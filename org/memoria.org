@@ -1,8 +1,8 @@
-* Masters Thesis [0/9]
+* Masters Thesis [0/0]
 
-** TODO Normative [0/4]
+** TODO Normative [0/0]
 
-*** TODO  50 Page extension
+*** TODO  50 Page extension [0/6]
     - [ ] Introduction
     - [ ] Objectives
     - [ ] Work plan
@@ -10,7 +10,7 @@
     - [ ] Conclusion
     - [ ] Bibliography
 
-*** TODO Language restrictions
+*** TODO Language restrictions [0/5]
     - [ ] Abstract in english including title in english
     - [ ] Abstract in spanish including the title in spanish
     - [ ] List with 10 keywords max. in spanish and english
@@ -29,11 +29,11 @@ difusión, uso e impacto del trabajo en internet y garantizar su preservación y
 acceso a largo plazo.
 '''
 
-*** TODO Frontpage information requierements
-    - [ ] "Master en Ingeniería Informática, Facultad de Informática, Universidad Complutense de Madrid"
-    - [ ] Title
-    - [ ] Author
-    - [ ] Directors
+*** TODO Frontpage information requierements [3/5]
+    - [X] "master en ingeniería informática, facultad de informática, universidad Complutense de Madrid"
+    - [X] Title
+    - [X] Author
+    - [X] Directors
     - [ ] "Curso 2017/2018"
 
 ** TODO Abstract

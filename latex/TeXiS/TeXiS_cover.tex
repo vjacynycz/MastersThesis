@@ -86,7 +86,7 @@
 
 % Primer subt�tulo de la segunda portada
 \def\textoPrimerSubtituloPortadaVal{%
-\textit{Memoria que presenta para optar al título de Doctor en Informática}  \\ [0.3em]%
+\textit{Memoria que presenta para optar al master en ingeniería informática}  \\ [0.3em]%
 \textbf{\autorPortadaVal}%
 }
 \newcommand{\textoPrimerSubtituloPortada}[1]{
@@ -95,7 +95,7 @@
 
 % Segundo subt�tulo de la segunda portada
 \def\textoSegundoSubtituloPortadaVal{%
-\textit{Dirigida por el Doctor}  \\ [0.3em]
+\textit{Directed by}  \\ [0.3em]
 \textbf{\directorPortadaVal}
 }
 \newcommand{\textoSegundoSubtituloPortada}[1]{
@@ -311,7 +311,12 @@
 \begin{large}
 
 \begin{center}
-\textbf{\autorPortadaVal}\\[0.3cm]
+  \textbf{\autorPortadaVal}\\[0.3cm]
+
+
+\\ \mbox{ } \\ \mbox{ } \\
+\textoSegundoSubtituloPortadaVal \\ [0.3]
+\\ \mbox{ } \\ \mbox{ } \\
 
 \textbf{\institucionVal}\\[1em]
 \textbf{\fechaPublicacionVal}
@@ -335,7 +340,7 @@
 \begin{small}
 \begin{center}
 \ifx\noTeXiSCreditsVal\undefined
-  Documento maquetado con \texis\ v.\texisVer.
+  Document made with \texis\ v.\texisVer. modified by Viktor Jacycynycz García
 \else
 \mbox{ }
 \fi
@@ -347,8 +352,7 @@
 \ifx\explicacionDobleCaraVal\undefined
 \mbox{ }
 \else
-\noindent Este documento está preparado para ser imprimido a doble
-cara.
+\noindent This document is prepared for duble-side printing.
 \fi
 \end{center}
 \end{small}
@@ -372,8 +376,8 @@ cara.
 \vfill
 
 \begin{large}
-\begin{center}
-\textoPrimerSubtituloPortadaVal
+  \begin{center}
+    \textoPrimerSubtituloPortadaVal
 \\ \mbox{ } \\ \mbox{ } \\
 \textoSegundoSubtituloPortadaVal \\ [0.3em]
 \end{center}
@@ -399,7 +403,7 @@ cara.
 \ifx\copyrightInfoVal\undefined
 \mbox{ }
 \else
-Copyright \textcopyright\ \copyrightInfoVal
+Copyright \textcopyright\ Viktor Jacynycz García
 \fi
 \vskip 3cm
 \ifx\isbnVal\undefined
