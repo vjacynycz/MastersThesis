@@ -1,0 +1,63 @@
+* Masters Thesis [0/9]
+
+** TODO Normative [0/4]
+
+*** TODO  50 Page extension
+    - [ ] Introduction
+    - [ ] Objectives
+    - [ ] Work plan
+    - [ ] Results
+    - [ ] Conclusion
+    - [ ] Bibliography
+
+*** TODO Language restrictions
+    - [ ] Abstract in english including title in english
+    - [ ] Abstract in spanish including the title in spanish
+    - [ ] List with 10 keywords max. in spanish and english
+    - [ ] Index of contents
+    - [ ] Authorization page.
+''' 
+El/la abajo firmante, matriculado/a en el Máster en Ingeniería Informática de la
+Facultad de Informática, autoriza a la Universidad Complutense de Madrid
+(UCM) a difundir y utilizar con fines académicos, no comerciales y
+mencionando expresamente a su autor el presente Trabajo Fin de Máster:
+“TÍTULO”, realizado durante el curso académico 20XX-20XX bajo la dirección
+de XXXX [y con la colaboración externa de dirección de YYYY] en el
+Departamento de XXXX, y a la Biblioteca de la UCM a depositarlo en el
+Archivo Institucional E-Prints Complutense con el objeto de incrementar la
+difusión, uso e impacto del trabajo en internet y garantizar su preservación y
+acceso a largo plazo.
+'''
+
+*** TODO Frontpage information requierements
+    - [ ] "Master en Ingeniería Informática, Facultad de Informática, Universidad Complutense de Madrid"
+    - [ ] Title
+    - [ ] Author
+    - [ ] Directors
+    - [ ] "Curso 2017/2018"
+
+** TODO Abstract
+
+** TODO Introduction
+
+** TODO State of art
+  
+*** References
+**** Reputation systems[0/2]
+  - [ ] Reputation systems in blockchain
+  - [ ] Reputation systems outside blockchain
+
+**** Peer reviews[0/2]
+  - [ ] Peer review nowadays
+  - [ ] Origins of peer review
+
+** TODO Methodology[0/0]
+
+** TODO Technology[0/0]
+ 
+** TODO Platform description[0/3]
+*** TODO What is for
+*** TODO How it works
+*** TODO How its made
+   
+** TODO Conclusion
