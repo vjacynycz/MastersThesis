@@ -3,108 +3,49 @@ pragma solidity^0.4.0;
 contract RevHub{
     
     struct Reviewer{
-        // Ethereum's address of the reviewer
-        address reviewerAddress;
         
         // Reputation of the reviewer
         uint reputation;
-        
+
         // Number of reviews
         uint numReviews;
-        
-        // Fields of expertise of the reviewer
-        // You can find the index of fields in the index var
-        uint[] fields;
-    }
-    
-    //Contract variables
-    address owner;
 
-    mapping(uint => string) public indexFields;
-    
-    mapping(uint => Reviewer) public reviewers;
-    uint numReviewers;
+        // Field ids of expertise of the reviewer
+        // Check ACM CCS https://dl.acm.org/ccs/ccs.cfm
 
-    
-    mapping(uint => address) public admins;
-    uint numAdmins;
-    
-    
-    // Modifiers
-    modifier onlyAdmins(){
-        bool isAdmin = false;
-        for(uint i = 0; i < numAdmins; i++){
-            if(msg.sender == admins[i])
-            {
-                isAdmin = true;
-                break;
-            }
-        }
-        require(isAdmin);
-        _;
-    }
-    modifier onlyReviewers(){
-        bool isReviewer = false;
-        for(uint i = 0; i < numReviewers; i++){
-            if(msg.sender == reviewers[i].reviewerAddress)
-            {
-                isReviewer = true;
-                break;
-            }
-        }
-        require(isReviewer);
-        _;
+        uint16[] fields;
     }
     
+    mapping(address => Reviewer) public reviewers;
+
     //Events
-    event ReviewerRegistered(address reviewerAddress,uint[] fields);
+    event ReviewerRegistered(address reviewerAddress,uint16[] fields);
     event ReputationReceived(address _from, address _to, uint _idReviewer, uint _rep);
-    
+
     //Functions
     function RevHub() public{
-        owner = msg.sender;
-        numReviewers = 0;
-        numAdmins = 0; 
-        admins[numAdmins] = owner;
-        numAdmins++;
     }
-    
+
     function registerReviewer
     (
     address _reviewerAddress,
-    uint _field1,
-    uint _field2,
-    uint _field3
+    uint16[] _fields
     )
     public
-    onlyAdmins()
     {
-        Reviewer storage newReviewer = reviewers[numReviewers];
-        newReviewer.reviewerAddress = _reviewerAddress;
+        Reviewer memory newReviewer;
         newReviewer.reputation = 0;
-        //newReviewer.fields = new uint[](20);
-        newReviewer.fields.push(_field1);
-        newReviewer.fields.push(_field2);
-        newReviewer.fields.push(_field3);
-        numReviewers++;
-        ReviewerRegistered(newReviewer.reviewerAddress, newReviewer.fields);
+        newReviewer.fields = _fields;
+        reviewers[_reviewerAddress] = newReviewer;
+        ReviewerRegistered(_reviewerAddress, _fields);
     }
 
-    function getFields(uint idReviewer)
-    public
-    constant
-    returns (uint[])
-    {
-        return reviewers[idReviewer].fields;
-    }
-    
-    function giveRep(uint _idReviewer, uint _reputation)
+    function giveRep(address _reviewerAddress, bool _reputation)
     public{
-        if(_reputation > 10 || _reputation < 1) {
-            revert();
-        } else {
-            reviewers[_idReviewer].reputation =
-            (reviewers[_idReviewer].reputation * 80 + _reputation *20)/100;
+        if(_reputation){
+            reviewers[_reviewerAddress].reputation ++;
+        }else{
+            reviewers[_reviewerAddress].reputation --;
         }
     }
     
@@ -112,50 +53,51 @@ contract RevHub{
     function() public{
         revert();
     }
-    /*
-    struct Rating{
-        address rater;
-        address reviewer;
-        bytes32 reviewHash;
-        uint numRating;
-    }
-    
-        event ReviewRated(
-        address _from,
-        address _toReviewer,
-        string _ipfsPaperAddress,
-        string _ipfsReviewAddress,
-        uint _rating
-        );
-        
-    */
 }
+contract CustomRevHub is RevHub{
+}
+
 contract RevNex{
-    
+
     mapping(bytes32 => bytes32[]) public paperReviewsMap;
     mapping(bytes32 => uint8[]) public paperAcceptance;
+    mapping(bytes32 => address[]) public paperReviewers;
     
-    function sendReview(bytes32 _ipfsPaperAddress, bytes32 _ipfsReviewAddress, uint8 _acceptance)
+    RevHub hub;
+    
+    function sendReview(
+        bytes32 _ipfsPaperAddress, 
+        bytes32 _ipfsReviewAddress, uint8 _acceptance,
+        address _reviewerAddress
+        )
     public
     {
         paperReviewsMap[_ipfsPaperAddress].push(_ipfsReviewAddress);
         paperAcceptance[_ipfsPaperAddress].push(_acceptance);
+        paperReviewers[_ipfsPaperAddress].push(_reviewerAddress);
     }
 
-    
-    function RevNex()
-    public{}
-    
+    function RevNex(RevHub _hub)
+    public{
+        hub = _hub;
+    }
+
     function checkAcceptance(bytes32 _ipfsPaperAddress)
-    public 
+    public
     constant
     returns (bool){
         return (paperAcceptance[_ipfsPaperAddress].length > 1);
     }
 }
 
-contract CustomReviewsNexus extends RevNex{
+contract CustomReviewsNexus is RevNex{
     
+    function checkAcceptance(bytes32 _ipfsPaperAddress)
+    public
+    constant
+    returns (bool){
+        return (paperAcceptance[_ipfsPaperAddress].length > 1);
+    }
 }
 
 //DAJ contract template (Decentralized Autonomous Journal)
@@ -194,12 +136,6 @@ contract DAJ{
     //Pending papers waiting for reviews
     uint[] pendingPapers;
 
-    //Reviews mapping of the pending papers
-    //mapping(bytes32 => Review) reviewHashMapping;
-
-    //Rating mapping of the reviews
-    //mapping(bytes32 => Rating) reviewsRating;
-
     /*
     Modifiers
     */
@@ -209,11 +145,11 @@ contract DAJ{
         address[] _authors,
         uint _paperId,
         bytes32 _ipfsPaperAddress);
-        
+
     event PaperPublished(
         bytes32 _ipfsPaperAddress
       );
-      
+
     event ReviewSent(
         address _reviewerAddress,
         bytes32 _ipfsPaperAddress,
@@ -264,7 +200,7 @@ contract DAJ{
       )
     public
     {
-        reviewsNexus.sendReview(_ipfsPaperAddress,_ipfsReviewAddress,_acceptance);
+        reviewsNexus.sendReview(_ipfsPaperAddress,_ipfsReviewAddress,_acceptance,msg.sender);
         //TODO check if the paper is accepted
         checkAcceptance(_ipfsReviewAddress);
     }
