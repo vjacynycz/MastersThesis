@@ -10,9 +10,8 @@ contract RevHub{
         // Number of reviews
         uint numReviews;
 
-        // Field ids of expertise of the reviewer
-        // Check ACM CCS https://dl.acm.org/ccs/ccs.cfm
-
+        // Fields of expertise of the reviewer
+        // You can find the index of fields in the index var
         uint16[] fields;
     }
     
@@ -55,6 +54,16 @@ contract RevHub{
     }
 }
 contract CustomRevHub is RevHub{
+    
+    function giveRep(address _reviewerAddress, bool _reputation)
+    public{
+        if(_reputation){
+            reviewers[_reviewerAddress].reputation ++;
+        }else{
+            reviewers[_reviewerAddress].reputation --;
+        }
+    }
+    
 }
 
 contract RevNex{
@@ -100,23 +109,61 @@ contract CustomReviewsNexus is RevNex{
     }
 }
 
-//DAJ contract template (Decentralized Autonomous Journal)
-contract DAJ{
-
-    //Structs
+contract DecentraLibrary{
+        
+    struct Multihash {
+      bytes32 _hash;
+      uint8 _hash_function;
+      uint8 _size;
+    }
+    
     struct Paper{
-        // IPFS Address of the file
-        // i.e. QmbFMke1KXqnYyBBWxB74N4c5SBnJMVAiMNRcGu6x1AwQH
-        bytes32 ipfsPaperAddress;
+        Multihash _ipfsPaperMultihash;
 
-        // Ethereum's address of the author
-        address[] authors;
+        // Ethereum's addresses of the authors
+        address[] _authors;
 
         // Check if the paper is acepted
-        bool published;
+        bool _published;
     }
+    
+    mapping(bytes32 => Paper) shelf;
+    
+    
+    event PaperStored(
+        bytes32 paperIdHash,
+        address[] _authors);
+    
+    function addPaper(uint8 size,uint8 hash_function,bytes32 hash,address[] authors)
+    public{
+        bytes32 paperIdHash = keccak256(hash,size,hash_function);
+        Multihash memory mh;
+        mh._size= size;
+        mh._hash_function = hash_function;
+        mh._hash = hash;
+        Paper memory ppr;
+        ppr._ipfsPaperMultihash = mh;
+        ppr._published = false;
+        ppr._authors = authors;
+        shelf[paperIdHash]=ppr;
+        PaperStored(paperIdHash,authors);
+    }
+    
+    function getPaper(bytes32 paperIdHash)
+    public 
+    constant
+    returns(uint8,uint8,bytes32,address[],bool){
+        Paper memory p = shelf[paperIdHash];
+        return(p._ipfsPaperMultihash._size,
+        p._ipfsPaperMultihash._hash_function,
+        p._ipfsPaperMultihash._hash,p._authors,p._published);
+    }
+    
+    
+}
 
-
+//DAJ contract template (Decentralized Autonomous Journal)
+contract DAJ{
 
     /*
     Variables
@@ -124,11 +171,7 @@ contract DAJ{
 
     RevHub reviewerHub;
     RevNex reviewsNexus;
-
-    //Mapping structure for papers
-    mapping(uint => Paper) public idPaperMap;
-    mapping(bytes32 => uint) ipfsPaperMap;
-    uint numPapers;
+    DecentraLibrary lib;
 
     //Owner of the contract
     address owner;
@@ -143,8 +186,9 @@ contract DAJ{
     event PaperSent(
         address _from,
         address[] _authors,
-        uint _paperId,
-        bytes32 _ipfsPaperAddress);
+        uint8 _size,
+        uint8 _hash_function,
+        bytes32 _hash);
 
     event PaperPublished(
         bytes32 _ipfsPaperAddress
@@ -162,35 +206,23 @@ contract DAJ{
     */
 
     function DAJ(RevNex _reviewsNexus) public{
-        numPapers = 0;
         owner = msg.sender;
-        numPapers = 0;
         reviewsNexus = _reviewsNexus;
     }
 
-    function getPaper(uint paperId)
-    constant
-    public
-    returns (
-        bytes32 ipfsPaperAddress,
-        address[] authors
-        ){
-        return (
-            idPaperMap[paperId].ipfsPaperAddress,
-            idPaperMap[paperId].authors
-        );
-    }
-
     function sendPaper(
-        bytes32 _ipfsPaperAddress,
+        uint8 _size,
+        uint8 _hash_function,
+        bytes32 _hash,
         address[] _authors
         )
         public{
-            idPaperMap[numPapers].ipfsPaperAddress = _ipfsPaperAddress;
-            idPaperMap[numPapers].authors = _authors;
-            ipfsPaperMap[_ipfsPaperAddress] = numPapers;
-            PaperSent(msg.sender,_authors,numPapers,_ipfsPaperAddress);
-            numPapers++;
+            lib.addPaper(
+                 _size,
+                 _hash_function,
+                 _hash,_authors
+                );
+        PaperSent(msg.sender,_authors, _size, _hash_function, _hash);
     }
 
     function sendReview(
