@@ -86,7 +86,7 @@
 
 % Primer subt�tulo de la segunda portada
 \def\textoPrimerSubtituloPortadaVal{%
-\textit{Memoria que presenta para optar al master en ingeniería informática}  \\ [0.3em]%
+\textit{Memoria que presenta para optar al master en ingeniería informática} \leavevmode \\ [0.3em]%
 \textbf{\autorPortadaVal}%
 }
 \newcommand{\textoPrimerSubtituloPortada}[1]{
@@ -95,7 +95,7 @@
 
 % Segundo subt�tulo de la segunda portada
 \def\textoSegundoSubtituloPortadaVal{%
-\textit{Directed by}  \\ [0.3em]
+\textit{Directed by} \leavevmode \\ [0.3em]
 \textbf{\directorPortadaVal}
 }
 \newcommand{\textoSegundoSubtituloPortada}[1]{
@@ -128,7 +128,7 @@
 
 %%%
 %% COMANDO PARA CREAR LAS PORTADAS.
-%% CONTIENE TODO EL C�DIGO LaTeX
+%% CONTIENE TODO EL C_DIGO LaTeX
 %%%
 \newcommand{\makeCover}{
 
@@ -286,11 +286,11 @@
 \settowidth{\longTitulo}{%
 \textbf{Arquitectura y metodología para el}}
 \begin{center}
-\rule{\longTitulo}{.5mm}\\
+\rule{\longTitulo}{.5mm}\leavevmode \\
 \vskip 1cm
 \textbf{\tituloPortadaVal}
 \vskip 0.7cm
-\rule{\longTitulo}{.5mm}\\
+\rule{\longTitulo}{.5mm}\leavevmode \\
 \end{center}
 \end{huge}
 
@@ -311,14 +311,14 @@
 \begin{large}
 
 \begin{center}
-  \textbf{\autorPortadaVal}\\[0.3cm]
+  \textbf{\autorPortadaVal}\leavevmode \\[0.3cm]
 
 
-\\ \mbox{ } \\ \mbox{ } \\
-\textoSegundoSubtituloPortadaVal \\ [0.3]
-\\ \mbox{ } \\ \mbox{ } \\
+\leavevmode \\ \mbox{ } \leavevmode \\ \mbox{ } \leavevmode \\
+\textoSegundoSubtituloPortadaVal \leavevmode \\ [0.3]
+\leavevmode \\ \mbox{ } \leavevmode \\ \mbox{ } \leavevmode \\
 
-\textbf{\institucionVal}\\[1em]
+\textbf{\institucionVal}\leavevmode \\[1em]
 \textbf{\fechaPublicacionVal}
 
 \end{center}
@@ -331,9 +331,9 @@
 
 \newpage
 
-% P�gina que en la cara de detr�s del folio de la portada.
+% P_gina que en la cara de detr_s del folio de la portada.
 % Ponemos que el documento esta maquetado con TeXiS y la
-% aclaraci�n de que debe imprimirse a doble cara.
+% aclaraci_n de que debe imprimirse a doble cara.
 \thispagestyle{empty}
 \mbox{ }
 \vfill%space*{4cm}
@@ -377,9 +377,9 @@
 
 \begin{large}
   \begin{center}
-    \textoPrimerSubtituloPortadaVal
-\\ \mbox{ } \\ \mbox{ } \\
-\textoSegundoSubtituloPortadaVal \\ [0.3em]
+    \textoPrimerSubtituloPortadaVal\
+\leavevmode \\ \mbox{ } \leavevmode \\ \mbox{ } \leavevmode \\
+\textoSegundoSubtituloPortadaVal \leavevmode \\ [0.3em]
 \end{center}
 \end{large}
 
@@ -387,8 +387,8 @@
 
 \begin{large}
 \begin{center}
-\textbf{\institucionVal}\\[0.2em]
-    \mbox{ }  \\
+\textbf{\institucionVal}\leavevmode \\[0.2em]
+    \mbox{ }  \leavevmode \\
 \textbf{\fechaPublicacionVal}
 \end{center}
 \end{large}

@@ -3,42 +3,9 @@
 %                         TeXiS_bib.tex
 %
 %---------------------------------------------------------------------
-%
-% TeXiS_bib.tex
-% Copyright 2009 Marco Antonio Gomez-Martin, Pedro Pablo Gomez-Martin
-%
-% This file belongs to TeXiS, a LaTeX template for writting
-% Thesis and other documents. The complete last TeXiS package can
-% be obtained from http://gaia.fdi.ucm.es/projects/texis/
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
-% and version 1.3 or later is part of all distributions of LaTeX
-% version 2005/12/01 or later.
-%
-% This work has the LPPL maintenance status `maintained'.
-%
-% The Current Maintainers of this work are Marco Antonio Gomez-Martin
-% and Pedro Pablo Gomez-Martin
-%
-%---------------------------------------------------------------------
-%
-% Fichero que contiene la generaci�n de la bibliograf�a. En principio,
-% no har�a falta tenerlo en  un fichero separado, pero como permitimos
-% a�adir una frase c�lebre antes  de la primera cita, la configuraci�n
-% ya  no es  trivial.  Para  "ocultar" la  fontaner�a  de LaTeX,  est�
-% separada  la  configuraci�n  de  los  par�metros  de  la  generaci�n
-% concreta de la bibliograf�a. La configuraci�n est� en el "directorio
-% del usuario" (Cascaras), mientras  que la generaci�n se encuentra en
-% el directorio TeXiS (este fichero).
-%
-%---------------------------------------------------------------------
 
 %%%
-% Gesti�n de la configuraci�n
+% Gestin de la configuracin
 %%%
 
 % Ficheros .bib
@@ -47,52 +14,19 @@
 \def\ficherosBibliografia{#1}
 }
 
-% Frase c�lebre
+% Frase lebre
 \def\citaBibliografia{}
 \newcommand{\setCitaBibliografia}[1]{
 \def\citaBibliografia{#1}
 }
-
-%%%
-% Configuraci�n terminada
-%%%
-
-%%%
-%% COMANDO PARA CREAR LA BIBLIOGRAF�A.
-%% CONTIENE TODO EL C�DIGO LaTeX
-%%%
 \newcommand{\makeBib}{
 
-%
-% Queremos que  tras el t�tulo del  cap�tulo ("Bibliograf�a") aparezca
-% una frase c�lebre,  igual que en el resto  de cap�tulos. El problema
-% es que  aqu� no ponemos  nosotros a mano  el \chapter{Bibliograf�a},
-% sino que lo mete �l autom�ticamente.
-%
-% Afortunadamente,  la gente  de  bibtex  hace las  cosas  bien ;-)  y
-% despu�s  de insertar  el t�tulo  de  la secci�n  ejecuta un  comando
-% denominado  \bibpreamble  que por  defecto  no  hace  nada. Pero  si
-% sobreescribimos  ese comando,  podremos  ejecutar c�digo  arbitrario
-% justo  despu�s de la  inserci�n del  t�tulo, y  antes de  la primera
-% referencia. Por  tanto, lo que hacemos es  sobreescribir ese comando
-% (normalmente  se conocen  como "hooks")  para a�adir  la  cita justo
-% despu�s del t�tulo.
-%
-% Desgraciadamente,  dependiendo  de la  versi�n  de  Natbib, hay  que
-% definir  o redefinir  el comando  (es decir,  utilizar  newcommand o
-% renewcommand)... como eso es un  l�o, utilizamos let y def, pues def
-% no falla si ya estaba definido.
 
 \let\oldbibpreamble\bibpreamble
 
 \def\bibpreamble{%
 \oldbibpreamble
-% A�adimos a la tabla de contenidos la bibliograf�a. Si no lo hacemos
-% aqu�, sale mal o el n�mero de p�gina (grave) o el enlace en el PDF
-% que te lleva a un sitio cercano (no tan grave).
-% Para que la bibliograf�a no salga en el PDF a�adida a la �ltima
-% parte del documento, si hay partes en el mismo, le damos la
-% categor�a de "parte".
+
 \ifx\generatoc\undefined
 \else
 \ifx\tienePartesTeXiS\undefined
@@ -101,42 +35,14 @@
 \addcontentsline{toc}{part}{Bibliografía}
 \fi
 \fi
-% A�adimos tambi�n una etiqueta, para poder referenciar el n�mero
-% de p�gina en el que comienza
+
 \label{bibliografia}
-% Frase c�lebre configurada por el usuario
+
 \citaBibliografia
 }
-% Fin definici�n "bibpreamble"
 
-
-%
-% Cambiamos  el estilo  de la  cabecera.  Hay que  hacerlo porque  por
-% defecto el paquete que  estamos usando (fancyhdr) pone en may�sculas
-% el t�tulo completo del cap�tulo.  Con los cap�tulos normales esto se
-% pudo evitar  en el  pre�mbulo redefiniendo el  comando \chaptermark,
-% pero con la bibliograf�a no se puede hacer. Se define la cabera para
-% que aparezca la palabra "Bibliograf�a" en ambas p�ginas.
-%
-%
 \cabeceraEspecial{Bibliografía}
 
-
-% Creamos la  bibliograf�a. Lo hacemos  dentro de un bloque  (entre la
-% pareja \begingroup  ... \endgroup) porque  dentro vamos a  anular la
-% sem�ntica que da babel  a la tilde de la e�e (que  hace que un ~N se
-% convierta  autom�ticamente en una  �). Esto  es debido  a que  en el
-% bibtex  aparecer�n  ~ para  separar  iniciales  de  los nombres  con
-% espacios  no separables  en varias  lineas, y  aquellos  nombres que
-% tengan  una N  como  inicial ser�an  puestos  como �.  Al anular  la
-% sem�ntica     al    ~    que     da    babel,     deshacemos    este
-% comportamiento. Naturalmente,  para que esto  no tenga repercusiones
-% negativas,  en  ning�n  .bib  deber�amos  utilizar ~N  (o  ~n)  para
-% representar una � ... tendremos  que utilizar o una �/� directamente
-% (no  aconsejable porque asume  que hemos  usado inputenc)  o, mejor,
-% usamos la  versi�n larga  \~n o  \~N que no  falla nunca.   Para m�s
-% informaci�n,  consulta  el  TeXiS_pream.tex  en el  punto  donde  se
-% incluye natbib y babel.
 
 \begingroup
 \spanishdeactivate{~}
@@ -146,9 +52,6 @@
 \endgroup
 
 } %\newcommand{\makeBib}
-
-% Variable local para emacs, para  que encuentre el fichero maestro de
-% compilaci�n y funcionen mejor algunas teclas r�pidas de AucTeX
 
 %%%
 %%% Local Variables:

@@ -1,4 +1,4 @@
-* Masters Thesis [0/0]
+* Masters Thesis [0/9]
 Dates:
 Entrega de la memoria del trabajo: hasta el 5 de febrero a las 14 horas
 Publicación de los tribunales evaluadores y fechas de defensa: 6 de febrero
@@ -32,7 +32,7 @@ de XXXX [y con la colaboración externa de dirección de YYYY] en el
 Departamento de XXXX, y a la Biblioteca de la UCM a depositarlo en el
 Archivo Institucional E-Prints Complutense con el objeto de incrementar la
 difusión, uso e impacto del trabajo en internet y garantizar su preservación y
-acceso a largo plazo.t
+acceso a largo plazo.
 '''
 
 *** DONE Frontpage information requierements [5/5]
@@ -60,7 +60,11 @@ acceso a largo plazo.t
 
 ** TODO Methodology[0/0]
 
-** TODO Technology[0/0]
+** TODO Technology[0/2]
+
+*** TODO IPFS
+
+*** TODO Ethereum
  
 ** TODO Platform description[0/3]
 *** TODO What is for

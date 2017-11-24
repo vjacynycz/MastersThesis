@@ -8,6 +8,7 @@ A level-1 auxiliary file: Cascaras/resumen.aux
 A level-1 auxiliary file: TeXiS/TeXiS_toc.aux
 A level-1 auxiliary file: Capitulos/Parte1.aux
 A level-1 auxiliary file: Capitulos/01Capitulo1.aux
+A level-1 auxiliary file: Capitulos/Technology.aux
 A level-1 auxiliary file: Apendices/ParteApendices.aux
 A level-1 auxiliary file: Apendices/01ApendiceA.aux
 A level-1 auxiliary file: Cascaras/bibliografia.aux
@@ -16,44 +17,47 @@ A level-1 auxiliary file: Cascaras/fin.aux
 Database file #1: nuestros.bib
 Database file #2: latex.bib
 Database file #3: otros.bib
-You've used 2 entries,
+Warning--I didn't find a database entry for "ldesc2e"
+Warning--I didn't find a database entry for "notsoshort"
+You've used 1 entry,
             2118 wiz_defined-function locations,
-            519 strings with 4234 characters,
-and the built_in function-call counts, 679 in all, are:
-= -- 54
-> -- 51
+            518 strings with 4114 characters,
+and the built_in function-call counts, 224 in all, are:
+= -- 20
+> -- 7
 < -- 0
-+ -- 21
-- -- 18
-* -- 48
-:= -- 127
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 13
++ -- 3
+- -- 2
+* -- 10
+:= -- 48
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 24
-empty$ -- 45
-format.name$ -- 18
-if$ -- 132
+cite$ -- 1
+duplicate$ -- 10
+empty$ -- 18
+format.name$ -- 2
+if$ -- 42
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 4
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 23
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 4
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 3
 quote$ -- 0
-skip$ -- 12
+skip$ -- 7
 stack$ -- 0
-substring$ -- 11
-swap$ -- 2
+substring$ -- 5
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 4
 warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 22
+while$ -- 2
+width$ -- 2
+write$ -- 12
+(There were 2 warnings)

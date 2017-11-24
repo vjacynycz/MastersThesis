@@ -1,13 +1,8 @@
 \begin{thebibliography}{1}
 
-\bibitem{ldesc2e}
-T.~Bautista, T.~Oetiker, H.~Partl, I.~Hyna, and E.~Schlegl.
-\newblock {\em Una Descripción de \LaTeXe}.
-\newblock Versión electrónica, 1998.
-
-\bibitem{notsoshort}
-T.~Oetiker, H.~Partl, I.~Hyna, and E.~Schlegl.
-\newblock {\em The Not So Short Introduction to \LaTeXe}.
-\newblock Versión electrónica, 1996.
+\bibitem{benet2014ipfs}
+J.~Benet.
+\newblock Ipfs-content addressed, versioned, p2p file system.
+\newblock {\em arXiv preprint arXiv:1407.3561}, 2014.
 
 \end{thebibliography}
