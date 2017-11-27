@@ -1,124 +1,84 @@
-%---------------------------------------------------------------------
-%
-%                            TeXiS_cover.tex
-%
-%---------------------------------------------------------------------
-%
-% TeXiS_cover.tex
-% Copyright 2009 Marco Antonio Gomez-Martin, Pedro Pablo Gomez-Martin
-%
-% This file belongs to TeXiS, a LaTeX template for writting
-% Thesis and other documents. The complete last TeXiS package can
-% be obtained from http://gaia.fdi.ucm.es/projects/texis/
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
-% and version 1.3 or later is part of all distributions of LaTeX
-% version 2005/12/01 or later.
-%
-% This work has the LPPL maintenance status `maintained'.
-%
-% The Current Maintainers of this work are Marco Antonio Gomez-Martin
-% and Pedro Pablo Gomez-Martin
-%
-%---------------------------------------------------------------------
-%
-% Fichero que  contiene la portada y  primera hoja de la  tesis, en la
-% que se vuelve a repetir el t�tulo.
-%
-% El contenido  de la  portada se configura  en un fichero  externo en
-% Cascaras/cover.tex
-%
-%---------------------------------------------------------------------
 
-%%%
-% Gesti�n de la configuraci�n
-%%%
-
-% T�tulo de la portada
 \def\tituloPortadaVal{\titulo}
-\newcommand{\tituloPortada}[1]{
+\newcommand{\tituloPortada}[1]{%
 \def\tituloPortadaVal{#1}
 }
 
 % Autor
 \def\autorPortadaVal{\autor}
-\newcommand{\autorPortada}[1]{
+\newcommand{\autorPortada}[1]{%
 \def\autorPortadaVal{#1}
 }
 
 % Tutor
 \def\directorPortadaVal{Tutor no definido. Usa
   \texttt{$\backslash$tutorPortada}}
-\newcommand{\directorPortada}[1]{
+\newcommand{\directorPortada}[1]{%
 \def\directorPortadaVal{#1}
 }
 
 % Fecha de publicacion
 \def\fechaPublicacionVal{}
-\newcommand{\fechaPublicacion}[1]{
+\newcommand{\fechaPublicacion}[1]{%
 \def\fechaPublicacionVal{#1}
 }
 
 % Imagen de la portada (escudo)
 \def\imagenPortadaVal{Imagenes/Vectorial/Todo}
-\newcommand{\imagenPortada}[1]{
+\newcommand{\imagenPortada}[1]{%
 \def\imagenPortadaVal{#1}
 }
 \def\escalaImagenPortadaVal{1.0}
-\newcommand{\escalaImagenPortada}[1]{
+\newcommand{\escalaImagenPortada}[1]{%
 \def\escalaImagenPortadaVal{#1}
 }
 % Tipo de documento (TESIS, MANUAL, ...)
 \def\tipoDocumentoVal{TESIS DOCTORAL}
-\newcommand{\tipoDocumento}[1]{
+\newcommand{\tipoDocumento}[1]{%
 \def\tipoDocumentoVal{#1}
 }
 
 % Instituci�n
 \def\institucionVal{}
-\newcommand{\institucion}[1]{
+\newcommand{\institucion}[1]{%
 \def\institucionVal{#1}
 }
 
 % Primer subt�tulo de la segunda portada
 \def\textoPrimerSubtituloPortadaVal{%
-\textit{Memoria que presenta para optar al master en ingeniería informática} \leavevmode \\ [0.3em]%
+\textit{Memoria que presenta para optar al master en ingeniería informática} \leavevmode \\[0.3em]%
 \textbf{\autorPortadaVal}%
 }
-\newcommand{\textoPrimerSubtituloPortada}[1]{
+\newcommand{\textoPrimerSubtituloPortada}[1]{%
 \def\textoPrimerSubtituloPortadaVal{#1}
 }
 
 % Segundo subt�tulo de la segunda portada
 \def\textoSegundoSubtituloPortadaVal{%
-\textit{Directed by} \leavevmode \\ [0.3em]
+\textit{Directed by} \leavevmode \\[0.3em]
 \textbf{\directorPortadaVal}
 }
-\newcommand{\textoSegundoSubtituloPortada}[1]{
+\newcommand{\textoSegundoSubtituloPortada}[1]{%
 \def\textoSegundoSubtituloPortadaVal{#1}
 }
 
 % ISBN
-\newcommand{\isbn}[1]{
+\newcommand{\isbn}[1]{%
 \def\isbnVal{#1}
 }
 
 % Copyright
-\newcommand{\copyrightInfo}[1]{
+\newcommand{\copyrightInfo}[1]{%
 \def\copyrightInfoVal{#1}
 }
 
 % Cr�ditos a TeXiS
-\newcommand{\noTeXiSCredits}{
+\newcommand{\noTeXiSCredits}{%
 \def\noTeXiSCreditsVal{}
 }
 
 % Explicaci�n sobre impresi�n a doble cara
-\newcommand{\explicacionDobleCara}{
+\newcommand{\explicacionDobleCara}{%
 \def\explicacionDobleCaraVal{}
 }
 %%%
@@ -130,7 +90,7 @@
 %% COMANDO PARA CREAR LAS PORTADAS.
 %% CONTIENE TODO EL C_DIGO LaTeX
 %%%
-\newcommand{\makeCover}{
+\newcommand{\makeCover}{%
 
 
 % Ponemos el marcador en el PDF
@@ -172,8 +132,7 @@
 %
 % Fijate que las notas marginales NO necesariamente llegar�n hasta el
 % final del folio. La separaci�n entre el extremo derecho de las notas
-% al margen y el final del folio en realidad depender� del tama�o de
-% �ste; no se especifica de ninguna manera. Esto significa que si
+% al margen y el final del folio en realidad depender� del tama�o de% �ste; no se especifica de ninguna manera. Esto significa que si
 % quieres ajustar exactamente el margen derecho tienes que echar
 % cuentas con respecto al tama�o del papel, que se mantiene en
 % \paperwidth.
@@ -279,28 +238,28 @@
 % Comienza el tex...
 \begin{huge}
 \mbox{ }
-\vfill
+\vfill %
 
 % Cuidado: Ajustarlo si el t�tulo cambia...
 \newlength{\longTitulo}
 \settowidth{\longTitulo}{%
 \textbf{Arquitectura y metodología para el}}
 \begin{center}
-\rule{\longTitulo}{.5mm}\leavevmode \\
+\rule{\longTitulo}{.5mm}\leavevmode \\\relax
 \vskip 1cm
 \textbf{\tituloPortadaVal}
 \vskip 0.7cm
-\rule{\longTitulo}{.5mm}\leavevmode \\
+\rule{\longTitulo}{.5mm}\leavevmode \\\relax
 \end{center}
 \end{huge}
 
-\vfill
+\vfill %
 
 \begin{center}
   \includegraphics[scale=\escalaImagenPortadaVal]{\imagenPortadaVal}
 \end{center}
 
-\vfill
+\vfill %
 
 \begin{center}
   {\Large \textbf{\tipoDocumentoVal}}
@@ -311,12 +270,12 @@
 \begin{large}
 
 \begin{center}
-  \textbf{\autorPortadaVal}\leavevmode \\[0.3cm]
+  \textbf{\autorPortadaVal}%\leavevmode \\[0.3cm]
 
 
-\leavevmode \\ \mbox{ } \leavevmode \\ \mbox{ } \leavevmode \\
-\textoSegundoSubtituloPortadaVal \leavevmode \\ [0.3]
-\leavevmode \\ \mbox{ } \leavevmode \\ \mbox{ } \leavevmode \\
+\leavevmode \\\relax \mbox{ }% \leavevmode \\% \mbox{ } \leavevmode \\
+\textoSegundoSubtituloPortadaVal \leavevmode \\[0.3]
+\leavevmode \\\relax \mbox{ }% \leavevmode \\ \mbox{ } \leavevmode \\
 
 \textbf{\institucionVal}\leavevmode \\[1em]
 \textbf{\fechaPublicacionVal}
@@ -325,7 +284,7 @@
 
 \end{large}
 
-\vfill
+\vfill %
 
 \end{cambiamargen}
 
@@ -373,22 +332,22 @@
 \end{center}
 \end{Huge}
 
-\vfill
+\vfill %
 
 \begin{large}
   \begin{center}
     \textoPrimerSubtituloPortadaVal\
-\leavevmode \\ \mbox{ } \leavevmode \\ \mbox{ } \leavevmode \\
-\textoSegundoSubtituloPortadaVal \leavevmode \\ [0.3em]
+\leavevmode \\\relax \mbox{ } \leavevmode \\\relax \mbox{ } \leavevmode \\\relax
+\textoSegundoSubtituloPortadaVal \leavevmode \\[0.3em]
 \end{center}
 \end{large}
 
-\vfill
+\vfill %
 
 \begin{large}
 \begin{center}
 \textbf{\institucionVal}\leavevmode \\[0.2em]
-    \mbox{ }  \leavevmode \\
+    \mbox{ }  \leavevmode \\\relax
 \textbf{\fechaPublicacionVal}
 \end{center}
 \end{large}
@@ -398,12 +357,12 @@
 \thispagestyle{empty}
 \mbox{ }
 
-% Informaci�n del ISBN y copyright
+% Informacion del ISBN y copyright
 \vskip 13cm
 \ifx\copyrightInfoVal\undefined
 \mbox{ }
 \else
-Copyright \textcopyright\ Viktor Jacynycz García
+Copyright \textcopyright Viktor Jacynycz García
 \fi
 \vskip 3cm
 \ifx\isbnVal\undefined
@@ -412,7 +371,7 @@ Copyright \textcopyright\ Viktor Jacynycz García
 ISBN \isbnVal
 \fi
 
-} % \newcommand{\makeCover}
+}% \newcommand{\makeCover}
 
 % Variable local para emacs, para que encuentre el fichero
 % maestro de compilaci�n

@@ -40,7 +40,7 @@ FICHEROS_GLOSARIO = acronimos.gdf
 # Genera el documento utilizando pdflatex
 # 
 pdflatex:
-	pdflatex $(NOMBRE_LATEX)
+	pdflatex -interaction=nonstopmode $(NOMBRE_LATEX)
 	-bibtex $(NOMBRE_LATEX)
 	-glosstex $(NOMBRE_LATEX) $(FICHEROS_GLOSARIO)
 	-makeindex $(NOMBRE_LATEX).gxs -o $(NOMBRE_LATEX).glx -s glosstex.ist

@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.11.21)  24 NOV 2017 14:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.11.21)  27 NOV 2017 19:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Tesis.tex
+**Tesis
 (./Tesis.tex
 LaTeX2e <2017-04-15>
 Babel <3.15> and hyphenation patterns for 84 language(s) loaded.
@@ -736,16 +736,7 @@ s
 \f@nch@O@erf=\skip66
 \f@nch@O@olf=\skip67
 \f@nch@O@orf=\skip68
-)
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 128.
-
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 129.
-
-)
+))
 \@input{TeXiS/TeXiS_cover.aux}
 \openout2 = `TeXiS/TeXiS_cover.aux'.
 
@@ -794,24 +785,24 @@ or select author-year BibTeX style, e.g. plainnat
 )
 \openout1 = `Tesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Info: Redefining \. on input line 71.
-LaTeX Info: Redefining \% on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
 \AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring OFF on input line 71.
+Package hyperref Info: Link coloring OFF on input line 74.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -820,9 +811,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count130
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
+LaTeX Info: Redefining \ref on input line 74.
+LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \nameref on input line 74.
  (./Tesis.out)
 (./Tesis.out)
 \@outlinefile=\write5
@@ -884,7 +875,7 @@ Package babel Info: Redefining spanish shorthand "?
 \evensidemarginOriginal=\skip72
 \oddsidemarginOriginal=\skip73
 \longTitulo=\skip74
-<Imagenes/Vectorial/escudoUCM.pdf, id=86, pagebox=cropbox, 597.23125pt x 844.15
+<Imagenes/Vectorial/escudoUCM.pdf, id=95, pagebox=cropbox, 597.23125pt x 844.15
 375pt>
 File: Imagenes/Vectorial/escudoUCM.pdf Graphic file (type pdf)
 <use Imagenes/Vectorial/escudoUCM.pdf>
@@ -1001,31 +992,6 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 159.
  [3]
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 159.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 159.
- [4]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 159.
 
  (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
@@ -1035,34 +1001,34 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 159.
 )
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 81.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 81.
-
-[5]
+(babel)             in language append on input line 84.
+ [4]
 \openout2 = `Cascaras/dedicatoria.aux'.
 
- (./Cascaras/dedicatoria.tex
+
+(./Cascaras/dedicatoria.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 57.
 Package babel Info: Redefining spanish shorthand >>
@@ -1099,10 +1065,35 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 57.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 57.
- [6
+ [5
 
 
 ]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 57.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 57.
+ [6]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 57.
 Package babel Info: Redefining spanish shorthand >>
@@ -1152,36 +1143,10 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 57.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 57.
- [8]
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 57.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 57.
- [9])
+ [8])
 \openout2 = `Cascaras/agradecimientos.aux'.
 
-
-(./Cascaras/agradecimientos.tex
+ (./Cascaras/agradecimientos.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 42.
 Package babel Info: Redefining spanish shorthand >>
@@ -1194,11 +1159,6 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 42.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 42.
-
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 44.
-
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 57.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -1206,6 +1166,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 57.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 76.
+
 (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1233,36 +1194,36 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 100.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 100.
- [10
+ [9
 
 
 
 ])
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 88.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 85.
- [11]
+(babel)             in language append on input line 88.
+ [10]
 \openout2 = `Cascaras/resumen.aux'.
 
 
@@ -1279,37 +1240,32 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 13.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 13.
-
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 14.
-
 )
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 87.
+(babel)             in language append on input line 90.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 87.
- [12
+(babel)             in language append on input line 90.
+ [11
 
 
 
@@ -1341,12 +1297,35 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 74.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 74.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 79.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 79.
+ [12
 
 
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 77.
 
-(./Tesis.toc
+] (./Tesis.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -1377,15 +1356,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 81.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 81.
- [13
 
-
-
-]
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 88.
-
+[13]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 91.
 Package babel Info: Redefining spanish shorthand >>
@@ -1398,7 +1370,33 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 91.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 91.
-(./Tesis.lof
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 94.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 94.
+ [14
+
+] (./Tesis.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -1429,9 +1427,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 96.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 96.
- [14
-
-]
+ [15]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 102.
 Package babel Info: Redefining spanish shorthand >>
@@ -1444,12 +1440,33 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 102.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 102.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 107.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 107.
+ [16
 
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 105.
-
-(./Tesis.lot
+] (./Tesis.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -1480,14 +1497,37 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 109.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 109.
- [15
+ [17])
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 99.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 99.
+ [18
 
-])
 
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 97.
-
+]
 \openout2 = `Capitulos/Parte1.aux'.
+
 
 (./Capitulos/Parte1.tex
 Package babel Info: Redefining spanish shorthand <<
@@ -1529,9 +1569,32 @@ Package babel Info: Redefining spanish shorthand "?
  [1
 
 
-
-
-])
+]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 44.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 44.
+ [2])
 \openout2 = `Capitulos/01Capitulo1.aux'.
 
  (./Capitulos/01Capitulo1.tex
@@ -1549,63 +1612,55 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 7.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 24.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 24.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 24.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 24.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 24.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 24.
-
-Package natbib Warning: Citation `ldesc2e' on page 2 undefined on input line 29
-.
-
-
-Package natbib Warning: Citation `notsoshort' on page 2 undefined on input line
- 37.
-
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 41.
+(babel)             in language append on input line 37.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 41.
+(babel)             in language append on input line 37.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 41.
+(babel)             in language append on input line 37.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 41.
+(babel)             in language append on input line 37.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 41.
+(babel)             in language append on input line 37.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 41.
+(babel)             in language append on input line 37.
 )
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 103.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 100.
- [2
+(babel)             in language append on input line 103.
+ [3
 
 
 
@@ -1613,6 +1668,35 @@ Package babel Info: Redefining spanish shorthand "?
 \openout2 = `Capitulos/Technology.aux'.
 
  (./Capitulos/Technology.tex
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 1.
+ [4
+
+
+
+]
 Cap\IeC {\'\i }tulo 2.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 1.
@@ -1627,95 +1711,106 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 1.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 18.
+(babel)             in language append on input line 13.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 18.
+(babel)             in language append on input line 13.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 18.
+(babel)             in language append on input line 13.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 18.
+(babel)             in language append on input line 13.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 18.
+(babel)             in language append on input line 13.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 18.
+(babel)             in language append on input line 13.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 25.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 25.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 25.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 25.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 25.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 25.
+(babel)             in language append on input line 20.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 26.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 27.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 27.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 27.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 27.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 27.
+(babel)             in language append on input line 38.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 27.
+(babel)             in language append on input line 38.
+[5]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 37.
+(babel)             in language append on input line 39.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 37.
+(babel)             in language append on input line 39.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 37.
+(babel)             in language append on input line 39.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 37.
+(babel)             in language append on input line 39.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 37.
+(babel)             in language append on input line 39.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 37.
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 40.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 40.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 40.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 40.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 40.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 40.
 )
+LaTeX Info: Redefining \. on input line 104.
+LaTeX Info: Redefining \% on input line 104.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 101.
+(babel)             in language append on input line 104.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 101.
- [3
-
-
-
-]
+(babel)             in language append on input line 104.
+ [6]
 \openout2 = `Apendices/ParteApendices.aux'.
 
  (./Apendices/ParteApendices.tex
@@ -1755,11 +1850,36 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 39.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 39.
- [4
+ [7
 
 
 
-])
+]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 39.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 39.
+ [8])
 \openout2 = `Apendices/01ApendiceA.aux'.
 
  (./Apendices/01ApendiceA.tex
@@ -1812,7 +1932,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 35.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 35.
-[5
+[9
 
 
 
@@ -1830,79 +1950,74 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 59.
 )
-LaTeX Info: Redefining \. on input line 110.
-LaTeX Info: Redefining \% on input line 110.
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 110.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 110.
- [6]
+(babel)             in language append on input line 113.
+ [10]
 \openout2 = `Cascaras/bibliografia.aux'.
 
- (./Cascaras/bibliografia.tex
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 81.
-
-(./Tesis.bbl
+ (./Cascaras/bibliografia.tex (./Tesis.bbl
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1.
+(babel)             in language append on input line 2.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1.
+(babel)             in language append on input line 2.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1.
+(babel)             in language append on input line 2.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1.
+(babel)             in language append on input line 2.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1.
+(babel)             in language append on input line 2.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1.
+(babel)             in language append on input line 2.
 ))
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 121.
+(babel)             in language append on input line 124.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 121.
- [7
+(babel)             in language append on input line 124.
+ [11
 
 
 
@@ -1947,7 +2062,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 89.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 89.
- [8
+
+[12
 
 
 ]
@@ -1975,13 +2091,10 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 92.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 92.
- [9])
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
-(./Tesis.aux (./Cascaras/cover.aux)
+ [13])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
+ (./Tesis.aux (./Cascaras/cover.aux)
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
  (./Cascaras/dedicatoria.aux)
@@ -1990,27 +2103,20 @@ LaTeX Info: Redefining \% on input line 24.
 (./Capitulos/Technology.aux) (./Apendices/ParteApendices.aux)
 (./Apendices/01ApendiceA.aux) (./Cascaras/bibliografia.aux) (./Cascaras/fin.aux
 ))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
-
-
-Package rerunfilecheck Warning: File `Tesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Tesis.out':
-(rerunfilecheck)             Before: 66B3E202F64A43ADF164DE2EAE4DA783;1292
-(rerunfilecheck)             After:  36A44DDFEED18CA17E479AE2DC7F88F3;1535.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
+Package rerunfilecheck Info: File `Tesis.out' has not changed.
+(rerunfilecheck)             Checksum: 5280EC4E149651D470426EB28AB6EA23;1457.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 10600 strings out of 492985
- 151855 string characters out of 6138637
- 251625 words of memory out of 5000000
- 13613 multiletter control sequences out of 15000+600000
+ 10637 strings out of 492985
+ 152653 string characters out of 6138637
+ 251700 words of memory out of 5000000
+ 13637 multiletter control sequences out of 15000+600000
  22215 words of font info for 45 fonts, out of 8000000 for 9000
  1379 hyphenation exceptions out of 8191
- 55i,11n,47p,638b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,47p,634b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -2029,10 +2135,10 @@ xmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/
 type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm
 -super/sfxc1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfxc1095
 .pfb>
-Output written on Tesis.pdf (24 pages, 693913 bytes).
+Output written on Tesis.pdf (31 pages, 704906 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 261 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 174 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 367 PDF objects out of 1000 (max. 8388607)
+ 308 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

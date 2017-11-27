@@ -12,52 +12,61 @@ A level-1 auxiliary file: Capitulos/Technology.aux
 A level-1 auxiliary file: Apendices/ParteApendices.aux
 A level-1 auxiliary file: Apendices/01ApendiceA.aux
 A level-1 auxiliary file: Cascaras/bibliografia.aux
-The style file: abbrv.bst
+The style file: IEEEtran.bst
 A level-1 auxiliary file: Cascaras/fin.aux
-Database file #1: nuestros.bib
-Database file #2: latex.bib
-Database file #3: otros.bib
-Warning--I didn't find a database entry for "ldesc2e"
-Warning--I didn't find a database entry for "notsoshort"
-You've used 1 entry,
-            2118 wiz_defined-function locations,
-            518 strings with 4114 characters,
-and the built_in function-call counts, 224 in all, are:
-= -- 20
-> -- 7
-< -- 0
-+ -- 3
-- -- 2
-* -- 10
-:= -- 48
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
-chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 10
-empty$ -- 18
-format.name$ -- 2
-if$ -- 42
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Database file #1: latex.bib
+Database file #2: otros.bib
+Database file #3: nuestros.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in kaluszka2010distributed
+
+Done.
+You've used 7 entries,
+            4087 wiz_defined-function locations,
+            878 strings with 8846 characters,
+and the built_in function-call counts, 5378 in all, are:
+= -- 418
+> -- 139
+< -- 44
++ -- 74
+- -- 25
+* -- 267
+:= -- 812
+add.period$ -- 16
+call.type$ -- 7
+change.case$ -- 7
+chr.to.int$ -- 102
+cite$ -- 8
+duplicate$ -- 382
+empty$ -- 425
+format.name$ -- 30
+if$ -- 1235
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 4
+int.to.str$ -- 7
+missing$ -- 67
+newline$ -- 44
+num.names$ -- 7
+pop$ -- 159
 preamble$ -- 1
-purify$ -- 3
-quote$ -- 0
-skip$ -- 7
+purify$ -- 0
+quote$ -- 2
+skip$ -- 404
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
-text.length$ -- 0
+substring$ -- 245
+swap$ -- 306
+text.length$ -- 10
 text.prefix$ -- 0
-top$ -- 0
-type$ -- 4
-warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 12
-(There were 2 warnings)
+top$ -- 5
+type$ -- 7
+warning$ -- 1
+while$ -- 27
+width$ -- 8
+write$ -- 87
+(There was 1 warning)
