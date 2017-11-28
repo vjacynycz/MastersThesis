@@ -1,0 +1,98 @@
+\message{ !name(../Tesis.tex)}
+\documentclass[11pt,a4paper,twoside]{book}
+
+%
+% Definimos  el   comando  \compilaCapitulo,  que   luego  se  utiliza
+% (opcionalmente) en config.tex. Quedar_a  mejor si tambi_n se definiera
+% en  ese fichero,  pero por  el modo  en el  que funciona  eso  no es
+% posible. Puedes consultar la documentaci_n de ese fichero para tener
+% m_s  informaci_n. Definimos tambi_n  \compilaApendice, que  tiene el
+% mismo  cometido, pero  que se  utiliza para  compilar  _nicamente un
+% ap_ndice.
+%
+%
+% Si  queremos   compilar  solo   una  parte  del   documento  podemos
+% especificar mediante  \includeonly{...} qu_ ficheros  son los _nicos
+% que queremos  que se incluyan.  Esto  es _til por  ejemplo para s_lo
+% compilar un cap_tulo.
+%
+% El problema es que todos aquellos  ficheros que NO est_n en la lista
+% NO   se  incluir_n...  y   eso  tambi_n   afecta  a   ficheros  de
+% la plantilla...
+%
+% Total,  que definimos  una constante  con los  ficheros  que siempre
+% vamos a querer compilar  (aquellos relacionados con configuraci_n) y
+% luego definimos \compilaCapitulo.
+\newcommand{\ficherosBasicosTeXiS}{%
+TeXiS/TeXiS_pream,TeXiS/TeXiS_cab,TeXiS/TeXiS_bib,TeXiS/TeXiS_cover,%
+TeXiS/TeXiS_part%
+}
+\newcommand{\ficherosBasicosTexto}{%
+constantes,guionado,Cascaras/bibliografia,config%
+}
+\newcommand{\compilaCapitulo}[1]{%
+\includeonly{\ficherosBasicosTeXiS,\ficherosBasicosTexto,Capitulos/#1}
+}
+
+\newcommand{\compilaApendice}[1]{%
+\includeonly{\ficherosBasicosTeXiS,\ficherosBasicosTexto,Apendices/#1}
+}
+
+\include{config}
+
+% Paquete de la plantilla
+
+\usepackage{TeXiS/TeXiS}
+
+\setcitestyle{square}
+
+
+% Incluimos el fichero con comandos de constantes
+\include{constantes}%también
+
+
+\typeout{Copyright Marco Antonio and Pedro Pablo Gomez Martin}
+
+%
+% "Metadatos" para el PDF
+%
+\ifpdf\hypersetup{%
+    pdftitle = {\titulo},
+    pdfsubject = {Master's Thesis},
+    pdfkeywords = {blockchain},
+    pdfauthor = {\textcopyright\ \autor},
+    pdfcreator = {\LaTeX\ con el paquete \flqq hyperref\frqq},
+    pdfproducer = {pdfeTeX-0.\the\pdftexversion\pdftexrevision},
+    }
+    \pdfinfo{/CreationDate (\today)}
+\fi
+
+
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%                        Documento
+%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\begin{document}
+
+\message{ !name(Capitulos/Technology.tex) !offset(-57) }
+\subsection{Distributed Hash Tables}
+A distributed hash table(\emph{DHT}) is a decentralized structure that works very similar to a hash table. Hash tables are used to identify items in a database. The table performs simple mathematical operations generating a random string called hash. The hash acts as a pointer that directs to the data, this allows the user to find data directly instead of looking through the entire database\cite{kaluszka2010distributed}.
+
+In a distributed hash table, any node can use a hash as a key to retrieve data.
+This system includes a data structure called ``keyspace'' that is a set of all
+possible keys, which is split up across the nodes in the system. The mapping of
+the keys is made by another function that describes the distance from one key to
+another. All the nodes have and identifier and a set of identifiers pointing to all its neighbours nodes. If a node is removed from the network, only a small
+portion of the data must be recovered by other
+nodes\cite{kaluszka2010distributed}.
+
+This system makes \emph{DHTs} scalable, fast and robust. It is used by
+frameworks such as Tapestry \cite{zhao2004tapestry}, Chord \cite{stoica2001chord}, Kelips
+\cite{gupta2003kelips}, Kademlia \cite{maymounkov2002kademlia} and IPFS
+\cite{benet2014ipfs}. These platforms are similar in cost and performance if
+they are tested in a large enough network. They behave very fast when it comes
+to searching for a key through massive networks of nodes\cite{li2004comparing},
+that's why it is used by IFPS to create its distributed file system.
+
+\message{ !name(../Tesis.tex) !offset(63) }
+
+\end{document}

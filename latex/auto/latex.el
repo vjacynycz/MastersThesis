@@ -8,6 +8,10 @@
     "zhao2004tapestry"
     "stoica2001chord"
     "gupta2003kelips"
-    "maymounkov2002kademlia"))
+    "maymounkov2002kademlia"
+    "pouwelse2005bittorrent"
+    "cohen2003incentives"
+    "levin2008bittorrent"
+    "torvalds2010git"))
  :bibtex)
 
