@@ -1,4 +1,4 @@
-* Masters Thesis [0/9]
+* Masters Thesis [0/11]
 Dates:
 Entrega de la memoria del trabajo: hasta el 5 de febrero a las 14 horas
 Publicación de los tribunales evaluadores y fechas de defensa: 6 de febrero
@@ -16,24 +16,12 @@ Entrega de actas: 2 de marzo
     - [ ] Conclusion
     - [X] Bibliography
 
-*** TODO Language restrictions [1/5]
+*** TODO Language restrictions [2/5]
     - [ ] Abstract in english including title in english
     - [ ] Abstract in spanish including the title in spanish
     - [ ] List with 10 keywords max. in spanish and english
     - [X] Index of contents
-    - [ ] Authorization page.
-''' 
-El/la abajo firmante, matriculado/a en el Máster en Ingeniería Informática de la
-Facultad de Informática, autoriza a la Universidad Complutense de Madrid
-(UCM) a difundir y utilizar con fines académicos, no comerciales y
-mencionando expresamente a su autor el presente Trabajo Fin de Máster:
-“TÍTULO”, realizado durante el curso académico 20XX-20XX bajo la dirección
-de XXXX [y con la colaboración externa de dirección de YYYY] en el
-Departamento de XXXX, y a la Biblioteca de la UCM a depositarlo en el
-Archivo Institucional E-Prints Complutense con el objeto de incrementar la
-difusión, uso e impacto del trabajo en internet y garantizar su preservación y
-acceso a largo plazo.
-'''
+    - [X] Authorization page.
 
 *** DONE Frontpage information requierements [5/5]
     CLOSED: [2017-11-16 jue 20:03]
@@ -58,6 +46,8 @@ acceso a largo plazo.
   - [ ] Peer review nowadays
   - [ ] Origins of peer review
 
+**** TODO why IPFS and Ethereum
+
 ** TODO Methodology[0/0]
 
 ** TODO Technology[0/2]
@@ -66,9 +56,11 @@ acceso a largo plazo.
 
 *** TODO Ethereum
  
-** TODO Platform description[0/3]
+** TODO Platform description[0/4]
 *** TODO What is for
 *** TODO How it works
 *** TODO How its made
-   
-** TODO Conclusion
+** TODO Results 
+** TODO Discussion
+** TODO Conclusion and future work
+** TODO 

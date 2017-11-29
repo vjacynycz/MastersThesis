@@ -28,45 +28,45 @@ Database file #3: nuestros.bib
 Warning--empty journal in kaluszka2010distributed
 
 Done.
-You've used 11 entries,
+You've used 13 entries,
             4087 wiz_defined-function locations,
-            899 strings with 9421 characters,
-and the built_in function-call counts, 8608 in all, are:
-= -- 675
-> -- 208
-< -- 73
-+ -- 112
-- -- 36
-* -- 420
-:= -- 1282
-add.period$ -- 26
-call.type$ -- 11
-change.case$ -- 11
-chr.to.int$ -- 168
-cite$ -- 12
-duplicate$ -- 613
-empty$ -- 708
-format.name$ -- 44
-if$ -- 2002
+            910 strings with 9688 characters,
+and the built_in function-call counts, 10263 in all, are:
+= -- 815
+> -- 235
+< -- 91
++ -- 128
+- -- 39
+* -- 496
+:= -- 1527
+add.period$ -- 31
+call.type$ -- 13
+change.case$ -- 13
+chr.to.int$ -- 210
+cite$ -- 14
+duplicate$ -- 729
+empty$ -- 844
+format.name$ -- 48
+if$ -- 2394
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 107
-newline$ -- 56
-num.names$ -- 11
-pop$ -- 249
+int.to.str$ -- 13
+missing$ -- 124
+newline$ -- 62
+num.names$ -- 13
+pop$ -- 283
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 658
+skip$ -- 789
 stack$ -- 0
-substring$ -- 403
-swap$ -- 493
-text.length$ -- 17
+substring$ -- 503
+swap$ -- 592
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 11
+type$ -- 13
 warning$ -- 1
-while$ -- 43
-width$ -- 13
-write$ -- 126
+while$ -- 53
+width$ -- 15
+write$ -- 146
 (There was 1 warning)

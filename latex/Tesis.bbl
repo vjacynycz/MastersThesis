@@ -73,4 +73,14 @@ D.~Levin, K.~LaCurts, N.~Spring, and B.~Bhattacharjee, ``Bittorrent is an
 L.~Torvalds and J.~Hamano, ``Git: Fast version control system,'' \emph{URL
   http://git-scm. com}, 2010.
 
+\bibitem{spinellis2005version}
+D.~Spinellis, ``Version control systems,'' \emph{IEEE Software}, vol.~22,
+  no.~5, pp. 108--109, 2005.
+
+\bibitem{bleichenbacher1994directed}
+D.~Bleichenbacher and U.~M. Maurer, ``Directed acyclic graphs, one-way
+  functions and digital signatures,'' in \emph{Annual International Cryptology
+  Conference}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 1994, pp.
+  75--82.
+
 \end{thebibliography}

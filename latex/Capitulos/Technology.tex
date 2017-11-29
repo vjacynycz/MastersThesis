@@ -35,7 +35,7 @@ This system includes a data structure called ``keyspace'' that is a set of all
 possible keys, which is split up across the nodes in the system. The mapping of
 the keys is made by another function that describes the distance from one key to
 another. All the nodes have and identifier and a set of identifiers pointing to
-all its neighbors nodes. If a node is removed from the network, only a small
+all its neighbours nodes. If a node is removed from the network, only a small
 portion of the data must be recovered by other
 nodes\cite{kaluszka2010distributed}.
 
@@ -64,15 +64,27 @@ IPFS uses three main features from BitTorrent's protocol\cite{benet2014ipfs}:
 \item BitTorrent tracks the availability of file chunks, sending the rarest
   first rather than sending the most common ones.
 \item IPFS uses PropShare\cite{levin2008bittorrent} bandwidth allocation strategy to improve BitTorrent's
-  behavior facing exploitable scenarios.
+  behaviour facing exploitable scenarios.
 \end{itemize}
 
 \subsection{Git - Version control system}
 Git is a distributed version control system (\emph{DVCS})\cite{torvalds2010git}.
 Git was born in 2005 when the development process of the Linux kernel lost its
-version control system. 
+version control system. The Linux kernel is one of the biggest free software
+projects nowadays, it has a great team of developers behind and the code usually
+changes very frequently. In 2002 the team used BitKeeper as VCS since they had a
+free license. But in 2005 when this license was over, Linus Torvalds decided to
+develop his own VCS\cite{spinellis2005version}.
 
+Git was designed to be scalable and distributed, and the most important factors
+that IPFS inherits from Git are: \cite{benet2014ipfs}:
 
+\begin{itemize}
+\item Git implements a Merkle Directed Acyclic Graph
+  \cite{bleichenbacher1994directed}, an object that reflects changes in a
+  file system in a distributed way.
+\item Objects are identified by the cryptographic hash of their contents.
+\end{itemize}
 
 
 %%%

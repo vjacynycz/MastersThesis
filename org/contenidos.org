@@ -1,0 +1,47 @@
+* Masters Thesis
+
+** Abstract[0/2]
+   - [ ] Porqué tenemos que utilizar sistemas que controlan terceros para publicar hoy en día
+
+** Introduction
+   - [ ] Sistemas de publicación cientifica hoy en día se basa en publicaciones
+   - [ ] Publicaciones son basadas en indicadores como JRC
+   - [ ] Basado en peer reviews
+   - [ ] 
+
+** State of the art
+  
+*** Peer reviews[0/3]
+ - [ ] Origen del peer review
+ - [ ] Para que sirve el peer review
+ - [ ] Ventajas e inconvenientes del peer review
+ - [ ] 
+
+*** Reputation systems[0/2]
+ - [ ] Sistema de reputacion y para que sirven
+ - [ ] 
+
+*** Why IPFS
+ - [ ] Sistema de archivos distribuido
+ - [ ] Identifica univocamente un fichero en una red P2P
+ - [ ] 
+
+*** Why Ethereum
+ - [ ] Firmas digitales
+ - [ ] Demostrar autoría
+ - [ ] Democracia, descentralización
+
+** Methodology &  Technology
+
+*** IPFS
+
+*** Ethereum
+ 
+** TODO Platform description[0/4]
+*** TODO What is for
+*** TODO How it works
+*** TODO How its made
+** TODO Results 
+** TODO Discussion
+** TODO Conclusion and future work
+** TODO 

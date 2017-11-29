@@ -12,6 +12,8 @@
     "pouwelse2005bittorrent"
     "cohen2003incentives"
     "levin2008bittorrent"
-    "torvalds2010git"))
+    "torvalds2010git"
+    "spinellis2005version"
+    "bleichenbacher1994directed"))
  :bibtex)
 
