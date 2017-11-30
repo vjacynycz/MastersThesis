@@ -1,71 +1,71 @@
-* Masters Thesis
+* Trabajo de fin de máster 
 
 ** Abstract[0/4]
-   - [ ] Porqué tenemos que utilizar sistemas que controlan terceros para publicar hoy en día
-   - [ ] Dependemos de empresas privadas que disponen de sus propias métricas para juzgar nuestro trabajo
-   - [ ] La comunidad cientifica peude ser autogobernada sin depender de terceros con las herramientas necesarias
-   - [ ] Se propone usar blockchain para un acercamiento a esas herramientas
+   - [ ] Por qué tenemos que utilizar sistemas que controlan terceros para publicar hoy en día.
+   - [ ] Dependemos de empresas privadas que disponen de sus propias métricas para juzgar nuestro trabajo.
+   - [ ] La comunidad científica puede ser auto gobernada sin depender de terceros con las herramientas necesarias.
+   - [ ] Se propone usar blockchain para un acercamiento a esas herramientas.
 
-** Introduction[0/8]
-   - [ ] Sistemas de publicación cientifica hoy en día se basa en publicaciones
-   - [ ] Publicaciones son basadas en indicadores como JRC y otros
-   - [ ] La revisión de los artículos está basado peer reviews
-   - [ ] El proceso es caro tanto para el autor como para el lector y nunguno de ellos se beneficia de ello
-   - [ ] Normalmente tardan mas de un año en aceptarte un artículo con buen JCR o similar
-   - [ ] Nadie controla a los reviewers, las revistas y congresos "confian" en una serie de personas para revisar
-         los artículos, y sus revisiones muchas veces no son objetivas (citar papers sobre sexismo en revisiones por pares)
-   - [ ] La reputacion de un revisor que hace una review mala no se ve afectada
-   - [ ] Los buenos revisores que realmente se curran las reviews y benefician a la comunidad científica no se benefician
+** Introducción[0/8]
+   - [ ] Sistemas de publicación científica hoy en día se basa en publicaciones.
+   - [ ] Publicaciones son basadas en indicadores como JCR y otros.
+   - [ ] La revisión de los artículos está basado en revisión por pares.
+   - [ ] El proceso es caro tanto para el autor como para el lector y ninguno de ellos se beneficia de ello.
+   - [ ] Normalmente tardan mas de un año en aceptarte un artículo con buen JCR o similar.
+   - [ ] Nadie controla a los revisores, las revistas y congresos "confían" en una serie de personas para revisar
+         los artículos, y sus revisiones muchas veces no son objetivas (citar artículos sobre sexismo en revisiones por pares).
+   - [ ] La reputación de un revisor que hace una revisión mala no se ve afectada.
+   - [ ] Los buenos revisores que realmente se curran las revisiones y ayudan a la comunidad científica no se benefician.
 
-** State of the art
+** Estado del arte
   
-*** Peer reviews[0/4]
- - [ ] Origen del peer review y del sistema actual de publicaciones
- - [ ] Para que sirve el peer review
- - [ ] Ventajas e inconvenientes del peer review
- - [ ] Alternativas al peer review, alt metrics y otros.
+*** Revisión por pares[0/4]
+ - [ ] Origen de la revisión por pares y del sistema actual de publicaciones.
+ - [ ] Para que sirve la revisión por pares.
+ - [ ] Ventajas e inconvenientes de la revisión por pares.
+ - [ ] Alternativas a la revisión por pares, "alt metrics" y otros.
 
-*** Reputation systems[0/5]
- - [ ] Sistemas de reputacion: qué son y para que sirven
+*** Sistemas de reputación[0/5]
+ - [ ] Sistemas de reputación: qué son y para que sirven.
  - [ ] Ejemplos de sistemas de reputación exitosos: stackoverflow etc.
- - [ ] Sistemas de reputacion centralizados y descentralizados
- - [ ] Sistemas de reputacion en blockchain
- - [ ] Beneficios de la utilización de este tipo de sistemas en entornos colavorativos VS sistemas centralizados
+ - [ ] Sistemas de reputación centralizados y descentralizados.
+ - [ ] Sistemas de reputación en blockchain.
+ - [ ] Beneficios de la utilización de este tipo de sistemas en entornos colaborativos contra sistemas centralizados.
 
-*** Porqué utilzar Blockchain[0/5]
- - [ ] No se necesita confianza en terceros
- - [ ] Criptograficamente seguro
- - [ ] Resitente a censura (poner ejemplo de Turquía y que podría pasar en otros países)
- - [ ] Se puede verificar cuando se ha enviado un paper o una revisión de forma segura y rápida
- - [ ] No hay un middleman que se lleva la pasta, la comunidad se ayuda a sí misma
+*** Por qué utilizar Blockchain[0/5]
+ - [ ] No se necesita confianza en terceros.
+ - [ ] Criptograficamente seguro.
+ - [ ] Resistente a censura (poner ejemplo de Turquía y que podría pasar en otros países).
+ - [ ] Se puede verificar cuando se ha enviado un artículo o una revisión de forma segura y rápida.
+ - [ ] No hay un tercero que se lleva la pasta, la comunidad se ayuda a sí misma.
 
-*** Porqué IPFS[0/4]
- - [ ] Sistema de archivos distribuido
- - [ ] Totalemente descentralizado
- - [ ] Criptograficamente seguro
- - [ ] Inmutable
+*** Por qué IPFS[0/4]
+ - [ ] Sistema de archivos distribuido.
+ - [ ] Totalmente descentralizado.
+ - [ ] Criptograficamente seguro.
+ - [ ] Inmutable.
 
-*** Why Ethereum[0/5]
- - [ ] Facilidad de verificar transacciones y autoría
- - [ ] Facilidad de crear herramientas para la auto-gobernanza de la comunidad
- - [ ] Democracia, descentralización
- - [ ] Posibilidad de aceptar donaciones en Ether a investigadores que envíen sus paper y realicen un trabajo interesante
- - [ ] Investigación colaborativa, yo puedo ponerme en contacto con cualquier persona que utilice este sistema y colaborar con el
+*** Por qué Ethereum[0/5]
+ - [ ] Facilidad de verificar transacciones y autoría.
+ - [ ] Facilidad de crear herramientas para la auto gobernanza de la comunidad.
+ - [ ] Democracia, descentralización.
+ - [ ] Posibilidad de aceptar donaciones en criptomonedas a investigadores que envíen sus artículos y realicen un trabajo interesante.
+ - [ ] Investigación colaborativa, yo puedo ponerme en contacto con cualquier persona que utilice este sistema y colaborar con él.
 
 
-** Methodology & Technology[0/2]
+** Metodología y Tecnología[0/2]
 
 - [ ] Contar la metodología que seguimos para realizar el proyecto
 - [ ] Contar las herramientas que utilizamos para diseñar la plataforma y cómo desarrollamos la idea en las sesiones que hacíamos
 
 *** IPFS[0/4]
  - [-] Qué es IPFS y que tiene detrás(extender un poco la explicación del estado del arte)
-   - [X] contar DHTs
-   - [X] contar BitTorrent
-   - [ ] contar Git
-   - [ ] contar SHFS
-   - [ ] contar que es una mezcla de todas las anteriores
- - [ ] Comparar IPFS con otros filesystems
+   - [X] contar DHTs.
+   - [X] contar BitTorrent.
+   - [ ] contar Git.
+   - [ ] contar SHFS.
+   - [ ] contar que es una mezcla de todas las anteriores.
+ - [ ] Comparar IPFS con otros sistemas de archivos distribuidos.
  - [ ] Explicar qué parte del proyecto está en IPFS y porqué
  - [ ] Explicar cómo son las direcciones IPFS (porque más tarde se explica cómo las guardamos en Ethereum)
 
@@ -74,13 +74,55 @@
  - [ ] Explicar el funcionamiento de los contratos
  - [ ] Explicar cómo mezclar IPFS y Ethereum
  - [ ] Explicar que utilizamos estas dos herramientas para hacer lo siguiente.
-
  
-** TODO Platform description[0/4]
-*** TODO What is for
-*** TODO How it works
-*** TODO How its made
-** TODO Results 
-** TODO Discussion
-** TODO Conclusion and future work
-** TODO 
+*** HTML, CSS y JavaScript
+ - [ ] Contar la parte de frontend de la plataforma que se comunica con el blockchain de Ethereum y con los nodos de IPFS.
+ - [ ] Comentar las librerías que se utilizan y para qué sirven.
+
+** Descripción de la plataforma[0/3]
+ - [ ] Una vez contado todo, se propone crear una plataforma con las tecnologías para intentar solucionar lo del estado del arte.
+
+ - [ ] Introducir el concepto de DAJ:
+   - [ ] Un Journal autónomo regido por unas reglas.
+   - [ ] Cualquier persona puede enviar un artículo.
+   - [ ] El Journal auto publica los artículos de forma automática cuando se cumplen ciertas características.
+     - [ ] Estas características son personalizables por cualquiera.
+     - [ ] Todo el mundo puede hacerse su propio DAJ con el sistema de reputación que desee.
+     - [ ] Se ofrecen contratos "tipo" a modo de interfaz para que el que quiera se cree un Journal con los artículos que hay en la red.
+
+ - [ ] La plataforma tiene dos partes:
+   - [ ] La parte de blockchain que tiene los contratos inteligentes de Ethereum y los archivos en IPFS.
+   - [ ] La parte de la web que se conecta con el contrato de Ethereum para poder interactuar con la plataforma.
+
+*** Cómo funciona
+ - [ ] Una persona envía un artículo a un contrato en Ethereum.
+   - [ ] El contrato transforma la dirección de IPFS a una dirección de 32bytes en Ethereum.
+   - [ ] El contrato anuncia a la red mediante un "evento" que se ha enviado un nuevo artículo.
+
+ - [ ] Cualquier persona puede enviar una revisión de un artículo.
+
+ - [ ] Estas revisiones son evaluables mediante diferentes sistemas que son intercambiables como pequeños módulos.
+   - [ ] Probar sistema de stackoverflow con votos positivos y negativos.
+   - [ ] Probar sistema de tokens de reputación.
+   - [ ] **TODO** Encontrar otros sistemas de reputación para probarlos.
+
+ - [ ] Cualquier persona puede crear su propio DAJ incluso con los artículos que ya están publicados.
+   - [ ] Cada persona puede forzar a que ciertos revisores revisen los artículos (actuarían como editores).
+
+ - [ ] Es un acercamiento a un sistema de colecciones que decía Antonio.
+
+** Resultados y discusión
+ - [ ] Comentar resultados de enviar varios artículos a una plataforma en un entorno de pruebas
+   - [ ] Obtener el precio de las transacciones en total teniendo en cuenta que le hacen varias revisiones
+   - [ ] Comparar resultados con costes actuales de enviar un artículo a otros sitios, Revistas o Congresos.
+
+ - [ ] Asumir tiempos teóricos basados en otros resultados para el tiempo de revisión y publicación en esta plataforma.
+   - [ ] Comparar con tiempos reales de revisión tanto de revistas como de congresos.
+
+** Conclusiones y trabajo futuro
+ - [ ] Con blockchain se puede conseguir romper el avasallamiento que tenemos hoy al JCR.
+ - [ ] Hay que migrar a mejores sistemas de publicación de artículos.
+ - [ ] Con este sistema totalmente implantado, sólo con una dirección de Ethereum puede verse la trayectoria de un investigador.
+ - [ ] En un futuro las citas pueden ser direcciones IPFS a otros artículos dentro de este sistema.
+ - [ ] Habría que conseguir que los investigadores del mañana prefieran publicar en este tipo de plataformas.
+
