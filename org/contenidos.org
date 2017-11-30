@@ -23,7 +23,7 @@
  - [ ] Origen de la revisión por pares y del sistema actual de publicaciones.
  - [ ] Para que sirve la revisión por pares.
  - [ ] Ventajas e inconvenientes de la revisión por pares.
- - [ ] Alternativas a la revisión por pares, "alt metrics" y otros.
+ - [ ] Alternativas a la revisión por pares, "alt metrics" y otros. 1
 
 *** Sistemas de reputación[0/5]
  - [ ] Sistemas de reputación: qué son y para que sirven.

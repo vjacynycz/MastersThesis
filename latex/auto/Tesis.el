@@ -15,10 +15,12 @@
     "Cascaras/agradecimientos"
     "Cascaras/resumen"
     "TeXiS/TeXiS_toc"
-    "Capitulos/01Capitulo1"
+    "Capitulos/Introduction"
+    "Capitulos/Soa"
     "Capitulos/Technology"
-    "Apendices/ParteApendices"
-    "Apendices/01ApendiceA"
+    "Capitulos/Platform"
+    "Capitulos/Results"
+    "Capitulos/Conclusions"
     "Cascaras/bibliografia"
     "TeXiS/TeXiS_acron"
     "Cascaras/fin"
@@ -30,8 +32,6 @@
     '("compilaApendice" 1)
     '("compilaCapitulo" 1)
     "ficherosBasicosTeXiS"
-    "ficherosBasicosTexto")
-   (LaTeX-add-environments
-    '("SubFloat" LaTeX-env-args ["argument"] 1)))
+    "ficherosBasicosTexto"))
  :latex)
 

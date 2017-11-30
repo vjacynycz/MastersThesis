@@ -1,17 +1,17 @@
-\chapter{Technology}
+\chapter{Methodology \& Technology}
 
 \begin{FraseCelebre}
-\begin{Frase}
-The needs of the many outweigh the needs of the few
-\end{Frase}
-\begin{Fuente}
-Spock - The Wrath of Khan
-\end{Fuente}
+  \begin{Frase}
+    The needs of the many outweigh the needs of the few
+  \end{Frase}
+  \begin{Fuente}
+    Spock - The Wrath of Khan
+  \end{Fuente}
 \end{FraseCelebre}
 
-%-------------------------------------------------------------------
+% -------------------------------------------------------------------
 \section{IPFS}
-%-------------------------------------------------------------------
+% -------------------------------------------------------------------
 \label{tech:sec:ipfs}
 IPFS stands for Interplanetary File System. It is a peer-to-peer file-sharing
 protocol that uses a cryptographic hashes to store files in a distributed
@@ -35,7 +35,7 @@ This system includes a data structure called ``keyspace'' that is a set of all
 possible keys, which is split up across the nodes in the system. The mapping of
 the keys is made by another function that describes the distance from one key to
 another. All the nodes have and identifier and a set of identifiers pointing to
-all its neighbours nodes. If a node is removed from the network, only a small
+all its neighbors nodes. If a node is removed from the network, only a small
 portion of the data must be recovered by other
 nodes\cite{kaluszka2010distributed}.
 
@@ -63,8 +63,8 @@ IPFS uses three main features from BitTorrent's protocol\cite{benet2014ipfs}:
   network, and punishes the ones who don't.
 \item BitTorrent tracks the availability of file chunks, sending the rarest
   first rather than sending the most common ones.
-\item IPFS uses PropShare\cite{levin2008bittorrent} bandwidth allocation strategy to improve BitTorrent's
-  behaviour facing exploitable scenarios.
+\item IPFS uses PropShare\cite{levin2008bittorrent} bandwidth allocation
+  strategy to improve BitTorrent's behavior facing exploitable scenarios.
 \end{itemize}
 
 \subsection{Git - Version control system}
@@ -81,13 +81,19 @@ that IPFS inherits from Git are: \cite{benet2014ipfs}:
 
 \begin{itemize}
 \item Git implements a Merkle Directed Acyclic Graph
-  \cite{bleichenbacher1994directed}, an object that reflects changes in a
-  file system in a distributed way.
+  \cite{bleichenbacher1994directed}, an object that reflects changes in a file
+  system in a distributed way.
 \item Objects are identified by the cryptographic hash of their contents.
+\item Version changes only update preferences and add objects. To broadcast
+  version changes, git only needs to transfer the new objects and update the
+  remote references.
 \end{itemize}
 
+\subsection{Self-Certified File Systems}
 
-%%%
+
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../Tesis.tex"

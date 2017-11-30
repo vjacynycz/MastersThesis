@@ -6,10 +6,12 @@ A level-1 auxiliary file: Cascaras/dedicatoria.aux
 A level-1 auxiliary file: Cascaras/agradecimientos.aux
 A level-1 auxiliary file: Cascaras/resumen.aux
 A level-1 auxiliary file: TeXiS/TeXiS_toc.aux
-A level-1 auxiliary file: Capitulos/01Capitulo1.aux
+A level-1 auxiliary file: Capitulos/Introduction.aux
+A level-1 auxiliary file: Capitulos/Soa.aux
 A level-1 auxiliary file: Capitulos/Technology.aux
-A level-1 auxiliary file: Apendices/ParteApendices.aux
-A level-1 auxiliary file: Apendices/01ApendiceA.aux
+A level-1 auxiliary file: Capitulos/Platform.aux
+A level-1 auxiliary file: Capitulos/Results.aux
+A level-1 auxiliary file: Capitulos/Conclusions.aux
 A level-1 auxiliary file: Cascaras/bibliografia.aux
 The style file: IEEEtran.bst
 A level-1 auxiliary file: Cascaras/fin.aux
@@ -29,7 +31,7 @@ Warning--empty journal in kaluszka2010distributed
 Done.
 You've used 13 entries,
             4087 wiz_defined-function locations,
-            909 strings with 9668 characters,
+            911 strings with 9701 characters,
 and the built_in function-call counts, 10263 in all, are:
 = -- 815
 > -- 235
