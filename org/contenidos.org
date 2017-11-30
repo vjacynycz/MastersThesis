@@ -75,7 +75,7 @@
  - [ ] Explicar cómo mezclar IPFS y Ethereum
  - [ ] Explicar que utilizamos estas dos herramientas para hacer lo siguiente.
  
-*** HTML, CSS y JavaScript
+*** HTML, CSS y JavaScript[0/2]
  - [ ] Contar la parte de frontend de la plataforma que se comunica con el blockchain de Ethereum y con los nodos de IPFS.
  - [ ] Comentar las librerías que se utilizan y para qué sirven.
 
@@ -94,7 +94,7 @@
    - [ ] La parte de blockchain que tiene los contratos inteligentes de Ethereum y los archivos en IPFS.
    - [ ] La parte de la web que se conecta con el contrato de Ethereum para poder interactuar con la plataforma.
 
-*** Cómo funciona
+*** Cómo funciona[0/5]
  - [ ] Una persona envía un artículo a un contrato en Ethereum.
    - [ ] El contrato transforma la dirección de IPFS a una dirección de 32bytes en Ethereum.
    - [ ] El contrato anuncia a la red mediante un "evento" que se ha enviado un nuevo artículo.
@@ -111,7 +111,7 @@
 
  - [ ] Es un acercamiento a un sistema de colecciones que decía Antonio.
 
-** Resultados y discusión
+** Resultados y discusión[0/2]
  - [ ] Comentar resultados de enviar varios artículos a una plataforma en un entorno de pruebas
    - [ ] Obtener el precio de las transacciones en total teniendo en cuenta que le hacen varias revisiones
    - [ ] Comparar resultados con costes actuales de enviar un artículo a otros sitios, Revistas o Congresos.
@@ -119,7 +119,7 @@
  - [ ] Asumir tiempos teóricos basados en otros resultados para el tiempo de revisión y publicación en esta plataforma.
    - [ ] Comparar con tiempos reales de revisión tanto de revistas como de congresos.
 
-** Conclusiones y trabajo futuro
+** Conclusiones y trabajo futuro[0/5]
  - [ ] Con blockchain se puede conseguir romper el avasallamiento que tenemos hoy al JCR.
  - [ ] Hay que migrar a mejores sistemas de publicación de artículos.
  - [ ] Con este sistema totalmente implantado, sólo con una dirección de Ethereum puede verse la trayectoria de un investigador.
