@@ -1,5 +1,5 @@
 (TeX-add-style-hook
- "TeXiS_cover"
+ "aux"
  (lambda ()
    (TeX-add-symbols
     '("copyrightInfo" 1)
@@ -31,8 +31,6 @@
     "copyrightInfoVal"
     "noTeXiSCreditsVal"
     "explicacionDobleCaraVal")
-   (LaTeX-add-environments
-    '("SubFloat" LaTeX-env-args ["argument"] 1))
    (LaTeX-add-lengths
     "cambioIzquierdo"
     "cambioDerecho"

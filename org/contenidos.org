@@ -1,41 +1,80 @@
 * Masters Thesis
 
-** Abstract[0/2]
+** Abstract[0/4]
    - [ ] Porqué tenemos que utilizar sistemas que controlan terceros para publicar hoy en día
+   - [ ] Dependemos de empresas privadas que disponen de sus propias métricas para juzgar nuestro trabajo
+   - [ ] La comunidad cientifica peude ser autogobernada sin depender de terceros con las herramientas necesarias
+   - [ ] Se propone usar blockchain para un acercamiento a esas herramientas
 
-** Introduction
+** Introduction[0/8]
    - [ ] Sistemas de publicación cientifica hoy en día se basa en publicaciones
-   - [ ] Publicaciones son basadas en indicadores como JRC
-   - [ ] Basado en peer reviews
-   - [ ] 
+   - [ ] Publicaciones son basadas en indicadores como JRC y otros
+   - [ ] La revisión de los artículos está basado peer reviews
+   - [ ] El proceso es caro tanto para el autor como para el lector y nunguno de ellos se beneficia de ello
+   - [ ] Normalmente tardan mas de un año en aceptarte un artículo con buen JCR o similar
+   - [ ] Nadie controla a los reviewers, las revistas y congresos "confian" en una serie de personas para revisar
+         los artículos, y sus revisiones muchas veces no son objetivas (citar papers sobre sexismo en revisiones por pares)
+   - [ ] La reputacion de un revisor que hace una review mala no se ve afectada
+   - [ ] Los buenos revisores que realmente se curran las reviews y benefician a la comunidad científica no se benefician
 
 ** State of the art
   
-*** Peer reviews[0/3]
- - [ ] Origen del peer review
+*** Peer reviews[0/4]
+ - [ ] Origen del peer review y del sistema actual de publicaciones
  - [ ] Para que sirve el peer review
  - [ ] Ventajas e inconvenientes del peer review
- - [ ] 
+ - [ ] Alternativas al peer review, alt metrics y otros.
 
-*** Reputation systems[0/2]
- - [ ] Sistema de reputacion y para que sirven
- - [ ] 
+*** Reputation systems[0/5]
+ - [ ] Sistemas de reputacion: qué son y para que sirven
+ - [ ] Ejemplos de sistemas de reputación exitosos: stackoverflow etc.
+ - [ ] Sistemas de reputacion centralizados y descentralizados
+ - [ ] Sistemas de reputacion en blockchain
+ - [ ] Beneficios de la utilización de este tipo de sistemas en entornos colavorativos VS sistemas centralizados
 
-*** Why IPFS
+*** Porqué utilzar Blockchain[0/5]
+ - [ ] No se necesita confianza en terceros
+ - [ ] Criptograficamente seguro
+ - [ ] Resitente a censura (poner ejemplo de Turquía y que podría pasar en otros países)
+ - [ ] Se puede verificar cuando se ha enviado un paper o una revisión de forma segura y rápida
+ - [ ] No hay un middleman que se lleva la pasta, la comunidad se ayuda a sí misma
+
+*** Porqué IPFS[0/4]
  - [ ] Sistema de archivos distribuido
- - [ ] Identifica univocamente un fichero en una red P2P
- - [ ] 
+ - [ ] Totalemente descentralizado
+ - [ ] Criptograficamente seguro
+ - [ ] Inmutable
 
-*** Why Ethereum
- - [ ] Firmas digitales
- - [ ] Demostrar autoría
+*** Why Ethereum[0/5]
+ - [ ] Facilidad de verificar transacciones y autoría
+ - [ ] Facilidad de crear herramientas para la auto-gobernanza de la comunidad
  - [ ] Democracia, descentralización
+ - [ ] Posibilidad de aceptar donaciones en Ether a investigadores que envíen sus paper y realicen un trabajo interesante
+ - [ ] Investigación colaborativa, yo puedo ponerme en contacto con cualquier persona que utilice este sistema y colaborar con el
 
-** Methodology &  Technology
 
-*** IPFS
+** Methodology & Technology[0/2]
 
-*** Ethereum
+- [ ] Contar la metodología que seguimos para realizar el proyecto
+- [ ] Contar las herramientas que utilizamos para diseñar la plataforma y cómo desarrollamos la idea en las sesiones que hacíamos
+
+*** IPFS[0/4]
+ - [-] Qué es IPFS y que tiene detrás(extender un poco la explicación del estado del arte)
+   - [X] contar DHTs
+   - [X] contar BitTorrent
+   - [ ] contar Git
+   - [ ] contar SHFS
+   - [ ] contar que es una mezcla de todas las anteriores
+ - [ ] Comparar IPFS con otros filesystems
+ - [ ] Explicar qué parte del proyecto está en IPFS y porqué
+ - [ ] Explicar cómo son las direcciones IPFS (porque más tarde se explica cómo las guardamos en Ethereum)
+
+*** Ethereum[0/4]
+ - [ ] Explicar Ethereum (es traducir la parte de "Tecnología" de mi TFG al inglés y actualizar los datos con valores de hoy en día)
+ - [ ] Explicar el funcionamiento de los contratos
+ - [ ] Explicar cómo mezclar IPFS y Ethereum
+ - [ ] Explicar que utilizamos estas dos herramientas para hacer lo siguiente.
+
  
 ** TODO Platform description[0/4]
 *** TODO What is for
