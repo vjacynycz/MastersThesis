@@ -21,6 +21,42 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{doi:10.1001/jama.295.1.90}
+\BIBentryALTinterwordspacing
+G.~E, ``The history and meaning of the journal impact factor,'' \emph{JAMA},
+  vol. 295, no.~1, pp. 90--93, 2006. [Online]. Available: \url{+
+  http://dx.doi.org/10.1001/jama.295.1.90}
+\BIBentrySTDinterwordspacing
+
+\bibitem{garfield2007evolution}
+E.~Garfield, ``The evolution of the science citation index,''
+  \emph{International microbiology}, vol.~10, no.~1, p.~65, 2007.
+
+\bibitem{toledo2011book}
+E.~G. Toledo and D.~T. Salinas, ``Book citation index: nueva historia sobre big
+  science y little science,'' \emph{Anuario ThinkEPI}, no.~1, pp. 195--202,
+  2011.
+
+\bibitem{wenneras2001nepotism}
+C.~Wenneras and A.~Wold, ``Nepotism and sexism in peer-review,'' \emph{Women,
+  sience and technology: A reader in feminist science studies}, pp. 46--52,
+  2001.
+
+\bibitem{huisman2017duration}
+J.~Huisman and J.~Smits, ``Duration and quality of the peer review process: the
+  author’s perspective,'' \emph{Scientometrics}, pp. 1--18, 2017.
+
+\bibitem{bergstrom2004costs}
+C.~T. Bergstrom and T.~C. Bergstrom, ``The costs and benefits of library site
+  licenses to academic journals,'' \emph{Proceedings of the National Academy of
+  Sciences of the United States of America}, vol. 101, no.~3, pp. 897--902,
+  2004.
+
+\bibitem{resnick2000reputation}
+P.~Resnick, K.~Kuwabara, R.~Zeckhauser, and E.~Friedman, ``Reputation
+  systems,'' \emph{Communications of the ACM}, vol.~43, no.~12, pp. 45--48,
+  2000.
+
 \bibitem{benet2014ipfs}
 J.~Benet, ``Ipfs-content addressed, versioned, p2p file system,'' \emph{arXiv
   preprint arXiv:1407.3561}, 2014.

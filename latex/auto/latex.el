@@ -14,6 +14,13 @@
     "levin2008bittorrent"
     "torvalds2010git"
     "spinellis2005version"
-    "bleichenbacher1994directed"))
+    "bleichenbacher1994directed"
+    "toledo2011book"
+    "doi:10.1001/jama.295.1.90"
+    "garfield2007evolution"
+    "wenneras2001nepotism"
+    "huisman2017duration"
+    "bergstrom2004costs"
+    "resnick2000reputation"))
  :bibtex)
 
