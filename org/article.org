@@ -8,3 +8,4 @@
    - [ ] Buscar las herramientas/propuestas que hay hoy en día para intentar mejorar el peer review
    - [ ] Buscar Sistemas de reputación actuales y propuestas de sistema de reputación
    - [ ] Buscar sistemas de reputación en blockchain
+     
