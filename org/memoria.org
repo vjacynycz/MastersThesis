@@ -1,4 +1,4 @@
-* Masters Thesis [0/11]
+* Masters Thesis [0/2]
 Dates:
 Entrega de la memoria del trabajo: hasta el 5 de febrero a las 14 horas
 Publicación de los tribunales evaluadores y fechas de defensa: 6 de febrero
@@ -31,36 +31,71 @@ Entrega de actas: 2 de marzo
     - [X] Directors
     - [X] "Curso 2017/2018"
 
-** TODO Abstract
+** Abstract
+   
+** Introduction
+   - [ ] Science publication systems nowadays
+   - [ ] What is peer-review
+   - [ ] History of peer-review
+   - [ ] Advantages and disadvantages of peer-review
+   - [ ] Who has economic benefits in the current science publication systems
+   - [ ] What is a reputation system
+   - [ ] What it is used for
+   - [ ] Advantages and disadvantages of the reputation systems
+   - [ ] Why it will be necessary to implements a reputation system for reviewers
 
-** TODO Introduction
+** State of the art
+   - [ ] Publication method today
+   - [ ] Alternative publication systems
+   - [ ] Alternatives for peer-review
+   - [ ] Reputation systems inside blockchain
+   - [ ] Reviewer reputation systems outside blockchain
 
-** TODO State of the art
-  
-*** References
-**** Reputation systems[0/2]
-  - [ ] Reputation systems in blockchain
-  - [ ] Reputation systems outside blockchain
+** Methodology
+   - [ ] Methodology we followed in the hackathon
+   - [ ] Brainstorming and some good ideas we came up to
+   - [ ] Value proposition canvas
+   - [ ] Scrum
 
-**** Peer reviews[0/2]
-  - [ ] Peer review nowadays
-  - [ ] Origins of peer review
-
-**** TODO why IPFS and Ethereum
-
-** TODO Methodology[0/0]
-
-** TODO Technology[0/2]
-
-*** TODO IPFS
-
-*** TODO Ethereum
+** Technology
+   - [ ] Why we decided to use IPFS and ehthereum
+   - [ ] Other alternatives we considered
+*** IPFS
+    - [ ] How it works
+    - [ ] Distributed Hash tables, Git, BitTorrent  and Self-certified filesystems
+    - [ ] How we use it in our project
+*** Ethereum
+    - [ ] What is blockchain
+    - [ ] What is ethereum
+    - [ ] Smart contracts
+    - [ ] Why we use smart contacts
+    - [ ] Advantages of using ethereum
+*** HTML, JavaScript and CSS
+    - [ ] Frontend of the platform
+    - [ ] How we connect IPFS and Ethereum
  
-** TODO Platform description[0/4]
-*** TODO What is for
-*** TODO How it works
-*** TODO How its made
-** TODO Results 
-** TODO Discussion
-** TODO Conclusion and future work
-** TODO 
+** Platform description
+   - [ ] Why we want to use a reputation system
+   - [ ] How it works internally
+   - [ ] How users can interact with the platform
+   - [ ] Examples of how it works
+   - [ ] Changes made during the realization of the project
+   - [ ] Code structure (back end and front end)
+
+** Results and discussion
+   - [ ] Monetary cost analysis compared to classic publication systems
+   - [ ] Review time analysis compared to actual peer-reviewer
+   - [ ] Discussion about how this project will improve modern science dissemination
+   - [ ] Discussion about the impact in the scientific community
+
+** Conclusion and future work
+   - [ ] We are improving the channels in which the science is spread
+   - [ ] We are eliminating the huge costs of scientific publication
+   - [ ] We are getting rid of the problems of actual peer-review
+*** Future work
+    - [ ] Eliminate the editors and create autonomous and decentralized journals
+    - [ ] Create collections of papers as "journal issues"
+    - [ ] Migrate from the system we have today to this system
+    - [ ] TODO more...
+
+** References 

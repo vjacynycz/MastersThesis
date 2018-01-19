@@ -1,0 +1,27 @@
+* Descripción
+Queremos desarrollar un sistema de reputación de revisores de artículos académicos para crear un nuevo paradigma de publicación de ciencia que sea gratuito, descentralizado y accesible para cualquiera. Vamos a utilizar dos tecnologías muy actuales:
+- IFPS para el almacenamiento de toda la información amente todas las acciones de los autores, revisores y lectores.referente a los artículos académicos.
+- Ethereum como plataforma para firmar criptográficamente todas las acciones de los autores, revisores y lectores.
+Con estas dos tecnologías queremos intentar 
+* Beneficio para la comunidad científica
+La comunidad científica actualmente se rige por un sistema basado en publicaciones. Se pueden identificar tres actores importantes:
+- Los autores: son los que crean el contenido y hacen que la comunidad científica avance. Los autores envían sus papers a journals que se encargan de encontrar personas que juzgan si el trabajo será publicado. Este sistema llamado "peer review" es el que se utiliza actualmente en toda la comunidad científica. Para poder enviar trabajos a algunos journals es necesario abonar cierta cantidad de dinero que en muchas ocasiones no está dentro de las capacidades del autor que quiere mandarlo, lo cual supone un coste innecesario para la persona que realmente es la que crea el trabajo.
+- Los revisores: son los que revisan el trabajo, normalmente contactados por journals que les piden que revisen artículos de manera gratuita. El proceso de revisión puede llegar a tardar muchísimo tiempo y no hay ninguna norma que delimite dicho tiempo. Muchas veces este tiempo es del orden de varios meses incluso más de un año, y eso sin tener en cuenta si el revisor acepta el artículo o lo rechaza.
+- Los lectores: son los consumidores del sistema. Los que reciben la información generada por los autores. Para acceder a ella, los journals imponen tarifas, muchas veces excesivas, simplemente por actuar de intermediario entre los tres actores descritos. Los lectores también pueden ser autores en busca de ideas y referencias para su trabajo, así que el proceso de creación tiene un coste adicional más.  Los revisores tampoco reciben beneficio, a pesar de que su trabajo es clave para la publicación de los artículos. Además los lectores que quieran acceder a los artículos deben pagar para poder hacerlo, y ese dinero se lo queda el publisher, no el autor del trabajo.
+
+Dados estos tres actores, los journals son intermediarios que se lucran del flujo de la información entre los tres, ninguno de los autores recibe un beneficio económico ya que todas las ganancias de la investigación científica se centralizan en los journals. 
+
+El sistema que queremos desarrollar elimina estas tasas para los autores y los lectores, haciendo que tanto enviar un paper como acceder a el tenga un coste ínfimo (coste de transacción de Ethereum). Se facilita un contrato en Ethereum llamado "decentralized journal" al que los autores pueden enviar sus También crea una red de revisores en la cual cada uno tiene una puntuación que indica su reputación en la red. Cuando a un revisor realiza una review de un artículo, esta puede ser evaluada en función de si es útil o no. 
+
+ Esta plataforma permite eliminar las siguientes problemáticas de nuestro sistema actual:
+- La de las reviews desfavorables sin motivo, las malas o incompletas, o las que se realizan muy tarde.
+- La del coste de acceso a los papers para los lectores y el coste de envío de los autores a los journals.
+- La del arranque en frío para nuevos papers, ya que un artículo revisado por revisores con reputación alta puede tener un impacto inicial mucho más grande que uno revisado por revisores con poca reputación.
+
+* Información sobre nosotros y los competidores
+La idea surgió de una hackathon
+
+- Competidores ninguno
+
+* Budget 
+Con el dinero que consigamos nos compraremos un yate.

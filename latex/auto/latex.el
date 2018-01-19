@@ -21,6 +21,7 @@
     "wenneras2001nepotism"
     "huisman2017duration"
     "bergstrom2004costs"
-    "resnick2000reputation"))
+    "resnick2000reputation"
+    "callaham_relationship_2007"))
  :bibtex)
 
