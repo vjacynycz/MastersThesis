@@ -9,12 +9,45 @@
   \end{Fuente}
 \end{FraseCelebre}
 
+\section{Methodology}
+The idea of this project came up in a Hackathon in September 2017. We were a
+group of 4 developers and we had one month to create an idea and a small
+prototype to implement in the blockchain.
+
+To give birth to the idea of a decentralized publication system for open science
+we used agile methodologies.
+
+
+\subsection{Brainstorming}
+
+Brainstorming was part of the first step to define what are we going to do. We
+throwed a lot of ideas into a white board without discrimination, no matter if
+the ideas were very hard or easy to implement.
+
+
+After saying enough ideas to fill the board we filtered the ones that were
+impossible to achieve. Then, each one voted the best three, making a ranking of
+the 3-4 best projects to start working on. Finally, we argued what were the best
+one and then we started developing the project backbone.
+
+
+After the first session of brainstorming that lasted approximately 4 hours we
+were ready to create a value proposition canvas to define all the aspects of the
+project.
+
+\subsection{Value proposition canvas}
+
+
+\includegraphics[width=0.9\linewidth]{Imagenes/vpc.jpg}
+
+\section{Technology}
+
 To face the challenges proposed by this project, there are many possibilities to
 distribute both the data and the information about the reputation network. To
 build a robust and decentralized system i
 
 % -------------------------------------------------------------------
-\section{IPFS}
+\subsection{IPFS}
 % -------------------------------------------------------------------
 \label{tech:sec:ipfs}
 IPFS stands for Interplanetary File System. It is a peer-to-peer file-sharing
@@ -26,7 +59,7 @@ exchange files\cite{benet2014ipfs}.
 IPFS merges three main ideas: Distributed Hash Tables, BitTorrent, Git and
 Self-Certified Systems.
 
-\subsection{Distributed Hash Tables}
+\subsubsection{Distributed Hash Tables}
 A distributed hash table(\emph{DHT}) is a decentralized structure that works
 very similar to a hash table. Hash tables are used to identify items in a
 database. The table performs simple mathematical operations generating a random
@@ -52,7 +85,7 @@ They behave very fast when it comes to searching for a key through massive
 networks of nodes\cite{li2004comparing}, that's why it is used by IPFS to create
 its distributed file system.
 
-\subsection{BitTorrent - File sharing}
+\subsubsection{BitTorrent - File sharing}
 BitTorrent \cite{cohen2003incentives} is a P2P file sharing system used
 worldwide. In this system, files are divides into very small chucks of data, and
 are shared in a peer-to-peer network. Each peer aims to maximize its download
@@ -71,7 +104,7 @@ IPFS uses three main features from BitTorrent's protocol\cite{benet2014ipfs}:
   strategy to improve BitTorrent's behavior facing exploitable scenarios.
 \end{itemize}
 
-\subsection{Git - Version control system}
+\subsubsection{Git - Version control system}
 Git is a distributed version control system (\emph{DVCS})\cite{torvalds2010git}.
 Git was born in 2005 when the development process of the Linux kernel lost its
 version control system. The Linux kernel is one of the biggest free software
@@ -93,7 +126,7 @@ that IPFS inherits from Git are: \cite{benet2014ipfs}:
   remote references.
 \end{itemize}
 
-\subsection{Self-Certified File Systems}
+\subsubsection{Self-Certified File Systems}
 
 
 
