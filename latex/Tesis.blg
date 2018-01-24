@@ -21,53 +21,195 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: latex.bib
+I was expecting an "="---line 645 of file latex.bib
+ :   
+ :   booktitle={Agile Conference, 2009. AGILE'09.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 949 of file latex.bib
+ : @article{toledo2011book
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 969 of file latex.bib
+ : @article{doi:10.1001/jama.295.1.90
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 991 of file latex.bib
+ : @article{garfield2007evolution
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1011 of file latex.bib
+ : @article{wenneras2001nepotism
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1027 of file latex.bib
+ : @article{huisman2017duration
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1077 of file latex.bib
+ : @article{callaham_relationship_2007
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1127 of file latex.bib
+ : @article{bergstrom2004costs
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1149 of file latex.bib
+ : @article{resnick2000reputation
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1377 of file latex.bib
+ : @article{benet_ipfs-content_2014
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1395 of file latex.bib
+ : @article{toledo2011book
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1415 of file latex.bib
+ : @article{doi:10.1001/jama.295.1.90
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1441 of file latex.bib
+ : @article{garfield2007evolution
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1461 of file latex.bib
+ : @article{wenneras2001nepotism
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1477 of file latex.bib
+ : @article{huisman2017duration
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1531 of file latex.bib
+ : @article{callaham_relationship_2007
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1553 of file latex.bib
+ : @article{walker_emerging_2015
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1587 of file latex.bib
+ : @article{bergstrom2004costs
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1609 of file latex.bib
+ : @article{resnick2000reputation
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1695 of file latex.bib
+ : @article{ford2013defining
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1923 of file latex.bib
+ : @article{solomon2012study
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1945 of file latex.bib
+ : @article{bjork2014anatomy
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1985 of file latex.bib
+ : @article{bartlingblockchain
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1997 of file latex.bib
+ : @article{tennant2017multi
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2017 of file latex.bib
+ : @article{dhillon2016bench
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2031 of file latex.bib
+ : @misc{morton2017aletheia
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2047 of file latex.bib
+ : @article{ware2008peer
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2067 of file latex.bib
+ : @article{frishauf2009reputation
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2081 of file latex.bib
+ : @article{spier2002history
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2103 of file latex.bib
+ : @article{goldbeck1999evidence
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2125 of file latex.bib
+ : @inproceedings{blum1988non
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2171 of file latex.bib
+ : @article{evans2009open
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2191 of file latex.bib
+ : @article{lariviere2015oligopoly
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2215 of file latex.bib
+ : @article{van2013true
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2237 of file latex.bib
+ : @article{eysenbach2006citation
+ :                               ,
+I'm skipping whatever remains of this entry
 Database file #2: otros.bib
 Database file #3: nuestros.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in osborn1953applied
 Warning--empty journal in kaluszka2010distributed
 
 Done.
-You've used 21 entries,
+You've used 65 entries,
             4087 wiz_defined-function locations,
-            963 strings with 11017 characters,
-and the built_in function-call counts, 16209 in all, are:
-= -- 1351
-> -- 343
-< -- 148
-+ -- 187
-- -- 55
-* -- 778
-:= -- 2477
-add.period$ -- 47
-call.type$ -- 21
-change.case$ -- 21
-chr.to.int$ -- 324
-cite$ -- 22
-duplicate$ -- 1166
-empty$ -- 1274
-format.name$ -- 70
-if$ -- 3774
+            1209 strings with 19024 characters,
+and the built_in function-call counts, 47788 in all, are:
+= -- 4001
+> -- 1032
+< -- 415
++ -- 562
+- -- 172
+* -- 2249
+:= -- 7341
+add.period$ -- 143
+call.type$ -- 65
+change.case$ -- 62
+chr.to.int$ -- 903
+cite$ -- 67
+duplicate$ -- 3477
+empty$ -- 3782
+format.name$ -- 217
+if$ -- 11138
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 191
-newline$ -- 88
-num.names$ -- 21
-pop$ -- 407
+int.to.str$ -- 65
+missing$ -- 580
+newline$ -- 230
+num.names$ -- 65
+pop$ -- 1262
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1264
+skip$ -- 3753
 stack$ -- 0
-substring$ -- 786
-swap$ -- 962
-text.length$ -- 40
+substring$ -- 2209
+swap$ -- 2836
+text.length$ -- 114
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 21
-warning$ -- 1
-while$ -- 86
-width$ -- 23
-write$ -- 232
-(There was 1 warning)
+type$ -- 65
+warning$ -- 2
+while$ -- 238
+width$ -- 67
+write$ -- 668
+(There were 35 error messages)

@@ -11,8 +11,8 @@
 
 \section{Methodology}
 The idea of this project came up in a Hackathon in September 2017. We were a
-group of 4 developers and we had one month to create an idea and a small
-prototype to implement in the blockchain.
+group of 4 developers with one month to create an idea and a small prototype to
+implement using blockchain technologies.
 
 To give birth to the idea of a decentralized publication system for open science
 we used agile methodologies.
@@ -20,27 +20,91 @@ we used agile methodologies.
 
 \subsection{Brainstorming}
 
-Brainstorming was part of the first step to define what are we going to do. We
-throwed a lot of ideas into a white board without discrimination, no matter if
-the ideas were very hard or easy to implement.
+Brainstorming was born as a method to increase creativity in groups and
+organizations. There are only few rules on this method: do not criticize any of
+the given ideas, quantity is desired over quality, try to combine suggested
+ideas and give all the ideas that come to mind, no matter if they are possible
+or not~\cite{osborn1953applied}.
 
+This method is used nowadays in companies and work groups as part of the process
+of the creation of a product, although there are some critics about
+brainstorming and sometimes instead of encouragind creativity, inhibits
+it~\cite{sutton1996brainstorming,mullen1991productivity}
+
+Leaving apart these problems, we decided to make a brainstorming session to
+define what we were going to do. Many ideas emerged and were capture into a
+white board without discrimination, no matter how hard or easy to implement they
+were.
 
 After saying enough ideas to fill the board we filtered the ones that were
 impossible to achieve. Then, each one voted the best three, making a ranking of
-the 3-4 best projects to start working on. Finally, we argued what were the best
-one and then we started developing the project backbone.
+the 3-4 best projects to start working on. Some of the ideas were creating a
+distributed \emp{wikipedia} with governance models, an application to contact
+people from minority groups in countries where they are persecuted collectives,
+a distributed and community driven NGO, and a crowdfunding platform for
+\emph{whisteblowers}.
 
-
-After the first session of brainstorming that lasted approximately 4 hours we
-were ready to create a value proposition canvas to define all the aspects of the
-project.
+Finally we decided to create an approach to a distributed platform for open
+science.
 
 \subsection{Value proposition canvas}
 
+\figura{vpc.jpg}{width=0.9\linewidth}{vpcimage}{Image of the value proposition
+  canvas after the session}
 
-\begin{center}
-\includegraphics[width=0.9\linewidth]{Imagenes/vpc.jpg}
-\end{center}
+A value proposition canvas is a tool to create, design and implement a product
+idea. Is commonly used by businesses and entrepreneurs to find the balance
+between customer profile and product design, but there are other cases of use
+for this tool outside business
+scope~\cite{pokorna2015value,meertens2012mapping}.
+
+The process is divided in two parts, customer profile and value map, each of
+these divided in other three parts:~\cite{osterwalder2014value}:
+
+\begin{itemize}
+\item \textbf{Customer profile:} This step is to identify the profile of the
+  final user of the platform. This section is divided in three parts: 1)
+  \emph{Customer jobs:} things the customer are trying to get done, 2)
+  \emph{Customer pains:} undesired costs and situations, 3) \emph{Customer
+    gains:} benefits, social gains and cost savings expected.
+\item \textbf{Value Map:} This section is about what the final product has to
+  have and what does not, and its also divided in: 1) \emph{Product and
+    services:} which products and services are offered that help the customer
+  get a job done, 2) \emph{Pain relievers:} how the customer pains are going to
+  be alleviated, 3) \emph{Gain creators:} how the products and services create
+  customer gains
+\end{itemize}
+
+We decided to use this methodology for the definition of the final platform,
+since it established the general development framework of the application.
+
+\subsection{Agile methodologies} \TODO{REPASAR}
+
+El gran crecimiento de internet y la economía digital ha alterado el concepto de
+ingeniería del software. Las metodologías de desarrollo de software (\emph{MDS})
+tradicionales están siendo eclipsadas por nuevas \emph{MDS} ligeras o \emph{MDS}
+ágiles. Estas metodologías (en adelante \emph{MDSAs}) están caracterizadas por
+la integración continua, desarrollo iterativo y la capacidad de asumir cambios
+en los requerimientos de
+negocio.\cite{boehm2005management,livermore2008factors}
+
+La \emph{MDSAs} más popular es conocida como programación extrema o
+\emph{Extreme Programming (XP)}\cite{lindstrom2004extreme} basada en una serie
+de conceptos básicos a la hora de realizar el desarrollo de un programa:
+simplicidad del código y prototipado rápido, comunicación continua del cliente
+con el equipo de desarrollo, responsabilidad del código de todos los integrantes
+del grupo, reuniones cortas y rápidas, refactorización e integracción
+continua.\cite{theunissen2005search,livermore2008factors}
+
+Otros métodos dentro de las \emph{MDSAs} son scrum\cite{rising2000scrum},
+métodos cristalinos\cite{cockburn2004crystal} y desarrollo basado en
+funcionalidades (en inglés \emph{FDD})\cite{coad1999java}. El uso de estas
+\emph{MDSAs} permite a los desarrolladores crear software de mejor calidad en
+periodos de tiempo más cortos. Estas metodologías han sido desarrolladas para
+mejorar el proceso de desarrollo, quitando las barreras a la aceptación de
+cambios en los requerimientos del cliente, un hecho que se da con bastante
+frecuencia\cite{lindstrom2004extreme}.
+
 \section{Technology}
 
 To face the challenges proposed by this project, there are many possibilities to
