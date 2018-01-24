@@ -98,6 +98,14 @@ Repeated entry---line 1609 of file latex.bib
  : @article{resnick2000reputation
  :                               ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 1631 of file latex.bib
+ : @misc{nakamoto2008bitcoin
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1641 of file latex.bib
+ : @article{buterin2014ethereum
+ :                             ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 1695 of file latex.bib
  : @article{ford2013defining
  :                          ,
@@ -169,47 +177,48 @@ Database file #3: nuestros.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty journal in osborn1953applied
 Warning--empty journal in kaluszka2010distributed
+Warning--empty journal in buterin2014ethereum
 
 Done.
-You've used 65 entries,
+You've used 67 entries,
             4087 wiz_defined-function locations,
-            1209 strings with 19024 characters,
-and the built_in function-call counts, 47788 in all, are:
-= -- 4001
-> -- 1032
+            1215 strings with 19222 characters,
+and the built_in function-call counts, 48423 in all, are:
+= -- 4047
+> -- 1040
 < -- 415
-+ -- 562
-- -- 172
-* -- 2249
-:= -- 7341
-add.period$ -- 143
-call.type$ -- 65
-change.case$ -- 62
++ -- 566
+- -- 174
+* -- 2268
+:= -- 7457
+add.period$ -- 147
+call.type$ -- 67
+change.case$ -- 64
 chr.to.int$ -- 903
-cite$ -- 67
-duplicate$ -- 3477
-empty$ -- 3782
-format.name$ -- 217
-if$ -- 11138
+cite$ -- 70
+duplicate$ -- 3537
+empty$ -- 3849
+format.name$ -- 219
+if$ -- 11278
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 580
-newline$ -- 230
-num.names$ -- 65
-pop$ -- 1262
+int.to.str$ -- 67
+missing$ -- 592
+newline$ -- 236
+num.names$ -- 67
+pop$ -- 1298
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 3753
+skip$ -- 3804
 stack$ -- 0
-substring$ -- 2209
-swap$ -- 2836
+substring$ -- 2211
+swap$ -- 2864
 text.length$ -- 114
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 65
-warning$ -- 2
-while$ -- 238
-width$ -- 67
-write$ -- 668
-(There were 35 error messages)
+type$ -- 67
+warning$ -- 3
+while$ -- 240
+width$ -- 69
+write$ -- 682
+(There were 37 error messages)

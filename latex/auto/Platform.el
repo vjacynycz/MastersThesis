@@ -3,10 +3,8 @@
  (lambda ()
    (LaTeX-add-labels
     "workflow"
-    "InteractionDiagram"
     "reputation"
     "distributedOA"
-    "privacy"
-    "PrivacyReviewRating"))
+    "privacy"))
  :latex)
 
