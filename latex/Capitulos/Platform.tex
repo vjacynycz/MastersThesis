@@ -9,7 +9,6 @@
   \end{Fuente}
 \end{FraseCelebre}
 
-
 We propose a blockchain-enabled decentralized publication system for open
 science. It consists of three main components that decentralize and try to
 improve three different aspects related to scientific publication:
@@ -50,7 +49,7 @@ These ideas are further discussed in the following sections.
 % infrastructure. Subsection \ref{distributedOA} explores the decentralization
 % of this infrastructure.
 
-\subsection{Transparent Peer Review Governance}
+\section{Transparent Peer Review Governance}
 \label{workflow}
 
 The system provides a platform for the peer review process communication, from
@@ -62,85 +61,85 @@ The interaction diagram of the system (Figure \ref{InteractionDiagram})
 describes the interactions of the supported peer review governance. Following,
 this interactions and their implementation are described.
 
-  \figura{Uml.png}{width=0.9\linewidth}{umlseq}{Sequence
-      diagram of platform interaction}
+\figura{Uml.png}{width=0.9\linewidth}{umlseq}{Sequence diagram of platform
+  interaction}
 
-  \begin{LaTeXdescription}
-  \item[Paper submission] A paper submission is registered by submitting the
-    IPFS address of the paper to an Ethereum contract. Then, the Ethereum sender
-    address is recorded as the corresponding author, and the submission is
-    timestamped in the blockchain.
+\begin{LaTeXdescription}
+\item[Paper submission] A paper submission is registered by submitting the IPFS
+  address of the paper to an Ethereum contract. Then, the Ethereum sender
+  address is recorded as the corresponding author, and the submission is
+  timestamped in the blockchain.
 
-  \item[Reviewer proposal] A journal editor may invite a peer reviewer to review
-    a specific paper. The transaction will record the Ethereum address of the
-    reviewer and optionally, a deadline to submit the review.
+\item[Reviewer proposal] A journal editor may invite a peer reviewer to review a
+  specific paper. The transaction will record the Ethereum address of the
+  reviewer and optionally, a deadline to submit the review.
 
-  \item[Reviewer acceptance/rejection] An invited reviewer may accept or reject
-    the review of a paper. The response will be recorded into the blockchain.
+\item[Reviewer acceptance/rejection] An invited reviewer may accept or reject
+  the review of a paper. The response will be recorded into the blockchain.
 
-  \item[Submit review] A reviewer should make a transaction to deliver the
-    review. The transaction will record the acceptance/rejection and the IPFS
-    address of the detailed review.
+\item[Submit review] A reviewer should make a transaction to deliver the review.
+  The transaction will record the acceptance/rejection and the IPFS address of
+  the detailed review.
 
-  \item[Rate review] A novelty of the system further discussed in Section
-    \ref{reputation} is the rating system for reviews. The transaction will
-    record the sender address and the rating as well as the rated review and
-    reviewer addresses.
-  \end{LaTeXdescription}
+\item[Rate review] A novelty of the system further discussed in Section
+  \ref{reputation} is the rating system for reviews. The transaction will record
+  the sender address and the rating as well as the rated review and reviewer
+  addresses.
+\end{LaTeXdescription}
 
-  \subsection{The Peer Review Reputation network}
-  \label{reputation}
+\section{The Peer Review Reputation network}
+\label{reputation}
 
-  The system proposes the use of a peer review reputation network were the
-  quality of peer reviews is rated by the authors, editors and reviewers of the
-  system. The work extends traditional peer review governance with the
-  possibility of rating the reviews, building a reputation system for
-  reviewers~\cite{resnick2000reputation}. Reviewers get rewarded for worthy,
-  fair, an timely reviews, or penalized otherwise.
+The system proposes the use of a peer review reputation network were the quality
+of peer reviews is rated by the authors, editors and reviewers of the system.
+The work extends traditional peer review governance with the possibility of
+rating the reviews, building a reputation system for
+reviewers~\cite{resnick2000reputation}. Reviewers get rewarded for worthy, fair,
+an timely reviews, or penalized otherwise.
 
-  This network of peer reviewers would enable a better reviewer selection, a
-  fair recognition of reviewers work and a protection against unfair reviews for
-  authors. However, it could also rise privacy concerns for both reviewers and
-  raters~\cite{van1999effect,schaub2016trustless}. We consider these privacy
-  issues in section \ref{privacy}.
+This network of peer reviewers would enable a better reviewer selection, a fair
+recognition of reviewers work and a protection against unfair reviews for
+authors. However, it could also rise privacy concerns for both reviewers and
+raters~\cite{van1999effect,schaub2016trustless}. We consider these privacy
+issues in section \ref{privacy}.
 
-  % With this network of rated peer reviews, different metrics of the peer
-  % reviewers can be provided by the system. Journals can benefit from this
-  % network by searching for well rated reviewers that respond on time, authors
-  % can expect shorter review time and forget about unaccountable bad reviews
-  % and reviewers can get their work publicly recognized. This approach can
-  % suppose a privacy problem for both reviewers and raters. We contemplate
-  % these problems and how to solve them in section \ref{PrivacyReviewRating}.
+% With this network of rated peer reviews, different metrics of the peer
+% reviewers can be provided by the system. Journals can benefit from this
+% network by searching for well rated reviewers that respond on time, authors
+% can expect shorter review time and forget about unaccountable bad reviews and
+% reviewers can get their work publicly recognized. This approach can suppose a
+% privacy problem for both reviewers and raters. We contemplate these problems
+% and how to solve them in section \ref{PrivacyReviewRating}.
 
-  \subsection{Distributed Open Access infrastructure}
-  \label{distributedOA}
-  % \commant{Copied from PEERE Paper.TODO rewrite}
-  Open Access focuses in the free access to scientific knowledge. While
-  publishers provide free of charge their Open Access content, their control of
-  the science dissemination infrastructure allows them to impose certain rules,
-  such as charging authors unreasonable fees to offer their work as Open
-  Access~\cite{solomon2012study} (Gold Open Access) or the temporal embargo and
-  restrictions on the dissemination of the final version (Green Open
-  access)~\cite{bjork2014anatomy}, among others.
+\section{Distributed Open Access infrastructure}
+\label{distributedOA}
+% \commant{Copied from PEERE Paper.TODO rewrite}
+Open Access focuses in the free access to scientific knowledge. While publishers
+provide free of charge their Open Access content, their control of the science
+dissemination infrastructure allows them to impose certain rules, such as
+charging authors unreasonable fees to offer their work as Open
+Access~\cite{solomon2012study} (Gold Open Access) or the temporal embargo and
+restrictions on the dissemination of the final version (Green Open
+access)~\cite{bjork2014anatomy}, among others.
 
-  The system proposes a decentralized infrastructure for science publication.
-  Academic documents - from first drafts to final versions, including peer
-  reviews- are shared in IPFS, an open P2P
-  network~\cite{benet_ipfs-content_2014}. Thus, the system inherently grants
-  Open Access by the design of its distributed infrastructure and circumvents
-  the publishers dominant role.
+The system proposes a decentralized infrastructure for science publication.
+Academic documents - from first drafts to final versions, including peer
+reviews- are shared in IPFS, an open P2P network~\cite{benet_ipfs-content_2014}.
+Thus, the system inherently grants Open Access by the design of its distributed
+infrastructure and circumvents the publishers dominant role.
 
-  \section{Privacy Settings of Open Peer Review and Rating}
-  \label{privacy}
-  Anonymity of reviewers and authors in peer reviews is traditionally used to
-  improve the fairness of the process. Thanks to single blind reviews, anonymous
-  reviewers can honestly critic a paper without fearing the reactions of the
-  authors. Double blind reviews also allow to reduce the impact of personal
-  biases. Finally, open review models propose that both authors and reviewers
-  know each other. These different privacy settings are shown in the left part
-  of Figure \ref{PrivacyReviewRating}.
+\section{Privacy Settings of Open Peer Review and Rating}
+\label{privacy}
+Anonymity of reviewers and authors in peer reviews is traditionally used to
+improve the fairness of the process. Thanks to single blind reviews, anonymous
+reviewers can honestly critic a paper without fearing the reactions of the
+authors. Double blind reviews also allow to reduce the impact of personal
+biases. Finally, open review models propose that both authors and reviewers know
+each other. These different privacy settings are shown in the left part of
+Figure \ref{PrivacyReviewRating}.
 
-  \figura{privacyReviewRating.jpg}{width=0.9\linewidth}{PrivacyReviewRating}{Review and Rating privacy models}
+\figura{privacyReviewRating.jpg}{width=0.9\linewidth}{PrivacyReviewRating}{Review
+  and Rating privacy models}
 
 Note, however, that the anonymity of the reviewers can be also abused. Unfair
 and low quality reviews are not discouraged by the system due to the lack of
@@ -278,6 +277,76 @@ manage anonymous ratings. A reviewer could also receive the rating of a review
 she did without revealing from which review or which rating the reputation
 comes. As before, a collateral model can be used to encourage the acceptance of
 low ratings.
+
+\section{Architecture}
+
+The platform's architecture consists in two main parts as explained in section
+\ref{tech}, a decentralized file system in which users can upload all the files
+using IPFS (see section \ref{tech:sec:ipfs}), and a smart contact to register
+all interactions of the users with the platform (see section
+\ref{tech:sec:ethereum:sm}).
+
+As a decentralized technology, anyone can run a node locally, connecting to the
+IPFS network and to the Ethereum's blockchain to interact with the platform, but
+this technology is not used commonly, and not all users have the knowledge to
+install and run these programs. As a solution, a ``gateway server'' to test the
+platform's implementation was created, using an web browser extension called
+Metamask\footnote[1]{https://metamask.io/} to interact with the blockchain and
+running an IPFS node to upload the files as explained in the diagram of the
+figure \ref{plat:sec:architecture:diagram}.
+
+\figura{architecture.jpg}{width=0.9\linewidth}{plat:sec:architecture:diagram}{Architecture
+  diagram of a node with IPFS and an Ethereum light client}
+
+\subsection{Smart Contract Architecture}
+
+Smart contracts in Ethereum can interact with each other, creating an ecosystem
+of programs that resemble object oriented programming. The contract structure
+and source code is crucial because once a contract is in the blockchain, there
+is no way to change it.
+
+Uno de los retos más importantes para diseñar un contrato es reducir el coste de
+las transacciones, ya que el coste de estas puede ser muy alto si el diseño del
+contrato es ineficiente~\cite{croman2016scaling}. Insertar datos en la
+blockchain es muy caro, por eso es recomendable utilizar las estructuras de
+datos que nos ofrece Ethereum para reducir el coste de transacción. El problema
+se plante a cuando se utilizan direcciones en IPFS, las cuales están en BASE58,
+un tamaño que sólo es representable por el tipo ``string'' de Ethereum, el cual
+es de los tipos de datos maś costosos para trabajar.
+
+Como solucion, la plataforma realiza la funcion hash en base32 de la dirección
+IPFS, convirtiendo el tipo de dato a uno mucho más barato para reducir en un
+30\% el coste de transacción.
+
+La estructura dentro de Ethereum está separada en cuatro contratos inteligentes:
+
+\begin{itemize}
+\item \textbf{Decentralized Journal:} Es el contrato desde el que se controlan
+  todas las interacciones con los autores y los editores. Los autores
+  interactuan con este contrato para enviar los papers, y los editores asignan a
+  revisores para el proceso de revision por pares.
+\item \textbf{Decentralized Library:} Este contrato es el que almacena las
+  direcciones IPFS de los papers y controla si están aceptados por el journal o
+  no. Es el que se encarga de convertir una dirección de base58 a bytes32 para
+  que sea manejada por la plataforma.
+\item \textbf{Reviewer Reputation Hub:} Se encarga de almacenar las direcciones,
+  los campos de investigación, y la reputación de los revisores que actuan con
+  la plataforma. Con este contrato interactuan los editores que quieran
+  encontrar a un revisor para realizar el proceso de revisión por pares.
+\item \textbf{Reviews Library:} Es el contrato en el que se almacenan las
+  reviews que hacen los revisores de los papers. A través de este contrato, se
+  pueden puntuar las revisiones, implicando la ganancia o perdida de la
+  reputación del revisor que la ha realizado.
+\end{itemize}
+
+\figura{contracts.png}{width=0.8\linewidth}{plat:sec:scarchitecture:uml}{Diagrama
+  UML del la estructura de contratos}
+
+El diagrama \ref{plat:sec:scarchitecture:uml} intenta ilustrar la estructura de
+los contratos a través de un UML, si asemejamos los contratos inteligentes de
+ethereum como objetos.
+
+
 
 %%%
 %%% Local Variables:

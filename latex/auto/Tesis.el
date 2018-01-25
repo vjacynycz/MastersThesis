@@ -4,7 +4,7 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("book" "11pt" "a4paper" "twoside")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("geometry" "lmargin=3.5cm" "rmargin=2.5cm")))
+                     '(("geometry" "lmargin=4cm" "rmargin=3cm")))
    (TeX-run-style-hooks
     "latex2e"
     "config"

@@ -360,6 +360,13 @@ E.~B. Sasson, A.~Chiesa, C.~Garman, M.~Green, I.~Miers, E.~Tromer, and
   \emph{Security and Privacy (SP), 2014 IEEE Symposium on}.\hskip 1em plus
   0.5em minus 0.4em\relax IEEE, 2014, pp. 459--474.
 
+\bibitem{croman2016scaling}
+K.~Croman, C.~Decker, I.~Eyal, A.~E. Gencer, A.~Juels, A.~Kosba, A.~Miller,
+  P.~Saxena, E.~Shi, E.~G. Sirer \emph{et~al.}, ``On scaling decentralized
+  blockchains,'' in \emph{International Conference on Financial Cryptography
+  and Data Security}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2016,
+  pp. 106--125.
+
 \bibitem{de2005publish}
 M.~De~Rond and A.~N. Miller, ``Publish or perish: bane or boon of academic
   life?'' \emph{Journal of Management Inquiry}, vol.~14, no.~4, pp. 321--329,

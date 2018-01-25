@@ -27,7 +27,7 @@ ideas and give all the ideas that come to mind, no matter if they are possible
 or not~\cite{osborn1953applied}.
 
 This method is used nowadays in companies and work groups as part of the process
-of the creation of a product, although there are some critics about
+of the creatfile uploadsion of a product, although there are some critics about
 brainstorming and sometimes instead of encouragind creativity, inhibits
 it~\cite{sutton1996brainstorming,mullen1991productivity}
 
@@ -105,7 +105,7 @@ cambios en los requerimientos del cliente, un hecho que se da con bastante
 frecuencia\cite{lindstrom2004extreme}.
 
 \section{Technology}
-
+\label{tech}
 To face the challenges proposed by this project, there are many possibilities to
 distribute both the data and the information about the reputation network. To
 build a robust and decentralized system i
@@ -124,6 +124,7 @@ IPFS merges three main ideas: Distributed Hash Tables, BitTorrent, Git and
 Self-Certified Systems.
 
 \subsubsection{Distributed Hash Tables}
+\label{tech:sec:ipfs:dht}
 A distributed hash table(\emph{DHT}) is a decentralized structure that works
 very similar to a hash table. Hash tables are used to identify items in a
 database. The table performs simple mathematical operations generating a random
@@ -150,6 +151,7 @@ networks of nodes\cite{li2004comparing}, that's why it is used by IPFS to create
 its distributed file system.
 
 \subsubsection{BitTorrent - File sharing}
+\label{tech:sec:ipfs:bt}
 BitTorrent \cite{cohen2003incentives} is a P2P file sharing system used
 worldwide. In this system, files are divides into very small chucks of data, and
 are shared in a peer-to-peer network. Each peer aims to maximize its download
@@ -169,6 +171,7 @@ IPFS uses three main features from BitTorrent's protocol\cite{benet2014ipfs}:
 \end{itemize}
 
 \subsubsection{Git - Version control system}
+\label{tech:sec:ipfs:git}
 Git is a distributed version control system (\emph{DVCS})\cite{torvalds2010git}.
 Git was born in 2005 when the development process of the Linux kernel lost its
 version control system. The Linux kernel is one of the biggest free software
@@ -191,23 +194,25 @@ that IPFS inherits from Git are: \cite{benet2014ipfs}:
 \end{itemize}
 
 \subsubsection{Self-Certified File Systems}
-
+\label{tech:sec:ipfs:scfs}
 
 \section{Ethereum}
-
+\label{tech:sec:ethereum}
 \figura{cryptomap.png}{width=0.9\linewidth}{criptomap}{Mapa de las criptos}
 
 Ethereum~\cite{buterin2014ethereum} is a very novel technology that allows the
 creation of distributed applications that run in an arbitrary large and
-trust-less network of nodes. Ethereum is based on
-Blockchain, the technology behind Bitcoin~\cite{nakamoto2008bitcoin}, and
-facilitates the creation of Bitcoin 2.0 applications, solving most of the
-technical issues inherent to decentralized platforms, like the one we introduce
-in this work. The use of this technology provides significant advantages for our
-application, as it does not require a central organization to manage the
-projects and bets. In particular, users don’t need to trust in a third party
-with their funds, and the network is resistant to node failures and attacks.
+trust-less network of nodes.
 
+\subsection{Blockchain}
+\label{tech:sec:ethereum:bc}
+Blockchain is the technology behind Bitcoin~\cite{nakamoto2008bitcoin} that
+provides a decentralized ledger of 
+
+\subsection{Smart Contracts}
+\label{tech:sec:ethereum:sm}
+The use of this technology provides significant advantages for our
+application, as it does 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../Tesis.tex"

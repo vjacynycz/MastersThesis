@@ -18,14 +18,19 @@
 \BOOKMARK [1][-]{section.3.2}{Technology}{chapter.3}% 18
 \BOOKMARK [2][-]{subsection.3.2.1}{IPFS}{section.3.2}% 19
 \BOOKMARK [1][-]{section.3.3}{Ethereum}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{Platform Description}{}% 21
-\BOOKMARK [1][-]{subsection.4.0.1}{Transparent Peer Review Governance}{chapter.4}% 22
-\BOOKMARK [2][-]{subsection.4.0.2}{The Peer Review Reputation network}{subsection.4.0.1}% 23
-\BOOKMARK [2][-]{subsection.4.0.3}{Distributed Open Access infrastructure}{subsection.4.0.1}% 24
-\BOOKMARK [1][-]{section.4.1}{Privacy Settings of Open Peer Review and Rating}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.1.1}{Anonymous Rating}{section.4.1}% 26
-\BOOKMARK [0][-]{chapter.5}{Results and discussion}{}% 27
-\BOOKMARK [1][-]{section.5.1}{Cool Section}{chapter.5}% 28
-\BOOKMARK [0][-]{chapter.6}{Conclusions and future work}{}% 29
-\BOOKMARK [0][-]{chapter*.10}{Bibliograf\355a}{}% 30
-\BOOKMARK [0][-]{fin.0}{Fin}{}% 31
+\BOOKMARK [2][-]{subsection.3.3.1}{Blockchain}{section.3.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.2}{Smart Contracts}{section.3.3}% 22
+\BOOKMARK [0][-]{chapter.4}{Platform Description}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Transparent Peer Review Governance}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.2}{The Peer Review Reputation network}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.3}{Distributed Open Access infrastructure}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.4}{Privacy Settings of Open Peer Review and Rating}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.4.1}{Anonymous Rating}{section.4.4}% 28
+\BOOKMARK [1][-]{section.4.5}{Architecture}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.5.1}{Smart Contract Architecture}{section.4.5}% 30
+\BOOKMARK [0][-]{chapter.5}{Results and discussion}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Cool Section}{chapter.5}% 32
+\BOOKMARK [0][-]{chapter.6}{Conclusions and future work}{}% 33
+\BOOKMARK [1][-]{section.6.1}{Future Work}{chapter.6}% 34
+\BOOKMARK [0][-]{chapter*.12}{Bibliograf\355a}{}% 35
+\BOOKMARK [0][-]{fin.0}{Fin}{}% 36

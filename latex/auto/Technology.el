@@ -2,6 +2,14 @@
  "Technology"
  (lambda ()
    (LaTeX-add-labels
-    "tech:sec:ipfs"))
+    "tech"
+    "tech:sec:ipfs"
+    "tech:sec:ipfs:dht"
+    "tech:sec:ipfs:bt"
+    "tech:sec:ipfs:git"
+    "tech:sec:ipfs:scfs"
+    "tech:sec:ethereum"
+    "tech:sec:ethereum:bc"
+    "tech:sec:ethereum:sm"))
  :latex)
 

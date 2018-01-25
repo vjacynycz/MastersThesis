@@ -77,6 +77,7 @@
     "smith1999opening"
     "sharples2016blockchain"
     "kaminsky2011spelunking"
-    "kalodner2015empirical"))
+    "kalodner2015empirical"
+    "croman2016scaling"))
  :bibtex)
 
