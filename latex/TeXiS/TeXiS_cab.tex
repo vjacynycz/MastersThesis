@@ -86,9 +86,6 @@
 % de \section. Y eso es precisamente lo que he utilizado al definir la
 % cabecera.
 
-
-
-
 % Paquete  para mejorar  el estilo  de  las cabeceras.  El paquete  es
 % fancyhdr.   En  versiones   antiguas  de   LaTeX,  el   paquete  era
 % fancyheader, que es el utilizado por ejemplo en el tutorial de LaTeX
@@ -120,7 +117,7 @@
 }
 
 \renewcommand{\headrulewidth}{0.2pt}
-\renewcommand{\chaptermark}[1]{%
+\renewcommand{\chaptermark}[1]{
 \markboth{\textsc{\chaptertitlename\ \thechapter.}\ #1}{}%
 }
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}

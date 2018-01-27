@@ -423,11 +423,28 @@ V.~Jacynycz, A.~Calvo, S.~Hassan, and A.~A. S{\'a}nchez-Ruiz, ``Betfunding: A
 J.~Peterson and J.~Krug, ``Augur: a decentralized, open-source platform for
   prediction markets,'' \emph{arXiv preprint arXiv:1501.01042}, 2015.
 
+\bibitem{bonneau2016ethiks}
+J.~Bonneau, ``Ethiks: Using ethereum to audit a coniks key transparency log,''
+  in \emph{International Conference on Financial Cryptography and Data
+  Security}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2016, pp.
+  95--105.
+
 \bibitem{cryptocompare}
 \BIBentryALTinterwordspacing
 C.~Eisenberg. Graphical comparison of all cryptocurrencies. [Online].
   Available: \url{https://www.cryptocoincharts.info/coins/graphicalComparison}
 \BIBentrySTDinterwordspacing
+
+\bibitem{wood2014ethereum}
+G.~Wood, ``Ethereum: A secure decentralised generalised transaction ledger,''
+  \emph{Ethereum Project Yellow Paper}, vol. 151, pp. 1--32, 2014.
+
+\bibitem{delmolino2016step}
+K.~Delmolino, M.~Arnett, A.~Kosba, A.~Miller, and E.~Shi, ``Step by step
+  towards creating a safe smart contract: Lessons and insights from a
+  cryptocurrency lab,'' in \emph{International Conference on Financial
+  Cryptography and Data Security}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Springer, 2016, pp. 79--94.
 
 \bibitem{van1999effect}
 S.~Van~Rooyen, F.~Godlee, S.~Evans, N.~Black, and R.~Smith, ``Effect of open

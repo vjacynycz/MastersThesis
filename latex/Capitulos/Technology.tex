@@ -278,6 +278,10 @@ develop decentralized and secure applications in a simple
 way~\cite{buterin2014ethereum}. These applications are called ``smart
 contracts'' and are written in the Ethereum's blockchain.
 
+Ethereum's cryptocurrency is called ``ETH'' and not only works like Bitcoin, to
+exchange money between users, but to \emph{fuel} the smart contracts' execution,
+running its source code for a small amount of ETH.
+
 Smart contracts are written in a programming language called
 Solidity\footnote{http://solidity.readthedocs.io/en/develop/} provided by the
 Ethereum's developers. This language is called contract-oriented and it was
@@ -285,14 +289,48 @@ influenced by C++, Python and JavaScript. Solidity offers the possibility to
 create a wide range of decentralized applications in the blockchain in which
 users do not have to trust a centralized organization.
 
-Some of the most important areas for decentralized apps are: gambling
-games~\cite{piasecki2016gaming}, voting systems~\cite{mccorry2017smart},
-crowdfunding~\cite{jacynycz2016betfunding}, prediction
-markets~\cite{peterson2015augur}, 
-
-Today it is the most exchanged currency within cryptocurrencies (see
+These contracts also have the capacity to store an transfer money, making them
+the perfect tool to implement a wide range of decentralized applications like:
+gambling games~\cite{piasecki2016gaming}, voting
+systems~\cite{mccorry2017smart}, crowdfunding~\cite{jacynycz2016betfunding},
+prediction markets~\cite{peterson2015augur}, transparency
+systems~\cite{bonneau2016ethiks} and so on. Today it is the most exchanged
+currency within cryptocurrencies (see
 figure~\ref{criptomap}~\cite{cryptocompare}).
-\subsubsection{Transactions in Ethereum}
+
+Smart contracts offer us a framework to design distributed platforms like the
+one proposed in this work, in which all transactions that interact with the
+scientific publication process can be cryptographically signed (see
+section~\ref{plat:trans}).
+
+\subsubsection{Accounts and Transactions}
+An address in ethereum is a 32-byte string that symbolizes a person's account or
+an smart contract:
+\begin{itemize}
+\item \textbf{Personal accounts:} These are the accounts of the users who want
+  to interact with the Ethereum network. Each one has its address and a balance.
+\item \textbf{Contract accounts:} A smart contract also is identified by an
+  Ethereum address. It contains the source code, a balance with the available
+  money, and its own internal memory where it saves all the contract's
+  information.
+\end{itemize}
+
+In this way, users and contract behave very similar in the blockchain, and to
+communicate these addresses, Ethereum uses transactions.
+
+Smart contracts behavior is transaction-based~\cite{wood2014ethereum}. once a
+contract is deployed in the blockchain, users (or other contracts) may send
+transactions to run its code. Each transaction has a payload, containing the
+data required to execute the desired part of the contract. This execution has a
+fee that users have to pay to the network based on how complex is the code they
+want to run.
+
+Ethereum's transaction-based smart contracts have changed the paradigm of modern
+software development, since the priority when developing a smart contract is to
+reduce the transaction costs of each interaction~\cite{delmolino2016step}.
+
+\figura{transaction.png}{width=0.9\linewidth}{tech:sec:eth:tx:diagram}{Blockchain's
+  state change through transactions}
 
 
 %%% Local Variables:

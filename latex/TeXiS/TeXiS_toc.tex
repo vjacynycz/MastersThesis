@@ -58,7 +58,7 @@
 % nivel 1.
 
 \ifpdf
-   \pdfbookmark{Índices}{indices}
+   \pdfbookmark{Indexes}{indexes}
 \fi
 
 % Tabla de contenidos.
@@ -71,10 +71,10 @@
 % usando la  informaci�n sobre los  cap�tulos y dem�s guardadas  en el
 % .toc
 \ifpdf
-   \pdfbookmark[1]{Tabla de contenidos}{tabla de contenidos}
+   \pdfbookmark[1]{Table of contents}{table of contents}
 \fi
 
-\cabeceraEspecial{\'Indice}
+\cabeceraEspecial{Index}
 
 \tableofcontents
 
@@ -85,11 +85,13 @@
 % La idea es semejante que para  el .toc del �ndice, pero ahora se usa
 % extensi�n .lof (List Of Figures) con la informaci�n de las figuras.
 
-\cabeceraEspecial{\'Indice de figuras}
+
 
 \ifpdf
-   \pdfbookmark[1]{Índice de figuras}{indice de figuras}
+   \pdfbookmark[1]{Index of figures}{index of figures}
 \fi
+
+\cabeceraEspecial{Index of Figures}
 
 \listoffigures
 
@@ -99,10 +101,10 @@
 % Como antes, pero ahora .lot (List Of Tables)
 
 \ifpdf
-   \pdfbookmark[1]{Índice de tablas}{indice de tablas}
+   \pdfbookmark[1]{Index of tables}{index of tables}
 \fi
 
-\cabeceraEspecial{\'Indice de tablas}
+\cabeceraEspecial{Index of tables}
 
 \listoftables
 

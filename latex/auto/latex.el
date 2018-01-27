@@ -108,6 +108,10 @@
     "mccorry2017smart"
     "jacynycz2016betfunding"
     "bonneau2016ethiks"
-    "peterson2015augur"))
+    "peterson2015augur"
+    "wood2014ethereum"
+    "delmolino2016step")
+   (LaTeX-add-environments
+    '("SubFloat" LaTeX-env-args ["argument"] 1)))
  :bibtex)
 

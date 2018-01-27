@@ -180,45 +180,45 @@ Warning--empty journal in buterin2014ethereum
 Warning--empty journal in kaluszka2010distributed
 
 Done.
-You've used 96 entries,
+You've used 99 entries,
             4087 wiz_defined-function locations,
-            1346 strings with 23621 characters,
-and the built_in function-call counts, 67334 in all, are:
-= -- 5588
-> -- 1395
-< -- 556
-+ -- 764
-- -- 232
-* -- 3063
-:= -- 10301
-add.period$ -- 215
-call.type$ -- 96
-change.case$ -- 94
-chr.to.int$ -- 1230
-cite$ -- 100
-duplicate$ -- 4968
-empty$ -- 5502
-format.name$ -- 292
-if$ -- 15737
+            1360 strings with 24059 characters,
+and the built_in function-call counts, 69689 in all, are:
+= -- 5774
+> -- 1442
+< -- 578
++ -- 790
+- -- 239
+* -- 3170
+:= -- 10648
+add.period$ -- 223
+call.type$ -- 99
+change.case$ -- 97
+chr.to.int$ -- 1284
+cite$ -- 103
+duplicate$ -- 5135
+empty$ -- 5711
+format.name$ -- 300
+if$ -- 16296
 int.to.chr$ -- 0
-int.to.str$ -- 96
-missing$ -- 835
-newline$ -- 331
-num.names$ -- 95
-pop$ -- 1902
+int.to.str$ -- 99
+missing$ -- 862
+newline$ -- 340
+num.names$ -- 98
+pop$ -- 1965
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 5321
+skip$ -- 5502
 stack$ -- 0
-substring$ -- 3051
-swap$ -- 3945
-text.length$ -- 146
+substring$ -- 3178
+swap$ -- 4078
+text.length$ -- 150
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 96
+type$ -- 99
 warning$ -- 4
-while$ -- 327
-width$ -- 98
-write$ -- 946
+while$ -- 342
+width$ -- 101
+write$ -- 974
 (There were 37 error messages)

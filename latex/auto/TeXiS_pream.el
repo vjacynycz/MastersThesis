@@ -55,6 +55,7 @@
     "pdfBorderAttrs"
     "tablename"
     "listtablename"
+    "listfigurename"
     "contentsname"
     "chaptername")
    (LaTeX-add-environments
