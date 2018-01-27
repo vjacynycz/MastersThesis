@@ -78,37 +78,41 @@ these divided in other three parts:~\cite{osterwalder2014value}:
 We decided to use this methodology for the definition of the final platform,
 since it established the general development framework of the application.
 
-\subsection{Agile methodologies} \TODO{REPASAR}
+\subsection{Agile methodologies}
+Traditional software development methodologies are being eclipsed by new light
+or agile methodologies. These methodologies are characterized by continuous
+integration, iterative development and the ability to assume changes in business
+requirements~\cite{boehm2005management,livermore2008factors}.
 
-El gran crecimiento de internet y la economía digital ha alterado el concepto de
-ingeniería del software. Las metodologías de desarrollo de software (\emph{MDS})
-tradicionales están siendo eclipsadas por nuevas \emph{MDS} ligeras o \emph{MDS}
-ágiles. Estas metodologías (en adelante \emph{MDSAs}) están caracterizadas por
-la integración continua, desarrollo iterativo y la capacidad de asumir cambios
-en los requerimientos de negocio.\cite{boehm2005management,livermore2008factors}
+One of the most popular is known as Extreme
+Programming~\cite{lindstrom2004extreme} based on a series of basic concepts when
+carrying out the development of a program: code simplicity and rapid
+prototyping, continuous customer communication with the development team,
+responsibility of the code of all the members of the group, short and quick
+meetings, refactoring and continuous integration~\cite{theunissen2005search}.
 
-La \emph{MDSAs} más popular es conocida como programación extrema o
-\emph{Extreme Programming (XP)}\cite{lindstrom2004extreme} basada en una serie
-de conceptos básicos a la hora de realizar el desarrollo de un programa:
-simplicidad del código y prototipado rápido, comunicación continua del cliente
-con el equipo de desarrollo, responsabilidad del código de todos los integrantes
-del grupo, reuniones cortas y rápidas, refactorización e integracción
-continua.\cite{theunissen2005search,livermore2008factors}
+Another well-known method within agile methodologies is
+scrum~\cite{rising2000scrum}, which uses two-week frameworks to perform
+development sprints and planning meetings. The use of these methodologies allows
+developers to create better quality software in shorter periods of time and are
+designed for small teams from three to nine developers.
 
-Otros métodos dentro de las \emph{MDSAs} son scrum\cite{rising2000scrum},
-métodos cristalinos\cite{cockburn2004crystal} y desarrollo basado en
-funcionalidades (en inglés \emph{FDD})\cite{coad1999java}. El uso de estas
-\emph{MDSAs} permite a los desarrolladores crear software de mejor calidad en
-periodos de tiempo más cortos. Estas metodologías han sido desarrolladas para
-mejorar el proceso de desarrollo, quitando las barreras a la aceptación de
-cambios en los requerimientos del cliente, un hecho que se da con bastante
-frecuencia\cite{lindstrom2004extreme}.
+I used these two methodologies to develop the platform that we were defining.
+Every Saturday we had a weekly meeting where we were adding or removing
+functionality to the platform. Extreme programming allowed me to meet design
+demands without sacrificing development time. At the end of each session, we
+planned the whole week and set the date for the next meeting.
 
 \section{Technology}
 \label{tech}
-To face the challenges proposed by this project, there are many possibilities to
-distribute both the data and the information about the reputation network. To
-build a robust and decentralized system i
+
+The proposed system relies upon two emerging distributed technologies. On the
+one hand, the Blockchain~\cite{buterin2014ethereum} provides a public
+decentralized ledger to record the system's interactions. On the other hand,
+IPFS~\cite{benet_ipfs-content_2014} is a distributed file system to store all
+the papers and reviews sent to the platform. This ensures that all the
+information is persistent, free and accessible, and does not rely on a
+centralized server.
 
 % -------------------------------------------------------------------
 \subsection{IPFS}
@@ -120,7 +124,7 @@ network. IPFS works very similar to HTTP protocol but in a BitTorrent way. It
 can be seen as a giant git repository where everyone can store, share and
 exchange files\cite{benet2014ipfs}.
 
-IPFS merges three main ideas: Distributed Hash Tables, BitTorrent, Git and
+IPFS merges four main ideas: Distributed Hash Tables, BitTorrent, Git and
 Self-Certified Systems.
 
 \subsubsection{Distributed Hash Tables}
@@ -196,23 +200,101 @@ that IPFS inherits from Git are: \cite{benet2014ipfs}:
 \subsubsection{Self-Certified File Systems}
 \label{tech:sec:ipfs:scfs}
 
-\section{Ethereum}
+A self-certified file system (\emph{SCFS}) is a secure file system that avoids
+internal key management, using public keys to map file names, making
+self-certifying pathnames. Key management occurs outside the system, letting the
+user choose the desired procedure to generate file
+names~\cite{mazieres2000self}.
+
+The name of an self-certified file system assure its server. Users can verify
+the public key offered by a \emph{SCFS} server and negotiate a shared secret to
+secure all traffic.
+
+IPFS tries to connect these ideas into a cohesive, trustful and decentralized
+file system. It is build on top of a peer-to-peer network, so no nodes are
+privileged, and all of those store IPFS objects in local storage. These objects
+represent files or other data structures. \todo{terminar explicar IPFS}
+
+\subsection{Ethereum}
 \label{tech:sec:ethereum}
-\figura{cryptomap.png}{width=0.9\linewidth}{criptomap}{Mapa de las criptos}
+%
 
 Ethereum~\cite{buterin2014ethereum} is a very novel technology that allows the
 creation of distributed applications that run in an arbitrary large and
-trust-less network of nodes.
+trust-less network of nodes. Ethereum's strength rely on three main concepts:
+blockchain, smart contract and transactions.
 
-\subsection{Blockchain}
+\subsubsection{Blockchain}
 \label{tech:sec:ethereum:bc}
-Blockchain is the technology behind Bitcoin~\cite{nakamoto2008bitcoin} that
-provides a decentralized ledger of 
+In the decade of the 80s and the 90s, decentralized forms of payment began to
+appear, such as ecash~\cite{digicash} that offered a currency with a high level
+of privacy; It was then that the concept of ``anonymous electronic money'' began
+to emerge.
 
-\subsection{Smart Contracts}
+Wei Dai in 1998 published his proposal for electronic money called
+B-money~\cite{bmoney} and from this idea, other proposals have emerged such as
+Bit gold~\cite{bitgold}, improving the implementation of a cryptocurrency using
+RPOW~\cite{finney2005rpow}, an extension of the Hashcash work test
+system~\cite{back2002hashcash}.
+
+In 2009, the idea of a decentralized currency first emerged, when Satoshi
+Nakamoto published the first version of Bitcoin~\cite{nakamoto2008bitcoin}. The
+purpose of this currency was to create a fully decentralized electronic payment
+system, using cryptographic tests instead of trust through a concept called
+proof of work (\emph{POW}).
+
+All monetary transactions of the system are stored in a data block until
+reaching a specific size. The idea of \emph{POW} is to add a random number
+(called ``nonce'') to that data so that when performing a hash function of the
+whole block, it has a certain number of leading zeros. Once a block is created,
+it is used as reference to the next block of data, adding the hash of the
+previous block to the next one. This system is called the
+blockchain~\cite{antonopoulos2014mastering} (see
+figure~\ref{tech:sec:eth:bc:diagram}).
+
+\figura{blockchain.png}{width=0.6\linewidth}{tech:sec:eth:bc:diagram}{Blockchain
+  representation diagram}
+
+All the nodes compete to find the next block, because when one of them manages
+to find the nonce to create the hash with leading zeros, notifies it to all the
+nodes of the network and gains 12.5 bitcoins~\cite{barber2012bitter}.
+
+This system makes it practically impossible to falsify a transaction in the
+blockchain, since the minimum change would cause an totally different hash from
+the blockchains of the other nodes, provoking a desyncronization to the
+peer-to-peer network. However, this system is still vulnerable to attacks aimed
+at specific users, such as man in the middle attacks~\cite{moore2013beware}.
+
+Ethereum uses this technology, not only for monetary exchanges, but for the
+execution of small fragments of code called ``smart contracts''.
+
+\subsubsection{Smart Contracts}
 \label{tech:sec:ethereum:sm}
-The use of this technology provides significant advantages for our
-application, as it does 
+\figura{cryptomap.png}{width=0.7\linewidth}{criptomap}{Existing cryptocurrencies
+  represented by purchase-sale volume}
+
+Ethereum was born inspired by the Bitcoin concept to offer any user a tool to
+develop decentralized and secure applications in a simple
+way~\cite{buterin2014ethereum}. These applications are called ``smart
+contracts'' and are written in the Ethereum's blockchain.
+
+Smart contracts are written in a programming language called
+Solidity\footnote{http://solidity.readthedocs.io/en/develop/} provided by the
+Ethereum's developers. This language is called contract-oriented and it was
+influenced by C++, Python and JavaScript. Solidity offers the possibility to
+create a wide range of decentralized applications in the blockchain in which
+users do not have to trust a centralized organization.
+
+Some of the most important areas for decentralized apps are: gambling
+games~\cite{piasecki2016gaming}, voting systems~\cite{mccorry2017smart},
+crowdfunding~\cite{jacynycz2016betfunding}, prediction
+markets~\cite{peterson2015augur}, 
+
+Today it is the most exchanged currency within cryptocurrencies (see
+figure~\ref{criptomap}~\cite{cryptocompare}).
+\subsubsection{Transactions in Ethereum}
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../Tesis.tex"

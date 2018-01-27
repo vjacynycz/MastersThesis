@@ -4,7 +4,7 @@
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("book" "11pt" "a4paper" "twoside")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
-                     '(("geometry" "lmargin=4cm" "rmargin=3cm")))
+                     '(("geometry" "lmargin=4cm" "rmargin=3cm") ("todonotes" "colorinlistoftodos" "textwidth=4cm" "shadow")))
    (TeX-run-style-hooks
     "latex2e"
     "config"
@@ -27,11 +27,14 @@
     "book"
     "bk11"
     "TeXiS/TeXiS"
-    "geometry")
+    "geometry"
+    "todonotes")
    (TeX-add-symbols
     '("compilaApendice" 1)
     '("compilaCapitulo" 1)
     "ficherosBasicosTeXiS"
-    "ficherosBasicosTexto"))
+    "ficherosBasicosTexto")
+   (LaTeX-add-environments
+    '("SubFloat" LaTeX-env-args ["argument"] 1)))
  :latex)
 
