@@ -318,33 +318,123 @@ Como solucion, la plataforma realiza la funcion hash en base32 de la dirección
 IPFS, convirtiendo el tipo de dato a uno mucho más barato para reducir en un
 30\% el coste de transacción.
 
-La estructura dentro de Ethereum está separada en cuatro contratos inteligentes:
 
-\begin{itemize}
-\item \textbf{Decentralized Journal:} Es el contrato desde el que se controlan
-  todas las interacciones con los autores y los editores. Los autores
-  interactuan con este contrato para enviar los papers, y los editores asignan a
-  revisores para el proceso de revision por pares.
-\item \textbf{Decentralized Library:} Este contrato es el que almacena las
-  direcciones IPFS de los papers y controla si están aceptados por el journal o
-  no. Es el que se encarga de convertir una dirección de base58 a bytes32 para
-  que sea manejada por la plataforma.
-\item \textbf{Reviewer Reputation Hub:} Se encarga de almacenar las direcciones,
-  los campos de investigación, y la reputación de los revisores que actuan con
-  la plataforma. Con este contrato interactuan los editores que quieran
-  encontrar a un revisor para realizar el proceso de revisión por pares.
-\item \textbf{Reviews Library:} Es el contrato en el que se almacenan las
-  reviews que hacen los revisores de los papers. A través de este contrato, se
-  pueden puntuar las revisiones, implicando la ganancia o perdida de la
-  reputación del revisor que la ha realizado.
-\end{itemize}
+\figura{contracts.png}{width=0.93\linewidth}{contracts:uml}{Diagrama UML del la
+  estructura de contratos}
 
-\figura{contracts.png}{width=0.8\linewidth}{plat:sec:scarchitecture:uml}{Diagrama
-  UML del la estructura de contratos}
+La estructura dentro de Ethereum está separada en cuatro contratos inteligentes
+como se muestra en la figura \ref{contracts:uml}.
 
-El diagrama \ref{plat:sec:scarchitecture:uml} intenta ilustrar la estructura de
-los contratos a través de un UML, si asemejamos los contratos inteligentes de
-ethereum como objetos.
+\subsubsection*{Decentralized Journal:} Es el contrato desde el que se controlan
+todas las interacciones con los autores y los editores. Los autores interactuan
+con este contrato para enviar los papers, y los editores asignan a revisores
+para el proceso de revision por pares.
+
+Este contrato tiene una serie de direcciones ethereum asociadas a los editores
+(que son los que pueden asignar revisores) y una referencia a la dirección del
+contrato de la librería donde se envían los papers. Además a través de este
+contrato, los revisores envían las revisones que les han sido asignadas.
+
+\subsubsection*{Decentralized Library} Este contrato es el que almacena las
+direcciones IPFS de los papers y controla si están aceptados por el journal o
+no.
+
+Es el que se encarga de convertir una dirección de base58 a bytes32 para que sea
+manejada por la plataforma. Esta conversión se realiza en dos pasos: primero el
+navegador web a través de javaScrpt deshace la base58 obteniendo los datos de
+identificación de un archivo IPFS (ver seccion \ref{tech:sec:ipfs}). Luego
+almacena estos datos en el struct ``Multihash'' y realiza una función hash para
+obtener un dato mucho más eficiente para trabajar en Ethereum. Este hash es el
+que se propagará por el sistema de contratos como idetificador del paper que se
+ha enviado.
+
+Además cada paper almacena todas las revisiones que tiene a trasvés de un struct
+``Review''. Este struct tiene una dirección IPFS con la review realizada, la
+dirección del reviewer y un entero representando si el paper es aceptado o no.
+
+\subsubsection*{RatingStorage}
+Este contrato tiene como finalidad almacenar los ratings de las reviews que han
+hecho los reviewers, y se encarga de dar la reputacion a estos.
+
+Cada ratrings es represetnado por un struct que tiene: un hash que identifica
+univocamente la review de un paper hecha por un revisor, la dirección de la
+persona que realiza el rating y un score que representa la reputacion que se le
+da al revisor.
+
+Respecto al sistema de reputación se decidió adoptar un sistema de reputación de
+cinco estrellas explicado en la sección \ref{rep:system}
+
+\subsubsection*{ReviewersHub}
+
+Se encarga de almacenar las direcciones, los campos de investigación, y la
+reputación de los revisores que etán registrados en la plataforma.
+
+Con este contrato interactuan el contrato de Rating storage para dar las
+puntuaciones de reputación a los revisores, los nuevos revisores que quieran
+registrarse en la plataforma y los editores que quieran encontrar a un revisor
+para realizar el proceso de revisión por pares.
+
+
+El diagrama \ref{contracts:uml} intenta ilustrar la estructura de los contratos
+a través de un UML, si asemejamos los contratos inteligentes de ethereum como
+objetos.
+
+
+\section{Reputation system}
+
+De los muchos sistemas de reputación comentados en la sección \ref{soa:rs} se ha
+decidido para la plataforma, un basado en un rating de cinco
+estrellas~\cite{kinateder2003architecture}. Este sistema de reputación esta
+presente en muchas plataformas online como
+Tripadvisor\footnote{https://www.tripadvisor.com/},
+Amazon\footnote{https://www.amazon.com/}, Google
+Play\footnote{https://play.google.com/} y otras grandes plataformas en las que
+los productos y servicios son votados por los usuarios.
+
+Al estar implementado directamente en la blokchcain, todas las interacciones son
+totoalemtne públicas y auditables, con lo que cualquier usuario puede ver quien
+ha votado a qué revisión y con qué puntuacion, por lo que es un sistema en el
+que no existe de base el anonimato. Esto permite disuadir los problemas
+comentados en la sección \ref{soa:rs} ya que los usuarios que realizan ataques
+dirigidfos o rating injustas se ven expuestos públicamente en la red.
+
+El funcionamiento interno tiene varios sencillos pasos:
+\begin{enumerate}
+\item Al hacer una revisión, se crea en el sistema un hash
+  (SHA-3~\cite{aumasson2008sha}) con: la dirección del revisor, la dirección del
+  paper al que revisa y la dirección del journal que le asignó la revisión. Este
+  hash identifica unívocamente a la revisión dentro del sistema.
+\item Tanto los autores, como los editores y los otros revisores del paper
+  tienen la capacidad de asignar una puntuación del 1 al 5 indicando si piensan
+  que la review es justa o no.
+\item Por cada votación, el sistema registra al votante y le envía la reputación
+  al revisor, realizando un alisado exponencial de todas las votaciones que ha
+  recibido~\cite{gardner1985exponential}.
+\end{enumerate}
+
+A la hora de decidir si una review es justa o no hay varios puntos de
+vista~\cite{daniel1993guardians,cole1979fair} y no todas las personas estarán de
+acuerdo, pero si se puede ofrecer unas guía de actuación para la comunidad para
+intentar que todas las votaciones del sistema sean lo más justas posibles para
+todos los que la utilicen.
+
+Dentro de un sistema de reputación siempre existirá cierta controversia y
+siempre existirán métodos para poder aplacarla~\cite{dellarocas2000immunizing},
+pero el diseño se presenta en este trabajo es una prueba de concepto que irá
+evolucionando a medida que se diseñen nuevos sistemas para aplacar los problemas
+que surgen.
+
+\section{Proof of concept showcase}
+
+La prueba de concepto presentada bajo el nombre de ``Alexandría'' es una
+aplicación web que engloba todo el proceso de publicación academica actual. Esta
+demo se conecta al contrato descrito en la seccion \ref{contratos}
+\figura{homepage.png}{width=0.8\linewidth}{poc:homepage}{Diagrama UML del la
+  estructura de contratos}
+\figura{topic.png}{width=0.8\linewidth}{poc:topics}{Diagrama UML del la
+  estructura de contratos}
+\figura{rating.png}{width=0.8\linewidth}{poc:rating}{Diagrama UML del la
+  estructura de contratos}
 
 
 

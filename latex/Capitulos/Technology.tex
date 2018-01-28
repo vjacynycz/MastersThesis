@@ -38,7 +38,7 @@ were.
 
 After saying enough ideas to fill the board we filtered the ones that were
 impossible to achieve. Then, each one voted the best three, making a ranking of
-the 3-4 best projects to start working on. Some of the ideas were creating a
+the 3-4 best projects to start working on. So me of the ideas were creating a
 distributed \emp{wikipedia} with governance models, an application to contact
 people from minority groups in countries where they are persecuted collectives,
 a distributed and community driven NGO, and a crowdfunding platform for
@@ -332,6 +332,64 @@ reduce the transaction costs of each interaction~\cite{delmolino2016step}.
 \figura{transaction.png}{width=0.9\linewidth}{tech:sec:eth:tx:diagram}{Blockchain's
   state change through transactions}
 
+\subsection{Remix}
+\figura{remix.png}{width=0.95\linewidth}{tech:sec:remix:sc}{Remix smart contract
+  web compiler}Remix\footnote{https://remix.ethereum.org/} es un compilador online de contratos
+inteligentes diseñado por la comunidad de Ethereum que permite crear, compilar y
+desplegar contratos inteligentes tanto en una testnet como en la blockchain.
+
+Este compilador ofrece la posibilidad de poder probar los contratos a través de
+una máquina virtual que simula la blockchain de
+Ethereum~\cite{hildenbrandt2017kevm}. Tras desplegar un contrato a través de
+Remix, la plataforma genera elementos HTML que simulan botones de interacción
+con el código, sin tener que desarrollar un frontend para probar las funciones
+de este.
+
+Además Remix ofrece un debugger para poder seguir el proceso de ejecución de una
+transacción, un estimador del gas necesario para poder realizarla, un analizador
+de código para detectar posibles vulnerabilidades y un sistema de exportación
+para generar ABIs (ver seccion \ref{jsmm}).
+
+Esta herramienta facilita mucho el proceso de desarrollo, ya que se pueden
+probar diferentes implementaciones realizando minimos cambios en el código y sin
+tener que instalar ningun programa (ver figura~\ref{tech:sec:remix:sc}).
+
+\subsection{JavaScript and Metamask}
+\label{jsmm}
+Ethereum dispone de un sistema para conectar usuarios a la blockchain a través
+de los navegadores web. Existen varias formas de poder conectarse: mediante
+navegadores especiales como AlethZero o Mist, o mediante la utilización de
+Metamask.
+
+Metamask es una extensión de los navegadores web más comunes (como Firefox o
+Chrome) que permite al usuario conectarse tanto a la red de Ethereum como a una
+testnet personalizada. Contiene los mecanismos necesarios para poder realizar
+transacciones y comunicarse con los contratos inteligentes que están en la
+blockchain. Para poder utilzarlo simplemente hay que instalar un pequeño
+programa en el navegador y disponer de una dirección con fondos para poder
+realizar estas transacciones.
+
+JavaScript se utiliza para conectar con la dirección de un contrato inteligente
+y poder llamar a funciones específicas de este. Para ello el JavaScript ha de
+disponer de dos datos importantes:
+
+\begin{itemize}
+\item \textbf{La dirección del contrato:} Al cargar la página web que se conecta
+  al contrato se debe disponer de la dirección de Ethereum en el que está
+  alojado, ya que para todas las interacciones con la plataforma se han de
+  realizar transacciones a dicha dirección.
+\item \textbf{ABI del contrato:} ABI significa Aplication Biary Interface y es
+  una estructura de datos en la que se encuentran todas las funciones a las que
+  se puede llamar en un contrato inteligente. Es la forma que tiene javascript
+  de poder construir las transacciones para llamar a dichas funciones. La
+  generación del ABI suele ser automática cuando se crea un contrato
+  inteligente.
+\end{itemize}
+
+Estas dos tecnologías son las utilizadas para realizar pruebas en el contrato
+inteligente a través de un HTML personalizado que simulaba la plataforma.
+Tniendo en cuenta como serían las interacciones de todos los usuarios de la
+plataforma si migraran de los sistemas actuales.
 
 %%% Local Variables:
 %%% mode: latex

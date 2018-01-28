@@ -16,10 +16,10 @@
 
 
 \section{Alternative Publication systems}
-
+\label{soa:aps}
 Publication systems, as seen on section \ref{intro} are vampirizing the
-industry. However, there are some attempts to change this paradigm on behalf
-of science dissemination.
+industry. However, there are some attempts to change this paradigm on behalf of
+science dissemination.
 
 Open journal systems~\cite{willinsky2005open} is an open software designed to
 facilitate the publishing process. This project was created by the Public
@@ -40,41 +40,44 @@ publishers have started their own mega-journals. Featuring alternative impact
 metrics, reusability of figures and data, post-publication discussions and
 portable reviews from other journals~\cite{bjork2015have}.
 
-The continuous publication model is based on publishing individual papers migrating
-from the previous issue-based model~\cite{anderton2013continuous}. This method
-is seen as an altenative for open-access journals as it speeds up the
-publication process~\cite{haymanview}. \emph{DPSOS}\footnote{Decentralized
+The continuous publication model is based on publishing individual papers
+migrating from the previous issue-based model~\cite{anderton2013continuous}.
+This method is seen as an altenative for open-access journals as it speeds up
+the publication process~\cite{haymanview}. \emph{DPSOS}\footnote{Decentralized
   Publication System for Open Science} adopts this model by design (see
-section~\ref{tech:sec:ethereum:sm}) as it publish automatically papers that
-meet certain preconditions that are written in the blockchain.
+section~\ref{tech:sec:ethereum:sm}) as it publish automatically papers that meet
+certain preconditions that are written in the blockchain.
 
 Preprints are scientific papers that have not yet gone through the peer review
 process~\cite{harnad2003electronic}. Formerly, the preprints that were sent to
 the journals were private, and only accessible by the editors and assigned
 reviewers. But nowadays it is common to publish a preprint before sending it to
-a journal, uploading it to specialized platforms like arXiv\footnote{https://arxiv.org/} or Preprints\footnote{https://www.preprints.org/}~\cite{brown2001volution}. In fact there is
-a correlation between the upload of a preprint
-and early citations after the publication of the
-paper~\cite{shuai2012scientific}. This system is a possible solution to the
-cold-start problem that papers of new researchers who enter the
-academic career have~\cite{sugiyama2010scholarly}.
+a journal, uploading it to specialized platforms like
+arXiv\footnote{https://arxiv.org/} or
+Preprints\footnote{https://www.preprints.org/}~\cite{brown2001volution}. In fact
+there is a correlation between the upload of a preprint and early citations
+after the publication of the paper~\cite{shuai2012scientific}. This system is a
+possible solution to the cold-start problem that papers of new researchers who
+enter the academic career have~\cite{sugiyama2010scholarly}.
 
 Social networks have also made a dent in the academic world, creating platforms
 to contact other researchers and encouraging them to share open access papers.
 Some of the well-known are Research Gate\footnote{https://www.researchgate.net},
-Mendeley\footnote{https://www.mendeley.com} or Academia\footnote{http://academia.edu}. But despite the good intentions of the creators
-of these platforms, many of the journals demand the copyright of the papers they
-publish, preventing the authors from sharing them through these services.
+Mendeley\footnote{https://www.mendeley.com} or
+Academia\footnote{http://academia.edu}. But despite the good intentions of the
+creators of these platforms, many of the journals demand the copyright of the
+papers they publish, preventing the authors from sharing them through these
+services.
 
 
-Decentralized alternatives, in spite of their promises~\cite{bartlingblockchain},
-are still in their infancy. A few proposals, none of them functional to date,
-have appeared recently.
+Decentralized alternatives, in spite of their
+promises~\cite{bartlingblockchain}, are still in their infancy. A few proposals,
+none of them functional to date, have appeared recently.
 
-One of them is a peer review proposal that tries to solve some of the peer review socio-technical problems
-using cryptocurrencies~\cite{tennant2017multi}. It needs a critical threshold of
-research community engagement, changing the actual processes and platforms, to
-start being implemented.
+One of them is a peer review proposal that tries to solve some of the peer
+review socio-technical problems using cryptocurrencies~\cite{tennant2017multi}.
+It needs a critical threshold of research community engagement, changing the
+actual processes and platforms, to start being implemented.
 
 Blockchain-enabled apps have also been proposed, with voting and storage of
 publications. This is the case of Aletheia~\cite{morton2017aletheia}, a software
@@ -93,30 +96,35 @@ cryptocurrencies and blockchain-based journal that records the publication
 timestamps in the Bitcoin blockchain.
 
 \section{Reputation systems}
-
+\label{soa:rs}
 Reputation systems today arise from the need to trust unknown
 individuals~\cite{resnick2000reputation}. Many of the big internet communities
 like Stackexchange\footnote{https://stackexchange.com/} or
 reddit\footnote{https://www.reddit.com/} have their own reputation system.
 Reputation systems behavior may vary depending on the
-platform~\cite{josang2002beta}, but the most usual is the one where users get a score
-based on certain interaction with the community.
+platform~\cite{josang2002beta}, but the most usual is the one where users get a
+score based on certain interaction with the community.
 
 Reputation systems also have a very large niche in e-commerce webs such as
 Ebay\footnote{https://www.ebay.com}, in which people pay for a product sold by
 an unknown vendor. There must be a previous trust in the vendor before buying
-any product, so a reputation system offers a score given by other users that encourages you to trust
-or not that certain seller~\cite{resnick2002trust}.
+any product, so a reputation system offers a score given by other users that
+encourages you to trust or not that certain seller~\cite{resnick2002trust}.
 
 Reputation systems vary widely in scope, such as one for peer-to-peer
-computing~\cite{zhou2007powertrust}, vehicle ad-hoc~\cite{dotzer2005vars} and
-even Wikipedia~\cite{adler2007content}. All of them are based on an exchange
-of trust between users who use these services.
+computing~\cite{zhou2007powertrust}, vehicle ad-hoc~\cite{dotzer2005vars}, web
+services~\cite{moore2008reputation} and even Wikipedia~\cite{adler2007content}.
+All of them are based on an exchange of trust between users who use these
+services.
 
 This same concept was intended to be transferred within the blokchain using a
-token as a trust unit, which users exchanged as a sign of trust
-deposits among them~\cite{sharples2016blockchain}.
+token as a trust unit, which users exchanged as a sign of trust deposits among
+them~\cite{sharples2016blockchain}.
 
+But reputation systems also have problems when it comes to defend the users from
+attacks to individuals~\cite{hoffman2009survey} and unfair ratings
+~\cite{whitby2004filtering}, so the architecture chosen for it must consider
+these weak points and try to mitigate them.
 
 This paper proposes the development of a decentralized publication system for
 open science. It aims to challenge the technical infrastructure that supports
@@ -124,8 +132,8 @@ the middlemen role of traditional publishers. Due to the successes of the Open
 Access movement, some of the scientific knowledge is today freely provided by
 the publishers. However, the content is still mostly served from their
 infrastructure (i.e. servers, web platforms). This ownership of the
-infrastructure gives them a position of power over the scientific community which
-produces the contents~\cite{fuster2010governance}. Such central and
+infrastructure gives them a position of power over the scientific community
+which produces the contents~\cite{fuster2010governance}. Such central and
 oligopolistic position in science dissemination allows them to impose policies
 (e.g. copyright ownership, Open Access prices) and concentrate profits.
 

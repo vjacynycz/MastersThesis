@@ -20,8 +20,7 @@
     "tech:sec:ipfs:scfs"
     "tech:sec:ethereum"
     "tech:sec:ethereum:bc"
-    "tech:sec:ethereum:sm")
-   (LaTeX-add-environments
-    '("SubFloat" LaTeX-env-args ["argument"] 1)))
+    "tech:sec:ethereum:sm"
+    "jsmm"))
  :latex)
 

@@ -20,17 +20,24 @@
 \BOOKMARK [1][-]{section.3.2}{Technology}{chapter.3}% 20
 \BOOKMARK [2][-]{subsection.3.2.1}{IPFS}{section.3.2}% 21
 \BOOKMARK [2][-]{subsection.3.2.2}{Ethereum}{section.3.2}% 22
-\BOOKMARK [0][-]{chapter.4}{Platform Description}{}% 23
-\BOOKMARK [1][-]{section.4.1}{Transparent Peer Review Governance}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.2}{The Peer Review Reputation network}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.3}{Distributed Open Access infrastructure}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.4}{Privacy Settings of Open Peer Review and Rating}{chapter.4}% 27
-\BOOKMARK [2][-]{subsection.4.4.1}{Anonymous Rating}{section.4.4}% 28
-\BOOKMARK [1][-]{section.4.5}{Architecture}{chapter.4}% 29
-\BOOKMARK [2][-]{subsection.4.5.1}{Smart Contract Architecture}{section.4.5}% 30
-\BOOKMARK [0][-]{chapter.5}{Results and discussion}{}% 31
-\BOOKMARK [1][-]{section.5.1}{Cool Section}{chapter.5}% 32
-\BOOKMARK [0][-]{chapter.6}{Conclusions and future work}{}% 33
-\BOOKMARK [1][-]{section.6.1}{Future Work}{chapter.6}% 34
-\BOOKMARK [0][-]{chapter*.15}{Bibliograf\355a}{}% 35
-\BOOKMARK [0][-]{fin.0}{Fin}{}% 36
+\BOOKMARK [2][-]{subsection.3.2.3}{Remix}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.4}{JavaScript and Metamask}{section.3.2}% 24
+\BOOKMARK [0][-]{chapter.4}{Platform Description}{}% 25
+\BOOKMARK [1][-]{section.4.1}{Transparent Peer Review Governance}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.2}{The Peer Review Reputation network}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{Distributed Open Access infrastructure}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.4}{Privacy Settings of Open Peer Review and Rating}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.4.1}{Anonymous Rating}{section.4.4}% 30
+\BOOKMARK [1][-]{section.4.5}{Architecture}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.5.1}{Smart Contract Architecture}{section.4.5}% 32
+\BOOKMARK [1][-]{section.4.6}{Reputation system}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.7}{Proof of concept showcase}{chapter.4}% 34
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 35
+\BOOKMARK [1][-]{section.5.1}{Monetary Impact}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.2}{Review Time and Quality Impact}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.3}{Science Distribution}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.4}{Problems}{chapter.5}% 39
+\BOOKMARK [0][-]{chapter.6}{Conclusions and future work}{}% 40
+\BOOKMARK [1][-]{section.6.1}{Future Work}{chapter.6}% 41
+\BOOKMARK [0][-]{chapter*.20}{Bibliograf\355a}{}% 42
+\BOOKMARK [0][-]{fin.0}{Fin}{}% 43

@@ -20,6 +20,7 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated field_info (elt_size=8) to 10060 items from 5000.
 Database file #1: latex.bib
 I was expecting an "="---line 339 of file latex.bib
  : scrum at amazon. com}, author={Atlas, Alan},eev 
@@ -178,47 +179,49 @@ Warning--empty journal in binfield2013open
 Warning--empty journal in osborn1953applied
 Warning--empty journal in buterin2014ethereum
 Warning--empty journal in kaluszka2010distributed
+Warning--missing institution in hildenbrandt2017kevm
+Warning--empty journal in cole1979fair
 
 Done.
-You've used 99 entries,
+You've used 110 entries,
             4087 wiz_defined-function locations,
-            1360 strings with 24059 characters,
-and the built_in function-call counts, 69689 in all, are:
-= -- 5774
-> -- 1442
-< -- 578
-+ -- 790
-- -- 239
-* -- 3170
-:= -- 10648
-add.period$ -- 223
-call.type$ -- 99
-change.case$ -- 97
-chr.to.int$ -- 1284
-cite$ -- 103
-duplicate$ -- 5135
-empty$ -- 5711
-format.name$ -- 300
-if$ -- 16296
+            1411 strings with 25871 characters,
+and the built_in function-call counts, 76037 in all, are:
+= -- 6274
+> -- 1583
+< -- 614
++ -- 862
+- -- 266
+* -- 3452
+:= -- 11655
+add.period$ -- 247
+call.type$ -- 110
+change.case$ -- 108
+chr.to.int$ -- 1362
+cite$ -- 116
+duplicate$ -- 5630
+empty$ -- 6278
+format.name$ -- 334
+if$ -- 17766
 int.to.chr$ -- 0
-int.to.str$ -- 99
-missing$ -- 862
-newline$ -- 340
-num.names$ -- 98
-pop$ -- 1965
+int.to.str$ -- 110
+missing$ -- 956
+newline$ -- 373
+num.names$ -- 109
+pop$ -- 2197
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 5502
+skip$ -- 5995
 stack$ -- 0
-substring$ -- 3178
-swap$ -- 4078
-text.length$ -- 150
+substring$ -- 3372
+swap$ -- 4431
+text.length$ -- 160
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 99
-warning$ -- 4
-while$ -- 342
-width$ -- 101
-write$ -- 974
+type$ -- 110
+warning$ -- 6
+while$ -- 370
+width$ -- 113
+write$ -- 1070
 (There were 37 error messages)

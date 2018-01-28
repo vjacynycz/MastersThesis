@@ -22,16 +22,23 @@
 \contentsline {subsubsection}{\numberline {3.2.2.1}Blockchain}{14}{subsubsection.3.2.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2.2}Smart Contracts}{15}{subsubsection.3.2.2.2}
 \contentsline {subsubsection}{\numberline {3.2.2.3}Accounts and Transactions}{17}{subsubsection.3.2.2.3}
-\contentsline {chapter}{\numberline {4}Platform Description}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Transparent Peer Review Governance}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}The Peer Review Reputation network}{21}{section.4.2}
-\contentsline {section}{\numberline {4.3}Distributed Open Access infrastructure}{21}{section.4.3}
-\contentsline {section}{\numberline {4.4}Privacy Settings of Open Peer Review and Rating}{21}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Anonymous Rating}{23}{subsection.4.4.1}
-\contentsline {section}{\numberline {4.5}Architecture}{24}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Smart Contract Architecture}{25}{subsection.4.5.1}
-\contentsline {chapter}{\numberline {5}Results and discussion}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Cool Section}{29}{section.5.1}
-\contentsline {chapter}{\numberline {6}Conclusions and future work}{33}{chapter.6}
-\contentsline {section}{\numberline {6.1}Future Work}{34}{section.6.1}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{37}{chapter*.15}
+\contentsline {subsection}{\numberline {3.2.3}Remix}{17}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}JavaScript and Metamask}{18}{subsection.3.2.4}
+\contentsline {chapter}{\numberline {4}Platform Description}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Transparent Peer Review Governance}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Peer Review Reputation network}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Distributed Open Access infrastructure}{23}{section.4.3}
+\contentsline {section}{\numberline {4.4}Privacy Settings of Open Peer Review and Rating}{23}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Anonymous Rating}{25}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Architecture}{26}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Smart Contract Architecture}{27}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6}Reputation system}{30}{section.4.6}
+\contentsline {section}{\numberline {4.7}Proof of concept showcase}{31}{section.4.7}
+\contentsline {chapter}{\numberline {5}Discussion}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Monetary Impact}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}Review Time and Quality Impact}{34}{section.5.2}
+\contentsline {section}{\numberline {5.3}Science Distribution}{34}{section.5.3}
+\contentsline {section}{\numberline {5.4}Problems}{36}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusions and future work}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future Work}{38}{section.6.1}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{41}{chapter*.20}

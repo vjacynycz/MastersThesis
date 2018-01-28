@@ -110,8 +110,17 @@
     "bonneau2016ethiks"
     "peterson2015augur"
     "wood2014ethereum"
-    "delmolino2016step")
-   (LaTeX-add-environments
-    '("SubFloat" LaTeX-env-args ["argument"] 1)))
+    "delmolino2016step"
+    "hildenbrandt2017kevm"
+    "moore2008reputation"
+    "kinateder2003architecture"
+    "whitby2004filtering"
+    "hoffman2009survey"
+    "aumasson2008sha"
+    "gardner1985exponential"
+    "cole1979fair"
+    "daniel1993guardians"
+    "dellarocas2000immunizing"
+    "russel2008business"))
  :bibtex)
 
