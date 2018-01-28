@@ -5,7 +5,6 @@ A level-1 auxiliary file: Cascaras/cover.aux
 A level-1 auxiliary file: Cascaras/dedicatoria.aux
 A level-1 auxiliary file: Cascaras/agradecimientos.aux
 A level-1 auxiliary file: Cascaras/resumen.aux
-A level-1 auxiliary file: TeXiS/TeXiS_toc.aux
 A level-1 auxiliary file: Capitulos/Introduction.aux
 A level-1 auxiliary file: Capitulos/Soa.aux
 A level-1 auxiliary file: Capitulos/Technology.aux
@@ -185,7 +184,7 @@ Warning--empty journal in cole1979fair
 Done.
 You've used 110 entries,
             4087 wiz_defined-function locations,
-            1411 strings with 25871 characters,
+            1410 strings with 25852 characters,
 and the built_in function-call counts, 76037 in all, are:
 = -- 6274
 > -- 1583

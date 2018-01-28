@@ -222,8 +222,9 @@
 % P�gina sin cabeceras
 \thispagestyle{empty}
 
-\begin{cambiamargen}{-\cambioIzquierdo}{-\cambioDerecho}
+%\begin{cambiamargen}{\cambioIzquierdo}{-\cambioDerecho}
 
+\newgeometry{inner=2cm,outer=3cm,top=2cm}
 
 % En la primera hoja no se entiende de p�ginas pares e impares
 \newlength{\evensidemarginOriginal}
@@ -286,7 +287,11 @@
 
 \vfill %
 
-\end{cambiamargen}
+%\end{cambiamargen}
+
+\restoregeometry
+
+
 \newpage
 
 % P_gina que en la cara de detr_s del folio de la portada.

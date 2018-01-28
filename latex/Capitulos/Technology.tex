@@ -33,8 +33,8 @@ it~\cite{sutton1996brainstorming,mullen1991productivity}
 
 Leaving apart these problems, we decided to make a brainstorming session to
 define what we were going to do. Many ideas emerged and were capture into a
-white board without discrimination, no matter how hard or easy to implement they
-were.
+white board without discrimination, no matter hukow hard or easy to implement
+they were.
 
 After saying enough ideas to fill the board we filtered the ones that were
 impossible to achieve. Then, each one voted the best three, making a ranking of
@@ -127,7 +127,7 @@ exchange files\cite{benet2014ipfs}.
 IPFS merges four main ideas: Distributed Hash Tables, BitTorrent, Git and
 Self-Certified Systems.
 
-\subsubsection{Distributed Hash Tables}
+\subsubsection*{Distributed Hash Tables}
 \label{tech:sec:ipfs:dht}
 A distributed hash table(\emph{DHT}) is a decentralized structure that works
 very similar to a hash table. Hash tables are used to identify items in a
@@ -154,7 +154,7 @@ They behave very fast when it comes to searching for a key through massive
 networks of nodes\cite{li2004comparing}, that's why it is used by IPFS to create
 its distributed file system.
 
-\subsubsection{BitTorrent - File sharing}
+\subsubsection*{BitTorrent - File sharing}
 \label{tech:sec:ipfs:bt}
 BitTorrent \cite{cohen2003incentives} is a P2P file sharing system used
 worldwide. In this system, files are divides into very small chucks of data, and
@@ -174,7 +174,7 @@ IPFS uses three main features from BitTorrent's protocol\cite{benet2014ipfs}:
   strategy to improve BitTorrent's behavior facing exploitable scenarios.
 \end{itemize}
 
-\subsubsection{Git - Version control system}
+\subsubsection*{Git - Version control system}
 \label{tech:sec:ipfs:git}
 Git is a distributed version control system (\emph{DVCS})\cite{torvalds2010git}.
 Git was born in 2005 when the development process of the Linux kernel lost its
@@ -197,7 +197,7 @@ that IPFS inherits from Git are: \cite{benet2014ipfs}:
   remote references.
 \end{itemize}
 
-\subsubsection{Self-Certified File Systems}
+\subsubsection*{Self-Certified File Systems}
 \label{tech:sec:ipfs:scfs}
 
 A self-certified file system (\emph{SCFS}) is a secure file system that avoids
@@ -213,18 +213,19 @@ secure all traffic.
 IPFS tries to connect these ideas into a cohesive, trustful and decentralized
 file system. It is build on top of a peer-to-peer network, so no nodes are
 privileged, and all of those store IPFS objects in local storage. These objects
-represent files or other data structures. \todo{terminar explicar IPFS}
+represent files or other data structures.
+
+\com{terminar explicar IPFS}
 
 \subsection{Ethereum}
 \label{tech:sec:ethereum}
-%
 
 Ethereum~\cite{buterin2014ethereum} is a very novel technology that allows the
 creation of distributed applications that run in an arbitrary large and
 trust-less network of nodes. Ethereum's strength rely on three main concepts:
 blockchain, smart contract and transactions.
 
-\subsubsection{Blockchain}
+\subsubsection*{Blockchain}
 \label{tech:sec:ethereum:bc}
 In the decade of the 80s and the 90s, decentralized forms of payment began to
 appear, such as ecash~\cite{digicash} that offered a currency with a high level
@@ -268,7 +269,7 @@ at specific users, such as man in the middle attacks~\cite{moore2013beware}.
 Ethereum uses this technology, not only for monetary exchanges, but for the
 execution of small fragments of code called ``smart contracts''.
 
-\subsubsection{Smart Contracts}
+\subsubsection*{Smart Contracts}
 \label{tech:sec:ethereum:sm}
 \figura{cryptomap.png}{width=0.7\linewidth}{criptomap}{Existing cryptocurrencies
   represented by purchase-sale volume}
@@ -303,7 +304,7 @@ one proposed in this work, in which all transactions that interact with the
 scientific publication process can be cryptographically signed (see
 section~\ref{plat:trans}).
 
-\subsubsection{Accounts and Transactions}
+\subsubsection*{Accounts and Transactions}
 An address in ethereum is a 32-byte string that symbolizes a person's account or
 an smart contract:
 \begin{itemize}
@@ -334,62 +335,99 @@ reduce the transaction costs of each interaction~\cite{delmolino2016step}.
 
 \subsection{Remix}
 \figura{remix.png}{width=0.95\linewidth}{tech:sec:remix:sc}{Remix smart contract
-  web compiler}Remix\footnote{https://remix.ethereum.org/} es un compilador online de contratos
-inteligentes diseñado por la comunidad de Ethereum que permite crear, compilar y
-desplegar contratos inteligentes tanto en una testnet como en la blockchain.
+  web compiler}Remix\footnote{https://remix.ethereum.org/} is an online smart
+contract web compiler designed by the Ethereum community that allows users
+create, compile and deploy contracts both in a test net or in the Ethereum's
+blockchain.
 
-Este compilador ofrece la posibilidad de poder probar los contratos a través de
-una máquina virtual que simula la blockchain de
-Ethereum~\cite{hildenbrandt2017kevm}. Tras desplegar un contrato a través de
-Remix, la plataforma genera elementos HTML que simulan botones de interacción
-con el código, sin tener que desarrollar un frontend para probar las funciones
-de este.
+This compiler offers the possibility to try the functionality of the contracts
+through a virtual machine that simulates the blockchain's behavior called EVM
+(\emph{Ethereum Virtual Machine})~\cite{hildenbrandt2017kevm}. When deploying a
+contract with this platform, a series of HTML elements are generated, simulating
+a real deployment and allowing developers to interact with the contract, without
+the need of developing a frontend to try the contract behavior.
 
-Además Remix ofrece un debugger para poder seguir el proceso de ejecución de una
-transacción, un estimador del gas necesario para poder realizarla, un analizador
-de código para detectar posibles vulnerabilidades y un sistema de exportación
-para generar ABIs (ver seccion \ref{jsmm}).
+Remix also has a series of interesting features: a debugger to follow the
+execution process of a transaction, a gas calculator that estimates the gas cost
+of each transaction, a code analizer to detect possible vulnerabilities and an
+ABI export system (see section \ref{jsmm}).
 
-Esta herramienta facilita mucho el proceso de desarrollo, ya que se pueden
-probar diferentes implementaciones realizando minimos cambios en el código y sin
-tener que instalar ningun programa (ver figura~\ref{tech:sec:remix:sc}).
+This tool facilitate the process of smart contracts developments, since the web
+service allows to try different implementations of the same contract doing only
+small changes, without the need of installing any software (see figure
+~\ref{tech:sec:remix:sc}).
+
+\subsection{Testrpc}
+\label{testrpc}
+
+Testrpc
 
 \subsection{JavaScript and Metamask}
 \label{jsmm}
-Ethereum dispone de un sistema para conectar usuarios a la blockchain a través
-de los navegadores web. Existen varias formas de poder conectarse: mediante
-navegadores especiales como AlethZero o Mist, o mediante la utilización de
-Metamask.
+Ethereum smart contract interaction is usually a web application that connects
+to its address, and it has systems to connect users to the blockchain through
+web browsers. There are two different ways to achieve this: the first one is to
+install an specialized web browser like
+AlethZero\footnote{https://github.com/ethereum/alethzero},
+Mist\footnote{https://github.com/ethereum/mist} or
+Brave\footnote{https://brave.com/}that connects to the blockchain automatically.
+Or installing an extension like Metamask\footnote{https://metamask.io/}.
 
-Metamask es una extensión de los navegadores web más comunes (como Firefox o
-Chrome) que permite al usuario conectarse tanto a la red de Ethereum como a una
-testnet personalizada. Contiene los mecanismos necesarios para poder realizar
-transacciones y comunicarse con los contratos inteligentes que están en la
-blockchain. Para poder utilzarlo simplemente hay que instalar un pequeño
-programa en el navegador y disponer de una dirección con fondos para poder
-realizar estas transacciones.
 
-JavaScript se utiliza para conectar con la dirección de un contrato inteligente
-y poder llamar a funciones específicas de este. Para ello el JavaScript ha de
-disponer de dos datos importantes:
+Metamask is an web browser extension (available for Chrome, Firefox, and Opera)
+that allows its users to connect both to a Ethereum network or a custom test
+net. It contains the mechanism needed to make transactions and communicate with
+smart contracts in the blockchain. To use it, users only need to install the
+extension from the Metamask homepage and configure it with an Ethereum account.
+Metamask also allows the creation of new accounts, but to make transactions with
+the official blockchain, it has to have enough funds.
+
+So Metamask not only acts as bridge between a web browser and the Ethereum
+network, it also works as a wallet and support Ethereum's official tokens.
+
+JavaScript is used to connect to an smart contract address and be able to call
+to specific functions of it. To do so, the JavaScript code has to have two
+important data:
 
 \begin{itemize}
-\item \textbf{La dirección del contrato:} Al cargar la página web que se conecta
-  al contrato se debe disponer de la dirección de Ethereum en el que está
-  alojado, ya que para todas las interacciones con la plataforma se han de
-  realizar transacciones a dicha dirección.
-\item \textbf{ABI del contrato:} ABI significa Aplication Biary Interface y es
-  una estructura de datos en la que se encuentran todas las funciones a las que
-  se puede llamar en un contrato inteligente. Es la forma que tiene javascript
-  de poder construir las transacciones para llamar a dichas funciones. La
-  generación del ABI suele ser automática cuando se crea un contrato
-  inteligente.
+\item \textbf{Ethereum's contrat address:} When the user loads the web page to
+  connect to the contract, JavaScript must have the address in which it is
+  stored, because all the interactions with the platform are made through
+  transactions to this address.
+\item \textbf{Contract's ABI:} An ABI (Application Binary Interface) is a data
+  structure in which JavaScript can find all the methods a contract has. Each
+  method defines its inputs, outputs, type, if its payable and a state.
+  JavaScript uses this information to build the transactions to call
+  these methods (see listing \ref{abi}).
+
 \end{itemize}
 
-Estas dos tecnologías son las utilizadas para realizar pruebas en el contrato
-inteligente a través de un HTML personalizado que simulaba la plataforma.
-Tniendo en cuenta como serían las interacciones de todos los usuarios de la
-plataforma si migraran de los sistemas actuales.
+This two technologies were used to test the platform proposed in this work,
+using HTML and Testrpc to simulate a functional journal (see
+section \ref{poc})
+\newpage
+\begin{lstlisting}[frame=single,caption=ABI fragment example,label=abi]
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_reviewerAddress",
+				"type": "address"
+			},
+			{
+				"name": "_reputation",
+				"type": "bool"
+			}
+		],
+		"name": "giveRep",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
+\end{lstlisting}
 
 %%% Local Variables:
 %%% mode: latex
