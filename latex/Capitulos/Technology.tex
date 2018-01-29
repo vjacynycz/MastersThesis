@@ -359,8 +359,39 @@ small changes, without the need of installing any software (see figure
 
 \subsection{Testrpc}
 \label{testrpc}
+\figura{testrpc.png}{width=0.7\linewidth}{testrpc:sc}{Transactions mined by
+  testrpc in a test network} Testrpc is a Node.js based Ethereum client for
+testing a development. It simulates an Ethereum client behavior using the
+ethereum.js library. Once installed throug \code{npm}, it can lauched through
+the linux terminal with the command \code{testrpc} and offers the developers a
+series of interesting features:
 
-Testrpc
+\begin{itemize}
+  \itbf{Simulate accounts:}
+  Testrpc\footnote{https://www.npmjs.com/package/ethereumjs-testrpc} default
+  command launches 5 accounts, but it offers the possibility to add as many as
+  needed with the option ``--accounts'', this allowed this project to simulate
+  the interaction of 1000 accounts communicating with the contracts''. Example:
+  \code{testrpc -a 1000}
+
+  \itbf{View transactions:} Once testrpc is lauched, developers can see through
+  the console all the transactions made with the blockchain in a user-frendly
+  way. It also has a gas estimator to calculate the price of each transaction
+  (see figure \ref{testrpc:sc}).
+
+  \itbf{Create test net:} Testrpc creates a test net through the port 8545. Any
+  user in the internet using Metamask (see section \ref{jsmm}) can connect to
+  this test net and interact with the contracts deployed.
+
+  \itbf{Give ETH to an existing account:} If an user already has an Ethereum
+  account and wants to connect a testrpc node, the administrator can assign ETH
+  to that account to allow the user do transactions in the test net.
+\end{itemize}
+
+The main difference between a testrpc network and the Ethereum network is that
+testrpc creates one block for each transaction, making a small block size
+compared to the Ethereum network, and preventing the gas estimator being
+accurate.
 
 \subsection{JavaScript and Metamask}
 \label{jsmm}
@@ -397,36 +428,18 @@ important data:
 \item \textbf{Contract's ABI:} An ABI (Application Binary Interface) is a data
   structure in which JavaScript can find all the methods a contract has. Each
   method defines its inputs, outputs, type, if its payable and a state.
-  JavaScript uses this information to build the transactions to call
-  these methods (see listing \ref{abi}).
+  JavaScript uses this information to build the transactions to call these
+  methods (see listing \ref{abi}).
 
 \end{itemize}
 
 This two technologies were used to test the platform proposed in this work,
-using HTML and Testrpc to simulate a functional journal (see
-section \ref{poc})
-\newpage
-\begin{lstlisting}[frame=single,caption=ABI fragment example,label=abi]
-[
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_reviewerAddress",
-				"type": "address"
-			},
-			{
-				"name": "_reputation",
-				"type": "bool"
-			}
-		],
-		"name": "giveRep",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	}
-]
+using HTML and Testrpc to simulate a functional journal (see section \ref{poc})
+
+\begin{lstlisting}[frame=single,caption=ABI fragment example,label=abi] [ {
+"constant": false, "inputs": [ { "name": "_reviewerAddress", "type": "address"
+}, { "name": "_reputation", "type": "bool" } ], "name": "giveRep", "outputs":
+[], "payable": false, "stateMutability": "nonpayable", "type": "function" } ]
 \end{lstlisting}
 
 %%% Local Variables:

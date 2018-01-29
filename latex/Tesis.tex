@@ -2,52 +2,46 @@
 \documentclass[11pt,a4paper,twoside]{book}
 
 %
-% Definimos  el   comando  \compilaCapitulo,  que   luego  se  utiliza
-% (opcionalmente) en config.tex. Quedar_a  mejor si tambi_n se definiera
-% en  ese fichero,  pero por  el modo  en el  que funciona  eso  no es
-% posible. Puedes consultar la documentaci_n de ese fichero para tener
-% m_s  informaci_n. Definimos tambi_n  \compilaApendice, que  tiene el
-% mismo  cometido, pero  que se  utiliza para  compilar  _nicamente un
+% Definimos el comando \compilaCapitulo, que luego se utiliza (opcionalmente) en
+% config.tex. Quedar_a mejor si tambi_n se definiera en ese fichero, pero por el
+% modo en el que funciona eso no es posible. Puedes consultar la documentaci_n
+% de ese fichero para tener m_s informaci_n. Definimos tambi_n \compilaApendice,
+% que tiene el mismo cometido, pero que se utiliza para compilar _nicamente un
 % ap_ndice.
 %
 %
-% Si  queremos   compilar  solo   una  parte  del   documento  podemos
-% especificar mediante  \includeonly{...} qu_ ficheros  son los _nicos
-% que queremos  que se incluyan.  Esto  es _til por  ejemplo para s_lo
-% compilar un cap_tulo.
+% Si queremos compilar solo una parte del documento podemos especificar
+% mediante \includeonly{...} qu_ ficheros son los _nicos que queremos que se
+% incluyan. Esto es _til por ejemplo para s_lo compilar un cap_tulo.
 %
-% El problema es que todos aquellos  ficheros que NO est_n en la lista
-% NO   se  incluir_n...  y   eso  tambi_n   afecta  a   ficheros  de
-% la plantilla...
+% El problema es que todos aquellos ficheros que NO est_n en la lista NO se
+% incluir_n... y eso tambi_n afecta a ficheros de la plantilla...
 %
-% Total,  que definimos  una constante  con los  ficheros  que siempre
-% vamos a querer compilar  (aquellos relacionados con configuraci_n) y
-% luego definimos \compilaCapitulo.
+% Total, que definimos una constante con los ficheros que siempre vamos a querer
+% compilar (aquellos relacionados con configuraci_n) y luego definimos
+% \compilaCapitulo.
 \newcommand{\ficherosBasicosTeXiS}{%
-TeXiS/TeXiS_pream,TeXiS/TeXiS_cab,TeXiS/TeXiS_bib,TeXiS/TeXiS_cover,%
-TeXiS/TeXiS_part%
-}
-\newcommand{\ficherosBasicosTexto}{%
-constantes,guionado,Cascaras/bibliografia,config%
-}
-\newcommand{\compilaCapitulo}[1]{%
-\includeonly{\ficherosBasicosTeXiS,\ficherosBasicosTexto,Capitulos/#1}
+  TeXiS/TeXiS_pream,TeXiS/TeXiS_cab,TeXiS/TeXiS_bib,TeXiS/TeXiS_cover,%
+  TeXiS/TeXiS_part%
+} \newcommand{\ficherosBasicosTexto}{%
+  constantes,guionado,Cascaras/bibliografia,config%
+} \newcommand{\compilaCapitulo}[1]{%
+  \includeonly{\ficherosBasicosTeXiS,\ficherosBasicosTexto,Capitulos/#1}
 }
 
 \newcommand{\compilaApendice}[1]{%
-\includeonly{\ficherosBasicosTeXiS,\ficherosBasicosTexto,Apendices/#1}
+  \includeonly{\ficherosBasicosTeXiS,\ficherosBasicosTexto,Apendices/#1}
 }
 
+\newcommand{\itbf}[1]{\item\textbf{#1}}
 \include{config}
 
+\newcommand{\code}[1]{\colorbox{lightgray}{{\texttt{#1}}}}
 % Paquete de la plantilla
 
-\usepackage{TeXiS/TeXiS}
-\usepackage[lmargin=4cm,rmargin=3cm]{geometry}
+\usepackage{TeXiS/TeXiS} \usepackage[lmargin=4cm,rmargin=3cm]{geometry}
 \usepackage[colorinlistoftodos, textwidth=4cm, shadow]{todonotes}
-\linespread{1.2}\selectfont
-\setcitestyle{square}
-\printtodos
+\linespread{1.2}\selectfont \setcitestyle{square} \printtodos
 
 % Incluimos el fichero con comandos de constantes
 \include{constantes}%también
@@ -59,28 +53,24 @@ constantes,guionado,Cascaras/bibliografia,config%
 % "Metadatos" para el PDF
 %
 \ifpdf\hypersetup{%
-    pdftitle = {\titulo},
-    pdfsubject = {Master's Thesis},
-    pdfkeywords = {blockchain},
-    pdfauthor = {\textcopyright\ \autor},
-    pdfcreator = {\LaTeX\ con el paquete \flqq hyperref\frqq},
-    pdfproducer = {pdfeTeX-0.\the\pdftexversion\pdftexrevision},
-    }
-    \pdfinfo{/CreationDate (\today)}
-\fi
+  pdftitle = {\titulo}, pdfsubject = {Master's Thesis}, pdfkeywords =
+  {blockchain}, pdfauthor = {\textcopyright\ \autor}, pdfcreator = {\LaTeX\ con
+    el paquete \flqq hyperref\frqq}, pdfproducer =
+  {pdfeTeX-0.\the\pdftexversion\pdftexrevision}, } \pdfinfo{/CreationDate
+  (\today)} \fi
 
 
-%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-%                        Documento
-%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Documento - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% -
 \begin{document}
 
-% Incluimos el  fichero de definici_n de guionado  de algunas palabras
-% que LaTeX no ha dividido como deber_a
+% Incluimos el fichero de definici_n de guionado de algunas palabras que LaTeX
+% no ha dividido como deber_a
 \input{guionado}
 
-% Marcamos  el inicio  del  documento para  la  numeraci_n de  p_ginas
-% (usando n_meros romanos para esta primera fase).
+% Marcamos el inicio del documento para la numeraci_n de p_ginas (usando n_meros
+% romanos para esta primera fase).
 \frontmatter
 
 
@@ -92,36 +82,34 @@ constantes,guionado,Cascaras/bibliografia,config%
 
 \include{Cascaras/resumen}
 
-\ifx\generatoc\undefined
-\else
+\ifx\generatoc\undefined \else
 \include{TeXiS/TeXiS_toc}
 \fi
 
-% Marcamos el  comienzo de  los cap_tulos (para  la numeraci_n  de las
-% p_ginas) y ponemos la cabecera normal
-\mainmatter
-\restauraCabecera
+% Marcamos el comienzo de los cap_tulos (para la numeraci_n de las p_ginas) y
+% ponemos la cabecera normal
+\mainmatter \restauraCabecera
 
-%\include{Capitulos/Parte1}
-%\include{Capitulos/Abstract}
+% \include{Capitulos/Parte1}
+% \include{Capitulos/Abstract}
 \include{Capitulos/Introduction}
 \include{Capitulos/Soa}
 \include{Capitulos/Technology}
 \include{Capitulos/Platform}
 \include{Capitulos/Results}
 \include{Capitulos/Conclusions}
-%\include{...}
-%\include{...}
-%\include{...}
-%\include{...}
+% \include{...}
+% \include{...}
+% \include{...}
+% \include{...}
 
 % Apéndices
-%\appendix
-%\include{Apendices/ParteApendices}
-%\include{Apendices/01ApendiceA}
-%\include{...}
-%\include{...}
-%\include{...}
+% \appendix
+% \include{Apendices/ParteApendices}
+% \include{Apendices/01ApendiceA}
+% \include{...}
+% \include{...}
+% \include{...}
 
 \backmatter
 
@@ -135,29 +123,26 @@ constantes,guionado,Cascaras/bibliografia,config%
 % _ndice de palabras
 %
 
-% S_lo  la   generamos  si  est_   declarada  \generaindice.  Consulta
-% TeXiS.sty para m_s informaci_n.
+% S_lo la generamos si est_ declarada \generaindice. Consulta TeXiS.sty para m_s
+% informaci_n.
 
-% En realidad, el soporte para la generaci_n de _ndices de palabras
-% en TeXiS no est_ documentada en el manual, porque no ha sido usada
-% "en producci_n". Por tanto, el fichero que genera el _ndice
-% *no* se incluye aqu_ (est_ comentado). Consulta la documentaci_n
-% en TeXiS_pream.tex para m_s informaci_n.
-\ifx\generaindice\undefined
-\else
-%\include{TeXiS/TeXiS_indice}
+% En realidad, el soporte para la generaci_n de _ndices de palabras en TeXiS no
+% est_ documentada en el manual, porque no ha sido usada "en producci_n". Por
+% tanto, el fichero que genera el _ndice *no* se incluye aqu_ (est_ comentado).
+% Consulta la documentaci_n en TeXiS_pream.tex para m_s informaci_n.
+\ifx\generaindice\undefined \else
+% \include{TeXiS/TeXiS_indice}
 \fi
 
 %
 % Lista de acr_nimos
 %
 
-% S_lo  lo  generamos  si  est_ declarada  \generaacronimos.  Consulta
-% TeXiS.sty para m_s informaci_n.
+% S_lo lo generamos si est_ declarada \generaacronimos. Consulta TeXiS.sty para
+% m_s informaci_n.
 
 
-\ifx\generaacronimos\undefined
-\else
+\ifx\generaacronimos\undefined \else
 \include{TeXiS/TeXiS_acron}
 \fi
 
