@@ -32,14 +32,17 @@
 \newcommand{\compilaApendice}[1]{%
   \includeonly{\ficherosBasicosTeXiS,\ficherosBasicosTexto,Apendices/#1}
 }
-
+\newcommand{\lip}[0]{\Blindtext[3][1]}
+\newcommand{\bb}[1]{\textbf{#1}}
 \newcommand{\itbf}[1]{\item\textbf{#1}}
 \include{config}
 
 \newcommand{\code}[1]{\colorbox{lightgray}{{\texttt{#1}}}}
 % Paquete de la plantilla
 
-\usepackage{TeXiS/TeXiS} \usepackage[lmargin=4cm,rmargin=3cm]{geometry}
+\usepackage{TeXiS/TeXiS}
+\usepackage{blindtext}
+\usepackage[lmargin=4cm,rmargin=3cm]{geometry}
 \usepackage[colorinlistoftodos, textwidth=4cm, shadow]{todonotes}
 \linespread{1.2}\selectfont \setcitestyle{square} \printtodos
 

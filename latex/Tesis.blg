@@ -5,6 +5,7 @@ A level-1 auxiliary file: Cascaras/cover.aux
 A level-1 auxiliary file: Cascaras/dedicatoria.aux
 A level-1 auxiliary file: Cascaras/agradecimientos.aux
 A level-1 auxiliary file: Cascaras/resumen.aux
+A level-1 auxiliary file: TeXiS/TeXiS_toc.aux
 A level-1 auxiliary file: Capitulos/Introduction.aux
 A level-1 auxiliary file: Capitulos/Soa.aux
 A level-1 auxiliary file: Capitulos/Technology.aux
@@ -19,161 +20,18 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated field_info (elt_size=8) to 10060 items from 5000.
+Reallocated field_info (elt_size=8) to 10244 items from 5000.
 Database file #1: latex.bib
-I was expecting an "="---line 339 of file latex.bib
- : scrum at amazon. com}, author={Atlas, Alan},eev 
- :                                                 booktitle={Agile Conference,
-I'm skipping whatever remains of this entry
-Repeated entry---line 485 of file latex.bib
- : @article{toledo2011book
- :                        , title={Book citation index: nueva historia sobre big
-I'm skipping whatever remains of this entry
-Repeated entry---line 495 of file latex.bib
- : @article{doi:10.1001/jama.295.1.90
- :                                   , author = {Garfield E}, title = {The history
-I'm skipping whatever remains of this entry
-Repeated entry---line 503 of file latex.bib
- : @article{garfield2007evolution
- :                               , title={The evolution of the science citation
-I'm skipping whatever remains of this entry
-Repeated entry---line 511 of file latex.bib
- : @article{wenneras2001nepotism
- :                              , title={Nepotism and sexism in peer-review},
-I'm skipping whatever remains of this entry
-Repeated entry---line 519 of file latex.bib
- : @article{huisman2017duration
- :                             , title={Duration and quality of the peer review
-I'm skipping whatever remains of this entry
-Repeated entry---line 547 of file latex.bib
- : @article{callaham_relationship_2007
- :                                    , title = {The relationship of previous
-I'm skipping whatever remains of this entry
-Repeated entry---line 619 of file latex.bib
- : review—a survey.pdf:application/pdf} } @article{bergstrom2004costs
- :                                                                     , title={The
-I'm skipping whatever remains of this entry
-Repeated entry---line 631 of file latex.bib
- : @article{resnick2000reputation
- :                               , title={Reputation systems}, author={Resnick,
-I'm skipping whatever remains of this entry
-Repeated entry---line 831 of file latex.bib
- : @article{benet_ipfs-content_2014
- :                                 , title = {{IPFS}-content addressed, versioned,
-I'm skipping whatever remains of this entry
-Repeated entry---line 841 of file latex.bib
- : @article{toledo2011book
- :                        , title={Book citation index: nueva historia sobre big
-I'm skipping whatever remains of this entry
-Repeated entry---line 851 of file latex.bib
- : @article{doi:10.1001/jama.295.1.90
- :                                   , author = {Garfield E}, title = {The history
-I'm skipping whatever remains of this entry
-Repeated entry---line 863 of file latex.bib
- : @article{garfield2007evolution
- :                               , title={The evolution of the science citation
-I'm skipping whatever remains of this entry
-Repeated entry---line 871 of file latex.bib
- : @article{wenneras2001nepotism
- :                              , title={Nepotism and sexism in peer-review},
-I'm skipping whatever remains of this entry
-Repeated entry---line 879 of file latex.bib
- : @article{huisman2017duration
- :                             , title={Duration and quality of the peer review
-I'm skipping whatever remains of this entry
-Repeated entry---line 913 of file latex.bib
- : @article{callaham_relationship_2007
- :                                    , title = {The relationship of previous
-I'm skipping whatever remains of this entry
-Repeated entry---line 927 of file latex.bib
- : @article{walker_emerging_2015
- :                              , title = {Emerging trends in peer review—a
-I'm skipping whatever remains of this entry
-Repeated entry---line 993 of file latex.bib
- : @article{bergstrom2004costs
- :                            , title={The costs and benefits of library site
-I'm skipping whatever remains of this entry
-Repeated entry---line 1005 of file latex.bib
- : @article{resnick2000reputation
- :                               , title={Reputation systems}, author={Resnick,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1015 of file latex.bib
- : @misc{nakamoto2008bitcoin
- :                          , title={Bitcoin: A peer-to-peer electronic cash
-I'm skipping whatever remains of this entry
-Repeated entry---line 1017 of file latex.bib
- : system}, author={Nakamoto, Satoshi}, year={2008} } @article{buterin2014ethereum
- :                                                                                ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1047 of file latex.bib
- : @article{ford2013defining
- :                          , title={Defining and characterizing open peer review:
-I'm skipping whatever remains of this entry
-Repeated entry---line 1177 of file latex.bib
- : @article{solomon2012study
- :                          , title={A study of open access journals using article
-I'm skipping whatever remains of this entry
-Repeated entry---line 1189 of file latex.bib
- : @article{bjork2014anatomy
- :                          , title={Anatomy of green open access},
-I'm skipping whatever remains of this entry
-Repeated entry---line 1209 of file latex.bib
- : @article{bartlingblockchain
- :                            , title={Blockchain for science and knowledge
-I'm skipping whatever remains of this entry
-Repeated entry---line 1217 of file latex.bib
- : @article{tennant2017multi
- :                          , title={A multi-disciplinary perspective on emergent
-I'm skipping whatever remains of this entry
-Repeated entry---line 1233 of file latex.bib
- : @article{dhillon2016bench
- :                          , title={From bench to bedside: Enabling reproducible
-I'm skipping whatever remains of this entry
-Repeated entry---line 1241 of file latex.bib
- : @misc{morton2017aletheia
- :                         , title={Aletheia: blockchain for scientific knowledge
-I'm skipping whatever remains of this entry
-Repeated entry---line 1253 of file latex.bib
- : @article{ware2008peer
- :                      , title={Peer review: benefits, perceptions and
-I'm skipping whatever remains of this entry
-Repeated entry---line 1263 of file latex.bib
- : @article{frishauf2009reputation
- :                                , title={Reputation systems: a new vision for
-I'm skipping whatever remains of this entry
-Repeated entry---line 1271 of file latex.bib
- : @article{spier2002history
- :                          , title={The history of the peer-review process},
-I'm skipping whatever remains of this entry
-Repeated entry---line 1279 of file latex.bib
- : @article{goldbeck1999evidence
- :                              , title={Evidence on peer review—scientific quality
-I'm skipping whatever remains of this entry
-Repeated entry---line 1289 of file latex.bib
- : @inproceedings{blum1988non
- :                           , title={Non-interactive zero-knowledge and its
-I'm skipping whatever remains of this entry
-Repeated entry---line 1315 of file latex.bib
- : @article{evans2009open
- :                       , title={Open access and global participation in science},
-I'm skipping whatever remains of this entry
-Repeated entry---line 1321 of file latex.bib
- : for the Advancement of Science} } @article{lariviere2015oligopoly
- :                                                                  , title={The
-I'm skipping whatever remains of this entry
-Repeated entry---line 1335 of file latex.bib
- : @article{van2013true
- :                     , title={The true cost of science publishing}, author={Van
-I'm skipping whatever remains of this entry
-Repeated entry---line 1343 of file latex.bib
- : @article{eysenbach2006citation
- :                               , title={Citation advantage of open access
-I'm skipping whatever remains of this entry
 Database file #2: otros.bib
 Database file #3: nuestros.bib
+Warning--I didn't find a database entry for "digicash"
+Warning--I didn't find a database entry for "bmoney"
+Warning--I didn't find a database entry for "bitgold"
+Warning--I didn't find a database entry for "cryptocompare"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in kronick1976history
 Warning--empty journal in binfield2013open
 Warning--empty journal in osborn1953applied
 Warning--empty journal in buterin2014ethereum
@@ -184,43 +42,43 @@ Warning--empty journal in cole1979fair
 Done.
 You've used 110 entries,
             4087 wiz_defined-function locations,
-            1410 strings with 25852 characters,
-and the built_in function-call counts, 76037 in all, are:
-= -- 6274
-> -- 1583
-< -- 614
-+ -- 862
-- -- 266
-* -- 3452
-:= -- 11655
-add.period$ -- 247
+            1426 strings with 25959 characters,
+and the built_in function-call counts, 77196 in all, are:
+= -- 6394
+> -- 1602
+< -- 636
++ -- 875
+- -- 267
+* -- 3529
+:= -- 11818
+add.period$ -- 248
 call.type$ -- 110
-change.case$ -- 108
-chr.to.int$ -- 1362
-cite$ -- 116
-duplicate$ -- 5630
-empty$ -- 6278
-format.name$ -- 334
-if$ -- 17766
+change.case$ -- 107
+chr.to.int$ -- 1410
+cite$ -- 117
+duplicate$ -- 5703
+empty$ -- 6345
+format.name$ -- 335
+if$ -- 18048
 int.to.chr$ -- 0
 int.to.str$ -- 110
-missing$ -- 956
-newline$ -- 373
-num.names$ -- 109
-pop$ -- 2197
+missing$ -- 955
+newline$ -- 365
+num.names$ -- 110
+pop$ -- 2154
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 5995
+skip$ -- 6099
 stack$ -- 0
-substring$ -- 3372
-swap$ -- 4431
-text.length$ -- 160
+substring$ -- 3487
+swap$ -- 4518
+text.length$ -- 166
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 110
-warning$ -- 6
-while$ -- 370
+warning$ -- 7
+while$ -- 379
 width$ -- 113
-write$ -- 1070
-(There were 37 error messages)
+write$ -- 1071
+(There were 11 warnings)

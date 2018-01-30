@@ -113,6 +113,22 @@ E.~Ford, ``Defining and characterizing open peer review: A review of the
 P.~Frishauf, ``Reputation systems: a new vision for publishing and peer
   review,'' \emph{Journal of Participatory Medicine}, 2009.
 
+\bibitem{bacon1878novum}
+F.~Bacon, \emph{Novum organum}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Clarendon press, 1878.
+
+\bibitem{kronick1976history}
+D.~A. Kronick, ``A history of scientific and technical periodicals: the origins
+  and development of the scientific and technological press, 1665-1790,'' 1976.
+
+\bibitem{burnham1990evolution}
+J.~C. Burnham, ``The evolution of editorial peer review,'' \emph{Jama}, vol.
+  263, no.~10, pp. 1323--1329, 1990.
+
+\bibitem{szklo2006quality}
+M.~Szklo, ``Quality of scientific articles,'' \emph{Revista de Sa{\'u}de
+  P{\'u}blica}, vol.~40, no. SPE, pp. 30--35, 2006.
+
 \bibitem{willinsky2005open}
 J.~Willinsky, ``Open journal systems: An example of open source software for
   journal management and publishing,'' \emph{Library hi tech}, vol.~23, no.~4,
@@ -372,24 +388,6 @@ D.~Bleichenbacher and U.~M. Maurer, ``Directed acyclic graphs, one-way
 D.~D.~F. Mazi{\`e}res, ``Self-certifying file system,'' Ph.D. dissertation,
   Massachusetts Institute of Technology, 2000.
 
-\bibitem{digicash}
-\BIBentryALTinterwordspacing
-Digicash - an introduction to ecash. [Online]. Available:
-  \url{https://web.archive.org/web/19971009044558/http://digicash.com/publish/ecash_intro/ecash_intro.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{bmoney}
-\BIBentryALTinterwordspacing
-W.~Dai. B-money proposal. [Online]. Available:
-  \url{http://www.weidai.com/bmoney.txt}
-\BIBentrySTDinterwordspacing
-
-\bibitem{bitgold}
-\BIBentryALTinterwordspacing
-N.~Szabo. Unenumerated: Bit gold. [Online]. Available:
-  \url{http://unenumerated.blogspot.com.es/2005/12/bit-gold.html}
-\BIBentrySTDinterwordspacing
-
 \bibitem{finney2005rpow}
 H.~Finney, ``Rpow: Reusable proofs of work,'' \emph{CodeCon 2005}, 2005.
 
@@ -442,12 +440,6 @@ J.~Bonneau, ``Ethiks: Using ethereum to audit a coniks key transparency log,''
   in \emph{International Conference on Financial Cryptography and Data
   Security}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2016, pp.
   95--105.
-
-\bibitem{cryptocompare}
-\BIBentryALTinterwordspacing
-C.~Eisenberg. Graphical comparison of all cryptocurrencies. [Online].
-  Available: \url{https://www.cryptocoincharts.info/coins/graphicalComparison}
-\BIBentrySTDinterwordspacing
 
 \bibitem{wood2014ethereum}
 G.~Wood, ``Ethereum: A secure decentralised generalised transaction ledger,''
