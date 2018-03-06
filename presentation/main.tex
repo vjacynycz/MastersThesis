@@ -1,0 +1,175 @@
+
+
+\documentclass{beamer}
+
+\usetheme{Madrid} 
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{subsection in toc}{
+  \hspace{5mm}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection
+  \breakhere}
+\setbeamertemplate{subsubsection in toc}{}
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+
+
+\AtBeginSubsubsection[]{
+  \begin{frame}
+   \frametitle{Parte \insertsectionnumber: \insertsectionhead}
+    
+    \begin{center}
+      \huge{\insertsubsectionhead}
+    \end{center}
+    \vspace{5mm}
+    \begin{center}
+      \begin{beamercolorbox}[sep=8pt,center,shadow=true]{title}
+        \usebeamerfont{title}
+        \insertsubsubsectionhead\par%\\
+      \end{beamercolorbox}
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\ib}[1]{\item \textbf{#1} }
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{import}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{media9}    
+\usepackage{etoolbox} 
+\usepackage{tikz}
+\usepackage{subcaption}
+
+\usepackage[sort&compress,sectionbib]{natbib}
+\bibliographystyle{IEEEtranN}
+
+\newcommand{\framei}[4]{
+  \begin{frame}{#1}
+    \begin{center}
+      \includegraphics[width=0.9\linewidth,height=0.7
+      \textheight,keepaspectratio]{img/#2}\\
+      #3~\cite{#4}.
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\framein}[3]{
+  \begin{frame}{#1}
+    \begin{center}
+      \includegraphics[width=0.9\linewidth,height=0.7
+      \textheight,keepaspectratio]{img/#2}\\
+      #3.
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\framet}[3]{
+  \begin{frame}{#1}
+    #2
+  \end{frame}
+}
+\title[Descentralizando la ciencia]{\huge{Descentralizando la ciencia:}\\
+  Plataforma distribuida para publicación de artículos académicos}
+
+\author[V. Jacynycz]{Viktor Jacynycz Garc\'ia}
+
+\institute[UCM] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+  Grupo Grasia\\
+  Facultad de informática\\
+  Universidad Complutense de Madrid \\ % Your institution for the title page
+  \medskip
+  \textit{vsjg@ucm.es} % Your email address
+}
+\date{} % Date, can be changed to a custom date
+
+\setcitestyle{numbers,square}
+% ~\citestyle{nature}
+\bibliographystyle{unsrtnat}
+
+\begin{document}
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{\'Indice}
+\tableofcontents 
+\end{frame}
+
+\section{Contexto}
+\subsection{Contexto Socio-cultural}
+\subsubsection{Sistemas de publicación}
+\framei{Sistemas de publicación}{journal.png}{Los primeros \emph{journals} comenzaron a
+  surgir a partir de 1665}{kronick1976history}
+
+\framei{Método de publicación}{publishing.png}{Antiguamente las ediciones de los
+  \emph{journals} se imprimían en papel a través de las imprentas}{spier2002history}
+
+\framei{El proceso de revisión por pares (\emph{1972})}{peerreview.png}{El proceso de revisión
+  por pares determina la eligibilidad de un artículo para ser publicado en un \emph{journal}}{spier2002history}
+
+\framei{Papel de los editores hoy en día}{publishers2.png}{Con la llegada de
+  internet, el papel de los editores se cuestiona, ya que no es necesario
+  imprimir los artículos para publicarlos}{lariviere2015oligopoly}
+
+\subsubsection{Sistemas de reputación}
+\framei{Sistemas de reputación}{reputation.png}{Los sistemas de reputación nos permiten
+  confiar en terceros dentro de un sistema, sin tener que conocerlos
+  previamente}{resnick2000reputation}
+
+\framein{Sistemas de reputación}{reputation2.png}{Hoy en día muchos servicios
+  utilizan estos sistemas}
+
+\subsection{Contexto Técnico}
+\subsubsection{Arquitecturas distribuidas}
+\framei{Arquitecturas de las redes}{architectures.png}{Diferentes arquitecturas de una red}{baran1964distributed}
+
+\framei{Blockchain}{blockchain.png}{Funcionamiento de la primera cadena de bloques}{nakamoto2008bitcoin}
+
+\framei{Sistema basado en transacciones}{transaction.png}{Las transacciones generan un cambio de estado}{antonopoulos2014mastering}
+
+\framei{Smart contracts}{sc.png}{Los contratos inteligentes son
+  pequeños fragmentos de código que cambian el estado de la cadena de bloques}{buterin2014ethereum}
+
+\subsection{Estado del arte}
+\subsubsection{Métodos alternativos de publicación}
+\framet{Métodos alternativos de publicación}{
+  \begin{itemize}
+    \ib{\emph{Open Journal Systems}:} Programas diseñados para facilitar el
+    proceso de publicación para \textit{journals} open access~\cite{willinsky2005open}.
+    \ib{Preprints:} Son artículos pendientes de publicación accesibles
+    para cualquier persona~\cite{shuai2012scientific}.
+    \ib{Mega-journals:} Combinación de varios \emph{journals} en uno solo para
+    fomentar la idea del open access~\cite{binfield2013open}
+    \ib{Publicación continua:} Metodología que utilizan algunos
+      \emph{journals} online. Consiste en publicar directamente los artículos
+      aceptados~\cite{anderton2013continuous}.
+  \end{itemize}
+}
+
+\subsubsection{Sistemas actuales de reputación}
+\framein{Stack exchange como referencia}{se.png}{Es una de las comunidades más
+  conocidas que implementa un sistema de reputación}
+
+\framein{Sistema de rating}{amazon.jpg}{Amazon, Google y muchas otras empresas  tienen un sistema de
+  puntuación basado en 5 estrellas}
+\subsection{Objetivos}
+
+\section{Plataforma}
+\subsection{Descripción general}
+\subsubsection{Funcionamiento}
+\subsubsection{Arquitectura}
+\begin{frame}
+\frametitle{Conclusiones}
+\end{frame}
+
+\section{Referencias}
+\begin{frame}[allowframebreaks]{Referencias}
+\bibliography{references}
+
+\printbibliography
+\end{frame}
+
+\end{document} 
