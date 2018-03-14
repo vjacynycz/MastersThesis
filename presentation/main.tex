@@ -1,5 +1,3 @@
-
-
 \documentclass{beamer}
 
 \usetheme{Madrid} 
@@ -35,7 +33,7 @@
 \usepackage{import}
 \usepackage{eurosym}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepac kage[spanish]{babel}
 \usepackage{media9}    
 \usepackage{etoolbox} 
 \usepackage{tikz}
@@ -137,6 +135,8 @@
 \subsubsection{Métodos alternativos de publicación}
 \framet{Métodos alternativos de publicación}{
   \begin{itemize}
+    \ib{Open Access Journals:} Journals que ofrecen sus papers de manera
+    gratuita, pero normalmente el precio de publicación recae sobre los autores~\cite{solomon2012study}.
     \ib{\emph{Open Journal Systems}:} Programas diseñados para facilitar el
     proceso de publicación para \textit{journals} open access~\cite{willinsky2005open}.
     \ib{Preprints:} Son artículos pendientes de publicación accesibles
@@ -150,26 +150,107 @@
 }
 
 \subsubsection{Sistemas actuales de reputación}
-\framein{Stack exchange como referencia}{se.png}{Es una de las comunidades más
+\framein{Sistema de votación}{se.png}{Stack exchange es una de las comunidades más
   conocidas que implementa un sistema de reputación}
 
 \framein{Sistema de rating}{amazon.jpg}{Amazon, Google y muchas otras empresas  tienen un sistema de
   puntuación basado en 5 estrellas}
 \subsection{Objetivos}
+\framet{Objetivos de la plataforma}{
+\begin{itemize}
+  \item \textbf{Crear} un sistema de publicación de ciencia abierto y descentralizado.
+  \item \textbf{Reducir} el tiempo de revisión de los artículos académicos.
+  \item Explorar \textbf{métricas alternativas} para los artículos, journals y revisores.
+  \item \textbf{Prevenir} posibles problemas de nepotismo o sexismo en la revisión por pares.
+\end{itemize}
+}
 
 \section{Plataforma}
 \subsection{Descripción general}
-\subsubsection{Funcionamiento}
-\subsubsection{Arquitectura}
-\begin{frame}
-\frametitle{Conclusiones}
-\end{frame}
+\subsubsection{Idea principal}
+
+\framein{Idea principal}{eipfs.png}{La plataforma utiliza \textbf{IPFS} como sistema de archivos y \textbf{Ethereum} como sistema de gestión para facilitar el proceso de publicación científica}
+
+\subsection{Pilares fundamentales}
+\subsubsection{Red P2P distribuida}
+
+\framet{Red P2P distribuida}{Una red P2P ofrece tanto una gran persistencia de
+  datos como robustez frente a la censura o la prohibición
+  \vfill
+  La plataforma ofrece una descentralizacion de todo el proceso, incluyendo:
+  envío de papers, asiganción de revisores, envío de revisiones y publicación.
+}
+
+\subsubsection{Sistema de reputación de revisores}
+\framet{Sistema de reputación de revisores}{El sistema de reputación de revisores tiene las siguientes características
+\begin{itemize}
+    \item Revisiones totalmente públicas y accesibles.
+    \item Cada revisión es puntuable por los autores y los otros revisores.
+    \item Revisores obtienen reputación por \emph{hacer bien} su trabajo.
+\end{itemize}
+}
+
+\framet{Sistema de reputación de revisores}{
+Las revisiones tienen un tiempo límite para ser realizadas.\\
+ \vfill
+Al realizar la entrega, los autores y los otros revisores podrán votar la
+revisión.\\
+\vfill
+De esta manera se evitan posibles revisiones injustas o incompletas.
+}
+
+\subsubsection{Open Science por diseño}
+
+
+\framet{Open Science por diseño}{Al estar en \textbf{IPFS} y \textbf{Ethereum}
+  implica que:
+  \begin{itemize}
+  \item Todos los contenidos son públicos y gratuitos, tanto para los autores como
+    para los revisores.
+  \item Todo el proceso es auditable, por lo que se puede saber de antemano toda
+    la información sobre revisores, autores y journals.
+  \end{itemize}}
+
+
+
+\subsection{Arquitectura}
+
+\subsubsection{Frontend y Backend}
+
+\framein{Estructura del Frontend}{homepage.png}{HTML + JavaScript + Metamask}
+\framein{Estructura del Frontend}{topic.png}{HTML + JavaScript + Metamask}
+\framein{Estructura del Frontend}{rating.png}{HTML + JavaScript + Metamask}
+
+\framein{Estructura del Backend}{architecture.png}{El diseño une las dos
+  tecnologías bajo la misma plataforma}
+
+\section{Conclusiones y trabajo futuro}
+\framet{Conclusiones}{
+  \begin{itemize}
+    \item Descentralizar los servicios de publicación abre muchísimas
+      posibilidades a favor del Open Access.
+    \item La transparencia que ofrece esta plataforma genera debates sobre la
+      privacidad de las revisiones y los revisores.
+    \item La eliminación de intermediarios que se lucran de este sistema
+      beneficiará a la comunidad cientifica.
+  \end{itemize}
+}
+
+\framet{Trabajo futuro}{
+  \begin{itemize}
+  \item Buscar journals independientes que quieran cambiar el proceso de publicación científica.
+  \item Finalizar el desarrollo de la plataforma.
+  \item Comenzar una etapa de pruebas.
+  \item Desplegar el contrato en blockchain.
+  \item Legitimizar esta plataforma.
+  \end{itemize}
+}
 
 \section{Referencias}
 \begin{frame}[allowframebreaks]{Referencias}
-\bibliography{references}
+  \bibliography{references}
 
-\printbibliography
+  \printbibliography
 \end{frame}
 
 \end{document} 
