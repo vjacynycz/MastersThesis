@@ -183,12 +183,67 @@ mejorarlos.
 \label{tb}
 \subsection{Network Architectures}
 \label{tb:na}
-\lip \figura{architectures.png}{width=0.95\linewidth}{tb:na:diagram}{Digram of
-  the diferent network architectures}
+\figura{architectures.png}{width=0.95\linewidth}{tb:na:diagram}{Digram of the
+  diferent network architectures} Una de los conceptos más importantes cuando se
+habla de Ethereum es el de arquitectura distribuida. Propone eliminar la
+centralización quitando la dependencia de un servidor centralizado.
 
+Existen tres tipos importantes de estructuras (ver figura 3):
+
+Estructura Centralizada: Toda la estructura está gestionada por un solo nodo y
+sus usuarios pertenecen a la misma comunidad. Se utiliza principalmente en
+servicios web, alojadas en un servidor centralizado por el que tienen que pasar
+todas las personas que quieran acceder a ella (e.g. Wikipedia, Airbnb, Github).
+
+Estructura Federada: La infraestructura está dividida en varios nodos operativos
+que funcionan como su propia estructura centralizada, fragmentado el servidor
+central en pequeños servidores distribuidos. Cada uno de estos tiene su propio
+dueño y su comunidad. A pesar de esto, cualquier usuario de la estructura puede
+acceder a los datos de otros independientemente del nodo al que pertenezcan
+(e.g. GNU Social, Buddycloud, Diaspora).
+
+Estructura P2P (Peer to Peer): Es una estructura totalmente distribuida,
+particionando los trabajos y la información entre los usuarios de la red
+llamados “Peers”. Cada uno de estos tienen los mismos privilegios en la
+infraestructura. Cada usuario controla su aportación a la red distribuida y
+generalmente todos pertenecen a la misma comunidad (e.g. BitTorrent, Twister,
+Bitcoin, Ethereum).
+
+
+Uno de los ejemplos más importantes de una arquitectura distribuida P2P es el de
+Bitcoin, en el que todos los usuarios ven todas las transacciones y tienen los
+mismos derechos.
+
+Ethereum utiliza también la arquitectura P2P al igual que Bitcoin consiguiendo
+así que todo el software desarrollado en este lenguaje sea 100\% libre y
+descentralizado, ya que todos los usuarios de la red tienen acceso a todos los
+contratos de la cadena de bloques y al código fuente de estos.
 \subsection{Criptocurrencies}
 \label{tb:cryptos}
-\lip
+En la década de los 80 y los 90 empezaron a aparecer formas de pago
+descentralizadas como ecash~\cite{chaum1995introduction} que ofrecían una moneda
+con un alto nivel de privacidad; fue entonces cuando empezó a surgir el concepto
+del “dinero electrónico anónimo”.
+
+Uno de los pioneros en la creación de una moneda electrónica descentralizada fue
+Wei Dai, que en 1998 publicó su propuesta de dinero electrónico llamada
+B-money~\cite{dai1998b}. Wei Dai proponía la creación de dinero mediante la
+resolución de puzles computacionales. A partir de la idea de Wei Dai han ido
+surgiendo otras propuestas como Bit gold~\cite{szabo2008bit} para mejorar la
+implementación de una criptomoneda haciendo uso de RPOW~\cite{finney2005rpow},
+una extensión del sistema de prueba de trabajo de Hashcash~\cite{back1997hash}.
+
+No fue hasta el año 2009 que se implementó por primera vez una moneda
+descentralizada, cuando Satoshi Nakamoto publicó la primera versión de
+Bitcoin~\cite{nakamoto2008bitcoin}. Esta moneda tenía como objetivo crear un
+sistema de pagos electrónicos completamente descentralizado, empleando pruebas
+criptográficas en lugar de confianza mediante un sistema de proof of work o
+prueba de trabajo. Este mecanismo criptográfico resolvía dos problemas. Primero,
+ofrecía una forma efectiva de alcanzar un consenso entre todos los nodos de la
+red sobre el estado de la misma. Segundo, ofrecía la posibilidad de que
+cualquier persona podía unirse a la red de nodos, resolviendo los problemas
+políticos que implican el hecho de quién llevaba el control de la red de nodos.
+
 
 \subsection{Blockchain}
 \label{tb:blockchain}
