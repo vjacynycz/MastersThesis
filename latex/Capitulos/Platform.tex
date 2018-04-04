@@ -1,4 +1,4 @@
-\chapter{Platform Description}
+\chapter{Platform description}
 
 \begin{FraseCelebre}
   \begin{Frase}
@@ -111,6 +111,36 @@ issues in section \ref{privacy}.
 % privacy problem for both reviewers and raters. We contemplate these problems
 % and how to solve them in section \ref{PrivacyReviewRating}.
 
+Cada vez que un usuario de la plataforma envíe una revisión, esta será
+puntuable. De esta manera cada revisor irá obteniendo una puntuación de cada una
+de las revisiones que envía, construyendo el sistema de reputación de revisores.
+Inicialmente, las personas que pueden realizar votaciones son: los autores del
+paper, los editores que han asignado a los revisores, y los otros revisores del
+artículo.
+
+De esta forma se da crédito a los revisores que realizan una buena revisión y se
+penaliza a los que no. Dando paso a varias implicaciones:
+
+\begin{itemize}
+  \itbf{El problema del arranque en frío de los papers:} Normalmente los papers
+  que son publicados en revistas o conferencias de bajo impacto tardan mucho en
+  ganar visibilidad en la comunidad científica. Sin embargo si con un sistema de
+  reputacion de revisores, si tres revisores con alta reputación hacen una
+  revisión favorable para un paper para un journal poco conocido, es probable
+  que tenga más visibilidad ya que la reputación de los revisores puede influir
+  positivamente en el impacto de los papers en la comunidad científica.
+  \itbf{Revisiones de pago:} En la mayoría de los casos hoy en día, los
+  revisores no obtienen ningún beneficio económico por realizar la revisión de
+  un paper. Al implementar un sistema de reputación, podrían formarse dinámicas
+  de pago por revisión, en las que los revisores con mayor reputación son
+  pagados por realizar  revisiónes a petición de la revista o de los autores.
+  Esto supone un incetivo para todos los revisores del sistema para realizar
+  buenas revisiones y ganar reputación. Además, como todas las interacciones
+  están en Ethereum, los pagos y las entregas pueden realizarse a través de
+  contratos inteligentes personalizados, eliminando intermediarios, y haciendo
+  el proceso transparente y honesto.
+\end{itemize}
+
 \section{Distributed Open Access infrastructure}
 \label{distributedOA}
 % \commant{Copied from PEERE Paper.TODO rewrite}
@@ -128,155 +158,6 @@ reviews- are shared in IPFS, an open P2P network~\cite{benet_ipfs-content_2014}.
 Thus, the system inherently grants Open Access by the design of its distributed
 infrastructure and circumvents the publishers dominant role.
 
-\section{Privacy Settings of Open Peer Review and Rating}
-\label{privacy}
-Anonymity of reviewers and authors in peer reviews is traditionally used to
-improve the fairness of the process. Thanks to single blind reviews, anonymous
-reviewers can honestly critic a paper without fearing the reactions of the
-authors. Double blind reviews also allow to reduce the impact of personal
-biases. Finally, open review models propose that both authors and reviewers know
-each other. These different privacy settings are shown in the left part of
-Figure \ref{PrivacyReviewRating}.
-
-\figura{privacyReviewRating.jpg}{width=0.9\linewidth}{PrivacyReviewRating}{Review
-  and Rating privacy models}
-
-Note, however, that the anonymity of the reviewers can be also abused. Unfair
-and low quality reviews are not discouraged by the system due to the lack of
-consequences. In order to alleviate this problem, our system proposes the
-construction of a reputation network of peer reviewers so that reviewers are
-awarded or criticized according to their work. This reputation network can also
-adopt different privacy settings, allowing both anonymous and signed ratings of
-either signed or anonymous reviews as depicted on the right side of Figure
-\ref{PrivacyReviewRating}.
-
-The implementation of these different privacy settings in a blockchain requires
-different approaches. The question of whether we can keep the benefits of blind
-review while providing accountability and recognition to reviewers deserves
-special consideration. Next, we discuss the different privacy models for review
-and privacy settings.
-
-% Anonymity of reviewers and authors in the peer review process is a simple tool
-% traditionally used to improve the fairness of the process. Thanks to single
-% blind reviews, anonymous reviewers could honestly critic a paper without
-% fearing authors reactions. Double blind reviews allow to reduce the impact of
-% biases in the review. Open reviews model however propose that both authors and
-% reviewers are known. Left part of Figure \ref{PrivacyReviewRating} illustrate
-% these different privacy settings of peer
-% review. %\commant{Mañana por la mañana tenemos una versión profesional del diagrama}.
-
-% As already discussed, the anonymity of the reviewers can also be abused.
-% Unfair or low quality reviews were not discouraged by the system due to the
-% lack of consequences.
-
-% The system propose the construction of a reputation network of peer reviewers.
-% This reputation network can also adopt different privacy settings, allowing
-% both anonymous and signed ratings of either signed or anonymous reviews as
-% depicted in the right side of Figure \ref{PrivacyReviewRating}.
-
-% Each of the anonymity options of the system requires different solutions,
-% which are discussed bellow. The question of whether we can keep the benefits
-% of blind review while providing accountability and recognition to reviews
-% deserves special consideration.
-
-\subsection*{Blind peer review}
-Blind review is the protection of the identity of reviewers in the peer review
-process. In a blockchain, this protection could be easily achieved by using
-single-use addresses previously agreed with the editor.
-
-\subsection*{Double blinded peer review}
-A double blinded review is a blind review that additionally protects the authors
-identity to prevent social bias~\cite{lee2013bias}~\cite{budden2008double}.
-Authors could protect their identities prior to publication by providing a
-single-use public address on submission. Later they can reveal their real
-identity since they are the only ones with access to that address.
-
-\subsection*{Open peer review}
-Open evaluation proposes the de-anonymization of all the parties involved in the
-peer review process~\cite{ford2013defining}. While studies found effect on the
-percentage of reviewers declining to review~\cite{van1999effect} other
-implications remain open to debate~\cite{groves2010open}.
-
-% \subsection*{Blind peer review}
-% Blind review is the protection of the identity of reviewers in the peer review
-% process. In a blockchain, this protection could be easily achieved by using
-% single use addresses or passwords agreed with the editor.
-
-% \subsection*{Double blinded peer review}
-% A double blinded review is a blind review that additionally protects the
-% authors identity to prevent social
-% bias~\cite{lee2013bias}~\cite{budden2008double}. Authors could protect their
-% identities prior to publication by providing a single use public key from
-% which later they sign their real identity or signing the paper with the hash
-% of their names followed by a random constant, revealing the constant after
-% acceptance.
-
-% \subsection*{Open peer review}
-% Open evaluation proposes the opening and deanonymization of peer
-% review~\cite{ford2013defining}. While studies found effect on the percentage
-% of reviewers declining to review~\cite{van1999effect} other implications
-% remain open to debate~\cite{groves2010open}.
-
-% Signed reviews are easy to implement by maintaining a public identity for the
-% reviewer.
-
-\subsection*{Open Rating}
-
-Similarly to open reviews, open ratings are easy to implement by maintaining a
-public identity for the raters.
-
-\subsection{Anonymous Rating}
-
-Protecting the identity of raters is interesting in several reputation systems.
-We can support this anonymity feature using \emph{blinded tokens}
-~\cite{schaub2016trustless} that grant permission to rate without revealing the
-identity of the rater. People authorized to rate a review, such as authors,
-editors and other reviewers involved in the process, may each get one of these
-tokens.
-
-\subsection*{Rating anonymous reviews}
-
-In a system that support voluntary signing of reviews, unsigned reviews would
-not affect the reviewers reputation unless they acknowledge their authorship.
-Thus, reviewers may only reveal their identities for well rated reviews,
-reducing the desired accountability for poor quality, unfair or late reviews.
-
-A system allowing anonymous, yet accountable, reputation system for peer
-reviewing is therefore of great interest. Following, we discuss the feasibility
-of adopting different anonymity approaches to realize this system.
-
-\emph{Collateral models} are widely used in blockchain technology to ensure that
-an actor assumes negative consequences of an interaction in order to avoid the
-greater consequence of loosing the collateral. A similar strategy can be used
-for the anonymous reputation network. If a reputation collateral is requested
-from the reviewers, they would be encouraged to claim even negative ratings.
-This model can be combined with anonymity measures to ensure accountable yet
-anonymous, peer reviews.
-
-\emph{Coin mixing} protocols are designed to obfuscate the relation between
-senders and receivers of Bitcoin payments by mixing in a single transaction many
-senders and receivers ~\cite{meiklejohn2015privacy}. We can not directly apply
-this approach to rate reviews since the receiver identity is known. However it
-can be used in collaboration with other techniques discussed below.
-
-\emph{Reusable payment codes} enable the possibility of using a large amount of
-addresses to receive a payment ~\cite{harrigan2016unreasonable,
-  ranvierReusable}. Reviewers may share one of this addresses with each of the
-actors with permission to rate and then collect the reputation probably using an
-anonymity layer such as coin mixing. Using a collateral model would encourage
-the acceptance of bad ratings.
-
-\emph{ZK-Snarks} are a cryptographic tool enabling to prove a statement without
-revealing anything else than the statement is in fact true (Zero-Knowledge Proof
-of Knowledge) ~\cite{blum1988non,bitansky2013succinct}. They also provide this
-property in a succinct and non-interactive fashion (i.e. using a relatively
-small proof and not requiring further communication between prover and
-verifier). Zcash uses this technology to build an anonymous
-cryptocurrency~\cite{sasson2014zerocash}. A similar approach could be used to
-manage anonymous ratings. A reviewer could also receive the rating of a review
-she did without revealing from which review or which rating the reputation
-comes. As before, a collateral model can be used to encourage the acceptance of
-low ratings.
 
 
 

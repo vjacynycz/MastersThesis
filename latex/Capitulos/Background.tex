@@ -220,38 +220,117 @@ descentralizado, ya que todos los usuarios de la red tienen acceso a todos los
 contratos de la cadena de bloques y al código fuente de estos.
 \subsection{Criptocurrencies}
 \label{tb:cryptos}
-En la década de los 80 y los 90 empezaron a aparecer formas de pago
-descentralizadas como ecash~\cite{chaum1995introduction} que ofrecían una moneda
-con un alto nivel de privacidad; fue entonces cuando empezó a surgir el concepto
-del “dinero electrónico anónimo”.
+In the decade of the 80s and the 90s, decentralized forms of payment began to
+appear, such as ecash~\cite{chaum1995introduction} that offered a currency with a high level
+of privacy; It was then that the concept of ``anonymous electronic money'' began
+to emerge.
 
-Uno de los pioneros en la creación de una moneda electrónica descentralizada fue
-Wei Dai, que en 1998 publicó su propuesta de dinero electrónico llamada
-B-money~\cite{dai1998b}. Wei Dai proponía la creación de dinero mediante la
-resolución de puzles computacionales. A partir de la idea de Wei Dai han ido
-surgiendo otras propuestas como Bit gold~\cite{szabo2008bit} para mejorar la
-implementación de una criptomoneda haciendo uso de RPOW~\cite{finney2005rpow},
-una extensión del sistema de prueba de trabajo de Hashcash~\cite{back1997hash}.
-
-No fue hasta el año 2009 que se implementó por primera vez una moneda
-descentralizada, cuando Satoshi Nakamoto publicó la primera versión de
-Bitcoin~\cite{nakamoto2008bitcoin}. Esta moneda tenía como objetivo crear un
-sistema de pagos electrónicos completamente descentralizado, empleando pruebas
-criptográficas en lugar de confianza mediante un sistema de proof of work o
-prueba de trabajo. Este mecanismo criptográfico resolvía dos problemas. Primero,
-ofrecía una forma efectiva de alcanzar un consenso entre todos los nodos de la
-red sobre el estado de la misma. Segundo, ofrecía la posibilidad de que
-cualquier persona podía unirse a la red de nodos, resolviendo los problemas
-políticos que implican el hecho de quién llevaba el control de la red de nodos.
-
+Wei Dai in 1998 published his proposal for electronic money called
+B-money~\cite{bmoney} and from this idea, other proposals have emerged such as
+Bit gold~\cite{bitgold}, improving the implementation of a cryptocurrency using
+RPOW~\cite{finney2005rpow}, an extension of the Hashcash work test
+system~\cite{back2002hashcash}.
 
 \subsection{Blockchain}
-\label{tb:blockchain}
-\lip
+\label{tb:cryptos:bc}
+In 2009, the idea of a decentralized currency first emerged, when Satoshi
+Nakamoto published the first version of Bitcoin~\cite{nakamoto2008bitcoin}. The
+purpose of this currency was to create a fully decentralized electronic payment
+system, using cryptographic tests instead of trust through a concept called
+proof of work (\emph{POW}).
 
-\subsection{Smart Contracts}
-\label{tb:smartcontracts}
-\lip
+All monetary transactions of the system are stored in a data block until
+reaching a specific size. The idea of \emph{POW} is to add a random number
+(called ``nonce'') to that data so that when performing a hash function of the
+whole block, it has a certain number of leading zeros. Once a block is created,
+it is used as reference to the next block of data, adding the hash of the
+previous block to the next one. This system is called the
+blockchain~\cite{antonopoulos2014mastering} (see
+figure~\ref{tech:sec:eth:bc:diagram}).
+
+\figura{blockchain.png}{width=0.9\linewidth}{tech:sec:eth:bc:diagram}{Blockchain
+  representation diagram}
+
+All the nodes compete to find the next block, because when one of them manages
+to find the nonce to create the hash with leading zeros, notifies it to all the
+nodes of the network and gains 12.5 bitcoins~\cite{barber2012bitter}.
+
+This system makes it practically impossible to falsify a transaction in the
+blockchain, since the minimum change would cause an totally different hash from
+the blockchains of the other nodes, provoking a desyncronization to the
+peer-to-peer network. However, this system is still vulnerable to attacks aimed
+at specific users, such as man in the middle attacks~\cite{moore2013beware}.
+
+\subsection{Ethereum}
+\label{tb:eth}
+Ethereum~\cite{buterin2014ethereum} is a very novel technology that allows the
+creation of distributed applications that run in an arbitrary large and
+trust-less network of nodes. Ethereum's strength rely on three main concepts:
+blockchain, smart contract and transactions.
+
+\subsubsection*{Smart Contracts}
+\label{tb:cryptos:sm}
+\figura{cryptomap.png}{width=0.7\linewidth}{criptomap}{Existing cryptocurrencies
+  represented by purchase-sale volume~\footnote{https://cryptocoincharts.info/coins/graphicalComparison}.}
+
+Ethereum was born inspired by the Bitcoin concept to offer any user a tool to
+develop decentralized and secure applications in a simple
+way~\cite{buterin2014ethereum}. These applications are called ``smart
+contracts'' and are written in the Ethereum's blockchain.
+
+Ethereum's cryptocurrency is called ``ETH'' and not only works like Bitcoin, to
+exchange money between users, but to \emph{fuel} the smart contracts' execution,
+running its source code for a small amount of ETH.
+
+Smart contracts are written in a programming language called
+Solidity\footnote{http://solidity.readthedocs.io/en/develop/} provided by the
+Ethereum's developers. This language is called contract-oriented and it was
+influenced by C++, Python and JavaScript. Solidity offers the possibility to
+create a wide range of decentralized applications in the blockchain in which
+users do not have to trust a centralized organization.
+
+These contracts also have the capacity to store an transfer money, making them
+the perfect tool to implement a wide range of decentralized applications like:
+gambling games~\cite{piasecki2016gaming}, voting
+systems~\cite{mccorry2017smart}, crowdfunding~\cite{jacynycz2016betfunding},
+prediction markets~\cite{peterson2015augur}, transparency
+systems~\cite{bonneau2016ethiks} and so on. Today it is the most exchanged
+currency within cryptocurrencies (see
+figure~\ref{criptomap}.
+
+Smart contracts offer us a framework to design distributed platforms like the
+one proposed in this work, in which all transactions that interact with the
+scientific publication process can be cryptographically signed (see
+section~\ref{plat:trans}).
+
+\subsubsection*{Accounts and Transactions}
+An address in ethereum is a 32-byte string that symbolizes a person's account or
+an smart contract:
+\begin{itemize}
+\item \textbf{Personal accounts:} These are the accounts of the users who want
+  to interact with the Ethereum network. Each one has its address and a balance.
+\item \textbf{Contract accounts:} A smart contract also is identified by an
+  Ethereum address. It contains the source code, a balance with the available
+  money, and its own internal memory where it saves all the contract's
+  information.
+\end{itemize}
+
+In this way, users and contract behave very similar in the blockchain, and to
+communicate these addresses, Ethereum uses transactions.
+
+Smart contracts behavior is transaction-based~\cite{wood2014ethereum}. once a
+contract is deployed in the blockchain, users (or other contracts) may send
+transactions to run its code. Each transaction has a payload, containing the
+data required to execute the desired part of the contract. This execution has a
+fee that users have to pay to the network based on how complex is the code they
+want to run.
+
+Ethereum's transaction-based smart contracts have changed the paradigm of modern
+software development, since the priority when developing a smart contract is to
+reduce the transaction costs of each interaction~\cite{delmolino2016step}.
+
+\figura{transaction.png}{width=0.9\linewidth}{tech:sec:eth:tx:diagram}{Blockchain's
+  state change through transactions}
 
 \section{State of the art}
 \subsection{Alternative publication systems}

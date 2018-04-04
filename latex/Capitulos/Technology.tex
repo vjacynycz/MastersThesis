@@ -38,14 +38,18 @@ they were.
 
 After saying enough ideas to fill the board we filtered the ones that were
 impossible to achieve. Then, each one voted the best three, making a ranking of
-the 3-4 best projects to start working on. So me of the ideas were creating a
-distributed \emp{wikipedia} with governance models, an application to contact
-people from minority groups in countries where they are persecuted collectives,
-a distributed and community driven NGO, and a crowdfunding platform for
-\emph{whisteblowers}.
+the 3-4 best projects to start working on. Some of the ideas we came up to were
+creating a distributed \emp{wikipedia} with governance models, an application to
+contact people from minority groups in countries where they are persecuted
+collectives, a distributed and community driven NGO, and a crowdfunding platform
+for \emph{whisteblowers}.
 
 Finally we decided to create an approach to a distributed platform for open
-science.
+science which we initially called Alexandria, in honor of Alexandra Elbakyan,
+the creator of Sci-hub. But we finally changed the name of the project to
+Decentralized Science because there were a similar project about distributed
+system for media files using blockchain with the same
+name\footnote{https://www.alexandria.io/}.
 
 \subsection{Value proposition canvas}
 
@@ -215,123 +219,35 @@ file system. It is build on top of a peer-to-peer network, so no nodes are
 privileged, and all of those store IPFS objects in local storage. These objects
 represent files or other data structures.
 
-\com{terminar explicar IPFS}
+\subsubsection*{IPFS on Decentralized Science}
+
+IPFS proporciona un sistema de archivos robusto, distribuido y seguro, en el que
+los archivos están formados criptográficamente por el hash de los datos. Este
+hash se comporta como un enlace dentro de la red de IPFS que permite identificar
+y recuperar el archivo gracias a las tecnologías que se han mencionado en los
+apartados anteriores.
+
+Esta característica implica que dos archivos idénticos se identifiquen con el
+mismo hash, eliminando duplicados de manera fácil y rápida.
+
+En Decentralized Science utilizamos esta tecnología para almacenar todos los
+archivos de la plataforma ya que nos permite tener un sistema de archivos
+descentralizado, sin necesidad de un servidor, robusto y persistente. Estas
+características hacen que la plataforma sea resistente tanto a censura como a
+prohibición, ya que IPFS funciona sobre una red de miles de nodos.
 
 \subsection{Ethereum}
 \label{tech:sec:ethereum}
+Como se ha visto en la sección~\ref{tb:eth}, Ethereum es una tecnología que
+permite crear aplicaciones totalmente descentralizadas y autónomas. Estas
+aplicaciones son subidas a la cadena de bloques de Ethereum por lo que no es
+necesario disponer de ningun servidor para ejecutarlas o comunicarse con ellas.
 
-Ethereum~\cite{buterin2014ethereum} is a very novel technology that allows the
-creation of distributed applications that run in an arbitrary large and
-trust-less network of nodes. Ethereum's strength rely on three main concepts:
-blockchain, smart contract and transactions.
+Con Ethereum e IPFS, Decentralized Science es una plataforma 100\% distribuida,
+libre y gratuita\footnote{Las interaciones con la plataforma pueden tener coste
+  de transacción dentro de la red de Ethereum (ver sección~\ref{sec})
+  \nopagebreak} para todos los usuarios.
 
-\subsubsection*{Blockchain}
-\label{tech:sec:ethereum:bc}
-In the decade of the 80s and the 90s, decentralized forms of payment began to
-appear, such as ecash~\cite{digicash} that offered a currency with a high level
-of privacy; It was then that the concept of ``anonymous electronic money'' began
-to emerge.
-
-Wei Dai in 1998 published his proposal for electronic money called
-B-money~\cite{bmoney} and from this idea, other proposals have emerged such as
-Bit gold~\cite{bitgold}, improving the implementation of a cryptocurrency using
-RPOW~\cite{finney2005rpow}, an extension of the Hashcash work test
-system~\cite{back2002hashcash}.
-
-In 2009, the idea of a decentralized currency first emerged, when Satoshi
-Nakamoto published the first version of Bitcoin~\cite{nakamoto2008bitcoin}. The
-purpose of this currency was to create a fully decentralized electronic payment
-system, using cryptographic tests instead of trust through a concept called
-proof of work (\emph{POW}).
-
-All monetary transactions of the system are stored in a data block until
-reaching a specific size. The idea of \emph{POW} is to add a random number
-(called ``nonce'') to that data so that when performing a hash function of the
-whole block, it has a certain number of leading zeros. Once a block is created,
-it is used as reference to the next block of data, adding the hash of the
-previous block to the next one. This system is called the
-blockchain~\cite{antonopoulos2014mastering} (see
-figure~\ref{tech:sec:eth:bc:diagram}).
-
-\figura{blockchain.png}{width=0.9\linewidth}{tech:sec:eth:bc:diagram}{Blockchain
-  representation diagram}
-
-All the nodes compete to find the next block, because when one of them manages
-to find the nonce to create the hash with leading zeros, notifies it to all the
-nodes of the network and gains 12.5 bitcoins~\cite{barber2012bitter}.
-
-This system makes it practically impossible to falsify a transaction in the
-blockchain, since the minimum change would cause an totally different hash from
-the blockchains of the other nodes, provoking a desyncronization to the
-peer-to-peer network. However, this system is still vulnerable to attacks aimed
-at specific users, such as man in the middle attacks~\cite{moore2013beware}.
-
-Ethereum uses this technology, not only for monetary exchanges, but for the
-execution of small fragments of code called ``smart contracts''.
-
-\subsubsection*{Smart Contracts}
-\label{tech:sec:ethereum:sm}
-\figura{cryptomap.png}{width=0.7\linewidth}{criptomap}{Existing cryptocurrencies
-  represented by purchase-sale volume}
-
-Ethereum was born inspired by the Bitcoin concept to offer any user a tool to
-develop decentralized and secure applications in a simple
-way~\cite{buterin2014ethereum}. These applications are called ``smart
-contracts'' and are written in the Ethereum's blockchain.
-
-Ethereum's cryptocurrency is called ``ETH'' and not only works like Bitcoin, to
-exchange money between users, but to \emph{fuel} the smart contracts' execution,
-running its source code for a small amount of ETH.
-
-Smart contracts are written in a programming language called
-Solidity\footnote{http://solidity.readthedocs.io/en/develop/} provided by the
-Ethereum's developers. This language is called contract-oriented and it was
-influenced by C++, Python and JavaScript. Solidity offers the possibility to
-create a wide range of decentralized applications in the blockchain in which
-users do not have to trust a centralized organization.
-
-These contracts also have the capacity to store an transfer money, making them
-the perfect tool to implement a wide range of decentralized applications like:
-gambling games~\cite{piasecki2016gaming}, voting
-systems~\cite{mccorry2017smart}, crowdfunding~\cite{jacynycz2016betfunding},
-prediction markets~\cite{peterson2015augur}, transparency
-systems~\cite{bonneau2016ethiks} and so on. Today it is the most exchanged
-currency within cryptocurrencies (see
-figure~\ref{criptomap}~\cite{cryptocompare}).
-
-Smart contracts offer us a framework to design distributed platforms like the
-one proposed in this work, in which all transactions that interact with the
-scientific publication process can be cryptographically signed (see
-section~\ref{plat:trans}).
-
-\subsubsection*{Accounts and Transactions}
-An address in ethereum is a 32-byte string that symbolizes a person's account or
-an smart contract:
-\begin{itemize}
-\item \textbf{Personal accounts:} These are the accounts of the users who want
-  to interact with the Ethereum network. Each one has its address and a balance.
-\item \textbf{Contract accounts:} A smart contract also is identified by an
-  Ethereum address. It contains the source code, a balance with the available
-  money, and its own internal memory where it saves all the contract's
-  information.
-\end{itemize}
-
-In this way, users and contract behave very similar in the blockchain, and to
-communicate these addresses, Ethereum uses transactions.
-
-Smart contracts behavior is transaction-based~\cite{wood2014ethereum}. once a
-contract is deployed in the blockchain, users (or other contracts) may send
-transactions to run its code. Each transaction has a payload, containing the
-data required to execute the desired part of the contract. This execution has a
-fee that users have to pay to the network based on how complex is the code they
-want to run.
-
-Ethereum's transaction-based smart contracts have changed the paradigm of modern
-software development, since the priority when developing a smart contract is to
-reduce the transaction costs of each interaction~\cite{delmolino2016step}.
-
-\figura{transaction.png}{width=0.9\linewidth}{tech:sec:eth:tx:diagram}{Blockchain's
-  state change through transactions}
 
 \subsection{Remix}
 \figura{remix.png}{width=0.95\linewidth}{tech:sec:remix:sc}{Remix smart contract
@@ -436,11 +352,8 @@ important data:
 This two technologies were used to test the platform proposed in this work,
 using HTML and Testrpc to simulate a functional journal (see section \ref{poc})
 
-\begin{lstlisting}[frame=single,caption=ABI fragment example,label=abi] [ {
-"constant": false, "inputs": [ { "name": "_reviewerAddress", "type": "address"
-}, { "name": "_reputation", "type": "bool" } ], "name": "giveRep", "outputs":
-[], "payable": false, "stateMutability": "nonpayable", "type": "function" } ]
-\end{lstlisting}
+
+\input{Capitulos/listing_abi.tex}
 
 %%% Local Variables:
 %%% mode: latex
