@@ -326,12 +326,15 @@ an smart contract:
 In this way, users and contract behave very similar in the blockchain, and to
 communicate these addresses, Ethereum uses \bb{transactions}.
 
+\figura{sc.png}{width=0.97\linewidth}{tb:eth:transaction}{State change of
+  Ethereum done by transactions}
+
 Smart contracts behavior is transaction-based~\cite{wood2014ethereum}. once a
 contract is deployed in the blockchain, users (or other contracts) may send
 transactions to run its code. Each transaction has a payload, containing the
 data required to execute the desired part of the contract. This execution has a
 fee that users have to pay to the network based on how complex is the code they
-want to run.
+want to run (see figure~\ref{tb:eth:transaction}).
 
 Ethereum's transaction-based smart contracts have changed the paradigm of modern
 software development, since the priority when developing a smart contract is to
