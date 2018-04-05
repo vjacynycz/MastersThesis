@@ -221,9 +221,9 @@ contratos de la cadena de bloques y al código fuente de estos.
 \subsection{Criptocurrencies}
 \label{tb:cryptos}
 In the decade of the 80s and the 90s, decentralized forms of payment began to
-appear, such as ecash~\cite{chaum1995introduction} that offered a currency with a high level
-of privacy; It was then that the concept of ``anonymous electronic money'' began
-to emerge.
+appear, such as ecash~\cite{chaum1995introduction} that offered a currency with
+a high level of privacy; It was then that the concept of ``anonymous electronic
+money'' began to emerge.
 
 Wei Dai in 1998 published his proposal for electronic money called
 B-money~\cite{bmoney} and from this idea, other proposals have emerged such as
@@ -232,20 +232,28 @@ RPOW~\cite{finney2005rpow}, an extension of the Hashcash work test
 system~\cite{back2002hashcash}.
 
 \subsection{Blockchain}
-\label{tb:cryptos:bc}
+\label{tb:bc}
+
+\figura{transaction.png}{width=0.9\linewidth}{tb:bc:transaction}{The change of
+  state of Bitcoin accounts done by transactions}
+
 In 2009, the idea of a decentralized currency first emerged, when Satoshi
 Nakamoto published the first version of Bitcoin~\cite{nakamoto2008bitcoin}. The
 purpose of this currency was to create a fully decentralized electronic payment
 system, using cryptographic tests instead of trust through a concept called
 proof of work (\emph{POW}).
 
-All monetary transactions of the system are stored in a data block until
-reaching a specific size. The idea of \emph{POW} is to add a random number
-(called ``nonce'') to that data so that when performing a hash function of the
-whole block, it has a certain number of leading zeros. Once a block is created,
-it is used as reference to the next block of data, adding the hash of the
-previous block to the next one. This system is called the
-blockchain~\cite{antonopoulos2014mastering} (see
+All monetary transactions between accounts are stored in a data block until
+reaching a specific size, giving a snapshot of all the state of all the accounts
+(see figure~\ref{tb:bc:transaction}). In this way, a Bitcoin address does not
+contain money but the collection of transactions from other addresses to this.
+
+The idea of \emph{proof of work} is to gather a number of pending transactions
+to a data block. Then add a random number (called ``nonce'') to that data so that
+when performing a hash function of the whole block has a certain number of
+leading zeros. Once a block is created, it is used as reference to the next
+block of data, adding the hash of the previous block to the next one. This
+system is called the blockchain~\cite{antonopoulos2014mastering} (see
 figure~\ref{tech:sec:eth:bc:diagram}).
 
 \figura{blockchain.png}{width=0.9\linewidth}{tech:sec:eth:bc:diagram}{Blockchain
@@ -271,7 +279,8 @@ blockchain, smart contract and transactions.
 \subsubsection*{Smart Contracts}
 \label{tb:cryptos:sm}
 \figura{cryptomap.png}{width=0.7\linewidth}{criptomap}{Existing cryptocurrencies
-  represented by purchase-sale volume~\footnote{https://cryptocoincharts.info/coins/graphicalComparison}.}
+  represented by purchase-sale
+  volume~\footnote{https://cryptocoincharts.info/coins/graphicalComparison}.}
 
 Ethereum was born inspired by the Bitcoin concept to offer any user a tool to
 develop decentralized and secure applications in a simple
@@ -295,8 +304,7 @@ gambling games~\cite{piasecki2016gaming}, voting
 systems~\cite{mccorry2017smart}, crowdfunding~\cite{jacynycz2016betfunding},
 prediction markets~\cite{peterson2015augur}, transparency
 systems~\cite{bonneau2016ethiks} and so on. Today it is the most exchanged
-currency within cryptocurrencies (see
-figure~\ref{criptomap}.
+currency within cryptocurrencies (see figure~\ref{criptomap}.
 
 Smart contracts offer us a framework to design distributed platforms like the
 one proposed in this work, in which all transactions that interact with the
@@ -316,7 +324,7 @@ an smart contract:
 \end{itemize}
 
 In this way, users and contract behave very similar in the blockchain, and to
-communicate these addresses, Ethereum uses transactions.
+communicate these addresses, Ethereum uses \bb{transactions}.
 
 Smart contracts behavior is transaction-based~\cite{wood2014ethereum}. once a
 contract is deployed in the blockchain, users (or other contracts) may send
@@ -329,8 +337,6 @@ Ethereum's transaction-based smart contracts have changed the paradigm of modern
 software development, since the priority when developing a smart contract is to
 reduce the transaction costs of each interaction~\cite{delmolino2016step}.
 
-\figura{transaction.png}{width=0.9\linewidth}{tech:sec:eth:tx:diagram}{Blockchain's
-  state change through transactions}
 
 \section{State of the art}
 \subsection{Alternative publication systems}
