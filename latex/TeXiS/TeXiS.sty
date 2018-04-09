@@ -117,6 +117,35 @@
 \end{figure}%
 } % \newcommand{\figura}
 
+
+\newcommand{\figuraAD}[9]{%
+  \begin{table}[h!]
+    \begin{tabular}{|l|l|}
+      \hline
+      \rowcolor{lightgray} 
+      #1 & \bb{#2} \\ \hline
+      Description & #3 \\ \hline
+      Input & #4 \\ \hline
+      Output & #5 \\ \hline
+      Requirements & #6 \\ \hline
+      Precondition & #7 \\ \hline
+      Post-condition & #8 \\ \hline
+    \end{tabular}
+    \caption{Functional requirements of #9}
+    \label{fr:#1}
+  \end{table}
+
+  % \vspace{-0.5 em}
+  \begin{figure}[h!]%
+    \begin{center}%
+      \imagen{Diag/#1.png}{width=0.9\linewidth}%
+      \caption{Activity diagram of #9}
+      \label{ad:#1}%
+    \end{center}%
+  \end{figure}%
+  \vspace{-0.3 em}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Comando:
 % \figuraEx{nombre-fich}{argumentos}{etiqueta}{t�tulo}{titulo_corto}
