@@ -156,40 +156,53 @@ improve them.
 \subsection{Network Architectures}
 \label{tb:na}
 \figura{architectures.png}{width=0.95\linewidth}{tb:na:diagram}{Digram of the
-  diferent network architectures} Una de los conceptos más importantes cuando se
-habla de Ethereum es el de arquitectura distribuida. Propone eliminar la
-centralización quitando la dependencia de un servidor centralizado.
+  diferent network architectures}
 
-Existen tres tipos importantes de estructuras (ver figura 3):
+One of the most important concepts about Decentralized Science is precisely a
+distributed network architecture. This architecture proposes removing the
+centralized infrastructure, spreading its functionality and privileges to all
+the peers in a network
 
-Estructura Centralizada: Toda la estructura está gestionada por un solo nodo y
-sus usuarios pertenecen a la misma comunidad. Se utiliza principalmente en
-servicios web, alojadas en un servidor centralizado por el que tienen que pasar
-todas las personas que quieran acceder a ella (e.g. Wikipedia, Airbnb, Github).
+There are three important types of network architecture (See
+figure~\ref{tb:na:diagram}~\cite{baran1964distributed}):
 
-Estructura Federada: La infraestructura está dividida en varios nodos operativos
-que funcionan como su propia estructura centralizada, fragmentado el servidor
-central en pequeños servidores distribuidos. Cada uno de estos tiene su propio
-dueño y su comunidad. A pesar de esto, cualquier usuario de la estructura puede
-acceder a los datos de otros independientemente del nodo al que pertenezcan
-(e.g. GNU Social, Buddycloud, Diaspora).
+\begin{itemize}
+  \itbf{Centralized Architecture:} All the structure is managed and controlled
+  by a single node. This type of architecture is used nowadays in web services
+  in which all of its users have to connect to a centralized server. Some of the
+  most used internet platforms like
+  Facebook\footnote{https://www.facebook.com/},
+  Github\footnote{https://github.com/} or
+  Amazon\footnote{https://www.amazon.com/} use this architecture.
 
-Estructura P2P (Peer to Peer): Es una estructura totalmente distribuida,
-particionando los trabajos y la información entre los usuarios de la red
-llamados “Peers”. Cada uno de estos tienen los mismos privilegios en la
-infraestructura. Cada usuario controla su aportación a la red distribuida y
-generalmente todos pertenecen a la misma comunidad (e.g. BitTorrent, Twister,
-Bitcoin, Ethereum).
+  
+  \itbf{Decentralized Architecture:} This type of structure is divided into a
+  series of nodes that work in its own centralized structure. Fragmenting the
+  centralized server in smaller ones interlinked between them. Each one is
+  managed by its community. Besides, all its users can access all the data
+  stored in all the nodes. This infrastructure is used in platforms like GNU
+  Social\footnote{https://www.gnu.org/software/social/},
+  Buddycloud\footnote{https://buddycloud.com/} and
+  Diaspora\footnote{https://diasporafoundation.org/} among others
+
+  \itbf{Distributed Architecture:} This is a fully decentralized architecture
+  and its usually called ``Peer to peer'' or ``P2P''.
+  All the data is spread among the nodes called \ii{peers} which have the same
+  privileges in the structure. Users can control its contribution to the network
+  and everyone can join or leave at any time without affecting the network
+  architecture. Today this structure is used in platforms like
+  BitTorrent\footnote{www.bittorrent.com/},
+  Bitcoin\footnote{https://bitcoin.org/} and
+  Ethereum\footnote{https://www.ethereum.org/}
+\end{itemize}
 
 
-Uno de los ejemplos más importantes de una arquitectura distribuida P2P es el de
-Bitcoin, en el que todos los usuarios ven todas las transacciones y tienen los
-mismos derechos.
+One of the examples mentioned above is the architecture of the Bitcoins network,
+in which all users can see all the transactions made between them,
+forming a fully transparent structure. Ethereum also uses this architecture to
+build a network of decentralized, free and open software, granting everyone
+access to all the source code.
 
-Ethereum utiliza también la arquitectura P2P al igual que Bitcoin consiguiendo
-así que todo el software desarrollado en este lenguaje sea 100\% libre y
-descentralizado, ya que todos los usuarios de la red tienen acceso a todos los
-contratos de la cadena de bloques y al código fuente de estos.
 \subsection{Criptocurrencies}
 \label{tb:cryptos}
 In the decade of the 80s and the 90s, decentralized forms of payment began to
