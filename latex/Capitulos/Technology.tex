@@ -88,24 +88,42 @@ or agile methodologies. These methodologies are characterized by continuous
 integration, iterative development and the ability to assume changes in business
 requirements~\cite{boehm2005management,livermore2008factors}.
 
-One of the most popular is known as Extreme
-Programming~\cite{lindstrom2004extreme} based on a series of basic concepts when
+One of the most popular is known as \bb{Extreme
+Programming}~\cite{lindstrom2004extreme} based on a series of basic concepts when
 carrying out the development of a program: code simplicity and rapid
 prototyping, continuous customer communication with the development team,
 responsibility of the code of all the members of the group, short and quick
 meetings, refactoring and continuous integration~\cite{theunissen2005search}.
 
 Another well-known method within agile methodologies is
-scrum~\cite{rising2000scrum}, which uses two-week frameworks to perform
+\bb{scrum}~\cite{rising2000scrum}, which uses two-week frameworks to perform
 development sprints and planning meetings. The use of these methodologies allows
 developers to create better quality software in shorter periods of time and are
 designed for small teams from three to nine developers.
 
-I used these two methodologies to develop the platform that we were defining.
-Every Saturday we had a weekly meeting where we were adding or removing
+These two methodologies were used to develop the platform that as it were being
+defined. Every Saturday we had a weekly meeting where we were adding or removing
 functionality to the platform. Extreme programming allowed me to meet design
 demands without sacrificing development time. At the end of each session, we
 planned the whole week and set the date for the next meeting.
+
+As a complement to the previous methodologies, \bb{Kanban} was used to manage the
+status of the project throughout the development process. Kanban was created by
+the company Toyota to be able to see the status of a project in an easy and fast
+way, but nowadays it is widely used in the field of software
+engineering~\cite{ahmad2013kanban}. Web services like
+Trello\footnote{https://trello.com/} or Github project
+boards\footnote{https://help.github.com/articles/about-project-boards/} feature
+a digital Kanban to carry out this development process and both were used in
+Decentralized Science.
+
+\subsection{Work done by the author}
+
+Although the initial idea of Decentralized Science was born in a hackathon with
+a team, I have taken charge of continuing the development of the platform when
+the event ended. Following the first outline, I have explored different
+implementations and structures for both the frontend (HTML and JavaScript) and
+the backend (Ethereum and IFS) parts.
 
 \section{Technology}
 \label{tech}
@@ -221,32 +239,33 @@ represent files or other data structures.
 
 \subsubsection*{IPFS on Decentralized Science}
 
-IPFS proporciona un sistema de archivos robusto, distribuido y seguro, en el que
-los archivos están formados criptográficamente por el hash de los datos. Este
-hash se comporta como un enlace dentro de la red de IPFS que permite identificar
-y recuperar el archivo gracias a las tecnologías que se han mencionado en los
-apartados anteriores.
+IPFS provides a robust, distributed and secure file system, in which the
+identifiers of the files are cryptographically formed by the hash of the data of
+the file itself. This hash behaves like a link within the IPFS network that
+allows to identify and recover the file thanks to the technologies that have
+been mentioned in the previous sections.
 
-Esta característica implica que dos archivos idénticos se identifiquen con el
-mismo hash, eliminando duplicados de manera fácil y rápida.
+This feature implies that two identical data files have the same hash, so they
+have the same IPFS address, eliminating duplicates in an easy, secure and fast
+way.
 
-En Decentralized Science utilizamos esta tecnología para almacenar todos los
-archivos de la plataforma ya que nos permite tener un sistema de archivos
-descentralizado, sin necesidad de un servidor, robusto y persistente. Estas
-características hacen que la plataforma sea resistente tanto a censura como a
-prohibición, ya que IPFS funciona sobre una red de miles de nodos.
+In Decentralized Science, we use this technology to store all the files in a
+robust and secure way, without relying on a centralized server. All these
+characteristics provides a persistent platform, resistant to censorship and
+prohibition, since IPFS works on a network of thousands of nodes.
 
 \subsection{Ethereum}
 \label{tech:sec:ethereum}
-Como se ha visto en la sección~\ref{tb:eth}, Ethereum es una tecnología que
-permite crear aplicaciones totalmente descentralizadas y autónomas. Estas
-aplicaciones son subidas a la cadena de bloques de Ethereum por lo que no es
-necesario disponer de ningun servidor para ejecutarlas o comunicarse con ellas.
+As seen in the section~\ref{tb:eth}, Ethereum is a technology that allows its
+users create fully decentralized and autonomous applications. These applications
+(called DApps) are smart contracts that are uploaded to the Ethereum blockchain,
+so it is not necessary to have a server to run or communicate with these
+contracts.
 
-Con Ethereum e IPFS, Decentralized Science es una plataforma 100\% distribuida,
-libre y gratuita\footnote{Las interaciones con la plataforma pueden tener coste
-  de transacción dentro de la red de Ethereum (ver sección~\ref{sec})
-  \nopagebreak} para todos los usuarios.
+With Ethereum and IPFS, Decentralized Science is a 100 \% distributed platform,
+open source and free\footnote{Interactions with the platform may have
+  transaction costs within the Ethereum network (see section~\ref{arch:trans})
+  \nopagebreak} to all users.
 
 
 \subsection{Remix}
