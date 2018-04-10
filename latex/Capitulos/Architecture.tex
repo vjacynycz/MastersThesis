@@ -160,75 +160,65 @@ que surgen.
 In the following section we will discuss the functional requirements and the
 activity diagrams for each transaction users can make to interact with the platform:
 
+
 \figuraAD{AD1}% 1. Table ID
 {Send Paper}% 2. Table title
-{Describe the functional requirement here}% 3. Table description
-{Some input}% 4. Inputs
-{Cool outputs}% 5. Outputs
-{The requirements}% 6. Requirements 
-{Some Preconditions to}% 7. Preconditions
-{The postcondition}% 8. Postconditions
+{The user uploads a file to IPFS and creates an Ethereum transaction}% 3. Table description
+{Authors' addresses and a file}% 4. Inputs
+{IPFS address of the paper}% 5. Outputs
+{Authors' Ethereum addresses and Metamask installed}% 6. Requirements 
+{The journal's contract address exists and the IPFS node is online}% 7. Preconditions
+{There is a transaction to the journal's contract address with the information\\ &
+  about the authors and the IPFS address of the paper }% 8. Postconditions
 {sending a paper}% 9. Caption description
 
 \figuraAD{AD2}% 1. Table ID
 {Assign Reviewer}% 2. Table title
-{Describe the functional requirement here}% 3. Table description
-{Some input}% 4. Inputs
-{Cool outputs}% 5. Outputs
-{The requirements}% 6. Requirements 
-{Some Preconditions to}% 7. Preconditions
-{The postcondition}% 8. Postconditions
+{An editor assigns reviewers for a paper}% 3. Table description
+{Ethereum's addresses of the reviewers}% 4. Inputs
+{_}% 5. Outputs
+{The journal's contract address exists}
+{The address has editor permissions and there is a paper pending}% 6. Requirements 
+{A transaction is created to assign the reviwers}% 7. Preconditions
 {assigning a reviewer}% 9. Caption description
 
 \figuraAD{AD3}% 1. Table ID
 {Accept Review task}% 2. Table title
-{Describe the functional requirement here}% 3. Table description
-{Some input}% 4. Inputs
-{Cool outputs}% 5. Outputs
-{The requirements}% 6. Requirements 
-{Some Preconditions to}% 7. Preconditions
-{The postcondition}% 8. Postconditions
+{An address authorized as a reviewer accepts the review task}% 3. Table description
+{A boolean accepting the task}% 4. Inputs
+{_}% 5. Outputs
+{The journal's contract address exists}% 6. Requirements 
+{There are a petition pending for the reviewers address}% 7. Preconditions
+{The petition is accepted and there is a deadline to submit the review}% 8. Postconditions
 {accepting a review}% 9. Caption description
 
 \figuraAD{AD4}% 1. Table ID
 {Send Review}% 2. Table title
-{Describe the functional requirement here}% 3. Table description
-{Some input}% 4. Inputs
-{Cool outputs}% 5. Outputs
-{The requirements}% 6. Requirements 
-{Some Preconditions to}% 7. Preconditions
-{The postcondition}% 8. Postconditions
+{A reviewers submits the review previously accepted via IPFS}% 3. Table description
+{A file containing the review}% 4. Inputs
+{The IPFS address of the review}% 5. Outputs
+{The journal's contract address exists}% 6. Requirements 
+{The submission is within the deadline}% 7. Preconditions
+{There is a transaction to the journal's contract address}% 8. Postconditions
 {sending a review}% 9. Caption description
 
 \figuraAD{AD5}% 1. Table ID
 {Rate Review}% 2. Table title
-{Describe the functional requirement here}% 3. Table description
-{Some input}% 4. Inputs
-{Cool outputs}% 5. Outputs
-{The requirements}% 6. Requirements 
-{Some Preconditions to}% 7. Preconditions
-{The postcondition}% 8. Postconditions
+{The authorized address submits a rating about a review}% 3. Table description
+{An integer from 1 to 5}% 4. Inputs
+{_}% 5. Outputs
+{The journal's contract address exists}% 6. Requirements 
+{The address can submit a review and has not done it yet}% 7. Preconditions
+{The reputation of the reviewer is affected by de rating}% 8. Postconditions
 {rating a review}% 9. Caption description
-
+%\clearpage
 \section{Transactions and costs}
 \label{arch:trans}
 As explained in the section \ref{tech:sec:ethereum} Ethereum's smart contracts
 are transaction-based. Each interaction with the platform is registered in the
 blockchain with a transaction. The architecture of this platform allows the
 following transactions.
-
+\lip
 \subsection*{Send Paper}
 \subsection*{}
 
-
-\section{Proof of concept showcase}
-\label{poc}
-La prueba de concepto presentada bajo el nombre de ``Alexandría'' es una
-aplicación web que engloba todo el proceso de publicación academica actual. Esta
-demo se conecta al contrato descrito en la seccion \ref{contratos}
-\figura{homepage.png}{width=0.8\linewidth}{poc:homepage}{Diagrama UML del la
-  estructura de contratos}
-\figura{topic.png}{width=0.8\linewidth}{poc:topics}{Diagrama UML del la
-  estructura de contratos}
-\figura{rating.png}{width=0.8\linewidth}{poc:rating}{Diagrama UML del la
-  estructura de contratos}

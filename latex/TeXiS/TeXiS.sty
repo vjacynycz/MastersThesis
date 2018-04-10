@@ -112,14 +112,17 @@
 \begin{figure}[t]%
 \begin{center}%
 \imagen{#1}{#2}%
-\caption{#4} \label{#3}%
+\caption{#4.} \label{#3}%
 \end{center}%
 \end{figure}%
 } % \newcommand{\figura}
 
 
 \newcommand{\figuraAD}[9]{%
-  \begin{table}[h!]
+
+  \clearpage
+  \begin{center}
+  \begin{table}[hp!]
     \begin{tabular}{|l|l|}
       \hline
       \rowcolor{lightgray} 
@@ -131,19 +134,19 @@
       Precondition & #7 \\ \hline
       Post-condition & #8 \\ \hline
     \end{tabular}
-    \caption{Functional requirements of #9}
+    \caption{Functional requirements of #9.}
     \label{fr:#1}
   \end{table}
 
   % \vspace{-0.5 em}
-  \begin{figure}[h!]%
-    \begin{center}%
-      \imagen{Diag/#1.png}{width=0.9\linewidth}%
-      \caption{Activity diagram of #9}
+  \begin{figure}[hp!]%
+    
+      \imagen{Diag/#1.png}{width=0.8\linewidth}%
+      \caption{Activity diagram of #9.}
       \label{ad:#1}%
-    \end{center}%
   \end{figure}%
-  \vspace{-0.3 em}
+\end{center}
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
