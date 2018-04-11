@@ -30,7 +30,7 @@ figure \ref{plat:sec:architecture:diagram}.
   diagram of a node with IPFS and an Ethereum light client}
 
 \section{Smart Contract Architecture}
-
+\label{arch:sca}
 Smart contracts in Ethereum can interact with each other, creating an ecosystem
 of programs that resemble object oriented programming. The contract structure
 and source code is crucial because once a contract is in the blockchain, there
@@ -158,18 +158,21 @@ que surgen.
 \section{Functional requirements and activity diagrams}
 
 In the following section we will discuss the functional requirements and the
-activity diagrams for each transaction users can make to interact with the platform:
+activity diagrams for each transaction users can make to interact with the
+platform:
 
 
 \figuraAD{AD1}% 1. Table ID
 {Send Paper}% 2. Table title
-{The user uploads a file to IPFS and creates an Ethereum transaction}% 3. Table description
+{The user uploads a file to IPFS and creates an Ethereum
+  transaction}% 3. Table description
 {Authors' addresses and a file}% 4. Inputs
 {IPFS address of the paper}% 5. Outputs
-{Authors' Ethereum addresses and Metamask installed}% 6. Requirements 
-{The journal's contract address exists and the IPFS node is online}% 7. Preconditions
-{There is a transaction to the journal's contract address with the information\\ &
-  about the authors and the IPFS address of the paper }% 8. Postconditions
+{Authors' Ethereum addresses and Metamask installed}% 6. Requirements
+{The journal's contract address exists and the IPFS node is
+  online}% 7. Preconditions
+{There is a transaction to the journal's contract address with the information\\
+  & about the authors and the IPFS address of the paper }% 8. Postconditions
 {sending a paper}% 9. Caption description
 
 \figuraAD{AD2}% 1. Table ID
@@ -177,27 +180,30 @@ activity diagrams for each transaction users can make to interact with the platf
 {An editor assigns reviewers for a paper}% 3. Table description
 {Ethereum's addresses of the reviewers}% 4. Inputs
 {_}% 5. Outputs
-{The journal's contract address exists}
-{The address has editor permissions and there is a paper pending}% 6. Requirements 
+{The journal's contract address exists} {The address has editor permissions and
+  there is a paper pending}% 6. Requirements
 {A transaction is created to assign the reviwers}% 7. Preconditions
 {assigning a reviewer}% 9. Caption description
 
 \figuraAD{AD3}% 1. Table ID
 {Accept Review task}% 2. Table title
-{An address authorized as a reviewer accepts the review task}% 3. Table description
+{An address authorized as a reviewer accepts the review
+  task}% 3. Table description
 {A boolean accepting the task}% 4. Inputs
 {_}% 5. Outputs
-{The journal's contract address exists}% 6. Requirements 
+{The journal's contract address exists}% 6. Requirements
 {There are a petition pending for the reviewers address}% 7. Preconditions
-{The petition is accepted and there is a deadline to submit the review}% 8. Postconditions
+{The petition is accepted and there is a deadline to submit the
+  review}% 8. Postconditions
 {accepting a review}% 9. Caption description
 
 \figuraAD{AD4}% 1. Table ID
 {Send Review}% 2. Table title
-{A reviewers submits the review previously accepted via IPFS}% 3. Table description
+{A reviewers submits the review previously accepted via
+  IPFS}% 3. Table description
 {A file containing the review}% 4. Inputs
 {The IPFS address of the review}% 5. Outputs
-{The journal's contract address exists}% 6. Requirements 
+{The journal's contract address exists}% 6. Requirements
 {The submission is within the deadline}% 7. Preconditions
 {There is a transaction to the journal's contract address}% 8. Postconditions
 {sending a review}% 9. Caption description
@@ -207,18 +213,89 @@ activity diagrams for each transaction users can make to interact with the platf
 {The authorized address submits a rating about a review}% 3. Table description
 {An integer from 1 to 5}% 4. Inputs
 {_}% 5. Outputs
-{The journal's contract address exists}% 6. Requirements 
+{The journal's contract address exists}% 6. Requirements
 {The address can submit a review and has not done it yet}% 7. Preconditions
 {The reputation of the reviewer is affected by de rating}% 8. Postconditions
 {rating a review}% 9. Caption description
-%\clearpage
-\section{Transactions and costs}
+% \clearpage
+\section{Transaction costs}
 \label{arch:trans}
+
 As explained in the section \ref{tech:sec:ethereum} Ethereum's smart contracts
 are transaction-based. Each interaction with the platform is registered in the
 blockchain with a transaction. The architecture of this platform allows the
-following transactions.
-\lip
-\subsection*{Send Paper}
-\subsection*{}
+following transactions (all the costs are estimated\footnote{Check
+  https://ethgasstation.info/ for more info about transaction costs}).
+
+\begin{itemize}
+  \itbf{Create the platform:} To create Decentralized Science, there must be an
+  initial transaction with the source code to upload it to the blockchain.
+  Normally this transaction is the most expensive, and is only necessary to do
+  it once.
+
+  This transaction creates all the contracts mentioned in the section
+  \ref{arch:sm} and outputs the Ethereum's address of the platform. The gas
+  amount required to this transaction is 1696291, approximately from 2 to 4
+  euros.
+
+  \itbf{Send Paper:} To send a paper the user have to send a transaction
+  containing the Ethereum addresses of the authors and a file containing the
+  paper. This file will be uploaded to IPFS through a node and then the
+  resulting address will be inserted in the transaction. The gas amount required
+  to do this transaction is 114812, around 0.30 euros.
+
+  \itbf{Assign reviewers:} Assigning the reviewers is normally very cheap
+  because an address authorized as ``editor'' must create a simple transaction
+  with the paper identifier and the addresses of the reviewers. The gas amount
+  required to do this transaction is 58707, around 0.10 euros.
+
+  \itbf{Accept review:} This is the cheapest interaction with the platform, a
+  reviewer must accept the task of reviewing a paper through a transaction. With
+  this system, the reviewer cryptographically signs the contract and compromises
+  to review the paper. The gas amount required to do this transaction is 23971,
+  around 0.04 euros.
+
+  \itbf{Send Review:} Sending a review is also expensive, because the review is
+  also a file and must be uploaded to IPFS. The transaction also contains a
+  reference to the paper, and an integer representing the acceptance level of
+  the review. The gas amount required to do this transaction is 149760, around
+  0.35 euros.
+
+  \itbf{Send Rating:} This transaction contains a reference to the review of a
+  paper, and an integer from 1 to 5 representing the rating of a review. This
+  transaction initially can only be made by the other reviewers, the authors and
+  the editors of the journal. The gas amount required to do this transaction is
+  94122, around 0.04 euros.
+
+\end{itemize}
+
+\subsection{Reducing transaction costs}
+In Ethereum, reducing the transaction costs is critical, because all
+interactions have costs to the user. In Decentralized Science's contract the
+following actions have been taken to reduce these costs:
+
+\begin{itemize}
+  \itbf{Reduce the amount of data stored in the blockchain:} Storing data in the
+  blockchain is slow and expensive, so the platform only registers the minimum
+  amount of data necessary to verify the interactions between users. All data
+  files are stored in IPFS and the addresses are saved in Ethereum. \itbf{Avoid
+    expensive data types:} Working with ``Strings'' in \ii{Solidity} is very
+  expensive, that's why it is recommended to avoid using this data type.
+
+  As described in the previous sections. Decentralized Science stores IPFS
+  addresses as links between Ethereum and IPFS, but these addresses are
+  \ii{Base58} strings, a data type not implemented yet in Ethereum. This address
+  has 3 parts: 1) A number representing a hash function, 2) another number
+  representing the size of the file and 3) a hashed string of the data done with
+  the 1) hash function.
+
+  To save an IPFS address in Ethereum, initially a ``String'' data type was
+  used. But to avoid using this type, first the \ii{Base58} is decoded into the
+  three parts mentioned above. Finally instead of creating a transaction with a
+  string representing the IPFS address, the transaction contains the hash ID
+  (using an \emph{uint8} data tyoe), the size (using an \emph{uint8} data type)
+  and the hashed data (using \emph{bytes32} data type). This allows the platform
+  to reduce the transactions involving a file upload around $40\%$.
+\end{itemize}
+
 
