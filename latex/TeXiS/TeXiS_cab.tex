@@ -26,47 +26,47 @@
 %
 %---------------------------------------------------------------------
 %
-% Contiene  los comandos  para poder  tener cabeceras  en  las p�ginas
+% Contiene  los comandos  para poder  tener cabeceras  en  las p_ginas
 % distintas de las que se configuran por defecto.
 %
-% Define  adem�s  algunos  comandos   para  utilizar  en  cap�tulos  y
+% Define  adem_s  algunos  comandos   para  utilizar  en  cap_tulos  y
 % secciones "especiales"  que no siguen  la cabecera normal,  como los
-% agradecimientos, resumen, tablas de �ndices y secciones de resumen y
-% notas bibliogr�ficas.
+% agradecimientos, resumen, tablas de _ndices y secciones de resumen y
+% notas bibliogr_ficas.
 %
 %---------------------------------------------------------------------
 
 
-% EXPLICACI�N DEL FANCYHDR (paquete utilizado para las cabeceras)
+% EXPLICACI_N DEL FANCYHDR (paquete utilizado para las cabeceras)
 
 % Para definir las cabeceras que  se quieren, se utilizan los comandos
-% \fancyhead y  \fancyfoot. Ambos reciben  como par�metro entre  [] el
+% \fancyhead y  \fancyfoot. Ambos reciben  como par_metro entre  [] el
 % sitio donde se  quiere establecer. Por ejemplo si  quiero cambiar lo
-% que aparece en las p�ginas pares (_E_ven), en la parte de la derecha
+% que aparece en las p_ginas pares (_E_ven), en la parte de la derecha
 % (_R_ight) de la cabecera  (_head_) se utiliza \fancyhead[ER]{Esto va
-%   a la  derecha en  las pares}. En  realidad, esos  par�metros entre
-% corchetes se pueden agrupar. Por  ejemplo, si queremos que el n�mero
-% de p�gina (\thepage)  aparezca en las pares a la  izquierda y en las
+%   a la  derecha en  las pares}. En  realidad, esos  par_metros entre
+% corchetes se pueden agrupar. Por  ejemplo, si queremos que el n_mero
+% de p_gina (\thepage)  aparezca en las pares a la  izquierda y en las
 % impares a la derecha, se usa \fancyhead[LE,RO]{\thepage}.
 %
-% Por otro  lado, en la  pr�ctica se utiliza  un texto en  las p�ginas
+% Por otro  lado, en la  pr_ctica se utiliza  un texto en  las p_ginas
 % izquierdas (es decir, las pares),  y otra en las derechas (es decir,
 % impares). Por eso, existen dos comandos preestablecidos, \righmark y
-% \leftmark,  que  contienen el  texto  que  aparecer�.  Lo normal  es
-% definir         despu�s:         \fancyhead[LO]{\rightmark}        y
-% \fancyhead[RE]{\leftmark}, para  que a  la izquierda de  las p�ginas
-% impares aparezca la  marca destinada a las p�ginas  de la derecha, y
-% en  la  derecha  de las  pares  el  texto  para  las p�ginas  de  la
+% \leftmark,  que  contienen el  texto  que  aparecer_.  Lo normal  es
+% definir         despu_s:         \fancyhead[LO]{\rightmark}        y
+% \fancyhead[RE]{\leftmark}, para  que a  la izquierda de  las p_ginas
+% impares aparezca la  marca destinada a las p_ginas  de la derecha, y
+% en  la  derecha  de las  pares  el  texto  para  las p_ginas  de  la
 % izquierda.
 %
-% Por  lo tanto,  si  queremos  que en  la  izquierda (p�ginas  pares)
-% aparezca el  nombre del cap�tulo,  habr� que "definir"  el \leftmark
+% Por  lo tanto,  si  queremos  que en  la  izquierda (p_ginas  pares)
+% aparezca el  nombre del cap_tulo,  habr_ que "definir"  el \leftmark
 % con el nombre.  Si queremos que en la  derecha (impares) aparezca el
-% nombre de la secci�n, habr� que "definir" as� el \rightmark.
+% nombre de la secci_n, habr_ que "definir" as_ el \rightmark.
 %
 % La realidad  es que no se  definen esos dos comandos  (de hecho creo
 % que no son  comandos como tal redefinibles...}, sino  que se utiliza
-% el comando \markboth. Seg�n la documentaci�n del paquete fancyhdr:
+% el comando \markboth. Seg_n la documentaci_n del paquete fancyhdr:
 %
 % The \leftmark  contains the Left  argument of the Last  \markboth on
 % the  page, the  \rihtmark contains  de Right  argument of  the first
@@ -74,43 +74,43 @@
 % If no  marks are  present on  a page they  are "inherited"  from the
 % previous page.
 %
-% Es decir, el \markboth debe ser  alg�n tipo de comando que tiene dos
-% par�metros, y  que se puede poner  en cualquier lugar  de la p�gina,
-% para cambiar el t�tulo. Por  ejemplo, se puede poner al principio de
-% un cap�tulo con \markboth{Titulo del capitulo}{}.
+% Es decir, el \markboth debe ser  alg_n tipo de comando que tiene dos
+% par_metros, y  que se puede poner  en cualquier lugar  de la p_gina,
+% para cambiar el t_tulo. Por  ejemplo, se puede poner al principio de
+% un cap_tulo con \markboth{Titulo del capitulo}{}.
 %
-% En  realidad, ese \markboth  intuyo que  est� ya  por defecto  en el
+% En  realidad, ese \markboth  intuyo que  est_ ya  por defecto  en el
 % comando \chapter, igual  que hay otro similar en  las secciones.  Si
 % se quiere poner otros, basta con redefinir el comando \chaptermark y
-% \sectionmark, que intuyo que ser�n  como hooks dentro del \chapter y
+% \sectionmark, que intuyo que ser_n  como hooks dentro del \chapter y
 % de \section. Y eso es precisamente lo que he utilizado al definir la
 % cabecera.
 
 % Paquete  para mejorar  el estilo  de  las cabeceras.  El paquete  es
 % fancyhdr.   En  versiones   antiguas  de   LaTeX,  el   paquete  era
 % fancyheader, que es el utilizado por ejemplo en el tutorial de LaTeX
-% que sirvi� de inspiraci�n para  esta plantilla. Adem�s de incluir el
+% que sirvi_ de inspiraci_n para  esta plantilla. Adem_s de incluir el
 % paquete,  definimos   el  estilo  de  cabeceras   que  queremos.  En
 % particular, utilizaremos el  estilo "predefinido" fancy, con algunas
-% modificaciones. Adem�s, cambio el estilo de las p�ginas de principio
-% del cap�tulo (t�cnicamente estilo "plain"), para que el n�mero de la
-% p�gina aparezca en la esquina de la derecha (abajo), en vez de en el
-% centro. Para los curiosos, explicaci�n al final del fichero.
+% modificaciones. Adem_s, cambio el estilo de las p_ginas de principio
+% del cap_tulo (t_cnicamente estilo "plain"), para que el n_mero de la
+% p_gina aparezca en la esquina de la derecha (abajo), en vez de en el
+% centro. Para los curiosos, explicaci_n al final del fichero.
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
 
-% Definici�n del estilo en las p�ginas normales:
+% Definici_n del estilo en las p_ginas normales:
 
-% Alargar la cabecera ser�a:
+% Alargar la cabecera ser_a:
 %\addtolength{\headwidth}{\marginparwidth}
 
-% Hacemos un poco m�s alta la cabecera, ya que el valor por defecto
+% Hacemos un poco m_s alta la cabecera, ya que el valor por defecto
 % (12) no es suficiente para el tipo de letra y contenido de cabecera
-% elegido, lo que provoca warnings cont�nuos en la compilaci�n
+% elegido, lo que provoca warnings cont_nuos en la compilaci_n
 \addtolength{\headheight}{2pt}
 
-% Establecemos el resto de par�metros de apariencia
+% Establecemos el resto de par_metros de apariencia
 \newcommand{\restauraCabecera}{
 \fancyhead[LO]{\rightmark}
 \fancyhead[RE]{\leftmark}
@@ -125,19 +125,19 @@
 \restauraCabecera
 \fancyhead[RO,LE]{\thepage}
 
-% Para los cap�tulos que no tienen numeraci�n en el �ndice ni tienen
+% Para los cap_tulos que no tienen numeraci_n en el _ndice ni tienen
 % secciones, se debe cambiar la cabecera, para que no aparezca algo
-% como "Cap�tulo 0. Agradecimientos". En esos cap�tulos, la cabecera
-% es "especial", porque en las p�ginas impares, tampoco aparece el
-% nombre de la secci�n, sino tambi�n el nombre del "cap�tulo". Para
+% como "Cap_tulo 0. Agradecimientos". En esos cap_tulos, la cabecera
+% es "especial", porque en las p_ginas impares, tampoco aparece el
+% nombre de la secci_n, sino tambi_n el nombre del "cap_tulo". Para
 % esos casos, se puede utilizar el comando siguiente.
 
 % IMPORTANTE: este comando _sobreescribe_ el funcionamiento de la
 % cabecera, hasta que se llame al comando \restauraCabecera, por lo
-% despu�s del "cap�tulo especial", debe invocarse a
-% \restauraCabecera. Y decir _despu�s_ significa _despu�s_, es decir
-% cuando el cap�tulo YA HA TERMINADO, y se ha empezado el siguiente, o
-% forzando final de p�gina con \newpage (\newpage\restauracabecera).
+% despu_s del "cap_tulo especial", debe invocarse a
+% \restauraCabecera. Y decir _despu_s_ significa _despu_s_, es decir
+% cuando el cap_tulo YA HA TERMINADO, y se ha empezado el siguiente, o
+% forzando final de p_gina con \newpage (\newpage\restauracabecera).
 \newcommand{\cabeceraEspecial}[1]{
 \fancyhead[LO]{\textsc{#1}}
 \fancyhead[RE]{\textsc{#1}}
@@ -145,20 +145,20 @@
 
 % La forma  "*" de  chapters y  sections NO llaman  a los  comandos de
 % marca (chaptermark y sectionmark) que son los que finalmente alteran
-% la cabecera. En  la tesis se utilizan secciones  sin numeraci�n para
-% el resumen y notas bibliograficas de cada cap�tulo, y queda bastante
-% mal que  se mantenga en la  cabecera el nombre de  la �ltima secci�n
-% con numeraci�n.
+% la cabecera. En  la tesis se utilizan secciones  sin numeraci_n para
+% el resumen y notas bibliograficas de cada cap_tulo, y queda bastante
+% mal que  se mantenga en la  cabecera el nombre de  la _ltima secci_n
+% con numeraci_n.
 %
-% La soluci�n es  modificar a mano la cabecera  (en concreto, la parte
-% izquierda  de las  p�ginas  impares, es  decir  el \markright).  Por
-% ejemplo, para las conclusiones habr�a que hacer:
+% La soluci_n es  modificar a mano la cabecera  (en concreto, la parte
+% izquierda  de las  p_ginas  impares, es  decir  el \markright).  Por
+% ejemplo, para las conclusiones habr_a que hacer:
 %
 % \section*{Resumen\markright{Resumen}}
 %
 % Para evitar tener  que hacerlo todo el tiempo,  creamos los comandos
 % \Resumen y  \NotasBibliograficas que lo  haga por nosotros.   El uso
-% ser�:
+% ser_:
 %
 % \section*{
 %                   \Resumen
@@ -166,7 +166,7 @@
 %
 % Por otro lado, al ser secciones  sin numerar no se meten en la tabla
 % de contenidos ni  como marcador para que aparezca  en el "contenido"
-% del PDF mostrado  por el lector. Para que lo haga,  hay que a�adir a
+% del PDF mostrado  por el lector. Para que lo haga,  hay que a_adir a
 % mano la entrada en el toc. Por ejemplo, para las conclusiones:
 %
 % \addcontentsline{toc}{section}{Resumen}
@@ -174,30 +174,30 @@
 %
 % que dice "quiero meter en el TOC (Table Of Content) una entrada tipo
 % section, con el nombre 'Resumen  ".  Esto tiene el efecto lateral de
-% a�adir el marcador en el PDF.
+% a_adir el marcador en el PDF.
 %
 % Esto  ya   no  lo   podemos  meter  en   los  comandos   \Resumen  y
 % \NotasBibliograficas, porque como lo estamos usando _dentro_ del
-% \section*, LaTeX a�n  no ha definido la posici�n en  el PDF y aunque
+% \section*, LaTeX a_n  no ha definido la posici_n en  el PDF y aunque
 % el  TOC sale  bien, el  enlace que  se  pone en  dicho TOC  y en  el
 % contenido del PDF  mostrado por el lector no sale  bien. En lugar de
-% eso,  hace referencia al  �ltimo marcador  (por ejemplo,  la secci�n
-% anterior, o la �ltima figura).
+% eso,  hace referencia al  _ltimo marcador  (por ejemplo,  la secci_n
+% anterior, o la _ltima figura).
 %
 %
-% Hay que ejecutar el comando \addcontentsline por tanto _despu�s_ del
-% comando \section. Una alternativa ser�a definir \Resumen de modo que
-% �l   mismo  hiciera   el  \section*{...}    completo,  y   luego  el
-% \addcontentsline... y as� no habr�a problemas. Pero esta soluci�n no
+% Hay que ejecutar el comando \addcontentsline por tanto _despu_s_ del
+% comando \section. Una alternativa ser_a definir \Resumen de modo que
+% _l   mismo  hiciera   el  \section*{...}    completo,  y   luego  el
+% \addcontentsline... y as_ no habr_a problemas. Pero esta soluci_n no
 % es  compatible  con  la   capacidad  de  los  editores  de  resaltar
-% secciones. Por tanto, cada vez que pongas la secci�n de conclusiones
-% o  de en  el pr�ximo  cap�tulo  tienes que,  MANUALMENTE, a�adir  el
-% \addcontentsline. Hazlo  _despu�s_ del  \section*. En otro  caso, se
-% utilizar� tambi�n en  el enlace del PDF la  �ltima secci�n o figura.
-% Haci�ndolo despu�s  en realidad  no queda del  todo bien,  porque el
-% enlace queda a la primera letra de la secci�n, en lugar de al t�tulo
+% secciones. Por tanto, cada vez que pongas la secci_n de conclusiones
+% o  de en  el pr_ximo  cap_tulo  tienes que,  MANUALMENTE, a_adir  el
+% \addcontentsline. Hazlo  _despu_s_ del  \section*. En otro  caso, se
+% utilizar_ tambi_n en  el enlace del PDF la  _ltima secci_n o figura.
+% Haci_ndolo despu_s  en realidad  no queda del  todo bien,  porque el
+% enlace queda a la primera letra de la secci_n, en lugar de al t_tulo
 % como ocurre con  las secciones numeradas, pero no  he encontrado una
-% forma de hacerlo mejor y tampoco quiero perder m�s tiempo.
+% forma de hacerlo mejor y tampoco quiero perder m_s tiempo.
 %
 % Para    eso,    hay    otros    dos    comandos,    \TocResumen    y
 % \TocNotasBibliograficas
@@ -214,7 +214,7 @@
 \newcommand{\Resumen}{Resumen\markright{Resumen}}
 \newcommand{\TocResumen}{\addcontentsline{toc}{section}{Resumen}}
 
-\newcommand{\NotasBibliograficas}{Notas bibliogr�ficas\markright{Notas
+\newcommand{\NotasBibliograficas}{Notas bibliogr_ficas\markright{Notas
     bibliográficas}}
 \newcommand{\TocNotasBibliograficas}{\addcontentsline{toc}{section}{Notas
     bibliográficas}}
@@ -227,18 +227,18 @@
 \newcommand{\Conclusiones}{Conclusiones\markright{Conclusiones\ldots}}
 \newcommand{\TocConclusiones}{\addcontentsline{toc}{section}{Conclusiones}}
 
-% Para el ap�ndice, hay que indicar que queremos que ponga "Ap�ndice
-% X", y no "Cap�tulo X" como hace normalmente.
+% Para el ap_ndice, hay que indicar que queremos que ponga "Ap_ndice
+% X", y no "Cap_tulo X" como hace normalmente.
 
-% Si estamos en modo Debug, ponemos en el pie de p�gina una indicaci�n.
+% Si estamos en modo Debug, ponemos en el pie de p_gina una indicaci_n.
 
 \ifx\release\undefined
 \fancyfoot[LE,RO]{\vspace*{1cm}\small \sc Borrador -- \today}
 \else
 \fi
 
-% Definici�n del estilo en la  p�gina de inicio de cap�tulo: N�mero de
-% la p�gina abajo a la derecha, y sin l�nea en la zona superior.
+% Definici_n del estilo en la  p_gina de inicio de cap_tulo: N_mero de
+% la p_gina abajo a la derecha, y sin l_nea en la zona superior.
 \fancypagestyle{plain}{%
   \fancyhf{}
   \fancyfoot[R]{\thepage}
@@ -246,10 +246,10 @@
   \renewcommand{\footrulewidth}{0pt}
 }
 
-% Cuando   se   cambia   de    cap�tulo,   se   ejecuta   el   comando
-% \cleardoublepage.  Si queremos que  la posible  p�gina que  se queda
+% Cuando   se   cambia   de    cap_tulo,   se   ejecuta   el   comando
+% \cleardoublepage.  Si queremos que  la posible  p_gina que  se queda
 % completamente en blanco NO tenga cabeceras, tenemos que redefinir el
-% comando. (Cogido de la documentaci�n del fancyhdr)
+% comando. (Cogido de la documentaci_n del fancyhdr)
 \makeatletter
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
   \hbox{}
@@ -261,7 +261,7 @@
 
 
 % Variable local para emacs, para  que encuentre el fichero maestro de
-% compilaci�n y funcionen mejor algunas teclas r�pidas de AucTeX
+% compilaci_n y funcionen mejor algunas teclas r_pidas de AucTeX
 
 %%%
 %%% Local Variables:

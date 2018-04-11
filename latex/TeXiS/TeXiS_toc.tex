@@ -26,35 +26,35 @@
 %
 %---------------------------------------------------------------------
 %
-% Contiene  los  comandos  para  generar los  �ndices  del  documento,
-% entendiendo por �ndices las tablas de contenidos.
+% Contiene  los  comandos  para  generar los  _ndices  del  documento,
+% entendiendo por _ndices las tablas de contenidos.
 %
-% Genera  el  �ndice normal  ("tabla  de  contenidos"),  el �ndice  de
-% figuras y el de tablas. Tambi�n  crea "marcadores" en el caso de que
-% se est� compilando con pdflatex para que aparezcan en el PDF.
+% Genera  el  _ndice normal  ("tabla  de  contenidos"),  el _ndice  de
+% figuras y el de tablas. Tambi_n  crea "marcadores" en el caso de que
+% se est_ compilando con pdflatex para que aparezcan en el PDF.
 %
 %---------------------------------------------------------------------
 
 
-% Primero un poquito de configuraci�n...
+% Primero un poquito de configuraci_n...
 
 
-% Pedimos que inserte todos los ep�grafes hasta el nivel \subsection en
+% Pedimos que inserte todos los ep_grafes hasta el nivel \subsection en
 % la tabla de contenidos.
 \setcounter{tocdepth}{2}
 
-% Le  pedimos  que nos  numere  todos  los  ep�grafes hasta  el  nivel
+% Le  pedimos  que nos  numere  todos  los  ep_grafes hasta  el  nivel
 % \subsubsection en el cuerpo del documento.
 \setcounter{secnumdepth}{3}
 
 
-% Creamos los diferentes �ndices.
+% Creamos los diferentes _ndices.
 
 % Lo primero un  poco de trabajo en los marcadores  del PDF. No quiero
-% que  salga una  entrada  por cada  �ndice  a nivel  0...  si no  que
-% aparezca un marcador "�ndices", que  tenga dentro los otros tipos de
-% �ndices.  Total, que creamos el marcador "�ndices".
-% Antes de  la creaci�n  de los �ndices,  se a�aden los  marcadores de
+% que  salga una  entrada  por cada  _ndice  a nivel  0...  si no  que
+% aparezca un marcador "_ndices", que  tenga dentro los otros tipos de
+% _ndices.  Total, que creamos el marcador "_ndices".
+% Antes de  la creaci_n  de los _ndices,  se a_aden los  marcadores de
 % nivel 1.
 
 \ifpdf
@@ -63,12 +63,12 @@
 
 % Tabla de contenidos.
 %
-% La  inclusi�n  de '\tableofcontents'  significa  que  en la  primera
-% pasada  de  LaTeX  se  crea   un  fichero  con  extensi�n  .toc  con
-% informaci�n sobre la tabla de contenidos (es conceptualmente similar
-% al  .bbl de  BibTeX, creo).  En la  segunda ejecuci�n  de  LaTeX ese
-% documento se utiliza para  generar la verdadera p�gina de contenidos
-% usando la  informaci�n sobre los  cap�tulos y dem�s guardadas  en el
+% La  inclusi_n  de '\tableofcontents'  significa  que  en la  primera
+% pasada  de  LaTeX  se  crea   un  fichero  con  extensi_n  .toc  con
+% informaci_n sobre la tabla de contenidos (es conceptualmente similar
+% al  .bbl de  BibTeX, creo).  En la  segunda ejecuci_n  de  LaTeX ese
+% documento se utiliza para  generar la verdadera p_gina de contenidos
+% usando la  informaci_n sobre los  cap_tulos y dem_s guardadas  en el
 % .toc
 \ifpdf
    \pdfbookmark[1]{Table of contents}{table of contents}
@@ -80,10 +80,10 @@
 
 \newpage
 
-% �ndice de figuras
+% _ndice de figuras
 %
-% La idea es semejante que para  el .toc del �ndice, pero ahora se usa
-% extensi�n .lof (List Of Figures) con la informaci�n de las figuras.
+% La idea es semejante que para  el .toc del _ndice, pero ahora se usa
+% extensi_n .lof (List Of Figures) con la informaci_n de las figuras.
 
 
 
@@ -97,7 +97,7 @@
 
 \newpage
 
-% �ndice de tablas
+% _ndice de tablas
 % Como antes, pero ahora .lot (List Of Tables)
 
 \ifpdf
@@ -111,7 +111,7 @@
 \newpage
 
 % Variable local para emacs, para  que encuentre el fichero maestro de
-% compilaci�n y funcionen mejor algunas teclas r�pidas de AucTeX
+% compilaci_n y funcionen mejor algunas teclas r_pidas de AucTeX
 
 %%%
 %%% Local Variables:
