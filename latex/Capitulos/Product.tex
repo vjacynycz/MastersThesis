@@ -1,15 +1,164 @@
-
-\chapter{Product}
+\chapter{Proof of concept}
 
 \begin{FraseCelebre}
   \begin{Frase}
-    There is no secret ingredient. To make something special you just have to
-    believe it's special.
+    Sooner or later you're going to realize just as I did that there's a
+    difference between knowing the path and walking the path.
   \end{Frase}
   \begin{Fuente}
-    Mr. Ping - Kung Fu Panda
+    Morpheus - The Matrix
   \end{Fuente}
 \end{FraseCelebre}
 
-\section{TODO}
-\lip
+As proof of concept, the final platform was uploaded to a server with an IPFS
+node. Users can interact with this platform and connec to to a blockchain test
+net in which all the accounts have unlimited money to make all the transactions
+to interact with Ethereum.
+
+As part of a decentralized system, users may run a local node instead of
+connecting to the gateway provided. The source code of the platform is open
+source, and can be obtained and deployed in an Ethereum and IPFS node.
+
+\sst{Frontpage}
+
+As showed in the figure~\ref{poc:fp}, the front page of the platform shows three
+main sections:
+
+\begin{itemize}
+  \itbf{A showcase showing the journals registered:} All journals registered in
+  the platform are automatically showed in the front page in order of
+  popularity. Showing the most popular journals first (i.e. journals with the
+  most publications).
+
+  \itbf{A list of filters:} A list showing the most relevant topics containing a
+  link to the topic search page.
+
+  \itbf{Register jornal link:} A link to the journal registration page.
+
+\end{itemize}
+
+The platform also has a searchbox to search queries within the platform.
+
+\figuraHere{homepage.png} {width=0.9\linewidth}{The front page of the
+  platform}{poc:fp}
+
+\sst{Register Journal}
+
+Decentralized Science offers the possibility to register journals within the
+platform. Journal editors who want to adopt this system, can implement a smart
+contract template hosted in github, upload it to Ethereum and provide the
+address the registration page. This will create a transaction in Ehtereum and
+will link the new registered journal in the platform. \figuraHere{register.png}%
+{width=0.9\linewidth}%
+{Register journal page}%
+{poc:rj}
+
+The figure~\ref{poc:rj} shows the registration page for journals. The HTML form
+creates an Ethereum transaction to Decentralized Science's address. The address
+provided must be an extension of the original contract for a decentralized
+journal, otherwise the transaction will be unsuccesful. \sst{Journal Page}
+
+The journal page contains all the infomation about the journal:
+\begin{itemize}
+\item Title of the journal.
+\item A short description about the journal.
+\item An image of the journals cover.
+\item Tags of the journal with links to a search of each one.
+\item Lastest papers published and a link to a list to all the papers of the
+  journal.
+\item A link to the paper subsission page.
+\item The average review time of the papers published in the journal.
+\end{itemize}
+
+\figuraHere{journal.png}%
+{width=0.9\linewidth}%
+{Journal page}%
+{poc:j}
+
+The figure~\ref{poc:j} shows the journal's page with all the information
+mentioned above. The HTML connects to the journal's Ethereum address to get the
+IPFS address of the journal. This last address references a \emph{JSON} file
+containing all the information about the journal.
+
+\vfill{1em}
+
+\sst{Paper page}
+
+A paper page contains useful information about the paper:
+\begin{itemize}
+\item Title.
+\item Authors, with links to each author page.
+\item Abstact of the paper.
+\item Topics with it's corresponding links.
+\item A download link for the paper and links to download each draft, offering
+  the possibillity to view the previous work of the researchers.
+\item The reviews from the reviewers showing the author, the text of the review
+  and the acceptance level. Each review is also a link to the reviewer's page.
+\end{itemize}
+\figuraHere{paper.png}%
+{width=0.9\linewidth}%
+{Paper page}%
+{poc:p}
+
+The figure~\ref{poc:p} shows the paper's page with all the information mentioned
+above.
+
+\sst{Author's page}
+
+The authors page shows all the information about a researcher, the main features
+about this page is:
+
+\begin{itemize}
+  \itbf{Reputation:} The reputation of a researcher is represented with a 5-star
+  rating, depending on how good or bad is as a reviewer. It also contains the
+  percent of the reviews delivered in time. \itbf{Ethreum's address:} The
+  address of the researcher can be used to verify all the transactions done with
+  that address. This offers the possibility to check a researcher career with
+  only it's address. \itbf{Papers published:} All the papers published as a
+  researcher with the mentioned address. \itbf{Papers reviewed:} All the reviews
+  the researcher have done. \itbf{Tags:} The tags the reviewer have participated
+  in.
+\end{itemize}
+
+\figuraHere{rating.png}%
+{width=0.97\linewidth}%
+{Author's page}%
+{poc:a}
+
+The figure~\ref{poc:a} shows the author's page with all the information
+mentioned above.
+
+\sst{Topic Page}
+
+The topic page contains information inside the platform about a specific topic.
+This page searches papers published under that topic. It also searchers
+reviewers (ordered by reviews, rating or time score) and journals (ordered by
+number of papers or average review time) in that topic.
+
+\figuraHere{topic.png}%
+{width=0.97\linewidth}%
+{Topic's page}%
+{poc:t}
+
+\sst{Journal's management page}
+
+The platforms allows addresses with editor privileges to assign reviewers to
+pending papers. The page shows the pending, accepted an rejected papers as shown
+in the figure~\ref{poc:jmp}.
+
+For each pending papers there is a modal to assign the addresses of the
+reviewers as shown in figure~\ref{poc:am}. This will create an Ethereum
+transaction to make the assignment public, and allows the reviewers assigned to
+accept the review.
+
+\figuraHere{manage.png}%
+{width=0.97\linewidth}%
+{Journal's management page}%
+{poc:jmp}
+
+\figuraHere{assign.png}%
+{width=0.97\linewidth}%
+{Assign modal from journal's management page}%
+{poc:am}
+
+
