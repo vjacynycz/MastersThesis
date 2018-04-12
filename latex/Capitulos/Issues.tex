@@ -14,33 +14,33 @@ each other. These different privacy settings are shown in the Figure
 Unfair or low quality reviews were not discouraged by the system due to the lack
 of consequences.
 
-\section{Privacy for the peer review process}
+\subsection{Privacy for the peer review process}
 
-\translate{ Toda la información de la plataforma está en blockchain, la cual es
-  accesible por todo el mundo. Esto supone un problema para la privacidad de los
-  revisores ya que no todos ellos quieren revelar su identidad. Esto supone que
-  hay que explorar diferentes configuraciones para cada uno de los modelos de
-  peer review. }
+As mentioned in previous sections, all the information is stored in either IPFS
+(files) or Ethereum (interactions). All this information is public for everyone.
+This may suppose a privacy problem for the reviewers if they do not want to
+reveal their identity. Exploring different possible configurations for each model of
+peer review may solve this problem.
 
 Each of the anonymity options of the system requires different solutions, which
 are discussed bellow. The question of whether we can keep the benefits of blind
 review while providing accountability and recognition to reviews deserves
 special consideration.
 
-\subsection*{Blind peer review}
+\subsubsection*{Blind peer review}
 Blind review is the protection of the identity of reviewers in the peer review
 process. This way, anonymous reviewers can honestly criticize a paper without
 fearing the reactions of the authors. In a blockchain, this protection could be
 easily achieved by using single-use addresses previously agreed with the editor.
 
-\subsection*{Double blinded peer review}
+\subsubsection*{Double blinded peer review}
 A double blinded review is a blind review that additionally protects the authors
 identity to prevent social bias~\cite{lee2013bias,budden2008double}. Authors
 could protect their identities prior to publication by providing a single-use
 public address on submission. Later they can reveal their real identity since
 they are the only ones with access to that address.
 
-\subsection*{Open peer review}
+\subsubsection*{Open peer review}
 
 Open review models propose that both authors and reviewers know each
 other~\cite{ford2013defining}. While studies found effect on the percentage of
@@ -72,7 +72,7 @@ open to debate~\cite{groves2010open}.
 % Signed reviews are easy to implement by maintaining a public identity for the
 % reviewer.
 
-\section{Privacy for the rating process}
+\subsection{Privacy for the rating process}
 \label{sec:privacyRating}
 
 
@@ -93,11 +93,11 @@ proposed reviewer reputation network.
 % where review reports are rated by authors, reviewers and editors. The possible
 % privacy settings of this system are presented in the following subsections.
 
-\subsection*{Open Rating}
+\subsubsection*{Open Rating}
 Similarly to open reviews, open ratings are easy to implement by maintaining a
 public identity for the raters and reviewers.
 
-\subsection*{Anonymous Rating}
+\subsubsection*{Anonymous Rating}
 
 Protecting the identity of raters is interesting in several reputation systems.
 We can support this anonymity feature using \emph{blinded tokens}
@@ -106,7 +106,7 @@ identity of the rater. People authorized to rate a review, such as authors,
 editors and other reviewers involved in the process, may each get one of these
 tokens.
 
-\subsection*{Rating Anonymous Reviews}
+\subsubsection*{Rating Anonymous Reviews}
 
 The question of whether we can keep the benefits of blind review while providing
 accountability and recognition to reviewers deserves special consideration.
@@ -121,7 +121,7 @@ reviewing is therefore of great interest. Following, we discuss the feasibility
 of adopting different anonymity and accountability approaches to realize this
 novel system.
 
-\subsection*{Accountability}
+\subsubsection*{Accountability}
 
 \emph{Collateral models} are widely used in blockchain technology to ensure that
 an actor assumes negative consequences of an interaction in order to avoid the
@@ -129,7 +129,7 @@ greater consequence of loosing the collateral. A similar strategy can be used
 for the anonymous reputation network. If a reputation collateral is requested
 from the reviewers, they would be encouraged to claim even negative ratings.
 
-\subsection*{Anonymity}
+\subsubsection*{Anonymity}
 
 % \emph{Coin mixing} protocols are designed to obfuscate the relation between
 % senders and receivers of Bitcoin payments by mixing in a single transaction
