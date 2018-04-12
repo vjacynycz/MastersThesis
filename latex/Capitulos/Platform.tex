@@ -150,13 +150,21 @@ dissemination infrastructure allows them to impose certain rules, such as
 charging authors unreasonable fees to offer their work as Open
 Access~\cite{solomon2012study} (Gold Open Access) or the temporal embargo and
 restrictions on the dissemination of the final version (Green Open
-access)~\cite{bjork2014anatomy}, among others.
+access)~\cite{bjork2014anatomy}, among others. 
 
 The system proposes a decentralized infrastructure for science publication.
 Academic documents - from first drafts to final versions, including peer
-reviews- are shared in IPFS, an open P2P network~\cite{benet_ipfs-content_2014}.
+reviews- are shared in IPFS, as mentioned on section~\ref{tech:sec:ipfs}.
 Thus, the system inherently grants Open Access by the design of its distributed
 infrastructure and circumvents the publishers dominant role.
+
+All the documents are first uploaded to IPFS, generating a \emph{Base58}
+address. Then the system uses this address to make a transaction in Ethereum,
+cryptographically signing the contract with the user's address. Other users that
+want to access the paper, only have to inspect the blockchain, retrieve the IPFS
+address and download it though a local node or a gateway. This makes
+Decentralized Science a truly open-access publication system, were all the
+process is public, transparent and trustful.
 
 
 
