@@ -36,94 +36,97 @@ of programs that resemble object oriented programming. The contract structure
 and source code is crucial because once a contract is in the blockchain, there
 is no way to change it.
 
-One of the most important milestones to design a smart contract is to reduce the
-transaction costs.
-
-Uno de los retos más importantes para diseñar un contrato es reducir el coste de
-las transacciones, ya que el coste de estas puede ser muy alto si el diseño del
-contrato es ineficiente~\cite{croman2016scaling}. Insertar datos en la
-blockchain es muy caro, por eso es recomendable utilizar las estructuras de
-datos que nos ofrece Ethereum para reducir el coste de transacción. El problema
-se plante a cuando se utilizan direcciones en IPFS, las cuales están en BASE58,
-un tamaño que sólo es representable por el tipo ``string'' de Ethereum, el cual
-es de los tipos de datos maś costosos para trabajar.
-
-Como solucion, la plataforma realiza la funcion hash en base32 de la dirección
-IPFS, convirtiendo el tipo de dato a uno mucho más barato para reducir en un
-30\% el coste de transacción.
-
+One of the most important challenges in designing a contract is to reduce the
+cost of transactions, since the cost of these can be very high if the contract
+design is inefficient~\cite{croman2016scaling}. Inserting data in the blockchain
+is very expensive, so it is advisable to use the data structures that Ethereum
+offers to reduce the transaction cost. Section~\ref{arch:trans} discusses the
+problems encountered during the development of the platform to reduce these
+costs and what solutions have been implemented.
 
 \figura{contracts.png}{width=0.93\linewidth}{contracts:uml}{Diagrama UML del la
   estructura de contratos}
 
-La estructura dentro de Ethereum está separada en cuatro contratos inteligentes
-como se muestra en la figura \ref{contracts:uml}.
+The design of the platform has been fragmented into 4 smart contracts that allow
+both reduce the cost of transactions, and fragment the information of the
+platform, as seen in figure \ref{contracts:uml}. This fragmentation allows other
+smart contracts interact with the information stored in Decentralized Science,
+without having to rely on a single contract that centralizes all the
+transactions, possibly causing a significant number of transactions to the same
+address.
 
-\subsection*{Decentralized Journal} Es el contrato desde el que se controlan
-todas las interacciones con los autores y los editores. Los autores interactuan
-con este contrato para enviar los papers, y los editores asignan a revisores
-para el proceso de revision por pares.
+\subsection*{Decentralized Journal}%
 
-Este contrato tiene una serie de direcciones ethereum asociadas a los editores
-(que son los que pueden asignar revisores) y una referencia a la dirección del
-contrato de la librería donde se envían los papers. Además a través de este
-contrato, los revisores envían las revisones que les han sido asignadas.
+This is the contract from which all interactions with authors and publishers are
+controlled. The authors interact with this contract to send the papers, and the
+editors assign reviewers for the peer review process.
 
-\subsection*{Decentralized Library} Este contrato es el que almacena las
-direcciones IPFS de los papers y controla si están aceptados por el journal o
-no.
+This contract has a series of ethereum addresses associated with the editors
+(which are the ones who can assign reviewers) and a reference to the contract
+address of the ``library contract'', where the papers are sent. In addition,
+through this contract, the reviewers send the reviews that have been assigned to
+them.
 
-Es el que se encarga de convertir una dirección de base58 a bytes32 para que sea
-manejada por la plataforma. Esta conversión se realiza en dos pasos: primero el
-navegador web a través de javaScrpt deshace la base58 obteniendo los datos de
-identificación de un archivo IPFS (ver seccion \ref{tech:sec:ipfs}). Luego
-almacena estos datos en el struct ``Multihash'' y realiza una función hash para
-obtener un dato mucho más eficiente para trabajar en Ethereum. Este hash es el
-que se propagará por el sistema de contratos como idetificador del paper que se
-ha enviado.
+\subsection*{Decentralized Library}
 
-Además cada paper almacena todas las revisiones que tiene a trasvés de un struct
-``Review''. Este struct tiene una dirección IPFS con la review realizada, la
-dirección del reviewer y un entero representando si el paper es aceptado o no.
+This smart contract stores the IPFS addresses of the papers and the reviews and
+controls if the papers are published.
 
-\subsection*{RatingStorage}
-Este contrato tiene como finalidad almacenar los ratings de las reviews que han
-hecho los reviewers, y se encarga de dar la reputacion a estos.
+To store this data, this contract saves a reference to the IPFS addresses in
+\emph{Base58}. This reference is the result of the data transformation is
+explained in the section~\ref{arch:trans}.
 
-Cada ratrings es represetnado por un struct que tiene: un hash que identifica
-univocamente la review de un paper hecha por un revisor, la dirección de la
-persona que realiza el rating y un score que representa la reputacion que se le
-da al revisor.
+Then it stores this data in a struct called ``Multihash'' defined in the smart
+contract and performs a hash function to obtain an identifier of the file within
+the system, which is much more efficient in Ethereum. This hash is the one that
+will be used to identify a paper from the other intelligent Decentralized
+Science contracts.
 
-Respecto al sistema de reputación se decidió adoptar un sistema de reputación de
-cinco estrellas explicado en la sección \ref{rep:system}
+In addition, each paper stores all the revisions it has through a ``Review''
+struct. This struct has an IPFS address with the review (transformed as a
+\emph{Multihash}), the address of the reviewer and an integer representing
+whether the paper is accepted or not.
+
+\subsection*{Rating Storage}
+
+This smart contract stores all the transactions about the ratings of the reviews
+made by the reviewers, and it is the one capable to give reputation to each one
+of them.
+
+Each ratring is represented by a struct that has: a hash that univocally
+identifies the review of a paper made by a reviewer, the address of the person
+making the rating and a score that represents the reputation that is given to
+the reviewer.
+
+Regarding the reputation system, it was decided to adopt a five-star reputation
+system explained in the section \ref{rep:system}.
 
 \subsection*{ReviewersHub}
 
-Se encarga de almacenar las direcciones, los campos de investigación, y la
-reputación de los revisores que etán registrados en la plataforma.
+It is responsible for storing the addresses, the research fields, and the
+reputation of the reviewers who are registered in the platform.
 
-Con este contrato interactuan el contrato de Rating storage para dar las
-puntuaciones de reputación a los revisores, los nuevos revisores que quieran
-registrarse en la plataforma y los editores que quieran encontrar a un revisor
-para realizar el proceso de revisión por pares.
+It is responsible for storing the addresses, the research fields, and the
+reputation of the reviewers who are registered in the platform. This contract is
+used by: the Rating Storage contract to give the reputation scores to the
+reviewers, the new reviewers who want to register on the platform and the
+editors who want to find new reviewers to carry out the peer review process.
 
-
-El diagrama \ref{contracts:uml} intenta ilustrar la estructura de los contratos
-a través de un UML, si asemejamos los contratos inteligentes de ethereum como
-objetos.
+The diagram \ref{contracts: uml} tries to illustrate the structure of the
+contracts through a UML, as if the intelligent contracts of ethereum were
+objects.
 
 
 \section{Reputation system}
+\label{rep:system}
 
-De los muchos sistemas de reputación comentados en la sección \ref{soa:rs} se ha
-decidido para la plataforma, un basado en un rating de cinco
-estrellas~\cite{kinateder2003architecture}. Este sistema de reputación esta
-presente en muchas plataformas online como
+Of the many reputation systems discussed in section \ref{soa:rs}, a five-star
+rating has been decided for the platform~\cite{kinateder2003architecture}. This
+reputation system is present in many online platforms such as
 Tripadvisor\footnote{https://www.tripadvisor.com/},
 Amazon\footnote{https://www.amazon.com/}, Google
-Play\footnote{https://play.google.com/} y otras grandes plataformas en las que
-los productos y servicios son votados por los usuarios.
+Play\footnote{https://play.google.com/} and other large platforms in which
+products and services are voted by users.
 
 Al estar implementado directamente en la blokchcain, todas las interacciones son
 totoalemtne públicas y auditables, con lo que cualquier usuario puede ver quien
@@ -132,31 +135,41 @@ que no existe de base el anonimato. Esto permite disuadir los problemas
 comentados en la sección \ref{soa:rs} ya que los usuarios que realizan ataques
 dirigidfos o rating injustas se ven expuestos públicamente en la red.
 
-El funcionamiento interno tiene varios sencillos pasos:
+
+Being implemented in the blockchain implies that all interactions are public and
+auditable. Everyone can see who has voted which revision and with what score or
+rating, so it is a system in which there is no anonymity. This allows dissuading
+the problems commented in section \ref{soa:rs} since the users who carry out
+unjust directing or rating attacks are exposed publicly in the network. But this
+also raises concerns about privacy and anonymity, commented in section
+\ref{sec:privacyReview}.
+
+The internal operating mode has several simple steps:
 \begin{enumerate}
-\item Al hacer una revisión, se crea en el sistema un hash
-  (SHA-3~\cite{aumasson2008sha}) con: la dirección del revisor, la dirección del
-  paper al que revisa y la dirección del journal que le asignó la revisión. Este
-  hash identifica unívocamente a la revisión dentro del sistema.
-\item Tanto los autores, como los editores y los otros revisores del paper
-  tienen la capacidad de asignar una puntuación del 1 al 5 indicando si piensan
-  que la review es justa o no.
-\item Por cada votación, el sistema registra al votante y le envía la reputación
-  al revisor, realizando un alisado exponencial de todas las votaciones que ha
-  recibido~\cite{gardner1985exponential}.
+\item When making a review, a hash is created in the system
+  (SHA-3~\cite{aumasson2008sha}) with: the address of the reviewer, the address
+  of the paper it reviews and the address of the journal that assigned the
+  review. This hash uniquely identifies the review within the system.
+  
+\item Both authors, editors and the other reviewers of the paper have the
+  ability to assign a score from 1 to 5 indicating whether they think the review
+  is fair or not.
+  
+\item For each vote, the system registers the voter and sends him the reputation
+     the reviewer, making an exponential smoothing of all the votes that he has
+     received~\cite{gardner1985exponential}.
 \end{enumerate}
 
-A la hora de decidir si una review es justa o no hay varios puntos de
-vista~\cite{daniel1993guardians,cole1979fair} y no todas las personas estarán de
-acuerdo, pero si se puede ofrecer unas guía de actuación para la comunidad para
-intentar que todas las votaciones del sistema sean lo más justas posibles para
-todos los que la utilicen.
+When deciding whether a review is fair or not there are several points of
+view~\cite{daniel1993guardians,cole1979fair} and not all people will agree, but
+offering guidelines for the community can be an initial solution to make all the
+votes in the system as fair as possible.
 
-Dentro de un sistema de reputación siempre existirá cierta controversia y
-siempre existirán métodos para poder aplacarla~\cite{dellarocas2000immunizing},
-pero el diseño se presenta en este trabajo es una prueba de concepto que irá
-evolucionando a medida que se diseñen nuevos sistemas para aplacar los problemas
-que surgen.
+Within a reputation system there will always be some controversy and there will
+always be methods to placate it~\cite{dellarocas2000immunizing}, but the design presented in this work is a
+proof of concept that will evolve as new systems are designed to appease the
+problems that have arisen.
+
 
 \section{Functional requirements and activity diagrams}
 
