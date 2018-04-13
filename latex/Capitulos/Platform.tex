@@ -111,35 +111,36 @@ issues in section \ref{privacy}.
 % privacy problem for both reviewers and raters. We contemplate these problems
 % and how to solve them in section \ref{PrivacyReviewRating}.
 
-Cada vez que un usuario de la plataforma envíe una revisión, esta será
-puntuable. De esta manera cada revisor irá obteniendo una puntuación de cada una
-de las revisiones que envía, construyendo el sistema de reputación de revisores.
-Inicialmente, las personas que pueden realizar votaciones son: los autores del
-paper, los editores que han asignado a los revisores, y los otros revisores del
-artículo.
+Each time a user of the platform sends a review, it will be rateable. This way,
+each reviewer will obtain a score of each one of the reviews he sends, building
+the reviewers' reputation system. Initially, the people who can vote are the
+authors of the paper, the editors who have assigned the reviewers, and the other
+reviewers of the article. But in future implementations, rating a review will be
+public.
 
-De esta forma se da crédito a los revisores que realizan una buena revisión y se
-penaliza a los que no. Dando paso a varias implicaciones:
+There are two main implications among others:
 
 \begin{itemize}
-  \itbf{El problema del arranque en frío de los papers:} Normalmente los papers
-  que son publicados en revistas o conferencias de bajo impacto tardan mucho en
-  ganar visibilidad en la comunidad científica. Sin embargo si con un sistema de
-  reputacion de revisores, si tres revisores con alta reputación hacen una
-  revisión favorable para un paper para un journal poco conocido, es probable
-  que tenga más visibilidad ya que la reputación de los revisores puede influir
-  positivamente en el impacto de los papers en la comunidad científica.
-  \itbf{Revisiones de pago:} En la mayoría de los casos hoy en día, los
-  revisores no obtienen ningún beneficio económico por realizar la revisión de
-  un paper. Al implementar un sistema de reputación, podrían formarse dinámicas
-  de pago por revisión, en las que los revisores con mayor reputación son
-  pagados por realizar  revisiónes a petición de la revista o de los autores.
-  Esto supone un incetivo para todos los revisores del sistema para realizar
-  buenas revisiones y ganar reputación. Además, como todas las interacciones
-  están en Ethereum, los pagos y las entregas pueden realizarse a través de
-  contratos inteligentes personalizados, eliminando intermediarios, y haciendo
-  el proceso transparente y honesto.
+  \itbf{The cold start problem for new papers and researchers:} Normally papers
+  that are published in journals or conferences of low impact take a long time
+  to gain visibility in the scientific community. However, if a reviewer
+  reputation system is used, if three reviewers with a high reputation make a
+  favorable review for a paper for a little-known journal, it is likely to have
+  more visibility since the reputation of the reviewers can positively influence
+  the impact of the papers in the scientific community.
+  
+  \itbf{Pay-per-review:} In most cases nowadays, the reviewers do not obtain any
+  economic benefit for carrying out the revision of a paper. By implementing a
+  reputation system, pay-per-review dynamics could be formed, in which the most
+  reputable reviewers are paid for performing reviews at the request of the
+  journal or the authors. This is an incentive for all reviewers of the system
+  to make good reviews and gain reputation. In addition, since all interactions
+  are in Ethereum, payments and deliveries confirmations can be made through
+  personalized smart contracts, eliminating intermediaries, and making the
+  process transparent and honest.
+ 
 \end{itemize}
+
 
 \section{Distributed Open Access infrastructure}
 \label{distributedOA}
@@ -150,12 +151,12 @@ dissemination infrastructure allows them to impose certain rules, such as
 charging authors unreasonable fees to offer their work as Open
 Access~\cite{solomon2012study} (Gold Open Access) or the temporal embargo and
 restrictions on the dissemination of the final version (Green Open
-access)~\cite{bjork2014anatomy}, among others. 
+access)~\cite{bjork2014anatomy}, among others.
 
 The system proposes a decentralized infrastructure for science publication.
 Academic documents - from first drafts to final versions, including peer
-reviews- are shared in IPFS, as mentioned on section~\ref{tech:sec:ipfs}.
-Thus, the system inherently grants Open Access by the design of its distributed
+reviews- are shared in IPFS, as mentioned on section~\ref{tech:sec:ipfs}. Thus,
+the system inherently grants Open Access by the design of its distributed
 infrastructure and circumvents the publishers dominant role.
 
 All the documents are first uploaded to IPFS, generating a \emph{Base58}
