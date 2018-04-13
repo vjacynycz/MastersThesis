@@ -1,112 +1,55 @@
 \chapter{Discussion}
 
 \begin{FraseCelebre}
-  \begin{Frase}
-    I am looking for someone to share in an adventure that I am arranging, and
-    it's very difficult to find anyone.
-  \end{Frase}
-  \begin{Fuente}
-    The Hobbit - J. R. R. Tolkien
-  \end{Fuente}
+    \begin{Frase}
+        I am looking for someone to share in an adventure that I am arranging, and
+        it's very difficult to find anyone.
+    \end{Frase}
+    \begin{Fuente}
+        The Hobbit - J. R. R. Tolkien
+    \end{Fuente}
 \end{FraseCelebre}
 
-As a result of the development of this platform, the ideal scenario would be
-that journals with impact factors like the mentioned \emph{JCR} adopt this
-system. There are some important points to consider if this platform becomes
-widely used.
+As a result of the development of this platform, the ideal scenario would be that journals with impact factors like the mentioned \emph{JCR} adopt this system.
+There are some important points to consider if this platform becomes widely used.
 
 \input{Capitulos/Issues}
+\subsection{Other Problems}
+\figura{chart.png}{width=0.99\linewidth}{prob:txfee}{Ethereum transaction fees
+evolution}
+
+Another problem is that the proposed technologies still have little expansion and are little known by the average user.
+
+For current researchers, a change of platform can be an inconvenience, since today's technologies such as \ii{easychair}\footnote{https://easychair.org/} can be difficult to replace. Proposing a change in the communication and revision systems can suppose a great initial rejection, taking the project to a dead end, especially if today's methods to connect to Ethereum's blockchain are still complex.
+
+Ethereum's cryptocurrency fluctuates a lot, and lately, there has been a rise in all cryptocurrencies' prices compared to a year ago\footnote{According to http://coincap.io/}. As shown in the figure \ref{prob:txfee} this price affects transactions, which may cause an increase of the prices to interact with the platform.
+
 
 \section{Monetary Impact}
-El impacto monetario sería uno de los más notables tras la implantación de este
-sistema en sistemas de publicación científica de hoy en día. Según datos de
-investigaciones al respecto, el coste de publicación de un artículo en una
-revista de imacto varía de entre 1000\$ hasta los
-5000\$~\cite{van2013true,russel2008business}, coste muchas veces inviable para
-investigadores que quieran avanzar en la investigación científica.
 
-El coste de la publicación y el acceso a la ciencia a través de el trabajo
-propuesto sería únicamente variable en función del precio del ETH\footnote{La
-  criptomoneda de Ethereum explicada en la sección \ref{tech:sec:ethereum}}. As
-seen in section~\ref{arch:trans}, the maximum cost of all the publication
-process would be around 4 to 6 euros.
+The monetary impact would be one of the most notable after the implementation of this system in today's scientific publishing systems. According to research data, the cost of publishing an article in a magazine with a high impact index varies from 1,000 to 5,000 euros\cite{van2013true,russel2008business}, a cost that is often not feasible for researchers who want to advance in scientific research.
 
-Teniendo en cuenta que para que se publique un paper han de realizarse como
-mínimo 5 transacciones se puede determinar que el precio actual para publicar un
-paper ronda entre los 4\$ y 6\$ segun datos de Ethereum Gas
-Station\footnote{Precio de una transacción en Ethereum
-  https://ethgasstation.info/}, más de 250 veces más barato que los sistemas de
-publicación actual en el mejor de los casos.
+The cost of publication and access to science through the proposed work would only vary depending on the price of the cryptocurrency used by Ethereum (see section \ref{tech:sec:ethereum}}). As seen in section~\ref{arch:trans}, the maximum cost of a transaction in all the publication process would be euros. Bearing in mind that for a paper to be published at least 5 transactions must be carried out, it can be determined that the current price for publishing a paper is around 2 euros according to Ethereum Gas Station \footnote{Price of a transaction in Ethereum https: //ethgasstation.info/}, more than 500 times cheaper than the publishing system mentioned before.
 
-\section{Review Time and Quality Impact}
-
-Otro de los impactos importantes sería la reducción del tiempo y el aumento de
-la calidad en el proceso de revision por pares.
-
-Si se dispone de una masa crítica de usuarios de la plataforma propuesta, se
-crea un ecosistema de usuarios que alimentan tanto la red de reputación de
-revisores como los contratos de publicación científica (ver
-section~\ref{contracts}). El proceso de Peer review se vería afectado de dos
-maneras:
+Another important impact would be the reduction of time and the increase of quality in the process of peer review. If a critical mass of researchers use the proposed platform, the peer review process would be affected in two ways:
 
 \begin{enumerate}
-\item \textbf{El tiempo de revisión:} Los contratos inteligentes permiten
-  establecer tiempos límites para la revisión de un artículo, suponiendo una
-  penalización a los revisores que no cumplan estos plazos (ver sección
-  \ref{reputation}). Si un Decentralized Journal tiene unos tiempos de revisión
-  establecidos, y los revisores que asignan aceptan las revisiones,
-  probablemente se experimente una mejoría en el tiempo de entrega de las
-  revisiones y por lo tanto en el proceso de publicación, con respecto a los
-  tiempos muchas veces excesivos de los sistemas de publicacion
-  actual~\cite{huisman2017duration}.
-\item \textbf{La calidad de las revisones:} Todas las revisiones son rateables
-  por la comunidad y afectan directamente a la reputación del revisor, así que
-  es altamente probable que la calidad de las revisiones en el sistema sufra una
-  mejoría y desaparezcan muchos de los problemas respecto a la revisión por
-  pares comentados en la sección \ref{intro}.
+\itbf{Improvement in the review time:} Smart contracts allow establishing time limits for the review of an article, assuming a penalty to reviewers who do not meet these deadlines (see section \ref{reputation}). If a Decentralized Journal has defined certain review times, and reviewers who are assigned accept the review proposal, it is likely that there will be an improvement in the delivery time of the reviews. Therefore in the publication process will be faster regarding the delivery times of the reviews of today's publishing systems~\cite{huisman2017duration}.
+
+\itbf{Improvement in the review quality:} All reviews are rated by the community and directly affect the reputation of the reviewer, so it is highly likely that the quality of the reviews in the system will suffer an improvement and many of the problems regarding the peer review discussed in section \ref{intro} will disappear.
 \end{enumerate}
 
 \section{Science Distribution}
 
-Toda interacción con la plataforma ha de realizarse mediante una cuenta Ethereum
-(ver section \ref{tech:sec:ethereum}) y quedan grabadas en la blockchain de
-este. Esto implicaría que a través de la dirección de un investigador científico
-se puedan obtener dato de todos los papers que ha publicado y revisado. Todo la
-comunidad científica podría sufrir una mejor gracias a este sistema. Además, los
-nuevos investigadores que quieren empezar su carrera en el mundo académico
-pueden obtener visibilidad si los revisores que revisan los papers que envían a
-los Distributed Journals tienen alta reputación o no.
+All interaction with the platform must be done through an Ethereum account and recorded in its blockchain. This would imply that through the address of a scientific researcher you can obtain all the papers this researcher have published and reviewed. The entire scientific community could improve thanks to this platform because an Ethereum address could be used as an accreditation system. In addition, new researchers who want to start their career in academia can gain visibility thanks to the reputation system.
 
-Si el sistema se implantara de manera exitosa, la comunidad científica empezaría
-a cuestionarse la existencia de los publishers, y si estos desaparecieran, se
-encontrarían nuevas formas de financiación de proyectos.
-
-\section{Problems}
-\figura{chart.png}{width=0.99\linewidth}{prob:txfee}{Ethereum transaction fees
-  evolution}
-
-
-Hay varios problemas para implantar este proyecto hoy en día, ya que las
-tecnologías propuestas todavía tienen poda expansión y son poco conocidas por el
-usuario medio.
-
-La primera es el cambio de plataforma para los investigadores de la comunidad,
-ya que la costumbre de utilizar las plataformas de hoy en día es dificil de
-cambiar, por lo que proponer un cambio en los sistemas de comunicación y
-revisión puede suponer un gran rechazo inicial, pudiendo llevar al proyecto a un
-punto muerto, sobretodo si la metodología de conexión a la blockchain de
-Ethereum es compleja actualmente.
-
-La segunda es el precio de las transacciones. Ethereum es una moneda que fluctúa
-bastante, y ultimamente se ha experimentado una gran crecida de todas los
-precios de las criptomonedas con respecto a hace seis meses. Las subidas en el
-precio provocan subidas en las transacciones, que a su vez provoca que la
-interacción sea más cara para todos los usuarios que la utilizan.
+If the system were implemented successfully, the scientific community would begin to question the existence of the publishers, and if they disappeared, new forms of project financing would be found.
 
 \section{Papers Published}
+
 Tenorio-Fornés, A., Jacynycz, V., Llop, D., Sánchez-Ruiz, A.A., Hassan, S.
 \textbf{“A Decentralized Publication System for Open Science using Blockchain
-  and IPFS”}. \emph{PEERE International Conference on Peer Review Proceedings.}
+and IPFS”}. \emph{PEERE International Conference on Peer Review Proceedings.}
 Rome (2018)
 
 
