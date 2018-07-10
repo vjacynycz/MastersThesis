@@ -1,134 +1,10 @@
-%---------------------------------------------------------------------
-%
-%                        TeXiS_pream.tex
-%
-%---------------------------------------------------------------------
-%
-% TeXiS_pream.tex
-% Copyright 2009 Marco Antonio Gomez-Martin, Pedro Pablo Gomez-Martin
-%
-% This file belongs to TeXiS, a LaTeX template for writting
-% Thesis and other documents. The complete last TeXiS package can
-% be obtained from http://gaia.fdi.ucm.es/projects/texis/
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
-% and version 1.3 or later is part of all distributions of LaTeX
-% version 2005/12/01 or later.
-%
-% This work has the LPPL maintenance status `maintained'.
-%
-% The Current Maintainers of this work are Marco Antonio Gomez-Martin
-% and Pedro Pablo Gomez-Martin
-%
-%---------------------------------------------------------------------
-%
-% Contiene la parte inicial del documento, antes del
-% \begin{document}. Carga los paquetes que se utilizar_n.
-%
-%---------------------------------------------------------------------
 
-% El paquete verbatim  es utilizado por uno de  los comandos definidos
-% en TeXiS.  Aunque  el propio estilo indica que  necesita ese paquete
-% con \RequirePackage, lo  hacemos "expl_cito" incluy_ndolo aqu_ antes
-% de incluir nuestro paquete.  Es necesario _nicamente para el comando
-% "example",  espec_fico del  manual y  que con  toda seguridad  no se
-% necesitar_ en  ning_n otro tipo  de documento (Tesis, etc.),  por lo
-% que si por alguna raz_n  la inclusi_n de este paquete interfiere con
-% otros y se desea no tener que incluirlo, se puede cambiar TeXiS.sty,
-% y eliminar el comando example.
 \usepackage{verbatim}
 
-% El  paquete  "layout" es  de  "depuraci_n".  Sirve  para definir  el
-% comando \layout que puedes meter  en cualquier sitio del documento y
-% te genera  un par de p_ginas  con un gr_fico sobre  la estructura de
-% las  p_ginas,   es  decir,  con  informaci_n   sobre  los  m_rgenes,
-% posiciones de las notas a pie, los encabezados, y dem_s. Recibe como
-% par_metro un  idioma que  le sirve para  mostrar "la leyenda"  en un
-% idioma diferente al ingl_s.
 
 %\usepackage[spanish]{layout}
 
-% El  paquete  glosstex  te  permite  generar listas  de  acr_nimos  y
-% glosarios.  En  realidad  te   permite  crear  listas  m_ltiples  de
-% cualquier cosa,  con tal de que  des un identificador  a cada lista.
-% Luego de  manera predeterminada controla  dos listas, una  de nombre
-% "acr" pensada para acr_nimos, y otra "glo" para el glosario.
 
-%
-% La idea  es tener uno o  varios ficheros externos  donde se mantiene
-% una "base  de datos" de acr_nimos,  de palabras para  el glosario, o
-% de, en  general, entradas  para cualquiera de  la lista  de t_rminos
-% gestionadas por glosstex. Esos ficheros normalmente llevan extensi_n
-% .gdf (Glossary  Data File, supongo),  y, por aclarar,  son similares
-% conceptualmente a  los ficheros .bib. En cada  entrada se especifica
-% una etiqueta que  la identifica y que normalmente  se utiliza cuando
-% aparece dicha entrada en alguna de las listas en el documento final.
-% Tambi_n  puede opcionalmente  especificarse un  texto en  LaTeX para
-% dicha entrada si  queremos poner otra o darle  formato (por ejemplo,
-% si  queremos meter  en  el glosario  el  t_rmino LaTeX,  normalmente
-% querremos usar  como etiqueta  identificativa la cadena  LaTeX, pero
-% luego queremos  que al escribirlo  en el documento salga  su versi_n
-% pija conseguida  mediante \LaTeX{}). Tambi_n  tiene una "descripci_n
-% larga"  (_til dependiendo  de  la configuraci_n)  y, finalmente,  la
-% descripci_n de la entrada.
-%
-%
-% Por ejemplo, una entrada sin descripci_n corta ser_a:
-%
-%   @entry{LaTeX, \LaTeX{}} Herramienta basada en \TeX{} para
-%   facilitar la creaci_n de documentaci_n.
-%
-
-% Puedes consultar  m_s informaci_n sobre  el formato en  el fichero
-% acronimos.gdf.
-
-% La idea es tener tantos ficheros gdf como queramos, y reutilizarlos
-% entre todos los documentos que necesitemos crear. Posteriormente, a
-% lo largo de esos documentos, referenciamos su uso. En concreto,
-% indicamos al sistema que queremos que una determinada entrada se
-% incluya en una de las listas gestionadas por GlossTeX.
-%
-% Para eso:
-%
-%  \glosstex[(<lista>)]{<etiqueta>}
-%
-% Lo de <lista> es opcional. Si no se especifica, se entiende "glo",
-% que se supone que contiene el glosario normal. El soporte "nativo"
-% para la lista de acr_nimos queda patente porque para a_adir uno
-% basta con:
-%
-%  \acronym{<etiqueta>}
-%
-% que es sin_nimo de \glosstex(acr){<etiqueta>}
-%
-% La  aparici_n   de  estos   comandos  ocasionan  la   generaci_n  de
-% anotaciones en los ficheros .aux correspondientes. Esos .aux hay que
-% procesarlos con la herramienta  glosstex, que genera un fichero .gxs
-% con informaci_n  sobre las entradas referenciadas y  su contenido, y
-% un .gxg con un log. El .gxs (si todo fue bien) es procesado de nuevo
-% para ser  ordenado y para aplicarle  estilo. Esto se  realiza con la
-% herramienta externa  makeindex, y usando el  estilo glosstex.ist. El
-% resultado es un  fichero .glx, que por fin  tiene todo correcto. Ese
-% fichero es  utilizado por el comando \printglosstex  dentro de alg_n
-% fichero .tex en la proxima invocaci_n a LaTeX
-%
-% Una cosa interesante es en el uso de acr_nimos. Al igual que podemos
-% utilizar  con natbib cosas  como \citeyear  o \citeauthor,  con esto
-% podemos  hacer \ac{<etiqueta>},  y el  sistema te  pone  el acr_nimo
-% autom_ticamente.  Esto  no  parece   muy  _til,  si  se  piensa  que
-% normalmente el  acr_nimo ser_ igual a  la etiqueta ;-)  La gracia es
-% que, adem_s,  la primera vez que  se hace, te  pone entre par_ntesis
-% tambi_n la forma larga 8-)
-%
-% Tambi_n puedes usar \acf si quieres  que te aparezca las siglas y el
-% significado  entre  par_ntesis en  alg_n  momento.  En realidad  hay
-% muchas m_s cosas, pero no las he mirado todas.
-%
-% http://www.ctan.org/tex-archive/help/Catalogue/entries/glosstex.html
 \ifx\generaacronimos\undefined
   % No queremos acr_nimos. Como no incluiremos el paquete glosstex
   % redefinimos sus comandos para que no cruja si se han usado.
@@ -142,59 +18,11 @@
   \usepackage{glosstex}
 \fi
 
-% shortvrb supuestamente define algunas macros c_modas como car_cteres
-% de escape.  Por ejemplo, para poner  un < normalmente  hay que hacer
-% una  ecuaci_n:   $<$.  Este   paquete  define  algunas   macros  m_s
-% intuitivas, en este caso bastar_a  con \< De igual forma, para poner
-% algo en  verbatim, la versi_n  larga es \texttt{blabla},  la versi_n
-% corta es  \verb+blabla+ (el +  puede sustituirse por  cualquier otra
-% cosa,  como un  |  ), y  con  este paquete  basta  con |blabla|  (es
-% equivalente a \verb|blabla|).  Pero vamos... a m_ no me funciona :-/
 
 \usepackage{shortvrb}
 
-% Modifica la codificaci_n de  entrada para LaTeX. B_sicamente permite
-% escribir cosas con acentos (_) y  _l solo lo sustituye por \'a. Para
-% eso, se especifica  en el primer par_metro la  p_gina de c_digos que
-% estamos utilizando (latin1  significa ISO Latin 1, o  sea ISO 8859-1
-% supongo). Para cada p_gina de c_digos (en nuestro caso latin1) tiene
-% un fichero de definiciones (.def)  en el que mapea cada car_cter por
-% encima del 128 a una orden LaTeX.
-%
-% Otra posible opci_n ser_a indicar utf8 (o utf8x) en lugar de latin1,
-% que podr_a  resultar _til para  aquellos que prefieran  escribir sus
-% fuentes  en  UTF-8 (como  tiende  a  ocurrir  actualmente de  manera
-% predeterminada  en  Ubuntu). No  obstante,  una  b_squeda r_pida  en
-% google parece indicar  que el soporte para fuentes  TeX con UTF-8 no
-% est_ demasiado  bien soportado y  podr_a dar algunos  problemas.  En
-% TeXiS, adem_s, seguro que generar_ conflictos, dado que si se indica
-% aqu_ utf8  se asumir_ que  *todo* usa UTF-8, inclu_dos  los ficheros
-% del propio  TeXiS que en realidad  est_n con ISO  8859-1. Por tanto,
-% usa  utf8  *bajo tu  propia  responsabilidad*.  TeXiS, desde  luego,
-% recomienda el uso de ISO 8859-1.
-
 \usepackage[utf8]{inputenc}
 
-% Incluimos el  estilo de bibliograf_a natbib, para  poder citarlas de
-% forma m_s compleja.  Por ejemplo,  \citep{ref} para que nos lo saque
-% entre  par_ntesis, \citet{ref}  normal  (si lo  referenciamos en  un
-% texto), \citeyear{ref} para la  fecha del art_culo, libro, etc_tera,
-% \citeauthor{ref} para los autores... Hay un mont_n de posibilidades.
-% Puedes ver informaci_n en http://merkel.zoneo.net/Latex/natbib.php
-%
-% Es importante incluirlo ANTES de  babel. Si primero se a_ade babel y
-% luego natbib,  cuando se tienen apellidos  "compuestos" (por ejemplo
-% "Du  Boulay" natbib  a_ade  un  ~ de  separaci_n  para convertir  al
-% espacio  en un espacio  no separable  en dos  l_neas, pero  al tener
-% activado  babel  el ~  aparece  en lugar  de  salir  el espacio.  En
-% cualquier  caso,  sigue  existiendo  un potencial  problema.  Natbib
-% abrevia los  nombres poniendo _nicamente las  iniciales (por ejemplo
-% para  el nombre  compuesto Francisco  Nunes Ferreira  pone Ferreira,
-% F. N.). El  problema es que tambi_n pone la ~  para separar, de modo
-% que sale Ferreira F._. El problema est_ en que Babel autom_ticamente
-% da significado  a ~n y lo  sustituye sin que le  digamos nada... hay
-% m_s  informaci_n en  el comentario  de babel  y  en TeXiS_bib.tex
-% http://chico.rediris.es/cgi-bin/wa?A2=ind0601&L=es-tex&D=0&P=1989
 
 \usepackage[round]{natbib}
 
@@ -206,7 +34,7 @@
 % tener que escribir  \'a ... aunque eso en teor_a  lo hace el paquete
 % inputenc :-m
 
-\usepackage[spanish]{babel}
+\usepackage[english]{babel}
 
 % El paquete url sirve para poder  poner direcciones Web y no morir en
 % el intento,  sobre todo  en la bibliograf_a.   Es _til porque  si la

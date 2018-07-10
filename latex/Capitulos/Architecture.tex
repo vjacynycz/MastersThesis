@@ -1,4 +1,5 @@
 
+
 \chapter{Architecture}
 
 \begin{FraseCelebre}
@@ -79,8 +80,8 @@ explained in the section~\ref{arch:trans}.
 Then it stores this data in a struct called ``Multihash'' defined in the smart
 contract and performs a hash function to obtain an identifier of the file within
 the system, which is much more efficient in Ethereum. This hash is the one that
-will be used to identify a paper from the other Decentralized
-Science's contracts.
+will be used to identify a paper from the other Decentralized Science's
+contracts.
 
 In addition, each paper stores all the revisions it has through a ``Review''
 struct. This struct has an IPFS address with the review (transformed as a
@@ -113,9 +114,29 @@ reviewers, the new reviewers who want to register on the platform and the
 editors who want to find new reviewers to carry out the peer review process.
 
 The diagram \ref{contracts: uml} tries to illustrate the structure of the
-contracts through a UML, as if the smart contracts of Ethereum were
-objects.
+contracts through a UML, as if the smart contracts of Ethereum were objects.
 
+\section{Ethereum addresses in Decentralized Science}
+\label{sec:ether-addr-decentr}
+\figura{tx_history.png}{width=0.93\linewidth}{sec:ether-addr-decentr:history}{Researcher's
+  transactions list}
+
+As mentioned in section \ref{ts:at}, ethereum address is a string of characters
+that identify a user's account or a smart contract.
+
+In this platform users are authors, reviewers, editors or some of these roles
+simultaneously. This implies that an ethereum address can be used to identify
+and verify an individual's scientific career. Each interaction is registered in
+the blockchain as a transaction that have a transaction id, which can be used to
+obtain the information of that particular transaction as shown in the figure
+\ref{sec:ether-addr-decentr:history}. This could mean that when a researcher
+needs to give credit of it's career, he or she will only need to supply his or
+her ethereum's address.
+
+\figura{add_citations.png}{width=0.93\linewidth}{sec:ether-addr-decentr:citations}{Use
+of Ethereum's addresses in Decentralized Science}
+
+Ethereum's smart contracts also have an ethereum address. 
 
 \section{Reputation system}
 \label{rep:system}
@@ -158,9 +179,9 @@ offering guidelines for the community can be an initial solution to make all the
 votes in the system as fair as possible.
 
 Within a reputation system there will always be some controversy and there will
-always be methods to placate it~\cite{dellarocas2000immunizing}, but the design presented in this work is a
-proof of concept that will evolve as new systems are designed to appease the
-problems that have arisen.
+always be methods to placate it~\cite{dellarocas2000immunizing}, but the design
+presented in this work is a proof of concept that will evolve as new systems are
+designed to appease the problems that have arisen.
 
 
 \section{Functional requirements and activity diagrams}
@@ -306,4 +327,7 @@ following actions have been taken to reduce these costs:
   to reduce the transactions involving a file upload around $40\%$.
 \end{itemize}
 
-
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../Tesis.tex"
+%%% End:

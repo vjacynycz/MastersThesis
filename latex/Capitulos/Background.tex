@@ -297,6 +297,7 @@ scientific publication process can be cryptographically signed (see
 section~\ref{plat:trans}).
 
 \subsubsection*{Accounts and Transactions}
+\label{ts:at}
 An address in ethereum is a 32-byte string that symbolizes a person's account or
 an smart contract:
 \begin{itemize}
@@ -355,10 +356,10 @@ portable reviews from other journals~\cite{bjork2015have}.
 The \bb{continuous publication} model is based on publishing individual papers
 migrating from the previous issue-based model~\cite{anderton2013continuous}.
 This method is seen as an altenative for open-access journals as it speeds up
-the publication process~\cite{haymanview}. \emph{DPSOS}\footnote{Decentralized
-  Publication System for Open Science} adopts this model by design (see
-section~\ref{tech:sec:ethereum:sm}) as it publish automatically papers that meet
-certain preconditions that are written in the blockchain.
+the publication process~\cite{haymanview}. \emph{Decentralized Science} adopts
+this model by design (explained in section \ref{arch:sca}) as the platform
+automatically  publishes papers that meet
+certain preconditions, such as getting at least two out of threee possitive reviews.
 
 \bb{Preprints} are scientific papers that have not yet gone through the peer
 review process~\cite{harnad2003electronic}. Formerly, the preprints that were
@@ -454,6 +455,8 @@ functions of science dissemination: 1) the peer review process, 2) the selection
 and recognition of peer reviewers, and 3) the distribution of scientific
 knowledge. The following section provides an overview of the system features,
 while the final section discusses its challenges.
+
+
 %%%
 %%% Local Variables:
 %%% mode: latex
