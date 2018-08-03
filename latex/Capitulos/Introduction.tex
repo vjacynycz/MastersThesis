@@ -91,84 +91,129 @@ proposals around open peer review~\cite{ford2013defining}, and proposals of
 reputation networks for reviewers~\cite{frishauf2009reputation}. In fact, a
 start-up, Publons\footnote{https://publons.com/}, provides a platform to
 acknowledge reviews and open them up. To sum up, this work aims to solve many of
-the problems mentioned before using leading technologies.
+the problems mentioned before trying to answer the questions asked previously.
 
 \section{Objectives}
 
 \subsection*{Create a decentralized platform for science publishing}
 
 This work proposes the design and development of a platform for open science.
-This platform should allow its users to submit papers, assign reviewers, submit
-reviews and rate the reviews. This will be achieved using decentralized and 
+This platform should allow its users to do the following interactions: submit
+papers, assign reviewers, submit reviews and rate the reviews. This will be
+achieved using decentralized technologies such as Ethereum (a decentralized
+ledger where each interaction is recorded in a public blockchain) and IPFS (a
+distributed file system).
+
+The platform should be accessible through a web page in a custom server acting
+as a bridge between the two technologies mentioned before. Also should give its
+users the possibility to download the source code and running it locally, as it
+is a fully decentralized platform.
+
+All the information held by the platform will be free and public, granting the
+possibility to each user to see all the journals, papers, reviews and ratings.
 
 \subsection*{Create a reputation system for reviewers}
 
-\subsection*{Compare the platform with the actual system}
+Reviewers rarely get credit for their work. Journals and conferences look for
+\emph{volunteers} to review the papers submitted to those, but normally
+reviewers remain anonymous and they do not get recognition for their work. To
+achieve this recognition, this work proposes a reputation system for reviewers,
+in which every review they submit can be rated. This rating builds up a score
+for each reviewer determining the \emph{reputation} of a reviewer.
+
+The platform should allow users to send ratings to an specific review. This
+rating will be saved and will be used to calculate the score of the reviewer
+that sent that particular review.
+
+With this idea, this work pretends to \emph{improve} good and fair reviews, and
+avoid bad ones, trying to mitigate the possibility of unfair reviews due to
+gender causes, research rivalry or ignorance of a subject.
+
+\subsection*{Analyze the platform}
+
+After developing a functional prototype with which to perform tests, this work
+also aims to analyze the behavior of the platform based on the entire process of
+scientific publication, from the first paper submission to the final
+publication.
+
+Tests will be carried out to calculate price estimates of the entire process,
+execution times, resistance to large amounts of information and usability
+compared to other platforms.
+
+Finally, comparisons of the results obtained will be shown based on the current
+publication process.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This work aims to challenge middlemen such as traditional publishers in science  %
-% publication. Particularly, proposes a decentralized publication system for open  %
-% science, allowing 1) paper submissions, 2) assignment of reviewers, 3) peer      %
-% review and, as a novelty, 4) the rating of peer reviews. With this distributed   %
-% system, we aim to improve the quality and efficiency of reviews and knowledge    %
-% distribution, helping editors, authors, and reviewers:                           %
-% \begin{itemize}                                                                  %
-% \item Editors and journals will be able to find the best peer reviewers in their %
-%   fields of interest, and also those that respond quickly. Thus, reducing        %
-%   time-to-publish and publishing costs.                                          %
-% \item Authors will be able to submit papers to time-responsive, free, open       %
-%   access journals, and forget about slow, unfair and unaccountable anonymous     %
-%   reviews.                                                                       %
-% \item Reviewers will finally have their work recognized.                         %
-% \end{itemize}                                                                    %
+% This work aims to challenge middlemen such as traditional publishers in
+% science %
+% publication. Particularly, proposes a decentralized publication system for
+% open %
+% science, allowing 1) paper submissions, 2) assignment of reviewers, 3) peer %
+% review and, as a novelty, 4) the rating of peer reviews. With this
+% distributed %
+% system, we aim to improve the quality and efficiency of reviews and
+% knowledge %
+% distribution, helping editors, authors, and reviewers: %
+% \begin{itemize} %
+% \item Editors and journals will be able to find the best peer reviewers in
+%   their %
+%   fields of interest, and also those that respond quickly. Thus, reducing %
+%   time-to-publish and publishing costs. %
+% \item Authors will be able to submit papers to time-responsive, free, open %
+%   access journals, and forget about slow, unfair and unaccountable anonymous %
+%   reviews. %
+% \item Reviewers will finally have their work recognized. %
+% \end{itemize} %
 %                                                                                  %
-% We are interested in exploring the following challenges, that could be dealt     %
-% with our technology:                                                             %
-% \begin{itemize}                                                                  %
-% \item Reduce time-to-review by rewarding on-time reviewers.                      %
-% \item Measure and prevent sexism, nepotism and other abuses in peer review.      %
-% \item Develop fully autonomous decentralized journals.                           %
-% \item Explore fully free publication systems for Open Access science, while      %
-%   enabling innovative business models.                                           %
-% \item Explore alternative and open metrics for papers, journals and reviewers.   %
-% \end{itemize}                                                                    %
+% We are interested in exploring the following challenges, that could be
+%                                                                                  % dealt %
+% with our technology: %
+% \begin{itemize} %
+% \item Reduce time-to-review by rewarding on-time reviewers. %
+% \item Measure and prevent sexism, nepotism and other abuses in peer review. %
+% \item Develop fully autonomous decentralized journals. %
+% \item Explore fully free publication systems for Open Access science, while %
+%   enabling innovative business models. %
+% \item Explore alternative and open metrics for papers, journals and
+%   reviewers. %
+% \end{itemize} %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  \section{Document Structure}
-  In this work there will be the following sections:
+\section{Document Structure}
+In this work there will be the following sections:
 
-  \subsubsection*{Part 1: Preface.}
-  \begin{itemize}
-    \itbf{Background and State of the art:} Background about the scope of the
-    project and what technologies are trying to change the current publication
-    systems and how is affecting the scientific community.
+\subsubsection*{Part 1: Preface.}
+\begin{itemize}
+  \itbf{Background and State of the art:} Background about the scope of the
+  project and what technologies are trying to change the current publication
+  systems and how is affecting the scientific community.
 
-    \itbf{Methodology and Technology:}Methodology followed during the
-    realization of this work, and the technologies used to implement the
-    platform's architecture.
-  \end{itemize}
-  \subsubsection*{Part 2: Decentralized Science.}
-  \begin{itemize}
-    \itbf{Platform description:} Platform general description, featuring its
-    main strengths regarding the current platforms and explaining how it works
-    and what is the expected behavior if it is widely used in the future.
+  \itbf{Methodology and Technology:}Methodology followed during the realization
+  of this work, and the technologies used to implement the platform's
+  architecture.
+\end{itemize}
+\subsubsection*{Part 2: Decentralized Science.}
+\begin{itemize}
+  \itbf{Platform description:} Platform general description, featuring its main
+  strengths regarding the current platforms and explaining how it works and what
+  is the expected behavior if it is widely used in the future.
 
-    \itbf{Architecture:} Technical description of the platform, including the
-    front end architecture and the definition of the smart contracts'
-    infrastructure, and the process followed to reduce the interaction costs.
+  \itbf{Architecture:} Technical description of the platform, including the
+  front end architecture and the definition of the smart contracts'
+  infrastructure, and the process followed to reduce the interaction costs.
 
-    \itbf{Product:} Proof of concept of the platform, how it works and how the
-    users can interact with the blockchain and with the p2p file network.
+  \itbf{Product:} Proof of concept of the platform, how it works and how the
+  users can interact with the blockchain and with the p2p file network.
 
-    \itbf{Discussion:} Results obtained after the realization of the work
-    proposed in this project, how it will affect the scientific community and
-    how to measure the potential impact of the platform.
+  \itbf{Discussion:} Results obtained after the realization of the work proposed
+  in this project, how it will affect the scientific community and how to
+  measure the potential impact of the platform.
 
-    \itbf{Conclusion and future work:} Implications of this work in the
-    scientific community and the next steps to follow to create an ecosystem of
-    autonomous publication systems, without the need of middlemen such as
-    journals or editors, and a proposal of a future Ph.D. about this subject.
-  \end{itemize}
+  \itbf{Conclusion and future work:} Implications of this work in the scientific
+  community and the next steps to follow to create an ecosystem of autonomous
+  publication systems, without the need of middlemen such as journals or
+  editors, and a proposal of a future Ph.D. about this subject.
+\end{itemize}
 
 
 %%%
