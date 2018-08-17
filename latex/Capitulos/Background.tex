@@ -113,6 +113,25 @@ Publication systems, as seen on the previous section, form an oligopoly of a
 few, concentrating the benefits of the industry. However, there are some
 attempts to change this paradigm on behalf of science dissemination.
 
+\bb{Open Access} is a concept referring to all the research material that is
+free of cost for the readers. This concept also involves various conditions for
+something to be considered ``open access''~\cite{bailey2007open}:
+
+\begin{itemize}
+  \itbf{Freely accessible online:} Any user can get a copy of the paper online
+  without any cost, including reviewed papers and unreviewed papers (preprints).
+  \itbf{Lax copyrights:} Any user can download, print, search, copy and link to
+  the full text or any part of these articles. \itbf{Public support:} Everyone
+  should be able to access to all the material involving the paper, and should
+  be uploaded to a public repository supported by an academic institution or
+  other well-established organization that seeks to enable open access.
+\end{itemize}
+
+But as mentioned in the chapter~\ref{intro}, in most \emph{open-access}
+journals, the costs lie with the authors rather than the
+readers~\cite{lariviere2015oligopoly,van2013true}, making unaffordable for some
+researchers the possibility to publish in these journals.
+
 \bb{Open journal systems}~\cite{willinsky2005open} is an open software designed
 to facilitate the publishing process. This project was created by the Public
 Knowledge Project\footnote{https://pkp.sfu.ca/about/} and it targets open-access
@@ -153,9 +172,14 @@ system is a possible solution to the cold-start problem that papers of new
 researchers who enter the academic career have~\cite{sugiyama2010scholarly}.
 
 Social networks have also made a dent in the academic world, creating platforms
-to contact other researchers and encouraging them to share open access papers.
-\todo{explain more} Some of the well-known are Research
-Gate\footnote{https://www.researchgate.net},
+to contact other researchers and encouraging them to share their papers. These
+platforms allow users to have a public profile, in which they can add relevant
+information about their career: research fields, interests, papers published,
+etc. The users also have the possibility to connect with other users and add
+them as contacts or fellow researchers. In addition, these platforms allow it's
+users to upload scientific papers (reviewed or unreviewed), granting the
+possibility to share them through the platform's community. Some of the
+well-known are Research Gate\footnote{https://www.researchgate.net},
 Mendeley\footnote{https://www.mendeley.com} or
 Academia\footnote{http://academia.edu}. But despite the good intentions of the
 creators of these platforms, many of the journals demand the copyright of the
@@ -170,6 +194,12 @@ recognition of carrying out good reviews, and be penalized otherwise.
 
 \subsection{Reputation systems}
 \label{scb:rs}
+
+\bb{Trust} in an individual is hard to acquire. Normally trust can not be bought,
+sold or exchanged. When choosing whether to trust someone or not, having the
+opinion of other people about that individual can be helpful. If these opinions
+about each individual are stored in a system which can be consulted by anyone,
+it is called a ``reputation system''.
 
 A reputation system is a technology that allows the users who use it to trust
 third parties inside the same system, without prior knowledge of each other. The
@@ -194,18 +224,33 @@ previous transactions had been honest or not. Each user who purchased products
 from that seller had the opportunity to rate the purchase. In this way, all
 those vendors who tried to rip off users immediately received a bad reputation.
 
-In Decentralized Science, two types of scoring systems have been considered: the
-first is a 5-star scoring system, in which users score 1 to 5 for other users, 1
-being bad reputation and 5 good reputation~\cite{} This reputation system is
-used in many e-commerce websites. The second one is the like/dislike, in which
-the interactions are evaluated with positive evaluation or negative evaluation,
-depending on the interaction that two users have had~\cite{}.
+Many of the large internet communities such as
+Stackexchange\footnote{https://stackexchange.com/} or
+reddit\footnote{https://www.reddit.com/} have their own reputation system.
+Reputation systems behavior may vary depending on the
+platform~\cite{josang2002beta}, but the most usual is the one where users get a
+score based on certain interaction with the community.
 
-This system has been extended to many internet services in which there is no
-centralized entity in which users have to rely, so building a fully distributed
-system requires trust between users that can offer a good reputation system. The
-section \ref{soa:rs} explores different systems that exist today and ways to
-improve them.
+Reputation systems also have a wide niche in e-commerce webs such as Ebay, as
+mentioned before, or Amazon\footnote{https://amazon.com}, in
+which people pay for a product sold by an unknown vendor. There must be a
+previous trust in the vendor before buying any product, so a reputation system
+offers a score given by other users that encourages you to trust or not that
+certain seller~\cite{resnick2002trust}.
+
+These systems vary widely in scope, such as one for peer-to-peer
+computing~\cite{zhou2007powertrust}, vehicle ad-hoc~\cite{dotzer2005vars}, web
+services~\cite{moore2008reputation} and even Wikipedia~\cite{adler2007content}.
+All of them are based on an exchange of trust between users who use these
+services.
+
+This same concept was intended to be implemented using a
+token as a \bb{trust unit}, which users exchanged as a sign of trust deposits among
+them~\cite{sharples2016blockchain}.
+
+Nevertheless, reputation systems also have problems when it comes to defend the
+users from attacks to individuals~\cite{hoffman2009survey} and unfair ratings
+~\cite{whitby2004filtering}.
 
 \section{Technical background}
 \label{tb}
@@ -411,35 +456,22 @@ current scientific community like Ledger\footnote{https://ledgerjournal.org}, a
 cryptocurrencies and blockchain-based journal that records the publication
 timestamps in the Bitcoin blockchain.
 
-\subsection{Existing Reputation systems}
+\subsection{Reputation systems in academia}
 \label{soa:rs}
-Many of the big internet communities like
-Stackexchange\footnote{https://stackexchange.com/} or
-reddit\footnote{https://www.reddit.com/} have their own reputation system.
-Reputation systems behavior may vary depending on the
-platform~\cite{josang2002beta}, but the most usual is the one where users get a
-score based on certain interaction with the community.
+\todo{SOA REP SYS EN ACADEMIA}
 
-Reputation systems also have a very large niche in e-commerce webs such as
-Ebay\footnote{https://www.ebay.com}, in which people pay for a product sold by
-an unknown vendor. There must be a previous trust in the vendor before buying
-any product, so a reputation system offers a score given by other users that
-encourages you to trust or not that certain seller~\cite{resnick2002trust}.
+In Decentralized Science, two types of scoring systems have been considered: the
+first is a 5-star scoring system, in which users score 1 to 5 for other users, 1
+being bad reputation and 5 good reputation~\cite{} This reputation system is
+used in many e-commerce websites. The second one is the like/dislike, in which
+the interactions are evaluated with positive evaluation or negative evaluation,
+depending on the interaction that two users have had~\cite{}.
 
-Reputation systems vary widely in scope, such as one for peer-to-peer
-computing~\cite{zhou2007powertrust}, vehicle ad-hoc~\cite{dotzer2005vars}, web
-services~\cite{moore2008reputation} and even Wikipedia~\cite{adler2007content}.
-All of them are based on an exchange of trust between users who use these
-services.
-
-This same concept was intended to be transferred within the blokchain using a
-token as a trust unit, which users exchanged as a sign of trust deposits among
-them~\cite{sharples2016blockchain}.
-
-But reputation systems also have problems when it comes to defend the users from
-attacks to individuals~\cite{hoffman2009survey} and unfair ratings
-~\cite{whitby2004filtering}, so the architecture chosen for it must consider
-these weak points and try to mitigate them.
+This system has been extended to many internet services in which there is no
+centralized entity in which users have to rely, so building a fully distributed
+system requires trust between users that can offer a good reputation system. The
+section \ref{soa:rs} explores different systems that exist today and ways to
+improve them.
 
 This paper proposes the development of a decentralized publication system for
 open science. It aims to challenge the technical infrastructure that supports
