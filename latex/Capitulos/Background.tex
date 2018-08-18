@@ -195,11 +195,11 @@ recognition of carrying out good reviews, and be penalized otherwise.
 \subsection{Reputation systems}
 \label{scb:rs}
 
-\bb{Trust} in an individual is hard to acquire. Normally trust can not be bought,
-sold or exchanged. When choosing whether to trust someone or not, having the
-opinion of other people about that individual can be helpful. If these opinions
-about each individual are stored in a system which can be consulted by anyone,
-it is called a ``reputation system''.
+\bb{Trust} in an individual is hard to acquire. Normally trust can not be
+bought, sold or exchanged. When choosing whether to trust someone or not, having
+the opinion of other people about that individual can be helpful. If these
+opinions about each individual are stored in a system which can be consulted by
+anyone, it is called a ``reputation system''.
 
 A reputation system is a technology that allows the users who use it to trust
 third parties inside the same system, without prior knowledge of each other. The
@@ -232,11 +232,11 @@ platform~\cite{josang2002beta}, but the most usual is the one where users get a
 score based on certain interaction with the community.
 
 Reputation systems also have a wide niche in e-commerce webs such as Ebay, as
-mentioned before, or Amazon\footnote{https://amazon.com}, in
-which people pay for a product sold by an unknown vendor. There must be a
-previous trust in the vendor before buying any product, so a reputation system
-offers a score given by other users that encourages you to trust or not that
-certain seller~\cite{resnick2002trust}.
+mentioned before, or Amazon\footnote{https://amazon.com}, in which people pay
+for a product sold by an unknown vendor. There must be a previous trust in the
+vendor before buying any product, so a reputation system offers a score given by
+other users that encourages you to trust or not that certain
+seller~\cite{resnick2002trust}.
 
 These systems vary widely in scope, such as one for peer-to-peer
 computing~\cite{zhou2007powertrust}, vehicle ad-hoc~\cite{dotzer2005vars}, web
@@ -244,8 +244,8 @@ services~\cite{moore2008reputation} and even Wikipedia~\cite{adler2007content}.
 All of them are based on an exchange of trust between users who use these
 services.
 
-This same concept was intended to be implemented using a
-token as a \bb{trust unit}, which users exchanged as a sign of trust deposits among
+This same concept was intended to be implemented using a token as a \bb{trust
+  unit}, which users exchanged as a sign of trust deposits among
 them~\cite{sharples2016blockchain}.
 
 Nevertheless, reputation systems also have problems when it comes to defend the
@@ -259,63 +259,82 @@ users from attacks to individuals~\cite{hoffman2009survey} and unfair ratings
 \figura{architectures.png}{width=0.95\linewidth}{tb:na:diagram}{Digram of the
   diferent network architectures}
 
-One of the most important concepts about Decentralized Science is precisely a
-distributed network architecture. This architecture proposes removing the
-centralized infrastructure, spreading its functionality and privileges to all
-the peers in a network
+\todo{poner algo aqui}
 
 There are three important types of network architecture (See
 figure~\ref{tb:na:diagram}~\cite{baran1964distributed}):
 
 \begin{itemize}
   \itbf{Centralized Architecture:} All the structure is managed and controlled
-  by a single node. This type of architecture is used nowadays in web services
-  in which all of its users have to connect to a centralized server. Some of the
-  most used internet platforms like
-  Facebook\footnote{https://www.facebook.com/},
+  by a single node. This structure is vulnerable, meaning that attacks to the
+  central node can compromise the entire network~\cite{baran1964distributed}.
+  This type of architecture is used nowadays in web services in which all of its
+  users have to connect to a centralized server. Some of the most used internet
+  platforms like Facebook\footnote{https://www.facebook.com/},
   Github\footnote{https://github.com/} or
   Amazon\footnote{https://www.amazon.com/} use this architecture.
 
   
-  \itbf{Decentralized Architecture:} This type of structure is divided into a
-  series of nodes that work in its own centralized structure. Fragmenting the
-  centralized server in smaller ones interlinked between them. Each one is
-  managed by its community. Besides, all its users can access all the data
-  stored in all the nodes. This infrastructure is used in platforms like GNU
-  Social\footnote{https://www.gnu.org/software/social/},
+  \itbf{Decentralized Architecture:} This type of structure shows a hierarchical
+  structure to a set of \emph{starts} connected in the form of a larger star
+  with an additional link forming a loop. Each \emph{star} is managed by its
+  community. Attacks to a single \emph{star} can suppose a loss of communication
+  between nodes but does not compromise the entire
+  system~\cite{baran1964distributed}. Besides, all its users can access all the
+  data stored in all the nodes. This infrastructure is used in platforms like
+  GNU Social\footnote{https://www.gnu.org/software/social/},
   Buddycloud\footnote{https://buddycloud.com/} and
   Diaspora\footnote{https://diasporafoundation.org/} among others
 
   \itbf{Distributed Architecture:} This is a fully decentralized architecture
-  and its usually called ``Peer to peer'' or ``P2P''. All the data is spread
-  among the nodes called \ii{peers} which have the same privileges in the
-  structure. Users can control its contribution to the network and everyone can
-  join or leave at any time without affecting the network architecture. Today
-  this structure is used in platforms like
-  BitTorrent\footnote{www.bittorrent.com/},
+  and its usually called ``Peer to peer'' or ``P2P''. All the nodes (or
+  \emph{peers}) share part of its own resources, and these shared resources are
+  necessary to provide the service and content offered by the network. They are
+  accessible by other peers directly, without intermediary
+  entities~\cite{schollmeier2001definition}. All the data is spread among the
+  nodes which have the same privileges in the structure. Users can control its
+  contribution to the network and everyone can join or leave at any time without
+  affecting the network architecture. Today this structure is used in platforms
+  like BitTorrent\footnote{www.bittorrent.com/},
   Bitcoin\footnote{https://bitcoin.org/} and
   Ethereum\footnote{https://www.ethereum.org/}
 \end{itemize}
 
+One of the most important concepts about Decentralized Science is precisely a
+distributed network architecture. This architecture proposes removing the
+centralized infrastructure, spreading its functionality and privileges to all
+the peers in a network.
 
-One of the examples mentioned above is the architecture of the Bitcoins network,
-in which all users can see all the transactions made between them, forming a
-fully transparent structure. Ethereum also uses this architecture to build a
-network of decentralized, free and open software, granting everyone access to
-all the source code.
-
-\subsection{Criptocurrencies}
+\subsection{Digital Currencies and Cryptocurrencies}
 \label{tb:cryptos}
-In the decade of the 80s and the 90s, decentralized forms of payment began to
-appear, such as ecash~\cite{chaum1995introduction} that offered a currency with
-a high level of privacy; It was then that the concept of ``anonymous electronic
-money'' began to emerge.
+
+In the 80s and 90s, with the expansion of the world wide web, several services
+began to be online (stores, newspapers, etc). Some of these services required
+monetary transactions through the internet. It was at this time that the
+concepts of electronic money or digital currencies began to emerge. One of the
+first forms of digital payment was Ecash~\cite{chaum1995introduction} in 1995,
+an idea of a digital currency that offered a high level of privacy.
 
 Wei Dai in 1998 published his proposal for electronic money called
-B-money~\cite{bmoney} and from this idea, other proposals have emerged such as
-Bit gold~\cite{bitgold}, improving the implementation of a cryptocurrency using
-RPOW~\cite{finney2005rpow}, an extension of the Hashcash work test
-system~\cite{back2002hashcash}.
+B-money~\cite{dai1998b} an "anonymous, distributed electronic cash system", a
+revolutionary idea for the time, since it added the concept of anonymity to
+monetary transactions. B-money added a layer of cryptography to secure these
+transactions, that is the beginning of the concept ``cryptocurrencies''.
+
+Hashcash~\cite{back2002hashcash} was another digital currency idea that was born
+in 2002 and introduced the concept of \emph{proof of work}. A \emph{proof of
+  work} is a piece of data which is difficult to generate, because it is time
+consuming or have high cost, but easy for others to verify. Hashcash used
+\emph{Hash Functions} with certain requirements to encrypt transactions of money
+between users.
+
+Despite the fact that these ideas were never carried out, they inspired others
+that would come later such as Nick Szabo's Bit gold~\cite{szabo2008bit} a similar approach as
+B-money but using P2P protocols and PRPOW~\cite{finney2005rpow} an invention by
+Hal Finney intended as a prototype for a digital cash.
+
+None of these currencies was implemented successfully enough until 4 years later
+with the arrival of the most widely used cryptocurrency today.
 
 \subsection{Bitcoin}
 \label{tb:bc}
@@ -326,8 +345,18 @@ system~\cite{back2002hashcash}.
 In 2009, the idea of a decentralized currency first emerged, when Satoshi
 Nakamoto published the first version of Bitcoin~\cite{nakamoto2008bitcoin}. The
 purpose of this currency was to create a fully decentralized electronic payment
-system, using cryptographic tests instead of trust through a concept called
-proof of work (\emph{POW}).
+system, using concepts and ideas of previous digital currencies such as B-money,
+Hashcash and Bit gold (see section~\ref{tb:cryptos}).
+
+Bitcoin forms a P2P network in which each user is able to watch and verify each
+transaction in the system.
+
+% If a user wanted to transfer money to it's account to another account, the
+% system will add the transaction to a block of data. Then it will try to add a
+% random string and apply a hash function. If the result have a with a number of
+% leading zeros the transaction will be encrypted and it will be easily
+% verificable. Otherwise the system will try to find another random stirng an
+% will repeat the process again.
 
 All monetary transactions between accounts are stored in a data block until
 reaching a specific size, giving a snapshot of all the state of all the accounts
