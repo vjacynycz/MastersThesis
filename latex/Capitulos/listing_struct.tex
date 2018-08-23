@@ -1,0 +1,28 @@
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[language=C++,commentstyle=\color{olive}\ttfamily,frame=single,caption=Struct used for stroring papers in the
+  first prototype,label=arstruct,captionpos=b]
+  contract PapersLibrary{
+
+      ...
+
+      struct Paper{
+          // IPFS address using Multihash struct
+          Multihash _ipfsPaperMultihash;
+
+          // Ethereum's addresses of the authors
+          address[] _authors;
+
+          // Check if the paper is acepted
+          bool _published;
+
+          // Array of Reviews (see Review Struct) of this paper
+          Review[] _reviews; 
+        }
+
+        // Papers received are stored in this array
+        Paper[] storedPapers;
+
+        ...
+    }
+  \end{lstlisting}
+  \end{minipage}

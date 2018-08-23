@@ -10,13 +10,63 @@
 \end{FraseCelebre}
 
 \section{Methodology}
-The idea of this project came up in a Hackathon in September 2017. We were a
-group of 4 developers with one month to create an idea and a small prototype to
-implement using blockchain technologies.
 
-To give birth to the idea of a decentralized publication system for open science
-we used agile methodologies.
+Decentralized Science is based on a project idea outlined in a blockchain event
+in September 2017. In this event we were a group of 4 developers with one month
+to design an idea of a platform or service using blockchain technologies to
+solve a particular problem. This Master's Thesis is a first approach to the
+software design and implementation of that project sketch.
 
+\subsection{Project Timeline}
+\label{methodology:timeline}
+
+
+Decentralized Science's project timeline has three different parts:
+
+\begin{itemize}
+  \itbf{Pre-project:} \emph{Blockchain for Social Impact} was an online event
+  that took place in September 2017. The main goal of that event was to design a
+  blockchain-powered platform to solve any social related problem, and the best
+  one would receive funding. Our team developed the first Decentralized
+  Science's idea in the month that the event lasted. In this month we had to
+  make a series of deliverables every week to show that we were working on one
+  project. In order to make this, the team met 3 times a week to design the
+  platform using methodologies such as Brainstorming and Value Proposition
+  Canvas. The main idea of the platform and the problems it had to solve were
+  identified in this period. Unfortunately the project was not one of the
+  winners of the event and the team decided to pause the project.
+
+  \itbf{Project implementation:} Since I was the only one with programming
+  knowledge in blockchain, I decided to continue with the project on my own.
+  Consequently, and as my Master's Thesis, I started the project's
+  implementation and software design from October 2017 until February 2018. To
+  achieve this, I used agile methodologies such as scrum and extreme programming
+  to be able to develop incremental prototypes as first approach to the
+  platform. During this period I have developed two functional prototypes using
+  different blockchain architectures. Afterwards, I have tested them to compare
+  the two implementations in terms of performance, execution cost and
+  compatibility with other possible platforms. These prototypes are developed
+  under an \bb{open source license} and the last version is available in
+  Github\footnote{see https://decentralized.science}. During these period I had
+  monthly reunions with my directors to update the status of the project.
+  Finally, since January of 2018 I have started this manuscript as the master's
+  thesis memory.
+
+  \itbf{Post-project:} From March 2018 the team decided to continue working in
+  the project's idea, trying to find supporters and funding to develop a final
+  platform. Decentralized Science has been in three European conferences on
+  blockchain in which several projects were discovered in the same field:
+  ETHCC2018 (Paris), SPOBC2018 (Vienna) and PEERE2018 (Rome). In addition,
+  Decentralized Science has formed a group with other similar projects called
+  Open Science Ecosystem with more than 30 projects in open science around the
+  world. Currently the team are sending scientific papers to different
+  conferences to validate the ideas of this platform with the scientific
+  community. One article has been published in a small conference and another
+  has been accepted with changes in a CORE-A conference so far. This papers and
+  the feedback received by the community allowed me to improve the platform
+  source code and complete this memory.
+  
+\end{itemize}
 
 \subsection{Brainstorming}
 
@@ -28,38 +78,42 @@ or not~\cite{osborn1953applied}.
 
 This method is used nowadays in companies and work groups as part of the process
 of the creatfile uploadsion of a product, although there are some critics about
-brainstorming and sometimes instead of encouragind creativity, inhibits
+brainstorming and in some cases instead of encouragind creativity, inhibits
 it~\cite{sutton1996brainstorming,mullen1991productivity}
 
-Leaving apart these problems, we decided to make a brainstorming session to
-define what we were going to do. Many ideas emerged and were capture into a
-white board without discrimination, no matter hukow hard or easy to implement
-they were.
+As part of the \bb{pre-project}(see section~\ref{methodology:timeline}) the team
+decided to use this methodology and do a brainstorming session to define what
+kind of problem should be solved with blockchain. Many ideas emerged and were
+capture into a white board without discrimination, no matter how hard or easy to
+implement they were.
 
 After saying enough ideas to fill the board we filtered the ones that were
 impossible to achieve. Then, each one voted the best three, making a ranking of
 the 3-4 best projects to start working on. Some of the ideas we came up to were
 creating a distributed \emp{wikipedia} with governance models, an application to
 contact people from minority groups in countries where they are persecuted
-collectives, a distributed and community driven NGO, and a crowdfunding platform
-for \emph{whisteblowers}.
+collectives, a distributed and community driven NGO\footnote{Non-governmental
+  organization}, and a crowdfunding platform for \emph{whisteblowers}\footnote{A
+  person who exposes any kind of information or activity that is deemed
+  illegal}.
 
 Finally we decided to create an approach to a distributed platform for open
 science which we initially called Alexandria, in honor of Alexandra Elbakyan,
-the creator of Sci-hub. But we finally changed the name of the project to
+the creator of Sci-hub. Nevertheless we changed the name of the project to
 Decentralized Science because there were a similar project about distributed
 system for media files using blockchain with the same
 name\footnote{https://www.alexandria.io/}.
 
 \subsection{Value proposition canvas}
+\label{sec:value-prop-canv}
 
 \figura{vpc.jpg}{width=0.9\linewidth}{vpcimage}{Image of the value proposition
   canvas after the session}
 
 A value proposition canvas is a tool to create, design and implement a product
-idea. Is commonly used by businesses and entrepreneurs to find the balance
-between customer profile and product design, but there are other cases of use
-for this tool outside business
+idea. This method is commonly used by businesses and entrepreneurs to find the
+balance between customer profile and product design, but there are other cases
+of use for this tool outside business
 scope~\cite{pokorna2015value,meertens2012mapping}.
 
 The process is divided in two parts, customer profile and value map, each of
@@ -79,7 +133,8 @@ these divided in other three parts:~\cite{osterwalder2014value}:
   customer gains
 \end{itemize}
 
-We decided to use this methodology for the definition of the final platform,
+We decided to use this methodology in the \bb{pre-project}(see
+section~\ref{methodology:timeline}) for the definition of the final platform,
 since it established the general development framework of the application. As a
 result, the following items were the most relevant of the project's Value
 Proposition Canvas:
@@ -107,6 +162,8 @@ Proposition Canvas:
 \end{itemize}
 
 \subsection{Agile methodologies}
+\label{sec:agile-methodologies}
+
 Traditional software development methodologies are being eclipsed by new light
 or agile methodologies. These methodologies are characterized by continuous
 integration, iterative development and the ability to assume changes in business
@@ -120,16 +177,22 @@ responsibility of the code of all the members of the group, short and quick
 meetings, refactoring and continuous integration~\cite{theunissen2005search}.
 
 Another well-known method within agile methodologies is
-\bb{scrum}~\cite{rising2000scrum}, which uses two-week frameworks to perform
+\bb{SCRUM}~\cite{rising2000scrum}, which uses two-week frameworks to perform
 development sprints and planning meetings. The use of these methodologies allows
 developers to create better quality software in shorter periods of time and are
 designed for small teams from three to nine developers.
 
-These two methodologies were used to develop the platform that as it were being
-defined. Every Saturday we had a weekly meeting where we were adding or removing
-functionality to the platform. Extreme programming allowed me to meet design
-demands without sacrificing development time. At the end of each session, we
-planned the whole week and set the date for the next meeting.
+These two methodologies were used to achieve the \bb{project implementation}
+(see section~\ref{methodology:timeline}). Programming smart contracts in
+Ethereum is a difficult task because once the source code is deployed in the
+blockchain, there is no way to change it. For this reason, these methodologies
+allowed me to develop small prototypes and run several test for each one. Every
+two weeks I started a development cycle consisting on programming the next
+prototype in the first week and run test in the second week.
+
+During the whole \bb{project implementation} phase, meetings were held with the
+thesis directors at least twice a month to discuss the progress made and set
+short-term objectives.
 
 As a complement to the previous methodologies, \bb{Kanban} was used to manage
 the status of the project throughout the development process. Kanban was created
@@ -140,14 +203,6 @@ Trello\footnote{https://trello.com/} or Github project
 boards\footnote{https://help.github.com/articles/about-project-boards/} feature
 a digital Kanban to carry out this development process and both were used in
 Decentralized Science.
-
-\subsection{Work done by the author}
-
-Although the initial idea of Decentralized Science was born in a hackathon with
-a team, I have taken charge of continuing the development of the platform when
-the event ended. Following the first outline, I have explored different
-implementations and structures for both the frontend (HTML and JavaScript) and
-the backend (Ethereum and IFS) parts.
 
 \section{Technology}
 \label{tech}
@@ -164,31 +219,47 @@ centralized server.
 \subsection{IPFS}
 % -------------------------------------------------------------------
 \label{tech:sec:ipfs}
+
 IPFS stands for Interplanetary File System. It is a peer-to-peer file-sharing
 protocol that uses a cryptographic hashes to store files in a distributed
-network. IPFS works very similar to HTTP protocol but in a BitTorrent way. It
-can be seen as a giant git repository where everyone can store, share and
+network. IPFS works very similar to the HTTP protocol but in a BitTorrent way.
+It can be seen as a giant git repository where everyone can store, share and
 exchange files\cite{benet2014ipfs}.
+
+\subsubsection*{IPFS on Decentralized Science}
+
+IPFS provides a robust, distributed and secure way to store files in a
+decentralized network. These files are identified by a string of characters and
+each identifier is unique. In order to achieve this IPFS forms the hash of the
+data inside the file (a cheap computational operation) and outputs its
+identifier. This hash behaves like a link within the IPFS network that allows
+users to identify and recover the file.
+
+This feature implies that two identical data files have the same hash, so they
+have the same IPFS address, eliminating duplicates in an easy, secure and fast
+way.
 
 IPFS merges four main ideas: Distributed Hash Tables, BitTorrent, Git and
 Self-Certified Systems.
 
 \subsubsection*{Distributed Hash Tables}
 \label{tech:sec:ipfs:dht}
+
 A distributed hash table(\emph{DHT}) is a decentralized structure that works
 very similar to a hash table. Hash tables are used to identify items in a
 database. The table performs simple mathematical operations generating a random
-string called hash. The hash acts as a pointer that directs to the data, this
-allows the user to find data directly instead of looking through the entire
-database\cite{kaluszka2010distributed}.
+string called \emph{hash}. The hash acts as a pointer that directs to the data,
+allowing users to find it in a large database without performing an exhaustive
+search\cite{kaluszka2010distributed}.
 
-In a distributed hash table, any node can use a hash as a key to retrieve data.
-This system includes a data structure called ``keyspace'' that is a set of all
-possible keys, which is split up across the nodes in the system. The mapping of
-the keys is made by another function that describes the distance from one key to
-another. All the nodes have and identifier and a set of identifiers pointing to
-all its neighbors nodes. If a node is removed from the network, only a small
-portion of the data must be recovered by other
+In distributed hash tables, hash strings are keys that identifies a value in one
+or more nodes. Any node can use a key to retrieve data. This system includes a
+data structure called ``keyspace'' that is a set of all possible keys, which is
+broadcasted across the nodes in the system. The mapping of the keys is made by a
+function that calculates the \ii{keyspace} of each node and shares it with its
+neighbors. These nodes also have and identifier and a set of identifiers
+pointing to all its neighbors nodes. If a node is removed from the network, only
+a small portion of the data must be recovered by other
 nodes\cite{kaluszka2010distributed}.
 
 This system makes \emph{DHTs} scalable, fast and robust. It is used by
@@ -205,9 +276,10 @@ its distributed file system.
 BitTorrent \cite{cohen2003incentives} is a P2P file sharing system used
 worldwide. In this system, files are divides into very small chucks of data, and
 are shared in a peer-to-peer network. Each peer aims to maximize its download
-rate by connecting to low latency peers. In BitTorrent's network, peers with
-high upload rate will get higher download rate, so the key is balancing the
-network bandwidth between downloading and uploading
+rate by connecting to the best peers, meaning that peers with faster network
+speed will be better than ones with slow connectivity. In BitTorrent's network,
+peers with high upload rate will get higher download rate, so the key is
+balancing the network bandwidth between downloading and uploading
 files\cite{pouwelse2005bittorrent}.
 
 IPFS uses three main features from BitTorrent's protocol\cite{benet2014ipfs}:
@@ -216,62 +288,58 @@ IPFS uses three main features from BitTorrent's protocol\cite{benet2014ipfs}:
   network, and punishes the ones who don't.
 \item BitTorrent tracks the availability of file chunks, sending the rarest
   first rather than sending the most common ones.
-\item IPFS uses PropShare\cite{levin2008bittorrent} bandwidth allocation
-  strategy to improve BitTorrent's behavior facing exploitable scenarios.
+\item IPFS uses PropShare\cite{levin2008bittorrent}, an alternative
+  implementation of the original BitTorrent protocol designed to maximize
+  network speed. This implementation improves the previous bandwidth allocation
+  strategy for each peer, enhancing the download and upload speed of the
+  network.
 \end{itemize}
 
 \subsubsection*{Git - Version control system}
 \label{tech:sec:ipfs:git}
-Git is a distributed version control system (\emph{DVCS})\cite{torvalds2010git}.
-Git was born in 2005 when the development process of the Linux kernel lost its
-version control system. The Linux kernel is one of the biggest free software
-projects nowadays, it has a great team of developers behind and the code usually
-changes very frequently. In 2002 the team used BitKeeper as VCS since they had a
-free license. But in 2005 when this license was over, Linus Torvalds decided to
-develop his own VCS\cite{spinellis2005version}.
 
-Git was designed to be scalable and distributed, and the most important factors
-that IPFS inherits from Git are: \cite{benet2014ipfs}:
+A version control system (\ii{VCS}) is a software to manage changes in a
+document, computer programs or any information. Each change is called revision
+and it is identified by a number, the person who did it and a timestamp. In a
+\ii{VCS} revisions can be reverted to a previous version, making them useful for
+software development.
+
+Git is a distributed \emph{VCS}\cite{torvalds2010git} that was born in 2005,
+when the development process of the Linux kernel lost its version control
+system. The Linux kernel is one of the biggest free software projects nowadays.
+It has a great team of developers behind and the code usually changes very
+frequently. In 2002 the team used BitKeeper~\footnote{BitKeeper is an and
+  distributed and scalable \ii{VCS} available at https://www.bitkeeper.org/} as
+\ii{VCS} since they had a free license. But in 2005 when this license was over,
+Linus Torvalds decided to develop his own \ii{VCS}\cite{spinellis2005version}.
+
+Git was designed to be scalable and distributed, and nowadays is widely used by
+the open source community. The most important factors that IPFS inherits from
+Git are: \cite{benet2014ipfs}:
 
 \begin{itemize}
-\item Git implements a Merkle Directed Acyclic Graph
-  \cite{bleichenbacher1994directed}, an object that reflects changes in a file
-  system in a distributed way.
+\item Git reflects changes in a file system in a distributed way using an
+  acyclic graph, in which each revision is a node and each change is an arc.
 \item Objects are identified by the cryptographic hash of their contents.
 \item Version changes only update preferences and add objects. To broadcast
   version changes, git only needs to transfer the new objects and update the
   remote references.
 \end{itemize}
 
-\subsubsection*{Self-Certified File Systems}
+\subsubsection*{Self-Certifying File Systems}
 \label{tech:sec:ipfs:scfs}
 
-A self-certified file system (\emph{SCFS}) is a secure file system that avoids
-internal key management, using public keys to map file names, making
-self-certifying pathnames. Key management occurs outside the system, letting the
-user choose the desired procedure to generate file
-names~\cite{mazieres2000self}.
-
-The name of an self-certified file system assure its server. Users can verify
-the public key offered by a \emph{SCFS} server and negotiate a shared secret to
-secure all traffic.
+\todo{explain more} A self-certifying file system (\emph{SCFS}) is a secure and
+decentralized file system that uses public keys to map file names, separating
+key management from file system security. Servers have a public key and clients
+use the server public key to authenticate the server and establish a secure
+communication channel. Once the client has verified the server a secure channel
+is established and the actual file access takes place.~\cite{mazieres2000self}.
 
 IPFS tries to connect these ideas into a cohesive, trustful and decentralized
 file system. It is build on top of a peer-to-peer network, so no nodes are
 privileged, and all of those store IPFS objects in local storage. These objects
 represent files or other data structures.
-
-\subsubsection*{IPFS on Decentralized Science}
-
-IPFS provides a robust, distributed and secure file system, in which the
-identifiers of the files are cryptographically formed by the hash of the data of
-the file itself. This hash behaves like a link within the IPFS network that
-allows to identify and recover the file thanks to the technologies that have
-been mentioned in the previous sections.
-
-This feature implies that two identical data files have the same hash, so they
-have the same IPFS address, eliminating duplicates in an easy, secure and fast
-way.
 
 In Decentralized Science, we use this technology to store all the files in a
 robust and secure way, without relying on a centralized server. All these
@@ -280,11 +348,33 @@ prohibition, since IPFS works on a network of thousands of nodes.
 
 \subsection{Ethereum}
 \label{tech:sec:ethereum}
+
 As seen in the section~\ref{tb:eth}, Ethereum is a technology that allows its
 users create fully decentralized and autonomous applications. These applications
 (called DApps) are smart contracts that are uploaded to the Ethereum blockchain,
 so it is not necessary to have a server to run or communicate with these
 contracts.
+
+Ethereum is used as \ii{backend} in Decentralized Science. All the internal
+operation of the platform is programmed in a smart contract and is executed from
+blockchain. This implies several important things:
+
+\begin{itemize}
+  \itbf{Open source:} All the source code uploaded to Ethereum is free, public
+  and anyone can fork it in other projects.
+
+  \ifbf{Auditable interactions:} All calls and interactions to the platform are
+  registered in blockchain, making the entire process of scientific publication
+  auditable.
+
+  \itbf{Distributed platform:} All the source code is executed in the Ethereum's
+  distributed network, meaning that Decentralized Science does not need a
+  centralized server or a third party service to run the platform.
+
+  \itbf{Free access to information:} Anyone can access to the platform's
+  information (journals, authors, papers, reviews and reputation) without any
+  cost and through a web page.
+\end{itemize}
 
 With Ethereum and IPFS, Decentralized Science is a 100 \% distributed platform,
 open source and free\footnote{Interactions with the platform may have
@@ -293,6 +383,8 @@ open source and free\footnote{Interactions with the platform may have
 
 
 \subsection{Remix}
+\label{sec:remix}
+
 \figura{remix.png}{width=0.95\linewidth}{tech:sec:remix:sc}{Remix smart contract
   web compiler}Remix\footnote{https://remix.ethereum.org/} is an online smart
 contract web compiler designed by the Ethereum community that allows users
@@ -318,12 +410,15 @@ small changes, without the need of installing any software (see figure
 
 \subsection{Testrpc}
 \label{testrpc}
+
 \figura{testrpc.png}{width=0.7\linewidth}{testrpc:sc}{Transactions mined by
-  testrpc in a test network} Testrpc is a Node.js based Ethereum client for
-testing a development. It simulates an Ethereum client behavior using the
-ethereum.js library. Once installed throug \code{npm}, it can lauched through
-the linux terminal with the command \code{testrpc} and offers the developers a
-series of interesting features:
+  testrpc in a test network}
+
+Testrpc is a Node.js based Ethereum client for testing a development. It
+simulates an Ethereum client behavior using the ethereum.js library. Once
+installed throug \code{npm}, it can lauched through the linux terminal with the
+command \code{testrpc} and offers the developers a series of interesting
+features:
 
 \begin{itemize}
   \itbf{Simulate accounts:}
@@ -335,8 +430,9 @@ series of interesting features:
 
   \itbf{View transactions:} Once testrpc is lauched, developers can see through
   the console all the transactions made with the blockchain in a user-frendly
-  way. It also has a gas estimator to calculate the price of each transaction
-  (see figure \ref{testrpc:sc}).
+  way. It also has a gas\footnote{Amount of money needed to execute a
+    transaction (see section~\ref{ts:at})} estimator, a tool that calculate the
+  price of each transaction (see figure \ref{testrpc:sc}).
 
   \itbf{Create test net:} Testrpc creates a test net through the port 8545. Any
   user in the internet using Metamask (see section \ref{jsmm}) can connect to
@@ -347,37 +443,37 @@ series of interesting features:
   to that account to allow the user do transactions in the test net.
 \end{itemize}
 
-The main difference between a testrpc network and the Ethereum network is that
-testrpc creates one block for each transaction, making a small block size
-compared to the Ethereum network, and preventing the gas estimator being
-accurate.
-
 \subsection{JavaScript and Metamask}
 \label{jsmm}
-Ethereum smart contract interaction is usually a web application that connects
-to its address, and it has systems to connect users to the blockchain through
-web browsers. There are two different ways to achieve this: the first one is to
-install an specialized web browser like
+
+In order to interact with a smart contract in Ethereum, users normally use a web
+application connected to the contract address (see section~\ref{ts:at}).
+Nevertheless, the web application must be connected to an Ethereum node in order
+to communicate with it. There are two different ways to achieve this. The first
+one is to install an specialized web browser like
 AlethZero\footnote{https://github.com/ethereum/alethzero},
 Mist\footnote{https://github.com/ethereum/mist} or
-Brave\footnote{https://brave.com/}that connects to the blockchain automatically.
-Or installing an extension like Metamask\footnote{https://metamask.io/}.
+Brave\footnote{https://brave.com/} that provide the libraries needed to interact
+with smart contracts and connects to the blockchain automatically. The second
+one is installing an extension like Metamask\footnote{https://metamask.io/} as
+an extension of the web browser.
 
 
-Metamask is an web browser extension (available for Chrome, Firefox, and Opera)
-that allows its users to connect both to a Ethereum network or a custom test
+Metamask is a web browser extension (available for Chrome, Firefox, and Opera)
+that allows its users to connect both to the Ethereum network or a custom test
 net. It contains the mechanism needed to make transactions and communicate with
 smart contracts in the blockchain. To use it, users only need to install the
 extension from the Metamask homepage and configure it with an Ethereum account.
-Metamask also allows the creation of new accounts, but to make transactions with
-the official blockchain, it has to have enough funds.
+Metamask also allows the creation of new accounts, but in order to make
+transactions with the main Ethereum blockchain, these accounts must have enough
+funds.
 
-So Metamask not only acts as bridge between a web browser and the Ethereum
-network, it also works as a wallet and support Ethereum's official tokens.
+Thus, Metamask not only acts as a bridge between a web browser and the Ethereum
+network, it also works as a wallet and supports Ethereum's official tokens.
 
-JavaScript is used to connect to an smart contract address and be able to call
-to specific functions of it. To do so, the JavaScript code has to have two
-important data:
+JavaScript is used to connect to a smart contract address and be able to call to
+specific functions of it. To do so, the JavaScript code must have two important
+data:
 
 \begin{itemize}
 \item \textbf{Ethereum's contrat address:} When the user loads the web page to
@@ -392,12 +488,27 @@ important data:
 
 \end{itemize}
 
-This two technologies were used to test the platform proposed in this work,
-using HTML and Testrpc to simulate a functional journal (see section \ref{poc})
+These two technologies were used to test the platform proposed in this work,
+using HTML and Testrpc to simulate a functional journal (see chapter~\ref{poc})
 
 
 \input{Capitulos/listing_abi.tex}
 
+
+\subsection{Github}
+\label{sec:github}
+
+Github\footnote{https://github,com} is a web hosting service for \ii{VCS} using
+Git (see section~\ref{tech:sec:ipfs:git}). If offers all Git features as well as
+its own features like bug tracking, issues and task management, kanban boards,
+wiki pages among others.
+
+Decentralized Science is 100\% open software and uploaded to Github. All the
+source code, documents, web page, and all the information is available at:
+
+\begin{lstlisting}[frame=single]
+  https://github.com/DecentralizedScience/.
+\end{lstlisting}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "../Tesis.tex"
