@@ -107,14 +107,16 @@ the blockchain:
   \itbf{Rating:} As part of the reputation system mentioned in
   chapter~\ref{cha:platform-description} each review can be rated to give or
   subtract reputation to the reviewer. This prototype uses a Rating struct to
-  gather these. It contains an unique string that identifies the rater
-  and the reviewer receiving the rating, the rater address and the score of the
-  rating.
+  gather these. It contains an unique string that identifies the rater and the
+  reviewer receiving the rating, the rater address and the score of the rating.
 
   \itbf{Reviewer:} Finally the last struct used in this approach is responsible
   of storing the reviewers. It contains the reviewer's Ethereum address, the
   reputation she or he has, an array representing the fields of expertise and
-  the number of reviews done. 
+  the number of reviews done.
+
+
+  
 \end{itemize}
 
 \subsection*{Decentralized Journal}%
@@ -261,8 +263,24 @@ designed to appease the problems that have arisen.
 
 In the following section we will discuss the functional requirements and the
 activity diagrams for each transaction users can make to interact with the
-platform:
+platform.
 
+Each of these interactions must be done through an Ethereum personal address, as
+it works as an identifier of the user performing it. For this reason, all of the
+following activity diagrams asks the user for an Ethereum address. In case a new
+user uses the platform does not have a personal address, the platform has the
+possibility to create one for that user through Metamask\footnote{Used to
+  connect a web browser to Ethereum (see section~\ref{jsmm})} extension.
+Furthermore, in order to complete each transaction, an essential requirement it
+that the user must have an Ethereum account and Metamask installed.
+
+\subsection*{Send paper}
+
+Once an user has an Ethereum account users may send papers. The platform asks
+for the authors and for the file through a web form. Javascript collects this
+information and uploads it to the file system, generating an IPFS file address.
+Finally, the platform creates a transaction with these information and sends
+them to the platform.
 
 \figuraAD{AD1}% 1. Table ID
 {Send Paper}% 2. Table title
@@ -277,6 +295,15 @@ platform:
   & about the authors and the IPFS address of the paper }% 8. Postconditions
 {sending a paper}% 9. Caption description
 
+\subsection*{Assign Reviewer}
+
+After receiving a paper, an editor has the possibility to assign reviewers. To
+do so, there must be a journal in the platform and the user must have editor
+privileges. Next, the editor assigns the reviewers of the paper and the platform
+creates the review tasks for each reviewer. These tasks can be accepted or
+rejected by the reviewers and they can have a ``deadline'' to receive the
+acceptance.
+
 \figuraAD{AD2}% 1. Table ID
 {Assign Reviewer}% 2. Table title
 {An editor assigns reviewers for a paper}% 3. Table description
@@ -286,6 +313,15 @@ platform:
   there is a paper pending}% 6. Requirements
 {A transaction is created to assign the reviwers}% 7. Preconditions
 {assigning a reviewer}% 9. Caption description
+
+\subsection*{Accept review task}
+
+As explained before a reviewer has the possibility to accept or reject a review
+task. Before doing so the reviewer must have an Ethereum address. Then, when a
+task is received, the reviewer has a time limit to accept it. If it is not
+accepted, the editor can assign another reviewer. In the other hand, if it is
+accepted, a transaction is created and the reviewer is registered in the paper
+to be able to send his review.
 
 \figuraAD{AD3}% 1. Table ID
 {Accept Review task}% 2. Table title
@@ -299,6 +335,16 @@ platform:
   review}% 8. Postconditions
 {accepting a review}% 9. Caption description
 
+\subsection*{Send review}
+
+Sending a review is similar to sending a paper. The main difference is that the
+reviewer, once she accepts the review task, has a deadline to submit a review.
+If the review is sent before the time limit, the file containing the review is
+uploaded to IPFS and the platform created an Ethereum transaction with this
+information. Otherwise, if the review is not sent, the reviewer loose reputation
+within the reputation system.
+
+% \begin{minipage}{\linewidth}
 \figuraAD{AD4}% 1. Table ID
 {Send Review}% 2. Table title
 {A reviewers submits the review previously accepted via
@@ -309,6 +355,14 @@ platform:
 {The submission is within the deadline}% 7. Preconditions
 {There is a transaction to the journal's contract address}% 8. Postconditions
 {sending a review}% 9. Caption description
+% \end{minipage}
+
+\subsection*{Rate review}
+
+As part of the reputation system, all reviews can be rated by the authors and by
+other reviewers. When a review is sent to the platform, it generates an
+identifier which can be rated with 1 or 0 as explained in
+section~\ref{rep:system}.
 
 \figuraAD{AD5}% 1. Table ID
 {Rate Review}% 2. Table title
@@ -375,7 +429,7 @@ following transactions (all the costs are estimated\footnote{Check
 \label{sec:reduc-trans-costs}
 
 In Ethereum, reducing the transaction costs is critical, because all
-interactions have costs to the user. In Decentralized Science's contract the
+interactions have costs to the user. In the Decentralized Science's contract the
 following actions have been taken to reduce these costs:
 
 \begin{itemize}
@@ -386,12 +440,12 @@ following actions have been taken to reduce these costs:
     expensive data types:} Working with ``Strings'' in \ii{Solidity} is very
   expensive, that's why it is recommended to avoid using this data type.
 
-  As described in the previous sections. Decentralized Science stores IPFS
-  addresses as links between Ethereum and IPFS, but these addresses are
-  \ii{Base58} strings, a data type not implemented yet in Ethereum. This address
-  has 3 parts: 1) A number representing a hash function, 2) another number
-  representing the size of the file and 3) a hashed string of the data done with
-  the 1) hash function.
+  As described in the chapter~\ref{cha:platform-description}. Decentralized
+  Science stores IPFS addresses as links between Ethereum and IPFS, but these
+  addresses are \ii{Base58} strings, a data type not implemented yet in
+  Ethereum. This address has 3 parts: 1) A number representing a hash function,
+  2) another number representing the size of the file and 3) a hashed string of
+  the data done with the 1) hash function.
 
   To save an IPFS address in Ethereum, initially a ``String'' data type was
   used. But to avoid using this type, first the \ii{Base58} is decoded into the

@@ -6,21 +6,21 @@
 
 Anonymity of reviewers and authors in peer reviews is traditionally used to
 improve the fairness of the process. Thanks to single blind reviews, anonymous
-reviewers can honestly critic a paper without fearing the reactions of the
+reviewers can honestly criticize a paper without fearing the reactions of the
 authors. Double blind reviews also allow to reduce the impact of personal
 biases. Finally, open review models propose that both authors and reviewers know
 each other. These different privacy settings are shown in the Figure
-\ref{PrivacyReviewRating}.But the anonymity of the reviewers can also be abused.
-Unfair or low quality reviews were not discouraged by the system due to the lack
-of consequences.
+\ref{PrivacyReviewRating}. Nevertheless, the anonymity of the reviewers can also
+be abused. Unfair or low quality reviews were not discouraged by the system due
+to the lack of consequences.
 
 \subsection{Privacy for the peer review process}
 \label{sec:privacy-peer-review}
 
 As mentioned in previous sections, all the information is stored in either IPFS
-(files) or Ethereum (interactions). All this information is public for everyone.
-This may suppose a privacy problem for the reviewers if they do not want to
-reveal their identity. Exploring different possible configurations for each model of
+(files) or Ethereum (interactions). All this information is public for everyone,
+which can be privacy problem for the reviewers if they do not want to reveal
+their identity. Exploring different possible configurations for each model of
 peer review may solve this problem.
 
 Each of the anonymity options of the system requires different solutions, which
@@ -77,60 +77,359 @@ open to debate~\cite{groves2010open}.
 \label{sec:privacyRating}
 
 
-\figura{privacyRating.jpg}{width=0.7\linewidth}{PrivacyRating}{Reviewer
-  reputation privacy models}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \figura{privacyRating.jpg}{width=0.7\linewidth}{PrivacyRating}{Reviewer %
+% reputation privacy models} %
+%                                                                                  %
+% Different privacy sections for peer review have been discussed in
+%                                                                                  % previous %
+% subsection. Note, however, that the anonymity of the reviewers can be also %
+% abused. Unfair and low quality reviews are not discouraged by the system due
+% to %
+% the lack of consequences. In order to alleviate this problem, our system %
+% proposes the construction of a reputation network of peer reviewers so that %
+% reviewers are awarded or criticized according to their work. This reputation %
+% network can also adopt different privacy settings, allowing both anonymous
+% and %
+% signed ratings of either signed or anonymous reviews as depicted on Figure %
+% \ref{PrivacyRating}. Next, we discuss the different privacy models for the %
+% proposed reviewer reputation network. %
+%                                                                                  %
+% % where review reports are rated by authors, reviewers and editors. The
+%                                                                                  % possible %
+% % privacy settings of this system are presented in the following
+% % subsections. %
+%                                                                                  %
+% \subsubsection*{Open
+%                                                                                  % Rating} %
+% Similarly to open reviews, open ratings are easy to implement by maintaining
+% a %
+% public identity for the raters and reviewers. %
+%                                                                                  %
+% \subsubsection*{Anonymous
+%                                                                                  % Rating}                                                %
+%                                                                                  %
+% Protecting the identity of raters is interesting in several reputation
+%                                                                                  % systems. %
+% We can support this anonymity feature using \emph{blinded tokens} %
+% ~\cite{schaub2016trustless} that grant permission to rate without revealing
+% the %
+% identity of the rater. People authorized to rate a review, such as authors, %
+% editors and other reviewers involved in the process, may each get one of
+% these %
+% tokens. %
+%                                                                                  %
+% \subsubsection*{Rating Anonymous
+%                                                                                  % Reviews}                                        %
+%                                                                                  %
+% The question of whether we can keep the benefits of blind review while
+%                                                                                  % providing %
+% accountability and recognition to reviewers deserves special consideration. %
+%                                                                                  %
+% In a system that support voluntary signing of reviews, unsigned reviews
+%                                                                                  % would %
+% not affect the reviewers reputation unless they acknowledge their
+% authorship. %
+% Thus, reviewers may only reveal their identities for well rated reviews, %
+% reducing the desired accountability for poor quality, unfair or late
+% reviews. %
+%                                                                                  %
+% A system allowing anonymous, yet accountable, reputation system for
+%                                                                                  % peer %
+% reviewing is therefore of great interest. Following, we discuss the
+% feasibility %
+% of adopting different anonymity and accountability approaches to realize
+% this %
+% novel system. %
+%                                                                                  %
+% \subsubsection*{Accountability} %
+%                                                                                  %
+% \emph{Collateral models} are widely used in blockchain technology to ensure
+%                                                                                  % that %
+% an actor assumes negative consequences of an interaction in order to avoid
+% the %
+% greater consequence of loosing the collateral. A similar strategy can be
+% used %
+% for the anonymous reputation network. If a reputation collateral is
+% requested %
+% from the reviewers, they would be encouraged to claim even negative ratings. %
+%                                                                                  %
+% \subsubsection*{Anonymity} %
+%                                                                                  %
+% % \emph{Coin mixing} protocols are designed to obfuscate the relation
+%                                                                                  % between %
+% % senders and receivers of Bitcoin payments by mixing in a single
+% % transaction %
+% % many senders and receivers ~\cite{meiklejohn2015privacy}. We can not
+% % directly %
+% % apply this approach to rate reviews since the receiver identity is known. %
+% % However it can be used in collaboration with other techniques discussed
+% % below. %
+%                                                                                  %
+% The previously discussed accountability tools can be combined with
+%                                                                                  % anonymity %
+% measures to ensure accountable yet anonymous, peer reviews. Following we %
+% introduce blockchain anonymity tools that could be used to implement this %
+% system.\commsem{ (TODO: I feel like this section is too ethereal, and I think
+% we %
+% have the risk to be rejected because of that.)} %
+%                                                                                  %
+% \emph{Reusable payment codes} enable the possibility of using a large amount
+%                                                                                  % of %
+% addresses to receive a payment ~\cite{harrigan2016unreasonable, %
+% ranvierReusable}. Reviewers may share one of these addresses with each of
+% the %
+% actors with permission to rate and then collect the reputation probably using
+% an %
+% anonymity layer such as coin mixing ~\cite{meiklejohn2015privacy}. %
+% % Using a collateral model would encourage the acceptance of bad ratings. %
+%                                                                                  %
+% \emph{ZK-Snarks} are a cryptographic tool enabling to prove a statement
+%                                                                                  % without %
+% revealing anything else than the statement is in fact true (Zero-Knowledge
+% Proof %
+% of Knowledge) ~\cite{blum1988non,bitansky2013succinct}. They also provide
+% this %
+% property in a succinct and non-interactive fashion \comm{(i.e. using a %
+% relatively small proof and not requiring further communication between
+% prover %
+% and verifier)}. Zcash uses this technology to build an anonymous %
+% cryptocurrency~\cite{sasson2014zerocash}. A similar approach could be used
+% to %
+% manage anonymous ratings. With this technology, a reviewer could receive the %
+% rating of a review she did without revealing from which review report or
+% which %
+% rating the reputation comes. %
+% % As before, a collateral model can be used to encourage the acceptance of
+% % low %
+% % ratings. %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Different privacy sections for peer review have been discussed in previous
-subsection. Note, however, that the anonymity of the reviewers can be also
-abused. Unfair and low quality reviews are not discouraged by the system due to
-the lack of consequences. In order to alleviate this problem, our system
-proposes the construction of a reputation network of peer reviewers so that
-reviewers are awarded or criticized according to their work. This reputation
-network can also adopt different privacy settings, allowing both anonymous and
-signed ratings of either signed or anonymous reviews as depicted on Figure
-\ref{PrivacyRating}. Next, we discuss the different privacy models for the
-proposed reviewer reputation network.
+
+
+
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{l|l|l|}
+    \cline{2-3}
+    & \textbf{\begin{tabular}[c]{@{}l@{}}Public\\ Reviewer\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Anonymous\\ Reviewer\end{tabular}} \\ \hline
+    \multicolumn{1}{|l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Public\\ Rater\end{tabular}}}    & \begin{tabular}[c]{@{}l@{}}Signed rate\\of open review\end{tabular}              & \begin{tabular}[c]{@{}l@{}}Signed rate\\of blind review\end{tabular}          \\ \hline
+    \multicolumn{1}{|l|}{\textbf{\begin{tabular}[c]{@{}l@{}}Anonymous\\ Rater\end{tabular}}} & \begin{tabular}[c]{@{}l@{}}Anonymous rate\\of open review\end{tabular}           & \begin{tabular}[c]{@{}l@{}}Anonymous rate\\of blind review\end{tabular}            \\ \hline
+  \end{tabular}%
+
+  \caption{Different configurations to rate a review}
+  \label{table-rate}
+\end{table}
+
+% Different privacy settings for peer review have been discussed in the previous
+% subsection.
+This section builds on the previous section, adding a new layer of complexity:
+we do not only deal with reviews, but with both reviews and ratings. As already
+proposed in Section~\ref{reputation}, the construction of a reputation network
+of reviewers may improve the accountability of the peer review process. Thus,
+this section explores the different privacy settings such reputation systems may
+have. One of these settings, the rating of blind reviews, is explored in more
+detail. Challenges of such system are identified, and will later guide Section
+\ref{sec:realizing} discussion on how it may be achieved.
 
 % where review reports are rated by authors, reviewers and editors. The possible
 % privacy settings of this system are presented in the following subsections.
 
-\subsubsection*{Open Rating}
-Similarly to open reviews, open ratings are easy to implement by maintaining a
-public identity for the raters and reviewers.
+\subsection*{Signed Rating}
+% \comat{TODO: use signed vs anonymous rating and open vs blind review, double
+% check this naming through all the paper} \comsa{This needs more explanation,
+% since "open" is ambiguous. It means publicly visible? by those in the network,
+% by google, by who? etc; "open" doesn't mean identifiable raters and
+% identifiable reviewers, if you mean that, explain it; and btw "open reviews"
+% is unclear also. }
+Similarly to the open peer review (explained in the previous section), signed
+ratings are public and verified ratings of a review. It is straight forward to
+implement by maintaining a public identity for the raters.
 
-\subsubsection*{Anonymous Rating}
+\subsection*{Anonymous Rating}
 
-Protecting the identity of raters is interesting in several reputation systems.
-We can support this anonymity feature using \emph{blinded tokens}
-~\cite{schaub2016trustless} that grant permission to rate without revealing the
-identity of the rater. People authorized to rate a review, such as authors,
-editors and other reviewers involved in the process, may each get one of these
-tokens.
+Protecting the identity of raters is interesting in several reputation systems
+~\cite{schaub2016trustless}. We can support this anonymity feature using
+\emph{blinded tokens}~\cite{schaub2016trustless} that grant permission to rate
+without revealing the identity of the rater. People authorized to rate a review
+in the system, e.g. authors, editors and other reviewers of the paper involved
+in the process, may each get one of these tokens.
+% \comsa{why are those the authorized and not others? who defines that?
+% where?}\comat{rewriten as an example, so there is n need to justify :)}
 
-\subsubsection*{Rating Anonymous Reviews}
+\subsection*{Rating Blind Reviews}
 
 The question of whether we can keep the benefits of blind review while providing
-accountability and recognition to reviewers deserves special consideration.
+accountability and recognition to reviewers (and thus rating their reviews)
+deserves special consideration.
 
-In a system that support voluntary signing of reviews, unsigned reviews would
-not affect the reviewers reputation unless they acknowledge their authorship.
-Thus, reviewers may only reveal their identities for well rated reviews,
-reducing the desired accountability for poor quality, unfair or late reviews.
+The following challenges must be considered in order to provide this privacy
+setting:
+\begin{enumerate}
 
-A system allowing anonymous, yet accountable, reputation system for peer
-reviewing is therefore of great interest. Following, we discuss the feasibility
-of adopting different anonymity and accountability approaches to realize this
-novel system.
+  \itbf{Anonymity:}\label{ch:anonymity} The reviewer should be able to claim the
+  rating received in her review (e.g. to receive positive reputation) without
+  revealing that she is the author of the review.
 
-\subsubsection*{Accountability}
+  \itbf{Accountability:} \label{ch:accountability} The reviewer should not be
+  able to avoid the effect of negative reviews (e.g. claiming just the positive
+  ratings).
+  
 
-\emph{Collateral models} are widely used in blockchain technology to ensure that
-an actor assumes negative consequences of an interaction in order to avoid the
-greater consequence of loosing the collateral. A similar strategy can be used
-for the anonymous reputation network. If a reputation collateral is requested
-from the reviewers, they would be encouraged to claim even negative ratings.
+  \itbf{Authorization:} \label{ch:authorization} The ratings should come from
+  authorized raters (i.e. minimizing cheating).
 
-\subsubsection*{Anonymity}
+
+  \itbf{Sybil resistance:} \label{ch:sybil} Having several identities in the
+  system should not provide advantages. Note blockchain systems such as Ethereum
+  allow the creation of multiple identities per user.
+
+
+  \itbf{System abuses:} \label{ch:abuses} The anonymity of the interactions may
+  hinder the detection and prevention of system abuses. For instance, malicious
+  actors may try to submit fake reviews to be rated by accounts they control in
+  order to get unfair good ratings. Detecting this behavior would not be trivial
+  since reviews and ratings may be anonymous.
+
+\end{enumerate}
+
+A system allowing an anonymous, yet accountable, reputation system for peer
+reviewing would enable a new privacy and accountability model for peer review.
+However, its implementation face important challenges such as those described
+above. Next section provides an overview of how existing techniques may be
+applied to tackle the identified
+challenges. %\comsa{are the above sections part of this subsection? unclear, confusing}
+
+\section{Achieving Accountable Anonymous Reviews}\label{sec:realizing}
+
+The previous section identifies challenges that an anonymous yet accountable
+reputation system for peer reviews face. Some existing technologies have been
+applied to similar challenges, and others may help to combine their advantages.
+This section explains these technologies and how they may be used to tackle the
+challenges of this system. First it provides an overview of how the technologies
+may be combined, and afterwards a description of the technologies follows.
+
+A simple way of protecting the identity of users is the use of different virtual
+identities for each interaction, i.e. \emph{single-use identities}. However,
+linking the reputation received by this single-use identities to their real
+identity both providing accountability (Challenge \ref{ch:accountability}) and
+preserving the anonymity (Challenge \ref{ch:anonymity}) require the use of other
+technologies.
+
+In order to provide accountability (Challenge \ref{ch:accountability}), the
+system may try to detect when an identity has not claimed back a bad reputation.
+For this purpose, a reputation deposit or \emph{collateral} could be requested
+for each rating a reviewer may get. This way, users could compare the number of
+claimed ratings and the number of unclaimed ratings, and assume bad ratings for
+those that are missing. This collateral-based technique should be applied
+carefully, avoiding abuses such as trying to use the same collateral for
+different ratings. Advanced cryptographic techniques such as \emph{zk-SNARKs}
+(explained below) may help to prove that these requirements are met without
+compromising the reviewers' identity. These techniques may be used to allow a
+reviewer to claim a rating from a review she did without revealing her identity
+but proving her authorship (Challenge \ref{ch:anonymity}).
+
+A different issue is to allow ratings to come solely from authorized raters
+(Challenge \ref{ch:authorization}). To attend these authorization requirements,
+several techniques such as \emph{blind signatures} or \emph{blind tokens} may be
+used. These would enable to grant permission to a collection of identities to
+perform an action, e.g. rate a review, without revealing which of them voted, or
+which voted for what. As previously, \emph{single-use identities} may be used to
+provide anonymity; in this case, for raters.
+
+Allowing only authorized rates, as previously explained, may help to prevent
+Sybil attacks (Challenge \ref{ch:sybil}). Moreover, the cost of losing a
+reputable identity may reduce the attractiveness of starting a new identity just
+for the sake of reputation.
+
+The use of the mentioned zk-SNARKs may also help to prevent some system abuses.
+For instance by enabling the use of cryptographic proofs that verify that the
+ratings come from reviews submitted to reputable journals, would prevent fake
+reviews and ratings.
+
+Next, the previously mentioned technologies are explained.
+
+\begin{description}
+\item[Single-use identities] New single-use identities may be used as a simple
+  technique to support anonymous interactions (Challenge~\ref{ch:anonymity}).
+  However, supporting the authorization rules of the system
+  (Challenge~\ref{ch:authorization}) and providing accountability
+  (Challenge~\ref{ch:accountability}) for those identities are challenges that
+  require consideration.
+
+\item[Ring signatures] Ring signatures \cite{rivest2001leak} are a cryptographic
+  technique that allows to authorize a collection of identities to perform an
+  action, while keeping the privacy of the specific identity that performed the
+  action. They may be used to authorize rates to a group of identities, e.g. the
+  authorized raters, without revealing who rated what or who rated. Thus, this
+  technique may be used to support the authorization requirements of the system
+  (Challenge~\ref{ch:authorization}), while providing some anonymity to the
+  users (Challenge~\ref{ch:anonymity}). Note that with this technique, the
+  identities of who may have signed are known, so the combination with other
+  anonymity measures could be of interest.
+
+\item[Blind tokens] In the context of an election and using a cryptographic
+  technique called blind signatures~\cite{chaum1983blind}, it is possible to
+  create ballots for authorized actors that preserve the anonymity of the vote
+  (both hiding who casted a vote and what each actor voted) but ensuring that
+  only authorized voters participated. Note that, as with ring signatures, the
+  identities of who may signed are known, and thus complementary anonymity
+  measures could be used. This technique has been also used to anonymize a
+  distributed reputation system~\cite{schaub2016trustless}. Thus, it could be
+  used to provide anonymity to reviewers and raters
+  (Challenge~\ref{ch:anonymity}) while supporting the authorization rules of the
+  system, i.e. who may submit a review or a rating
+  (Challenge~\ref{ch:authorization}).
+
+\item[Collateral pattern] In order to secure the funds needed for a blockchain
+  application to function, it is common that the application requests the
+  participants to pay as collateral the assets they may lose. For instance, a
+  betting smart contract will first ask all participants to pay their bets and
+  afterwards distribute the prices. This paper calls this technique "collateral
+  pattern", and proposes its use to provide accountability (Challenge
+  \ref{ch:accountability}) to the reviewers of the reputation system (Section
+  \ref{sec:reputation}). For each rating a reviewer may obtain, the reviewer
+  must spend as much reputation as she may lose. This encourages the claiming of
+  bad ratings, since not claiming them may result in a bigger loss.
+  % \comse{No queda claro como se podría participar en el sistema por primera
+  % vez, sin reputación que poner en collateral. No tenemos solución, lo
+  % enumeraría como problema a solucionar.}\comat{Es cierto, aunque no se si
+  % necesitamos dar tanto nivel de detalle aquí}
+
+\item[zk-SNARK] is a cryptographic procedure enabling to prove a statement
+  without revealing anything else, i.e. apart from the evaluation if the
+  statement is in fact true (zero-knowledge proof of
+  knowledge)~\cite{blum1988non,bitansky2013succinct}. The same authors also
+  provide this property in a succinct and non-interactive fashion, i.e. using a
+  relatively small proof and not requiring further communication between prover
+  and verifier. In fact, the popular ZCash project uses this technology to build
+  an anonymous cryptocurrency~\cite{sasson2014zerocash}. Proving statements in
+  this privacy preserving manner is of great interest for several challenges of
+  the proposed accountable anonymous review system. For instance, proving that a
+  user controls a single-use identity (explained above) may allow the user to
+  claim the reputation given to that identity (Challenge \ref{ch:anonymity}).
+  Additionally, a reviewer may prove that she payed the reputation collateral
+  (explained above) needed to submit a review without revealing her identity and
+  without being able to use the same collateral for another review (Challenge
+  \ref{ch:accountability}). Finally, proving that the reputation comes from a
+  review submitted to a collection of honest journals that do not allow abuses,
+  may help to mitigate the abuses that fake reviews and ratings represents for
+  the system (Challenge \ref{ch:abuses}).
+
+  % \item[Reusable payment codes] is a technique that enables the possibility of
+  %   using a large amount of addresses to receive a payment
+  %   ~\cite{harrigan2016unreasonable, ranvierReusable}. Reviewers may share one
+  %   of these addresses with each of the actors with permission to rate and
+  %   then collect the reputation probably using an anonymity layer such as coin
+  %   mixing ~\cite{meiklejohn2015privacy}. \comsa{and more concepts!! anonymity
+  %   layer? coin mixing?} Using a collateral model would encourage the
+  %   acceptance of bad ratings.
+
+
+\end{description}
+
+
 
 % \emph{Coin mixing} protocols are designed to obfuscate the relation between
 % senders and receivers of Bitcoin payments by mixing in a single transaction
@@ -138,31 +437,11 @@ from the reviewers, they would be encouraged to claim even negative ratings.
 % apply this approach to rate reviews since the receiver identity is known.
 % However it can be used in collaboration with other techniques discussed below.
 
-The previously discussed accountability tools can be combined with anonymity
-measures to ensure accountable yet anonymous, peer reviews. Following we
-introduce blockchain anonymity tools that could be used to implement this
-system.\commsem{ (TODO: I feel like this section is too ethereal, and I think we
-  have the risk to be rejected because of that.)}
+% This subsection introduces blockchain anonymity tools such as
+% \emph{blinded-token}, \emph{reusable payment codes} and \emph{zk-SNARKs} that
+% are relevant for the proposal of the paper.
 
-\emph{Reusable payment codes} enable the possibility of using a large amount of
-addresses to receive a payment ~\cite{harrigan2016unreasonable,
-  ranvierReusable}. Reviewers may share one of these addresses with each of the
-actors with permission to rate and then collect the reputation probably using an
-anonymity layer such as coin mixing ~\cite{meiklejohn2015privacy}.
-% Using a collateral model would encourage the acceptance of bad ratings.
 
-\emph{ZK-Snarks} are a cryptographic tool enabling to prove a statement without
-revealing anything else than the statement is in fact true (Zero-Knowledge Proof
-of Knowledge) ~\cite{blum1988non,bitansky2013succinct}. They also provide this
-property in a succinct and non-interactive fashion \comm{(i.e. using a
-  relatively small proof and not requiring further communication between prover
-  and verifier)}. Zcash uses this technology to build an anonymous
-cryptocurrency~\cite{sasson2014zerocash}. A similar approach could be used to
-manage anonymous ratings. With this technology, a reviewer could receive the
-rating of a review she did without revealing from which review report or which
-rating the reputation comes.
-% As before, a collateral model can be used to encourage the acceptance of low
-% ratings.
 
 
 %%%
