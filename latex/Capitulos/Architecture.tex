@@ -114,23 +114,28 @@ the blockchain:
   of storing the reviewers. It contains the reviewer's Ethereum address, the
   reputation she or he has, an array representing the fields of expertise and
   the number of reviews done.
-
-
   
 \end{itemize}
 
-\subsection*{Decentralized Journal}%
+Above these structures, there is a system of smart contracts which interact with
+each other to make the platform work. The first Decentralized Science prototype
+consisted of the following contracts:
+
+\subsection*{Decentralized Journal}
 \label{sec:decentr-journ}
 
-This is the contract from which all interactions with authors and publishers are
-controlled. The authors interact with this contract to send the papers, and the
-editors assign reviewers for the peer review process.
+A Decentralized Journal (see chapter~\ref{cha:platform-description}) is an smart
+contract that behaves like a digital journal. It is similar to small program in
+blockchain which controls all interactions with authors and editors. The authors
+interact with this smart contract to submit papers, and the editors assign
+reviewers for the peer review process.
 
-This contract has a series of ethereum addresses associated with the editors
-(which are the ones who can assign reviewers) and a reference to the contract
-address of the ``library contract'', where the papers are sent. In addition,
-through this contract, the reviewers send the reviews that have been assigned to
-them.
+Specifically, this contract has a series of ethereum addresses associated with
+the editors (which are the ones who can assign reviewers) and a reference to the
+contract address of the ``library contract'', where the papers are sent.
+
+In addition, through this contract, the reviewers send the reviews that have
+been assigned to them.
 
 \subsection*{Decentralized Library}
 \label{sec:decentr-libr}
@@ -172,22 +177,108 @@ system explained in the section \ref{rep:system}.
 \label{sec:reviewershub}
 
 It is responsible for storing the addresses, the research fields, and the
-reputation of the reviewers who are registered in the platform.
-
-It is responsible for storing the addresses, the research fields, and the
 reputation of the reviewers who are registered in the platform. This contract is
 used by: the Rating Storage contract to give the reputation scores to the
 reviewers, the new reviewers who want to register on the platform and the
 editors who want to find new reviewers to carry out the peer review process.
 
-The diagram \ref{contracts: uml} tries to illustrate the structure of the
-contracts through a UML, as if the smart contracts of Ethereum were objects.
-
 \subsection*{First prototype problems}
 \label{sec:first-prot-probl}
 
-\section{Second prototype}
+The most important problem that the first prototype had was that the papers were
+centralized in the same contract. This centralization involved having to send
+many requests to the same Ethereum address, which could mean an increase in
+transaction costs.
 
+Another disadvantage of this implementation is that each of the papers was
+identified by the index within the library's contract array. Identifying a paper
+with just one number within the system did not have any advantage over the
+identifiers for today's digital content. The second prototype tries to alleviate
+this problem using Ethereum addresses
+
+Finally, using arrays and data strucs implied that the data were stored in a
+linear way, something that is inadvisable if one thinks in terms of scalability.
+Storing the data in an array could mean a loss of performance of the platform
+when a certain number of papers was reached. The second prototype uses hash maps
+instead of arrays to store the information, a more efficient and cheaper way to
+store data in blockchain.
+
+
+\section{Second prototype}
+\label{sec:second-prototype}
+
+The second and final prototype of the platform is based on the use of smart
+contracts as papers, meaning that papers submitted to the platform have an
+associated Ethereum address. This implies that one of these addresses can
+uniquely identify a paper. Furthermore, since all interactions with the platform
+are timestamped, an Ethereum address could be used to demonstrate the authorship
+of a scientific paper even if it has not been published.
+
+\figura{UML_class_2.png}{width=0.93\linewidth}{contracts:uml2}{UML class diagram
+  of the contract structure of the second prototype}
+
+As shown in the figure~\ref{contracts:uml2}, the contract structure has been
+modified to eliminate the use of strucs except the one used to store the IPFS
+addresses.
+
+In addition, the arrays have been replaced by ``mappings'', a type of data in
+Ethereum similar to a hashmap that improves in time and cost the use of data
+within smart contracts.
+
+The smart contracts used in the second prototype are the following:
+
+\sst{Journal contract}
+
+This smart contract is similar to the first prototype. Its function is to manage
+the publication process. It has an owner who controls the journal and a series
+of editors who are responsible for assigning the reviewers of the articles.
+
+The main difference with the previous version is that every time someone sends a
+paper to the journal, it creates a paper smart contract with its information.
+When a paper smart contract is created, it outputs an Ethereum address,
+explained in the next section.
+
+Journal's owners can set time limits for the confirmation time (explained in
+chapter \ref{cha:platform-description}) and for the review time. This
+information is public, meaning that researchers can decide if they want to
+submit a paper to a certain journal depending on the review times they are
+looking for.
+
+Finally, this contract has the possibility of adding information such as a
+title, a short description, an image, and a list of topics in which the journal
+focuses.
+
+\sst{Paper contract}
+
+The biggest contribution of this prototype is that the papers are Ethereum
+contracts, therefore they have an associated address (see
+section~\ref{tb:cryptos:sm}). Since all the addresses in Ethereum are unique,
+they could identify a paper both inside and outside the platform.
+
+The paper contract keeps a reference of the journal to which it has been
+submitted. This allows the journal's editors to assign the reviewers for the
+peer-review process.
+
+Once the reviewers of a paper have been assigned, they only have to interact
+with the paper contract without having to go through the journal, thus freeing
+the transaction traffic towards the same address. When the reviews have been
+made and if they are favorable, the paper is published automatically.
+
+Besides, each time a review is received, the paper contract allows a rating to
+be submitted. In this way, it is the paper itself that controls who can perform
+the rating and who has done it already.
+
+\sst{RepHub contract}
+
+This contract is the reputation system, responsible for storing the reputation
+of each reviewer. For this, whenever someone wants to make a rating, this
+contract communicates with the corresponding paper to verify that the person who
+is sending the rating can do so.
+
+If the paper verifies that it can be done, an internal transaction is sent
+between the reputation system and the paper to indicate that the person has made
+a rating. Once this is done, this contract calculates the reviewer's reputation
+and stores it within the system.
 
 \section{Ethereum addresses in Decentralized Science}
 \label{sec:ether-addr-decentr}
@@ -195,62 +286,62 @@ contracts through a UML, as if the smart contracts of Ethereum were objects.
 \figura{tx_history.png}{width=0.93\linewidth}{sec:ether-addr-decentr:history}{Researcher's
   transactions list}
 
-As mentioned in section \ref{ts:at}, ethereum address is a string of characters
-that identify a user's account or a smart contract.
-
-In this platform users are authors, reviewers, editors or some of these roles
-simultaneously. This implies that an ethereum address can be used to identify
-and verify an individual's scientific career. Each interaction is registered in
-the blockchain as a transaction that have a transaction id, which can be used to
-obtain the information of that particular transaction as shown in the figure
-\ref{sec:ether-addr-decentr:history}. This could mean that when a researcher
-needs to give credit of it's career, he or she will only need to supply his or
-her ethereum's address.
+Ethereum addresses (see section~\ref{ts:at}) are strings of characters that
+identify an individual or a contract in the blockchain. These addresses are
+unique, meaning that two people or contract cannot have the same address. As
+mentioned in this chapter, inside Decentralized Science users are authors,
+reviewers, editors or some of these roles simultaneously. This implies that an
+ethereum address can be used to identify and verify an individual's scientific
+career if there are enough interactions with the platform. Each of these is
+registered in the blockchain as a transaction that have a transaction id, which
+can be used to obtain the information of that particular transaction as shown in
+the figure \ref{sec:ether-addr-decentr:history}. This could mean that in the
+future, when researchers need to give credit of their careers, they would only
+need to supply their ethereum's addresses.
 
 \figura{add_citations.png}{width=0.93\linewidth}{sec:ether-addr-decentr:citations}{Use
   of Ethereum's addresses in Decentralized Science}
 
-Ethereum's smart contracts also have an ethereum address.
+Ethereum's smart contracts also have an ethereum address, meaning that all
+papers and journals in the platform have its own Ethereum address. Although this
+address is unique, it can be used to identify a paper or a journal outside the
+blockchain (e.g. with a QR code). This system could potentially replace digital
+identifiers like ISBN or DOI.
 
 \section{Reputation system}
 \label{rep:system}
 
-Of the many reputation systems discussed in section \ref{soa:rs}, a five-star
-rating has been decided for the platform~\cite{kinateder2003architecture}. This
-reputation system is present in many online platforms such as
-Tripadvisor\footnote{https://www.tripadvisor.com/},
-Amazon\footnote{https://www.amazon.com/}, Google
-Play\footnote{https://play.google.com/} and other large platforms in which
-products and services are voted by users.
+As mentioned in the chapter~\ref{cha:platform-description}, paper reviews can be
+rated by the authors of the paper, the editors who have assigned the reviewers,
+and the other reviewers of the article. This first approach attempts to avoid
+direct attacks on the reputation of reviewers, which limits the possibility of
+rating a review to the authors and reviewers involved.
 
-Being implemented in the blockchain implies that all interactions are public and
-auditable. Everyone can see who has voted which revision and with what score or
-rating, so it is a system in which there is no anonymity. This allows dissuading
-the problems commented in section \ref{soa:rs} since the users who carry out
-unjust directing or rating attacks are exposed publicly in the network. But this
-also raises concerns about privacy and anonymity, commented in section
-\ref{sec:privacyReview}.
+On the other hand, if a review is unfavorable, there is a possibility that the
+authors will misqualify the reviewer, submitting a bad rating. For that reason,
+all the ratings are public and visible by anyone, trying to discourage this type
+of behavior.
 
-The internal operating mode has several simple steps:
+To go deeper into the subject, the internal operation of the system follows the
+following steps:
+
 \begin{enumerate}
-\item When making a review, a hash is created in the system
-  (SHA-3~\cite{aumasson2008sha}) with: the address of the reviewer, the address
-  of the paper it reviews and the address of the journal that assigned the
-  review. This hash uniquely identifies the review within the system.
+\item When a reviewer submits a review, the paper's smart contract allows the
+  authors and the other reviewers to submit one rating for that particular
+  review.
   
-\item Both authors, editors and the other reviewers of the paper have the
-  ability to assign a score from 1 to 5 indicating whether they think the review
-  is fair or not.
+\item In order to send a rating, users should make a transaction to the RepHub
+  smart contract with the score, the paper's address and the reviewer's address.
+  These two data univocally identify a revision, since the same reviewer can not
+  make two different reviews of the same paper.
   
-\item For each vote, the system registers the voter and sends him the reputation
-     the reviewer, making an exponential smoothing of all the votes that he has
-     received~\cite{gardner1985exponential}.
+\item For each rating, the system registers the rater and modifies the
+  reviewer's reputation, making an exponential smoothing of the score
+  received~\cite{gardner1985exponential}. In this case, exponential smoothing is
+  used to calculate the average of the score without knowing the total number of
+  raters. To be more precise, the alpha value used in the exponential smoothing
+  is $0.2$.
 \end{enumerate}
-
-When deciding whether a review is fair or not there are several points of
-view~\cite{daniel1993guardians,cole1979fair} and not all people will agree, but
-offering guidelines for the community can be an initial solution to make all the
-votes in the system as fair as possible.
 
 Within a reputation system there will always be some controversy and there will
 always be methods to placate it~\cite{dellarocas2000immunizing}, but the design
@@ -389,10 +480,9 @@ following transactions (all the costs are estimated\footnote{Check
   Normally this transaction is the most expensive, and is only necessary to do
   it once.
 
-  This transaction creates all the contracts mentioned in the section
-  \ref{arch:sm} and outputs the Ethereum's address of the platform. The gas
-  amount required to this transaction is 1696291, approximately from 2 to 4
-  euros.
+  This transaction creates all the contracts required by the platform and
+  outputs the Ethereum's address of the platform. The gas amount required to
+  this transaction is 1696291, approximately from 2 to 4 euros.
 
   \itbf{Send Paper:} To send a paper the user have to send a transaction
   containing the Ethereum addresses of the authors and a file containing the

@@ -1,0 +1,185 @@
+\section{Introducción}
+
+La investigación científica hoy en día se basa en publicar en revistas con alto
+\bb{índice de impacto} \cite{doi:10.1001/jama.295.1.90}, la carrera de un
+investigador se puede medir en función del número de artículos académicos que ha
+publicado en estas revistas. Hay diferentes índices de impacto que determinan
+la calidad de una revista. Uno de los más conocidos es el \ii{Journal Citation
+  Reports} (JCR), un indicador que representa, para cada revista indexada, la
+relación entre el número de objetos citables y en número de citas que obtienen.
+Este factor es calculado cada año y está dividido en cuatro cuartiles que
+determinan el ranking de cada revista. Esto quiere decir que una que esté
+en el primer cuartil (Q1) tiene mayor índice de impacto que las de los
+cuartiles dos (Q2), tres (Q3) o cuatro
+(Q4)\footnote{https://jcr.incites.thomsonreuters.com/}. \ii{JCR} fué
+originalmente una evolución de el llamado \emph{Science Citation Index}, que
+nació en 1955~\cite{garfield2007evolution} y que hoy en día es controlado por
+una compañía privada llamada ``Thomson
+Reuters''\footnote{https://www.thomsonreuters.com}. \ii{¿Podría la comunidad
+  científica depender de si misma en vez de en una compañía privada para decidir
+  la calidad de una revista académica?}
+
+Uno de los problemas en el mundo de la academia es la obsesión por publicar.
+Idealmente, una investifación tiene que conseguir muchas publicaciones en
+revistas indexadas. Esta idea causa, en algunos casos, que los autores de los
+artículos tenga que suplir las exigencias que les imponen los revisores y los
+editores de estas revistas, reduciendo potencialmente la originalidad y la
+novedad de un artículo de investigación~\cite{Frey2003}. Uno de los ejemplos más
+claros es en el campo de investigación de mámarketing, en el que las
+universidades presionan cada vez más a los investigadores para publicar en
+revistas de alto impacto, forzando a estos a centrar su investigación en generar
+material publicable~\cite{ortinau2011writing}. \emph{ ¿Podría existir una forma
+  mejor de hacer carrera en el mundo de la investigación en vez de forzar a los
+  investigadores a generar material redundante o poco original?}
+
+La publicación científica y el proceso de revisión por pares están construidos
+sobre un paradigma basado en artículos, con pocos cambos en los últmos
+siglos~\cite{spier2002history}. El mencionado proceso de \ii{revisión por pares}
+es el proceso que se utiliza hoy en día para decidir si un artículo académico es
+apto para ser publicado o no. Un grupo de ``expertos'' en una materia en
+concreto revisan el artículo y emiten un veredicto.
+Pero este proceso ha sido criticado en varios aspectos. Las revisiones no
+siempre son del todo objetivas, ya que existen casos de revisiones desfavorables
+por causas de género, especialmente en los campos de ciencias
+puras~\cite{wenneras2001nepotism}. El tiempo de revisión de un artículo suele
+ser largo, provocando que el proceso de investigación en algunos casos se
+ralentice~\cite{huisman2017duration}. Las revisiones no siempre garantizan la
+calidad de un artículo académico, y no pueden ser utilizadas para decidir si una
+investigación es buena o no~\cite{goldbeck1999evidence}. \emph{¿Podrían
+  explorarse alternativas para mejorar este proceso para que sea más honesto,
+  justo o rápido?}
+
+Los beneficios de la distribución científica están centralizados en unas pocas
+editoriales, ni los autores, los revisores o los lectores obtienen dinero de
+este sistema. Además, a pesar de que el desarrollo y la expansión de Internet
+han proporcionado nuevas formas de diseminación~\cite{eysenbach2006citation} y
+evaluación ~\cite{walker_emerging_2015} para el proceso de publicación, los
+beneficios siguen concentrados en dichas editoriales. La reducción de costes de
+distribución ha causado un mayor acceso al conocimiento científico, y por ello
+se ha cuestionado el papel de las editoriales tradicionales en este
+sistema~\cite{ReinventingRigor}. Sin embargo, las universidades normalmente
+asumen los costes de acceso a los artículos publicados en estas revistas a
+través de subscripciones injustas~\cite{bergstrom2004costs}. Por otra parte, los
+movimientos \ii{Open Access} y \ii{Open Science} han reducido con éxito estos
+costes para los lectores~\cite{evans2009open}. No obstante, esto no ha sido
+suficiente para paliar los beneficios del modelo de negocio de la editoriales
+tradicionales~\cite{lariviere2015oligopoly}, las cuales cobran a los autores en
+vez de a los lectores~\cite{van2013true}. \emph{¿Podría la comunidad científica
+  construir un sistema para descentralizar los beneficios del proceso de
+  publicación y recompensar tanto a los autores como a los revisores?}
+
+Los editores de una revista que nececesiten asignar a los revisores para los
+artículos que reciben tienen que confiar en ellos de antemano. Esto puede
+limitar el espectro de campos para los que un editor pueda encontrar revisores.
+Pese a ello, internet ofrece la posibilidad de encontrar a gente a través de
+todo el mundo, pudiendo encontrar revisores expertos en todo tipo de materias.
+Sin embargo, cuando se trata de confiar en una persona desconocida, debería
+existir un sistema en el que cualquiera pueda confiar para encontrar revisores
+de calidad. Los sistemas de reputación son la solución a este problema, ya
+que ofrecen una primera impresión de una persona basada en las opiniones de
+otras que hayan interactuado con ella~\cite{resnick2000reputation}. Si un editor
+de una revista quiere ampliar su plantilla de revisores necesitaría contactar
+con nuevas personas, las cuales pueden ser desconocidas. El problema es que no
+es fácil determinar la calidad de un revisor basada en su experiencia
+\cite{callaham_relationship_2007} por lo que un sistema de reputación podría ser
+útil para encontrar buenos revisores sin tener que conocerlos de antemano.
+\ii{¿Se podría construir un sistema en el que los revisores son puntuados para
+  conseguir reputación basada en lo buenas o malas que sean sus revisiones?}
+
+\section{Objetivos}
+\label{sec:objectives-1}
+\subsection*{Crear una plataforma descentralizada para la publicación
+  científica}
+
+Este trabajo propone el diseño y el desarrollo de una plataforma para \ii{Open
+  Science}. Esta plataforma debería permitir a los usuarios: enviar artículos,
+asignar revisores, enviar revisiones y puntuar estas revisiones. Para ello se
+utilizarán tecnologías descentralizadas como Ethereum (una plataforma
+distribuida en la que cada interacción es grabada en una base de datos pública)
+e IPFS (un sistema de archivos distribuido).
+
+La plataforma será accesible a través de una web en un servidor personalizado
+que actuará como puente entre las dos tecnologías mencionadas. Además, al ser
+distribuido, se ofrecerá a los usuarios el código fuente para poder ejecutar la
+plataforma en un nodo local.
+
+Toda la información de la plataforma será pública y gratuita, dando la
+posibilidad de ver las revistas, los artículos académicos, las revisiones
+y la reputación de todos los revisores.
+
+\sst{Crear un sistema de reputacion para revisores}
+
+Los revisores raras veces obtienen reconocimiento por su trabajo. Las revistas
+científicas y las conferencias normalmente buscan \ii{voluntarios} para llevar
+a cabo el proceso de revisión, pero en la mayoría de los casos, los revisores permanecen anónimos. Para
+conseguir este reconocimiento, este trabajo propone el desarrollo de un sistema
+de reputación de revisores, en el que cada revisión puede ser puntuada. Esta
+puntiación es asociada a cada revisor, la cual determina la \ii{reputación} que
+tiene.
+
+La plataforma debe permitir a los usuarios calificar cada una de las revisiones
+que obtienen los artículos académicos. Esta calificación servira para calcular
+la puntuación de cada revisor dentro de la plataforma, haciendo que los
+revisores que realicen buenas revisiones tenga buena reputación y los que no
+mala.
+
+Con esta idea este trabajo pretende \ii{fomentar} revisiones buenas y entregadas
+a tiempo y disuadir a aquellos revisores que no estén dispuestos a esto,
+mitigando en la medida de lo posible revisiones injustas debido a causas de
+genero, rivalidad de investigación o desconocimiento de una materia.
+
+\sst{Analizar la plataforma}
+
+Después de desarrollar un prototipo funcional para realizar pruebas, este
+trabajo propone analizar el comportamiento de la plataforma basado en el proceso
+completo, desde el envío del primer artículo hasta su publicación
+final.
+
+Se realizarán varios  test para calcular estimaciones del coste de todo el
+proceso, tiempos de ejecución, resistencia a grandes cantidades de información e
+impacto monetario en la comunidad.
+
+Finalmente se ofrecerán conclusiones de los resultados obtenidos para analizar
+la viabilidad de la implantación de esta plataforma frente a los sistemas
+actuales.
+
+
+\section{Estructura del documento}
+Este trabajo dispone de los siguientes capítulos:
+
+
+\subsubsection*{Part 1: Preface.}
+\begin{itemize}
+  \itbf{Background and State of the art:} Trasfondo en
+  el cual incide el proyecto y diferentes tecnologías actuales para
+  cambiar el proceso actual de publiación de ciencia.
+
+  \itbf{Methodology and Technology:} Explicación de  las
+  metodologías y tecnologías utilizadas durante el desarrollo de todo el
+  proyecto.
+  
+\end{itemize}
+\subsubsection*{Part 2: Decentralized Science.}
+\begin{itemize}
+  \itbf{Platform description:} Descripción general de la plataforma, presentando
+  el funcionamiento esperado y las principales ventajas del diseño.
+  
+  \itbf{Architecture:} Descripción técnica de la plataforma, incluyendo la
+  arquitectura del \ii{frontend}, la definición del funcionamiento interno y el
+  proceso seguido para reducir los costes de interacción.
+  
+  \itbf{Product:} Prueba de concepto de la plataforma, mostrando un prototipo
+  funcional que interactúa con las tecnologías distribuidas mencionadas previamente.
+
+  \itbf{Discussion:} Resultados obtenidos después del desarrollo de la
+  plataforma y cómo estos afectarían a la comunidad científica.
+
+  \itbf{Conclusion and future work:} Implicaciones de este trabajo,
+  observaciones finales, y propuestas para un futuro proyecto de doctorado.
+\end{itemize}
+
+%%%
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../Tesis.tex"
+%%% End:

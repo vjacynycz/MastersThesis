@@ -25,13 +25,6 @@ elaborate what we know today as scientific papers. But it was 45 years later, in
 editors were the ones who had to carry out the revision of the papers that would
 be published in these journals.
 
-% El proceso de generación de publicaciones científicas actual se estableció en
-% 1620~\cite{bacon1878novum} https://pbs.twimg.com/media/DY0rMNmU0AAoVQz.jpgy
-% fue en 1665 cuando comenzaron a aparecer lo que hoy consideramos como los
-% primeros journals científicos~\cite{kronick1976history}. En esa época los
-% editores eran los que tenían que llevar a cabo la revisión de los artículos
-% que serían publicados en dichos journals.
-
 It was around 100 years later when an alternative system was adopted, instead of
 editors doing the work of reviewing all the papers, this would be done by a
 group of experts in a certain field, deciding if each paper reviewed is good
@@ -109,6 +102,7 @@ to fairer and more honest scientific publication and dissemination systems.
 
 \subsection{Alternative publication systems}
 \label{soa:aps}
+
 Publication systems, as seen on the previous section, form an oligopoly of a
 few, concentrating the benefits of the industry. However, there are some
 attempts to change this paradigm on behalf of science dissemination.
@@ -118,13 +112,17 @@ free of cost for the readers. This concept also involves various conditions for
 something to be considered ``open access''~\cite{bailey2007open}:
 
 \begin{itemize}
+  
   \itbf{Freely accessible online:} Any user can get a copy of the paper online
   without any cost, including reviewed papers and unreviewed papers (preprints).
+  
   \itbf{Lax copyrights:} Any user can download, print, search, copy and link to
-  the full text or any part of these articles. \itbf{Public support:} Everyone
-  should be able to access to all the material involving the paper, and should
-  be uploaded to a public repository supported by an academic institution or
-  other well-established organization that seeks to enable open access.
+  the full text or any part of these articles.
+
+  \itbf{Public support:} Everyone should be able to access to all the material
+  involving the paper, and should be uploaded to a public repository supported
+  by an academic institution or other well-established organization that seeks
+  to enable open access.
 \end{itemize}
 
 But as mentioned in the chapter~\ref{intro}, in most \emph{open-access}
@@ -250,7 +248,20 @@ them~\cite{sharples2016blockchain}.
 
 Nevertheless, reputation systems also have problems when it comes to defend the
 users from attacks to individuals~\cite{hoffman2009survey} and unfair ratings
-~\cite{whitby2004filtering}.
+~\cite{whitby2004filtering}. In the other hand, being implemented in the
+blockchain implies that all interactions are public and auditable. Everyone can
+see all votes and ratings, so it is a system in which there is no anonymity.
+This could allow dissuading the mentioned problems since the users who carry out
+unjust directing or rating attacks are exposed publicly in the network.
+Nevertheless, this also raises concerns about privacy and anonymity.
+
+Nowadays the most widely used reputation systems are based on a five-star
+rating~\cite{kinateder2003architecture}. This reputation system is present in
+many online platforms in some of the mentioned before and others like
+Tripadvisor\footnote{https://www.tripadvisor.com/},
+AliExpress\footnote{https://aliexpress.com/}, Google
+Play\footnote{https://play.google.com/} and other large platforms in which
+products and services are voted by users.
 
 \section{Technical background}
 \label{tb}
@@ -259,9 +270,13 @@ users from attacks to individuals~\cite{hoffman2009survey} and unfair ratings
 \figura{architectures.png}{width=0.95\linewidth}{tb:na:diagram}{Digram of the
   diferent network architectures}
 
-\todo{poner algo aqui}
-
-There are three important types of network architecture (See
+Most of the services that we use everyday are on the internet. All the users or
+these platforms need to be connected to the network in order to use them. These
+services are usually offered by centralized entities to which users have to
+connect in order to access them. On the other hand, there are also other
+platforms that offer their services without centralizing all the traffic in the
+same site. For each one of these services, there are different architectures,
+which can be divided into three different groups (see
 figure~\ref{tb:na:diagram}~\cite{baran1964distributed}):
 
 \begin{itemize}
@@ -300,26 +315,31 @@ figure~\ref{tb:na:diagram}~\cite{baran1964distributed}):
   Ethereum\footnote{https://www.ethereum.org/}
 \end{itemize}
 
-One of the most important concepts about Decentralized Science is precisely a
-distributed network architecture. This architecture proposes removing the
-centralized infrastructure, spreading its functionality and privileges to all
-the peers in a network.
+Despite the disadvantages, most sites choose a centralized structure since in
+many cases they are controlled by private companies. However, distributed
+architectures are increasingly being used by new technologies since, as
+explained above, they offer more advantages than centralized architectures. One
+of the clear examples of the use of this architecture is that of
+cryptocurrencies.
 
 \subsection{Digital Currencies and Cryptocurrencies}
 \label{tb:cryptos}
 
 In the 80s and 90s, with the expansion of the world wide web, several services
 began to be online (stores, newspapers, etc). Some of these services required
-monetary transactions through the internet. It was at this time that the
+monetary transactions through the internet to be used so at this time, the
 concepts of electronic money or digital currencies began to emerge. One of the
 first forms of digital payment was Ecash~\cite{chaum1995introduction} in 1995,
 an idea of a digital currency that offered a high level of privacy.
+Unfortunately at that time the use of the internet was not so widespread and the
+idea did not work.
 
-Wei Dai in 1998 published his proposal for electronic money called
-B-money~\cite{dai1998b} an "anonymous, distributed electronic cash system", a
-revolutionary idea for the time, since it added the concept of anonymity to
-monetary transactions. B-money added a layer of cryptography to secure these
-transactions, that is the beginning of the concept ``cryptocurrencies''.
+Three years later, in 1998, Wei Dai published his proposal for electronic money
+called B-money~\cite{dai1998b} an "anonymous, distributed electronic cash
+system", a revolutionary idea for the time, since it added the concept of
+anonymity to monetary transactions. B-money added a layer of cryptography to
+secure these transactions that is why these ideas began to be called
+``cryptocurrencies''.
 
 Hashcash~\cite{back2002hashcash} was another digital currency idea that was born
 in 2002 and introduced the concept of \emph{proof of work}. A \emph{proof of
@@ -328,13 +348,14 @@ consuming or have high cost, but easy for others to verify. Hashcash used
 \emph{Hash Functions} with certain requirements to encrypt transactions of money
 between users.
 
-Despite the fact that these ideas were never carried out, they inspired others
-that would come later such as Nick Szabo's Bit gold~\cite{szabo2008bit} a similar approach as
-B-money but using P2P protocols and PRPOW~\cite{finney2005rpow} an invention by
-Hal Finney intended as a prototype for a digital cash.
+Despite the fact that these projects were never carried out, they inspired
+others that would come later such as Nick Szabo's Bit gold~\cite{szabo2008bit} a
+similar approach as B-money but using P2P protocols and
+PRPOW~\cite{finney2005rpow} an invention by Hal Finney intended as a prototype
+for a digital cash.
 
 None of these currencies was implemented successfully enough until 4 years later
-with the arrival of the most widely used cryptocurrency today.
+with the arrival of the most widely used cryptocurrency today: \bb{Bitcoin}.
 
 \subsection{Bitcoin}
 \label{tb:bc}
@@ -342,26 +363,38 @@ with the arrival of the most widely used cryptocurrency today.
 \figura{transaction.png}{width=0.9\linewidth}{tb:bc:transaction}{The change of
   state of Bitcoin accounts done by transactions}
 
-In 2009, the idea of a decentralized currency first emerged, when Satoshi
-Nakamoto published the first version of Bitcoin~\cite{nakamoto2008bitcoin}. The
-purpose of this currency was to create a fully decentralized electronic payment
-system, using concepts and ideas of previous digital currencies such as B-money,
-Hashcash and Bit gold (see section~\ref{tb:cryptos}).
+In 2009, the idea of a \bb{fully decentralized currency} first emerged, when
+Satoshi Nakamoto, a fictional identity, published the first version of
+Bitcoin~\cite{nakamoto2008bitcoin}. Decentralizing a currency implied that there
+was no entity that controlled it, not even banks, governments or companies.
+Bitcoin is controlled by all users who use it, since it uses a P2P network in
+which everyone can see and verify all money transactions. This technology used
+concepts and ideas of previous digital currencies such as B-money, Hashcash and
+Bit gold (see section~\ref{tb:cryptos}).
 
-Bitcoin forms a P2P network in which each user is able to watch and verify each
-transaction in the system.
+Furthermore, Bitcoin's transactions must be verified by all peers, meaning that
+there has to be a consensus among all the nodes for a transaction to be
+completed. This solved the double-spending problem by which a dishonest actor
+may try to spend twice the same coin in decentralized currency systems.
 
-% If a user wanted to transfer money to it's account to another account, the
-% system will add the transaction to a block of data. Then it will try to add a
-% random string and apply a hash function. If the result have a with a number of
-% leading zeros the transaction will be encrypted and it will be easily
-% verificable. Otherwise the system will try to find another random stirng an
-% will repeat the process again.
+This technology relies on a ledger of transactions, a large database containing
+all the transactions since the beginning of Bitcoin, that is updated and
+maintained by the network. Bitcoin introduces incentives to maintain the
+security of this ledger, both rewarding nodes that contribute computational
+power for the security of the network, and requiring at least half of the
+computing power of the network to alter the state of the blockchain (thus, the
+blockchain is secure if at least half of the computing power is provided by
+honest peers).
 
-All monetary transactions between accounts are stored in a data block until
-reaching a specific size, giving a snapshot of all the state of all the accounts
-(see figure~\ref{tb:bc:transaction}). In this way, a Bitcoin address does not
-contain money but the collection of transactions from other addresses to this.
+Bitcoin uses random text strings, called addresses, to identify users who use
+the currency. These addresses store money within the network and allow transfers
+called transactions.
+
+To deepen more into Bitcoin's inner functioning, all monetary transactions
+between accounts are stored in a data block until reaching a specific size,
+giving a snapshot of all the state of all the accounts (see
+figure~\ref{tb:bc:transaction}). In this way, a Bitcoin address does not contain
+money but the collection of transactions from other addresses to this.
 
 The idea of \emph{proof of work} is to gather a number of pending transactions
 to a data block. Then add a random number (called ``nonce'') to that data so
@@ -383,6 +416,11 @@ blockchain, since the minimum change would cause an totally different hash from
 the blockchains of the other nodes, provoking a desyncronization to the
 peer-to-peer network. However, this system is still vulnerable to attacks aimed
 at specific users, such as man in the middle attacks~\cite{moore2013beware}.
+
+This technology enabled a new wave of decentralization of applications such as
+domain name registries~\cite{benshoof2016distributed} or microblogging platforms
+\cite{freitas2013twister}. A second wave of blockchain based decentralization
+was started by Ethereum~\cite{buterin2014ethereum}, as described below.
 
 \subsection{Ethereum}
 \label{tb:eth}

@@ -10,114 +10,186 @@
   \end{Fuente}
 \end{FraseCelebre}
 
-We propose a blockchain-enabled decentralized publication system for open
-science. It consists of three main components that decentralize and try to
-improve three different aspects related to scientific publication:
+\section{Design using a Decentralized Infrastructure}
+\label{archAndDes}
+Decentralized Science is a blockchain-enabled publication system for open
+science. The system provides a platform for the peer review process
+communications, from paper submission to paper acceptance/rejection, and
+supports the rating of peer reviews to build a reviewer reputation network.
 
-1) Peer review governance communication is traditionally centralized and
-controlled by editors and publishers. Our proposal opens and decentralizes these
-communications making the process more transparent.
+The proposed system relies on the technologies mentioned in section
+\ref{sec:tech}. The \emph{Ethereum blockchain} provides a public decentralized
+ledger to record the system's interactions. Smart contracts are used to enforce
+the rules of the system, such as just accepting reviews of invited reviewers. On
+the other hand, \emph{IPFS} provides a distributed content-addressable file
+system to store the content of the peer review process, from the first submitted
+paper to each of the reviews. This ensures that the information registered in
+the platform will be persistent, free and accessible, and will not rely on a
+centralized server.
 
-2) Peer reviewer quality and reliability information is difficult to
-predict~\cite{callaham_relationship_2007}, and it is usually hold private by
-publishers and journals. The system proposes to open this information through a
-decentralized reputation network of peer reviewers over a blockchain.
+\figura{Uml.png}{width=0.9\linewidth}{InteractionDiagram}{Sequence diagram of
+  platform interaction}
 
-3) Scientific papers are traditionally obtained or bought from a centralized
-publisher. We propose a decentralized network to distribute academic works and
-promote free access to science.
+The sequence diagram of the system (Figure \ref{InteractionDiagram}) describes
+the main interactions of the supported peer review governance. Below we proceed
+to describe these interactions and the basic ideas to implement them.
+
+
+\sst{Decentralized Journal}
+\label{cha:platform-description-6}
+
+The platform is designed to fit current publication systems, offering journals
+to create a \ii{Decentralized Journal}, a smart contract (see
+section~\ref{tb:cryptos:sm}) used to record all interaction users make with the
+platform.
+
+\emph{Decentralized Journals} have a title, a description, a list of fields of
+interest and an image. This information is shown in the front page of each
+journal and it is stored within the file system. When any user wants to upload a
+new journal or edit one, they must have an ``owner'' account. The owner is
+capable to edit the journal information, give account privileges, assign
+reviewers and change the journal's owner.
+
+\sst{Account privileges}
+\label{cha:platform-description-5}
+
+This platform allows journals to have certain ``editor'' accounts. These are
+able to assign reviewers for each paper submitted to the journal. In order to do
+so, editors have access to the ``journal management page'' in which they can
+view: papers pending of reviewers assignment, papers pending of review, papers
+published and papers rejected.
+
+\sst{Submit paper}
+\label{cha:platform-description-4}
+
+Users may submit a paper to a journal inside Decentralized Science. First, the
+platform asks for the submission information such as the authors, an abstract
+and the file containing the paper. Next, this information is uploaded to the
+file system and assigned to the journal. Once the submission is complete, the
+paper remains pending until an editor assigns the reviewers. In this point, the
+paper acts as a preprint (see section~\ref{soa:aps}), remaining visible for all
+users until it is reviewed, modifying the paper's state from pending to
+published or rejected.
+
+\sst{Assign review task}
+\label{cha:platform-description-3}
+
+Once a reviewer is assigned for a pending paper, the reviewer has the
+possibility to accept or reject the review task. This acceptance has an
+``acceptance time limit'' in which the reviewer can communicate her decision. If
+the task is accepted, the reviewer has a deadline to submit the review. In the
+other hand, if the task is rejected, the editor can assign another reviewer.
+
+\sst{Submit review}
+\label{cha:platform-description-2}
+
+Reviewers can submit their reviews for the papers they have been assigned to.
+This submission is similar to the paper's submission as it is uploaded to the
+file system and then it is assigned to the corresponding paper. Each review
+submission has a time limit established by each journal. This time limit is
+notified to the reviewers before the accept the review task. In the event of a
+reviewer sending a review when the time has expired, a penalty is applied to the
+reviewer's reputation inside Decentralized Science's reputation system. Finally,
+if all the reviews are favorable, the journal's source code automatically
+publishes the paper, featuring continuous publication (see
+section~\ref{soa:aps}).
+
+\sst{Rate a review}
+\label{cha:platform-description-1}
+
+As a novelty in Decentralized Science, there is the possibility to rate the
+reviews of a paper. This rating can only be done by the authors, the reviewers
+or the editors of the journal the paper have been submitted to. Each rating
+consists in an numeric value (1 or 0) representing if the rated is thinks the
+review is good or not.
+
+When deciding whether a review is good or not there are several points of
+view~\cite{daniel1993guardians,cole1979fair} and not everyone agrees. For
+this purpose, a community guideline is provided to explain what is a good
+review. This guidelines are created within the scientific community through
+academic papers and other sources, and they are always subject to change if the
+community requests it. In this way, this could be a solution to make all the
+votes in the system as fair as possible.
+
+Subsequently, the ``score'' of a rating affects directly to the reviewer's reputation in
+Decentralized Science. For this reason, reputation inside the system is a value
+between 1 and 0, meaning that reviewers with reputation closer to 1 are
+considered better by the community than the ones with reputation closer to 0.
+
+
+\section{Platform's features}
+
+Decentralized Science consists of three main components that decentralize and
+try to improve three different aspects related to scientific publication:
+\begin{enumerate}
+\item Peer reviewer quality and reliability information is difficult to
+  predict~\cite{callaham_relationship_2007}, and it is usually hold private by
+  publishers and journals. The system proposes to open this information through
+  a decentralized reputation network of peer reviewers over a blockchain.
+
+
+\item Scientific papers are traditionally obtained or bought from a centralized
+  publisher. We propose a decentralized network to distribute academic works and
+  promote free access to science.
+
+\item Peer review governance communication is traditionally centralized and
+  controlled by editors and publishers. Our proposal opens and decentralizes
+  these communications making the process more transparent.
+
+\end{enumerate}
 
 These ideas are further discussed in the following sections.
 
-% \section{Decentralized publication system for open science}
+\subsection{Open Access By-Design}
+\label{sec:open-access-design}
 
-% We propose a blockchain-enabled decentralized publication system for open
-% science. It consist of three components that decentralizes three different
-% aspects of science publication.
+Open Access focuses on the free access to scientific knowledge. While publishers
+provide free of charge their Open Access content, their control of the science
+dissemination infrastructure allows them to impose certain rules, such as
+charging authors unreasonable fees to offer their work as Open Access (Gold Open
+Access)~\cite{solomon2012study} or the temporal embargo and restrictions on the
+dissemination of the final version (Green Open access)~\cite{bjork2014anatomy},
+among others.
 
-% 1) Peer review governance communication is traditionally centralized and
-% controlled by editors and publisher. Subsection \ref{workflow} further explore
-% the opening and decentralization of this communication with blockchain
-% technology.
+This system proposes a decentralized infrastructure for science publication.
+Academic documents -from first drafts to final versions, including peer reviews-
+are shared through IPFS, an open P2P network~\cite{benet_ipfs-content_2014}
+described in the previous sections. Thus, the system inherently grants Open
+Access by-design of its distributed infrastructure and circumvents the
+publishers dominant role. Moreover, the access to all those documents does not
+depend on the existence of this platform. Even if it ceases to exists, the
+documents could still be retrieved from the network.
 
-% 2) Peer reviewer quality and reliability information is difficult to
-% predict~\cite{callaham_relationship_2007}, and is usually hold private by
-% publishers and journals. The system propose to distribute and open this
-% information though a decentralized reputation network of peer reviewers over
-% blockchain. Subsection \ref{reputation} further explore this proposal.
+\subsection{A Distributed Reviewer Reputation System}
+\label{sec:distr-revi-reput}
 
-% 3) Open access papers are traditionally obtained from a centralized publisher
-% infrastructure. Subsection \ref{distributedOA} explores the decentralization
-% of this infrastructure.
+The information concerning the quality and reliability of reviewers is usually
+held private by publishers and journals (and even editors). There is no easy way
+to predict the quality of a reviewer from factors such as training and
+experience~\cite{callaham_relationship_2007}. Although this information is
+valuable, it is kept private, reinforcing the publishers and journals
+influential positions.
 
-\section{Transparent Peer Review Governance}
-\label{workflow}
-
-The system provides a platform for the peer review process communication, from
-paper submission to paper acceptance or rejection. It registers all the
-interactions into a blockchain based distributed
-ledger. % and provides open access to all relevant content, from the different versions of the paper to the submitted reviews.
-
-The interaction diagram of the system (Figure \ref{InteractionDiagram})
-describes the interactions of the supported peer review governance. Following,
-this interactions and their implementation are described.
-
-\figura{Uml.png}{width=0.9\linewidth}{umlseq}{Sequence diagram of platform
-  interaction}
-
-\begin{LaTeXdescription}
-\item[Paper submission] A paper submission is registered by submitting the IPFS
-  address of the paper to an Ethereum contract. Then, the Ethereum sender
-  address is recorded as the corresponding author, and the submission is
-  timestamped in the blockchain.
-
-\item[Reviewer proposal] A journal editor may invite a peer reviewer to review a
-  specific paper. The transaction will record the Ethereum address of the
-  reviewer and optionally, a deadline to submit the review.
-
-\item[Reviewer acceptance/rejection] An invited reviewer may accept or reject
-  the review of a paper. The response will be recorded into the blockchain.
-
-\item[Submit review] A reviewer should make a transaction to deliver the review.
-  The transaction will record the acceptance/rejection and the IPFS address of
-  the detailed review.
-
-\item[Rate review] A novelty of the system further discussed in Section
-  \ref{reputation} is the rating system for reviews. The transaction will record
-  the sender address and the rating as well as the rated review and reviewer
-  addresses.
-\end{LaTeXdescription}
-
-\section{The Peer Review Reputation network}
-\label{reputation}
-
-The system proposes the use of a peer review reputation network were the quality
-of peer reviews is rated by the authors, editors and reviewers of the system.
-The work extends traditional peer review governance with the possibility of
-rating the reviews, building a reputation system for
+This project extends traditional peer review communication workflow with the
+possibility of rating peer reviews, i.e. building a reputation system for
 reviewers~\cite{resnick2000reputation}. Reviewers get rewarded for worthy, fair,
-an timely reviews, or penalized otherwise.
+and timely reviews, or penalized otherwise.
+    
+This open reputation network of reviewers could increase the visibility and
+recognition of the reviewing work~\cite{rajpert-de_meyts_rewarding_2016}, as
+proposed at~\cite{peere2018}.
 
-This network of peer reviewers would enable a better reviewer selection, a fair
-recognition of reviewers work and a protection against unfair reviews for
-authors. However, it could also rise privacy concerns for both reviewers and
-raters~\cite{van1999effect,schaub2016trustless}. We consider these privacy
-issues in section \ref{privacy}.
+In fact, such incentives could even be monetary, using
+crypto-currencies~\cite{Jan:2018:SDC:3184558.3191556}.
 
-% With this network of rated peer reviews, different metrics of the peer
-% reviewers can be provided by the system. Journals can benefit from this
-% network by searching for well rated reviewers that respond on time, authors
-% can expect shorter review time and forget about unaccountable bad reviews and
-% reviewers can get their work publicly recognized. This approach can suppose a
-% privacy problem for both reviewers and raters. We contemplate these problems
-% and how to solve them in section \ref{PrivacyReviewRating}.
+In addition, creating a public reputation network for reviewers reduces, or at
+least exposes, unfair and biased
+reviews~\cite{wenneras2001nepotism,ReinventingSocioTech}.
 
-Each time a user of the platform sends a review, it will be rateable. This way,
-each reviewer will obtain a score of each one of the reviews he sends, building
-the reviewers' reputation system. Initially, the people who can vote are the
-authors of the paper, the editors who have assigned the reviewers, and the other
-reviewers of the article. But in future implementations, rating a review will be
-public.
+As seen in the previous section, in this approach the only ones allowed to send
+a rating are the authors of the paper, the editors who have assigned the
+reviewers, and the other reviewers of the article. Nevertheless, in future
+implementations, rating a review could be public.
 
 There are two main implications among others:
 
@@ -130,9 +202,9 @@ There are two main implications among others:
   more visibility since the reputation of the reviewers can positively influence
   the impact of the papers in the scientific community.
   
-  \itbf{Pay-per-review:} In most cases nowadays, the reviewers do not obtain any
+  \itbf{Payed reviews:} In most cases nowadays, the reviewers do not obtain any
   economic benefit for carrying out the revision of a paper. By implementing a
-  reputation system, pay-per-review dynamics could be formed, in which the most
+  reputation system, payed reviews dynamics could be formed, in which the most
   reputable reviewers are paid for performing reviews at the request of the
   journal or the authors. This is an incentive for all reviewers of the system
   to make good reviews and gain reputation. In addition, since all interactions
@@ -142,31 +214,37 @@ There are two main implications among others:
  
 \end{itemize}
 
+\subsection{Transparent Governance}
+\label{sec:transp-govern}
 
-\section{Distributed Open Access infrastructure}
-\label{distributedOA}
-% \commant{Copied from PEERE Paper.TODO rewrite}
-Open Access focuses in the free access to scientific knowledge. While publishers
-provide free of charge their Open Access content, their control of the science
-dissemination infrastructure allows them to impose certain rules, such as
-charging authors unreasonable fees to offer their work as Open
-Access~\cite{solomon2012study} (Gold Open Access) or the temporal embargo and
-restrictions on the dissemination of the final version (Green Open
-access)~\cite{bjork2014anatomy}, among others.
+The peer review process is nowadays digitally supported, and yet some argue that
+the system remains feudal~\cite{ReinventingRigor}. There are multiple proposals
+to improve peer review~\cite{walker_emerging_2015}, and yet its communications
+and processes remain closed and in control of journals and publishers, and thus
+depend on their infrastructure~\cite{ReinventingSocioTech}.
 
-The system proposes a decentralized infrastructure for science publication.
-Academic documents - from first drafts to final versions, including peer
-reviews- are shared in IPFS, as mentioned on section~\ref{tech:sec:ipfs}. Thus,
-the system inherently grants Open Access by the design of its distributed
-infrastructure and circumvents the publishers dominant role.
+The proposed system aims to improve the peer review process transparency, speed,
+and fairness. In order to do that, the system proposes to support the peer
+review interactions in an open and decentralized network. It registers, in a
+public decentralized ledger, the following parts of the publication process:
+paper submission, reviewers assignment, review submission and paper publication.
+Thus, processes like the selection of reviewers, or the contents of the reviews,
+are open to the public eye. With the interactions being time-stamped and
+tamper-proof thanks to the blockchain technology, they can be monitored,
+audited, and held accountable. Besides, more complex iterations of the system
+may consider blind reviews, as discussed in Section \ref{sec:privacyRating}.
 
-All the documents are first uploaded to IPFS, generating a \emph{Base58}
-address. Then the system uses this address to make a transaction in Ethereum,
-cryptographically signing the contract with the user's address. Other users that
-want to access the paper, only have to inspect the blockchain, retrieve the IPFS
-address and download it though a local node or a gateway. This makes
-Decentralized Science a truly open-access publication system, were all the
-process is public, transparent and trustful.
+Opening the peer review process communications to the public could even change
+the acceptance dynamics within the system. Currently, high rejection ratios are
+encouraged because the risk of rejecting a relevant paper is negligible, while
+the acceptance of not so relevant content is
+penalized~\cite{ReinventingRigor,garfield2007evolution}. However, within a more
+transparent system, the first may be penalized as well.
+
+This transparency, combined with a distributed infrastructure for peer review,
+facilitates the exploration of new workflows~\cite{ReinventingSocioTech}. The
+following subsection explores one of these possibilities.
+
 
 
 
