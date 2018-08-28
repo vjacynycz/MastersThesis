@@ -288,7 +288,6 @@ figure~\ref{tb:na:diagram}~\cite{baran1964distributed}):
   platforms like Facebook\footnote{https://www.facebook.com/},
   Github\footnote{https://github.com/} or
   Amazon\footnote{https://www.amazon.com/} use this architecture.
-
   
   \itbf{Decentralized Architecture:} This type of structure shows a hierarchical
   structure to a set of \emph{starts} connected in the form of a larger star
@@ -299,7 +298,7 @@ figure~\ref{tb:na:diagram}~\cite{baran1964distributed}):
   data stored in all the nodes. This infrastructure is used in platforms like
   GNU Social\footnote{https://www.gnu.org/software/social/},
   Buddycloud\footnote{https://buddycloud.com/} and
-  Diaspora\footnote{https://diasporafoundation.org/} among others
+  Diaspora\footnote{https://diasporafoundation.org/} among others.
 
   \itbf{Distributed Architecture:} This is a fully decentralized architecture
   and its usually called ``Peer to peer'' or ``P2P''. All the nodes (or
@@ -318,9 +317,8 @@ figure~\ref{tb:na:diagram}~\cite{baran1964distributed}):
 Despite the disadvantages, most sites choose a centralized structure since in
 many cases they are controlled by private companies. However, distributed
 architectures are increasingly being used by new technologies since, as
-explained above, they offer more advantages than centralized architectures. One
-of the clear examples of the use of this architecture is that of
-cryptocurrencies.
+explained above, they offer more advantages than centralized ones. One of the
+clear examples of the use of this architecture is that of cryptocurrencies.
 
 \subsection{Digital Currencies and Cryptocurrencies}
 \label{tb:cryptos}
@@ -372,50 +370,59 @@ which everyone can see and verify all money transactions. This technology used
 concepts and ideas of previous digital currencies such as B-money, Hashcash and
 Bit gold (see section~\ref{tb:cryptos}).
 
-Furthermore, Bitcoin's transactions must be verified by all peers, meaning that
-there has to be a consensus among all the nodes for a transaction to be
-completed. This solved the double-spending problem by which a dishonest actor
-may try to spend twice the same coin in decentralized currency systems.
+In order to understand this technology, two important concepts must be defined:
+addresses and transactions.
 
-This technology relies on a ledger of transactions, a large database containing
-all the transactions since the beginning of Bitcoin, that is updated and
-maintained by the network. Bitcoin introduces incentives to maintain the
-security of this ledger, both rewarding nodes that contribute computational
-power for the security of the network, and requiring at least half of the
-computing power of the network to alter the state of the blockchain (thus, the
-blockchain is secure if at least half of the computing power is provided by
-honest peers).
+Each user who wants to use this cryptocurrency, must first have an account, a
+randomly generated text string called \bb{address}. Each address can be
+generated with no cost and user can have multiple addresses. These addresses act
+as an identifier inside the Bitcoin's database and are used to transfer money.
 
-Bitcoin uses random text strings, called addresses, to identify users who use
-the currency. These addresses store money within the network and allow transfers
-called transactions.
+Money transfers between two \ii{addresses} are called \bb{transactions}. Each
+transaction is a small data fragment containing the source address, the
+destination address and the amount of money transferred.
 
-To deepen more into Bitcoin's inner functioning, all monetary transactions
-between accounts are stored in a data block until reaching a specific size,
-giving a snapshot of all the state of all the accounts (see
-figure~\ref{tb:bc:transaction}). In this way, a Bitcoin address does not contain
-money but the collection of transactions from other addresses to this.
+Bitcoin's users can observe all \ii{transactions} between all \ii{addresses}. In
+order to do so, this technology stores a certain number of transactions into a
+data fragment, called block. Next, this block is linked cryptographically to the
+previous one containing all the foregoing transactions, forming a chain of
+interlinked data called \ii{blockchain} (see figure~\ref{tb:bc:transaction}). .
+To sum up, Bitcoin's blockchain is a large chain of data blocks containing all
+the transactions between all accounts since the beginning of this technology.
 
-The idea of \emph{proof of work} is to gather a number of pending transactions
-to a data block. Then add a random number (called ``nonce'') to that data so
-that when performing a hash function of the whole block has a certain number of
-leading zeros. Once a block is created, it is used as reference to the next
-block of data, adding the hash of the previous block to the next one. This
-system is called the blockchain~\cite{antonopoulos2014mastering} (see
+Bitcoin's transactions must be verified by all peers, meaning that there has to
+be a consensus among all the nodes for a transaction to be completed. This
+solved the double-spending problem by which a dishonest actor may try to spend
+twice the same coin in decentralized currency systems~\cite{chohan2017double}.
+
+Bitcoin also introduces incentives to maintain the security of this ledger, both
+rewarding nodes that contribute computational power for the security of the
+network, and requiring at least half of the computing power of the network to
+alter the state of the blockchain (thus, the blockchain is secure if at least
+half of the computing power is provided by honest peers).
+
+To deepen more into Bitcoin's inner functioning, this technology injects money
+into the network using the idea of \emph{proof of work} or POW.
+
+POW consists in all users competing with each other to encrypt a data block with
+certain restrictions. The winner notifies its neighbors with the data block
+successfully encrypted and gets its reward in money~\cite{barber2012bitter}.
+
+Specifically, to encrypt a block, peers need to gather a number of pending
+transactions into a data structure. Next, they add a random number (called
+``nonce'') to that structure so that when performing a hash function of the
+whole block has a certain number of leading zeros. Once a block is created, it
+is used as reference to the next block of data, adding the hash of the previous
+block to the next one~\cite{antonopoulos2014mastering} (see
 figure~\ref{tech:sec:eth:bc:diagram}).
 
 \figura{blockchain.png}{width=0.9\linewidth}{tech:sec:eth:bc:diagram}{Blockchain
   representation diagram}
 
-All the nodes compete to find the next block, because when one of them manages
-to find the nonce to create the hash with leading zeros, notifies it to all the
-nodes of the network and gains 12.5 bitcoins~\cite{barber2012bitter}.
-
 This system makes it practically impossible to falsify a transaction in the
-blockchain, since the minimum change would cause an totally different hash from
-the blockchains of the other nodes, provoking a desyncronization to the
-peer-to-peer network. However, this system is still vulnerable to attacks aimed
-at specific users, such as man in the middle attacks~\cite{moore2013beware}.
+blockchain, since all nodes need to reach consensus. However, this system is
+still vulnerable to attacks aimed at specific users, such as man in the middle
+attacks~\cite{moore2013beware}.
 
 This technology enabled a new wave of decentralization of applications such as
 domain name registries~\cite{benshoof2016distributed} or microblogging platforms
@@ -426,23 +433,28 @@ was started by Ethereum~\cite{buterin2014ethereum}, as described below.
 \label{tb:eth}
 Ethereum~\cite{buterin2014ethereum} is a very novel technology that allows the
 creation of distributed applications that run in an arbitrary large and
-trust-less network of nodes. Ethereum's strength rely on three main concepts:
-blockchain, smart contract and transactions.
+trust-less network of nodes. Ethereum is based in the Bitcoin's blockchain
+technology, a public database where everyone can watch all transactions.
+
+Using this idea, Ethereum uses its own blockchain (see section~\ref{tb:bc}) to
+deploy and execute fragments of code in a distributed network. This fragments of
+code are called ``smart contracts'' and they are uploaded to the blockchain in
+order to be executed.
+
+Working very similar to Bitcoin's blockchain, peers have to reach consensus in
+each smart contract execution, making a smart contract source code almost
+impossible to hack.
+
+Apart from this, Ethereum uses its own cryptocurrency called ``Ether''. This
+currency not only works like Bitcoin, to exchange money between users, but to
+\emph{fuel} the smart contracts' code execution, running its inner functions for
+a small amount of \ii{Ether}.
 
 \subsubsection*{Smart Contracts}
 \label{tb:cryptos:sm}
 \figura{cryptomap.png}{width=0.7\linewidth}{criptomap}{Existing cryptocurrencies
   represented by purchase-sale
   volume~\footnote{https://cryptocoincharts.info/coins/graphicalComparison}.}
-
-Ethereum was born inspired by the Bitcoin concept to offer any user a tool to
-develop decentralized and secure applications in a simple
-way~\cite{buterin2014ethereum}. These applications are called ``smart
-contracts'' and are written in the Ethereum's blockchain.
-
-Ethereum's cryptocurrency is called ``ETH'' and not only works like Bitcoin, to
-exchange money between users, but to \emph{fuel} the smart contracts' execution,
-running its source code for a small amount of ETH.
 
 Smart contracts are written in a programming language called
 Solidity\footnote{http://solidity.readthedocs.io/en/develop/} provided by the
@@ -461,34 +473,50 @@ currency within cryptocurrencies (see figure~\ref{criptomap}.
 
 Smart contracts offer us a framework to design distributed platforms like the
 one proposed in this work, in which all transactions that interact with the
-scientific publication process can be cryptographically signed (see
-section~\ref{plat:trans}).
+scientific publication process can be cryptographically verified (see
+section~\ref{sec:second-prototype}).
 
-\subsubsection*{Accounts and Transactions}
+\subsubsection*{Addresses and Transactions}
 \label{ts:at}
-An address in ethereum is a 32-byte string that symbolizes a person's account or
-an smart contract:
+
+As in Bitcoin's network, Ethereum's user accounts are called \bb{addresses} and
+the transfers between them are called \bb{transactions}. The main difference
+between Ethereum and its predecessor is that an address can also be assigned to
+a smart contract. Thus, there are two types of addresses within the Ethereum
+network:
+
 \begin{itemize}
-\item \textbf{Personal accounts:} These are the accounts of the users who want
+
+\item \textbf{Personal addresses:} These are the addresses of the users who want
   to interact with the Ethereum network. Each one has its address and a balance.
-\item \textbf{Contract accounts:} A smart contract also is identified by an
-  Ethereum address. It contains the source code, a balance with the available
-  money, and its own internal memory where it saves all the contract's
-  information.
+  
+\item \textbf{Contract addresses:} Once a smart contract is deployed in the
+  Ethereum blockchain, the network generates an address and assigns it to the
+  deployed contract. It contains a pointer to the source code, a balance with
+  the available money, and its own internal memory where it saves all the
+  contract's information.
+
 \end{itemize}
 
-In this way, users and contract behave very similar in the blockchain, and to
-communicate these addresses, Ethereum uses \bb{transactions}.
+Each of the addresses within the Ethereum network is unique, so they have
+several useful applications when it comes to develop an smart contract.
+Addresses can be used to identify who executes a contract as well as to restrict
+the use of certain contracts to a list of allowed addresses. Listing
+\ref{contrxample} shows an example code of a very simple smart contact. This
+example contains comments to explain the address restrictions mentioned before.
 
-\figura{sc.png}{width=0.97\linewidth}{tb:eth:transaction}{State change of
-  Ethereum done by transactions}
+It should be noted that these address restrictions can also be applied to
+contract addresses, and may limit the execution of a certain fragment to an
+address associated with another contract.
 
-Smart contracts behavior is transaction-based~\cite{wood2014ethereum}. once a
+\input{Capitulos/listing_contract.tex}
+
+Smart contracts behavior is transaction-based~\cite{wood2014ethereum}. Once a
 contract is deployed in the blockchain, users (or other contracts) may send
-transactions to run its code. Each transaction has a payload, containing the
-data required to execute the desired part of the contract. This execution has a
-fee that users have to pay to the network based on how complex is the code they
-want to run (see figure~\ref{tb:eth:transaction}).
+transactions to run specific functions in its code. Each transaction has a
+payload, containing the data required to execute the desired function. This
+execution has a fee that users have to pay to the network based on how complex
+is the code they want to run (see figure~\ref{tb:eth:transaction}).
 
 Ethereum's transaction-based smart contracts have changed the paradigm of modern
 software development, since the priority when developing a smart contract is to
@@ -496,6 +524,13 @@ reduce the transaction costs of each interaction~\cite{delmolino2016step}.
 
 
 \section{State of the art}
+\label{sec:state-art}
+
+As mentioned in the previous sections, scientific publication process has
+undergone few changes in the last centuries. Nevertheless, journals and
+conferences are trying to adapt the submission systems to the internet era,
+using software to manage the process from submission to publication.
+
 
 
 Decentralized alternatives, in spite of their
@@ -523,9 +558,6 @@ current scientific community like Ledger\footnote{https://ledgerjournal.org}, a
 cryptocurrencies and blockchain-based journal that records the publication
 timestamps in the Bitcoin blockchain.
 
-\subsection{Reputation systems in academia}
-\label{soa:rs}
-\todo{SOA REP SYS EN ACADEMIA}
 
 In Decentralized Science, two types of scoring systems have been considered: the
 first is a 5-star scoring system, in which users score 1 to 5 for other users, 1

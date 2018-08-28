@@ -1,0 +1,34 @@
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[language=C++,commentstyle=\color{olive}\ttfamily,frame=single,caption=Example
+  of an smart contract,label=contrxample,captionpos=b]
+
+  contract Example{
+    
+    // The owner of the contract
+    address owner;
+    
+    constructor() public{
+        // The contract assigns the owner to 
+        // the account that creates the contract
+        owner = msg.sender;
+    }
+    
+    function doSomethingPublilc() public{
+      // This function can be called
+      // once the contract is deployed
+    }
+    
+    function doSomethingRestricted() {ag.sender != owner){
+            // If the address that calls this function is not
+            // the owner the transaction is cancelled
+            revert();
+        }
+        else{
+            // This function can be called only by the owner
+        }
+    }
+    
+}
+  
+  \end{lstlisting}
+  \end{minipage}
