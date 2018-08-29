@@ -1,0 +1,112 @@
+
+\section{Conclusiones finales}
+
+Este trabajo propone la descentralización de tres de las funciones del proceso
+de revisión por pares: 1) la comunicación del proceso de revisión por pares, 2)
+la reputación de los revisores, y 3) la distribución de los artículos y las
+revisiones de estos. Ofrece un primer acercamiento a la implementación de la
+plataforma con un prototipo funcional.
+
+Las tecnologías distribuidas como Blockchain e IPFS pueden cumplir las promesas
+del \ii{Open Access} a la vez que abren nuevos modelos para la distribución de
+ciencia.
+
+La descentralización de la estructura mejora la trasparencia y la honestidad del
+sistema, y puede proporcionar nuevos escenarios para fomentar la innovación.
+También se ha de tener en cuenta que el sistema y los prototipos propuestos no
+se basan en el uso de criptomonedas, ya que se centran en un enfoque sin fines
+lucrativos, lejos de los enfoques comerciales impulsados ​​por las startups, cada
+vez más comunes dentro en el espacio blockchain.
+
+La transparencia proporcionada al abrir el proceso de revisión por pares permite
+la construcción de un sistema de reputación de revisores, pero también plantea
+problemas sobre la privacidad y la equidad. Además, la introducción de una nueva
+métrica pública (la reputación de los revisores) también puede afectar las
+carreras de los investigadores, lo que puede suponer un aumento en la presión a
+los procesos ya de por sí agotadores para la supervivencia
+académica~\cite{de2005publish}.
+
+Las tecnologías de Blockchain se pueden usar para replicar la configuración de
+privacidad utilizada actualmente en los procesos de revisión por pares. Sin
+embargo, Blockchain también se puede utilizar para presentar un nuevo modelo de
+revisión que respalde la responsabilidad de la revisión por pares y al mismo
+tiempo mantener el anonimato de las revisiones a ciegas y doble ciego para
+mejorar la equidad. Las implicaciones de estos posibles modelos de revisión
+responsables, abiertas y anónimas aún están por revelarse.
+
+
+Además, la infraestructura del sistema se basa en nuevas tecnologías con sus
+propios desafíos. Las tecnologías de Blockchain se enfrentan a problemas de
+escalabilidad, costos de transacción, inclusión y usabilidad. Por otro lado, los
+sistemas de archivos distribuidos como IPFS pueden ser más resistentes, pero aún
+necesitan a alguien a cargo de preservar y proporcionar los datos, ya que sin
+esa persona responsable, puede provocar la pérdida imprevista de contenido
+almacenado por las plataformas que utilicen dicho sistema de archivos.
+
+Otros temas abiertos que pueden explorarse en el trabajo futuro son la
+exploración de diferentes modelos de derechos de autor, el desafío de las
+métricas tradicionales centradas en revistas para calificar la calidad de la
+publicación, diferentes algoritmos de reputación, diferentes niveles de apertura
+y la exploración de revistas autónomas descentralizadas, capaces de operar de
+manera automática sin interacción de los usuarios.
+
+A pesar de los desafíos existentes, la descentralización de los procesos en los
+que se basa la ciencia podría abrir un nuevo campo de exploración, con
+implicaciones que posiblemente no podamos prever ahora. ¿Podrán los beneficios
+superar a los riesgos?
+
+
+\section{Trabajo futuro}
+
+Uno de los primeros problemas a atacar sería el anonimato en las revisiones por
+pares, porque no importa lo utópico que parezca, un sistema completamente
+público en el que no hay anonimato de los revisores y los autores es difícil de
+implementar. Este problema podría mitigarse con algunas de las soluciones
+propuestas en la sección~\ref{sec:privacyRating}. Sin embargo, el código fuente
+de este trabajo se puede migrar a otras tecnologías de blockchain. Por lo tanto,
+si en el futuro, existe una tecnología similar a Ethereum, donde los protocolos
+de anonimato ya están implementados, una versión de esta plataforma podría
+implementarse fácilmente.
+
+
+Como posibles extensiones de este proyecto se proponen las siguientes ideas:
+
+\begin{itemize}
+\item La incorporación de un sistema para enviar documentos ya aceptados,
+  tratando de ampliar la investigación que proponen, incluyendo la posibilidad
+  de seguir las líneas de investigación de otros autores, completando sus
+  trabajos para construir una comunidad científica colaborativa, basada en el
+  apoyo mutuo.
+\item Una metodología de citación estándar en la que tanto documentos como
+  autores son direcciones de Ethereum que reemplazan identificadores como ISBN o
+  DOI. Una dirección de autor podría proporcionar información sobre el trabajo
+  del autor, ofreciendo la posibilidad de ver los trabajos que envió, los que
+  revisó y las colaboraciones realizadas con otros autores. La dirección de un
+  artículos podría proporcionar información sobre el factor de impacto que
+  tiene, mostrando todos los demás artículos que lo citan.
+\item La automatización de la asignación de revisores para un artículo recién
+  enviado, de modo que el papel formal del editor desaparezca, ya que la
+  elección dependerá completamente del contrato inteligente de la revista a la
+  que corresponda. Esta elección podría basarse en la confianza que la comunidad
+  tiene en la red de reputación de los revisores, pudiendo eliminar a uno de los
+  intermediarios del sistema.
+\item Finalmente, el intermediario de las revistas científicas podría
+  eliminarse. Si la asignación de revisores y la publicación de los artículos es
+  automática y está en el blockchain, la comunidad científica cuestionaría la
+  existencia de estas revistas. Con el apoyo de un sistema de reputación
+  totalmente funcional y ampliamente utilizado para los revisores, una forma
+  ideal de publicación científica podría ser una gran biblioteca en la que los
+  autores presenten su trabajo, los revisores se elijan al azar según su
+  reputación y los trabajos se publiquen automáticamente.
+\end{itemize}
+
+Para concluir este trabajo, propongo un futuro doctorado con nuevas líneas de
+desarrollo con mayor impacto en la comunidad. Esta propuesta incluiría: una
+exploración exhaustiva de todas las tecnologías de blockchain, entrevistas con
+usuarios reales para validar la plataforma, simulación social usando sistemas
+multi-agente para analizar el comportamiento de la plataforma y contactar con
+usuarios potenciales para implementar demos en entornos reales.
+
+Puede de dentro de unos años los métodos de publicación científica se basen en
+proyectos como el que presenta este trabajo, cambiando el paradigma que lleva
+tantos años impuesto en el proceso de investigación científica.

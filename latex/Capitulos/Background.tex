@@ -520,27 +520,88 @@ is the code they want to run (see figure~\ref{tb:eth:transaction}).
 
 Ethereum's transaction-based smart contracts have changed the paradigm of modern
 software development, since the priority when developing a smart contract is to
-reduce the transaction costs of each interaction~\cite{delmolino2016step}.
+reduce the transaction costs of each interaction~\cite{delmolino2016step}. For
+this reason, the development of this project is based on the programming
+incremental prototypes to be able to perform tests in a fast way (see
+section~\ref{sec:agile-methodologies}).
 
 
 \section{State of the art}
 \label{sec:state-art}
 
-As mentioned in the previous sections, scientific publication process has
-undergone few changes in the last centuries. Nevertheless, journals and
-conferences are trying to adapt the submission systems to the internet era,
-using software to manage the process from submission to publication.
+Nowadays, journals and conferences manage the submission process digitally.
+Whiles conferences commonly uses a generic software (usually web-based open
+source systems), journals normally have its own management system. These
+platforms allows editors to manage submission and peer-review process, as well
+as review assignment and notification sending.
 
+\bb{Event Management Systems} (EMS) or \ii{Conference Management Systems} are
+wide range of software products that are used in the management academic
+conferences~\cite{azar2006academic}.
 
+\bb{EasyChair}~\cite{easychair} is perhaps one of the best known, a web-based
+EMS widely used by the community with more than $65202$ conferences
+served~\footnote{According to https://easychair.org/}. This system provides the
+following tools: 1) paper submission; 2) review assignment; 3) email
+notifications to authors, reviewers and conference chairs and 4) preparation of
+the conference proceedings.
 
-Decentralized alternatives, in spite of their
-promises~\cite{bartlingblockchain}, are still in their infancy. A few proposals,
-none of them functional to date, have appeared recently.
+\bb{OpenConf}~\cite{openconf} is another EMS that offers the same tools as
+EasyChair. It lacks of project management features and it is only suitable for
+conference, workshop or seminary events. OpenConf has a diferent licenses for
+its users\footnote{https://www.openconf.com/editions/}: a free but limited one
+for communities or a ``Professional Edition'' with extra features like web an
+mobile integration.
 
-One of them is a peer review proposal that tries to solve some of the peer
-review socio-technical problems using cryptocurrencies~\cite{tennant2017multi}.
-It needs a critical threshold of research community engagement, changing the
-actual processes and platforms, to start being implemented.
+\bb{AEMS}~\cite{paulo2011aems} is an advanced event management system that
+features useful tools like project management integration. This platform main
+objective is combine the functionality of previous EMS and improve them,
+offering its customers tools to manage activities, resources and costs
+associated with an event.
+
+In the other hand, journals normally do not have to take charge of organizing a
+conference or a workshop, so they do not have to worry about things like
+schedules or conference chairs. Authors submit their papers, papers are assigned
+to reviewers and papers are accepted for publication or rejected. To carry out
+the monitoring of this process there are several platforms called \bb{Editorial
+  systems} (ES)~\cite{Lev2016}.
+
+\bb{Evise} is a web-based ES used by the publisher ``Elsevier''~\cite{evise} to
+manage the editorial process. This platform allows users to have a profile
+inside Elsevier's database used to sing into this publisher's journals. It also
+has editor oriented tools like one to search for, invite, and manage reviewers
+from a single screen or one to create and manage personal customized decision
+letters among many others.
+
+\bb{MySpringer}~\cite{myspringer} by ``Springer Nature'' is another ES used to
+access the contents inside this publisher's system. It is suitable both for
+authors, in which they can view its publications and manage submissions made,
+and for editors, who can access to a variety of tools similar to Evise's
+platform. Furthermore, users can link an account in
+Overleaf\footnote{https://www.overleaf.com/}, a collaborative online \LaTeX
+editor, to submit papers to the any Springer's journal.
+
+All these platforms, despite being used today, are still chained to the archaic
+publication methodology that we currently have (see section~\ref{scb:ps}). For
+example, the reviewers remain anonymous even after the publication of the paper,
+usually causing them not to receive any recognition for their work.
+
+Nonetheless, there are initiatives to change this, such as the one proposed by
+\bb{Publons}~\cite{rajpert2016rewarding}, a platform in which users make public
+all the reviews they make to the peer review process. Publons tries to eliminate
+the anonymity of this process, urging the reviewers to obtain recognition for
+publishing such revisions. However, it is not always possible to make reviews
+public, given that sometimes journals or conferences do not allow this type of
+data to be published.
+
+Alternatives to these systems using decentralized technologies, in spite of
+their promises~\cite{bartlingblockchain}, are still in their infancy. A few
+proposals, none of them functional to date, have appeared recently. One of the
+most promising ones is a peer review proposal that tries to solve some of the
+peer review socio-technical problems using
+cryptocurrencies~\cite{tennant2017multi}. It needs a critical threshold of
+research community engagement, changing the actual processes and platforms, to
+start being implemented.
 
 Blockchain-enabled apps have also been proposed, with voting and storage of
 publications. This is the case of Aletheia~\cite{morton2017aletheia}, a software
@@ -559,20 +620,7 @@ cryptocurrencies and blockchain-based journal that records the publication
 timestamps in the Bitcoin blockchain.
 
 
-In Decentralized Science, two types of scoring systems have been considered: the
-first is a 5-star scoring system, in which users score 1 to 5 for other users, 1
-being bad reputation and 5 good reputation~\cite{} This reputation system is
-used in many e-commerce websites. The second one is the like/dislike, in which
-the interactions are evaluated with positive evaluation or negative evaluation,
-depending on the interaction that two users have had~\cite{}.
-
-This system has been extended to many internet services in which there is no
-centralized entity in which users have to rely, so building a fully distributed
-system requires trust between users that can offer a good reputation system. The
-section \ref{soa:rs} explores different systems that exist today and ways to
-improve them.
-
-This paper proposes the development of a decentralized publication system for
+This work proposes the development of a decentralized publication system for
 open science. It aims to challenge the technical infrastructure that supports
 the middlemen role of traditional publishers. Due to the successes of the Open
 Access movement, some of the scientific knowledge is today freely provided by
@@ -582,13 +630,6 @@ infrastructure gives them a position of power over the scientific community
 which produces the contents~\cite{fuster2010governance}. Such central and
 oligopolistic position in science dissemination allows them to impose policies
 (e.g. copyright ownership, Open Access prices) and concentrate profits.
-
-The proposed system aims to move the infrastructure control from the publishers
-to the scientific community. It entails the decentralization of three essential
-functions of science dissemination: 1) the peer review process, 2) the selection
-and recognition of peer reviewers, and 3) the distribution of scientific
-knowledge. The following section provides an overview of the system features,
-while the final section discusses its challenges.
 
 
 %%%
