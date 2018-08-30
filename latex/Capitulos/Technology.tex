@@ -27,14 +27,14 @@ Decentralized Science's project timeline has three different parts:
   \itbf{Pre-project:} \emph{Blockchain for Social Impact} was an online event
   that took place in September 2017. The main goal of that event was to design a
   blockchain-powered platform to solve any social related problem, and the best
-  one would receive funding. Our team developed the first Decentralized
-  Science's idea in the month that the event lasted. In this month we had to
-  make a series of deliverables every week to show that we were working on one
-  project. In order to make this, the team met 3 times a week to design the
-  platform using methodologies such as Brainstorming and Value Proposition
-  Canvas. The main idea of the platform and the problems it had to solve were
-  identified in this period. Unfortunately the project was not one of the
-  winners of the event and the team decided to pause the project.
+  one would receive funding. Me and other partners formed a team to develop the
+  first Decentralized Science's idea within the month that the event lasted. In
+  this period we had to make a series of deliverables every week to show that we
+  were working on one project. In order to make this, the team met 3 times a
+  week to design the platform using methodologies such as Brainstorming and
+  Value Proposition Canvas. The main idea of the platform and the problems it
+  had to solve were identified in this period. Unfortunately the project was not
+  one of the winners of the event and the team decided to pause the project.
 
   \itbf{Project implementation:} Since I was the only one with programming
   knowledge in blockchain, I decided to continue with the project on my own.
@@ -62,9 +62,10 @@ Decentralized Science's project timeline has three different parts:
   world. Currently the team are sending scientific papers to different
   conferences to validate the ideas of this platform with the scientific
   community. One article has been published in a small conference and another
-  has been accepted with changes in a CORE-A conference so far. This papers and
-  the feedback received by the community allowed me to improve the platform
-  source code and complete this memory.
+  has been accepted with changes in a CORE-A conference so far (see
+  section~\ref{sec:conferences-papers}). This papers and the feedback received
+  by the community allowed me to improve the platform source code and complete
+  this manuscript.
   
 \end{itemize}
 
@@ -188,7 +189,7 @@ Ethereum is a difficult task because once the source code is deployed in the
 blockchain, there is no way to change it. For this reason, these methodologies
 allowed me to develop small prototypes and run several test for each one. Every
 two weeks I started a development cycle consisting on programming the next
-prototype in the first week and run test in the second week.
+prototype in the first week and running tests in the second week.
 
 During the whole \bb{project implementation} phase, meetings were held with the
 thesis directors at least twice a month to discuss the progress made and set
@@ -212,8 +213,8 @@ one hand, the Blockchain~\cite{buterin2014ethereum} provides a public
 decentralized ledger to record the system's interactions. On the other hand,
 IPFS~\cite{benet_ipfs-content_2014} is a distributed file system to store all
 the papers and reviews sent to the platform. This ensures that all the
-information is persistent, free and accessible, and does not rely on a
-centralized server.
+information is persistent, free, accessible, and does not rely on a centralized
+server.
 
 % -------------------------------------------------------------------
 \subsection{IPFS}
@@ -224,7 +225,7 @@ IPFS stands for Interplanetary File System. It is a peer-to-peer file-sharing
 protocol that uses a cryptographic hashes to store files in a distributed
 network. IPFS works very similar to the HTTP protocol but in a BitTorrent way.
 It can be seen as a giant git repository where everyone can store, share and
-exchange files\cite{benet2014ipfs}.
+exchange files~\cite{benet2014ipfs}.
 
 \subsubsection*{IPFS on Decentralized Science}
 
@@ -245,12 +246,13 @@ Self-Certified Systems.
 \subsubsection*{Distributed Hash Tables}
 \label{tech:sec:ipfs:dht}
 
-A distributed hash table(\emph{DHT}) is a decentralized structure that works
-very similar to a hash table. Hash tables are used to identify items in a
-database. The table performs simple mathematical operations generating a random
-string called \emph{hash}. The hash acts as a pointer that directs to the data,
-allowing users to find it in a large database without performing an exhaustive
-search\cite{kaluszka2010distributed}.
+A distributed hash table (\emph{DHT}) is a decentralized structure that works
+very similar to a hash table. It consists on a table that behaves as a
+collection of keys (hash strings) that identify items in a distributed database.
+The table performs simple mathematical operations generating a random string
+called \emph{hash}. The hash acts as a pointer that directs to the table's
+information, allowing users to find it in a large database without performing an
+exhaustive search~\cite{kaluszka2010distributed}.
 
 In distributed hash tables, hash strings are keys that identifies a value in one
 or more nodes. Any node can use a key to retrieve data. This system includes a
@@ -268,27 +270,27 @@ frameworks such as Tapestry \cite{zhao2004tapestry}, Chord
 \cite{maymounkov2002kademlia} and IPFS \cite{benet2014ipfs}. These platforms are
 similar in cost and performance if they are tested in a large enough network.
 They behave very fast when it comes to searching for a key through massive
-networks of nodes\cite{li2004comparing}, that's why it is used by IPFS to create
-its distributed file system.
+networks of nodes~\cite{li2004comparing}, that's why it is used by IPFS to
+create its distributed file system.
 
 \subsubsection*{BitTorrent - File sharing}
 \label{tech:sec:ipfs:bt}
-BitTorrent \cite{cohen2003incentives} is a P2P file sharing system used
+BitTorrent~\cite{cohen2003incentives} is a P2P file sharing system used
 worldwide. In this system, files are divides into very small chucks of data, and
 are shared in a peer-to-peer network. Each peer aims to maximize its download
 rate by connecting to the best peers, meaning that peers with faster network
 speed will be better than ones with slow connectivity. In BitTorrent's network,
 peers with high upload rate will get higher download rate, so the key is
 balancing the network bandwidth between downloading and uploading
-files\cite{pouwelse2005bittorrent}.
+files~\cite{pouwelse2005bittorrent}.
 
-IPFS uses three main features from BitTorrent's protocol\cite{benet2014ipfs}:
+IPFS uses three main features from BitTorrent's protocol~\cite{benet2014ipfs}:
 \begin{itemize}
 \item BitTorrent's data exchange protocol rewards nodes who contribute to the
   network, and punishes the ones who don't.
 \item BitTorrent tracks the availability of file chunks, sending the rarest
   first rather than sending the most common ones.
-\item IPFS uses PropShare\cite{levin2008bittorrent}, an alternative
+\item IPFS uses PropShare~\cite{levin2008bittorrent}, an alternative
   implementation of the original BitTorrent protocol designed to maximize
   network speed. This implementation improves the previous bandwidth allocation
   strategy for each peer, enhancing the download and upload speed of the
@@ -298,24 +300,24 @@ IPFS uses three main features from BitTorrent's protocol\cite{benet2014ipfs}:
 \subsubsection*{Git - Version control system}
 \label{tech:sec:ipfs:git}
 
-A version control system (\ii{VCS}) is a software to manage changes in a
+A Version Control System (\ii{VCS}) is a software to manage changes in a
 document, computer programs or any information. Each change is called revision
 and it is identified by a number, the person who did it and a timestamp. In a
 \ii{VCS} revisions can be reverted to a previous version, making them useful for
 software development.
 
-Git is a distributed \emph{VCS}\cite{torvalds2010git} that was born in 2005,
+Git is a distributed \emph{VCS}~\cite{torvalds2010git} that was born in 2005,
 when the development process of the Linux kernel lost its version control
 system. The Linux kernel is one of the biggest free software projects nowadays.
 It has a great team of developers behind and the code usually changes very
-frequently. In 2002 the team used BitKeeper~\footnote{BitKeeper is an and
+frequently. In 2002 the team used BitKeeper\footnote{BitKeeper is an and
   distributed and scalable \ii{VCS} available at https://www.bitkeeper.org/} as
 \ii{VCS} since they had a free license. But in 2005 when this license was over,
-Linus Torvalds decided to develop his own \ii{VCS}\cite{spinellis2005version}.
+Linus Torvalds decided to develop his own \ii{VCS}~\cite{spinellis2005version}.
 
 Git was designed to be scalable and distributed, and nowadays is widely used by
 the open source community. The most important factors that IPFS inherits from
-Git are: \cite{benet2014ipfs}:
+Git are~\cite{benet2014ipfs}:
 
 \begin{itemize}
 \item Git reflects changes in a file system in a distributed way using an
@@ -343,8 +345,8 @@ represent files or other data structures.
 
 In Decentralized Science, we use this technology to store all the files in a
 robust and secure way, without relying on a centralized server. All these
-characteristics provides a persistent platform, resistant to censorship and
-prohibition, since IPFS works on a network of thousands of nodes.
+characteristics provides a persistent platform, since IPFS works on a network of
+thousands of nodes.
 
 \subsection{Ethereum}
 \label{tech:sec:ethereum}
@@ -507,7 +509,7 @@ Decentralized Science is 100\% open software and uploaded to Github. All the
 source code, documents, web page, and all the information is available at:
 
 \begin{lstlisting}[frame=single]
-  https://github.com/DecentralizedScience/.
+  https://github.com/DecentralizedScience/
 \end{lstlisting}
 %%% Local Variables:
 %%% mode: latex

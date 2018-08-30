@@ -15,22 +15,22 @@ science. The system provides a platform for the peer review process
 communications, from paper submission to paper acceptance/rejection, and
 supports the rating of peer reviews to build a reviewer reputation network.
 
-The proposed system relies on the technologies mentioned in section
-\ref{sec:tech}. The \emph{Ethereum blockchain} provides a public decentralized
-ledger to record the system's interactions. Smart contracts are used to enforce
-the rules of the system, such as just accepting reviews of invited reviewers. On
-the other hand, \emph{IPFS} provides a distributed content-addressable file
-system to store the content of the peer review process, from the first submitted
-paper to each of the reviews. This ensures that the information registered in
-the platform will be persistent, free and accessible, and will not rely on a
-centralized server.
+The proposed system relies on the technologies mentioned in section~\ref{tech}.
+The \emph{Ethereum blockchain} provides a public decentralized ledger to record
+the system's interactions. Smart contracts are used to enforce the rules of the
+system, such as just accepting reviews of invited reviewers. On the other hand,
+\emph{IPFS} provides a distributed content-addressable file system to store the
+content of the peer review process, from the first submitted paper to each of
+the reviews. This ensures that the information registered in the platform will
+be persistent, free and accessible, and will not rely on a centralized server.
 
 \figura{Uml.png}{width=0.9\linewidth}{InteractionDiagram}{Sequence diagram of
   platform interaction}
 
 The sequence diagram of the system (Figure \ref{InteractionDiagram}) describes
-the main interactions of the supported peer review governance. Below we proceed
-to describe these interactions and the basic ideas to implement them.
+the main interactions of the platform featuring the publication process of a
+paper. Below we proceed to describe these interactions and the basic ideas to
+implement them.
 
 
 \sst{Decentralized Journal}
@@ -43,19 +43,18 @@ platform.
 
 \emph{Decentralized Journals} have a title, a description, a list of fields of
 interest and an image. This information is shown in the front page of each
-journal and it is stored within the file system. When any user wants to upload a
-new journal or edit one, they must have an ``owner'' account. The owner is
-capable to edit the journal information, give account privileges, assign
-reviewers and change the journal's owner.
+journal and it is stored within the file system. Each \ii{decentralized journal}
+has an owner capable of editing the journal information, giving account
+privileges, assigning reviewers and changing the journal's owner.
 
 \sst{Account privileges}
 \label{cha:platform-description-5}
 
-This platform allows journals to have certain ``editor'' accounts. These are
-able to assign reviewers for each paper submitted to the journal. In order to do
-so, editors have access to the ``journal management page'' in which they can
-view: papers pending of reviewers assignment, papers pending of review, papers
-published and papers rejected.
+This platform allows journals give ``editor'' privileges to desired users. These
+are able to assign reviewers for each paper submitted to the journal. In order
+to do so, editors have access to the ``journal management page'' in which they
+can view: papers pending of reviewers assignment, papers pending of review,
+papers published and papers rejected.
 
 \sst{Submit paper}
 \label{cha:platform-description-4}
@@ -72,18 +71,18 @@ published or rejected.
 \sst{Assign review task}
 \label{cha:platform-description-3}
 
-Once a reviewer is assigned for a pending paper, the reviewer has the
-possibility to accept or reject the review task. This acceptance has an
-``acceptance time limit'' in which the reviewer can communicate her decision. If
-the task is accepted, the reviewer has a deadline to submit the review. In the
-other hand, if the task is rejected, the editor can assign another reviewer.
+Once a reviewer is proposed for a pending paper, she has the possibility to
+accept or reject the review task. This acceptance has an time limit in which she
+can communicate her decision. If the task is accepted, the reviewer has a
+deadline to submit the review. In the other hand, if the task is rejected, the
+editor can assign another reviewer.
 
 \sst{Submit review}
 \label{cha:platform-description-2}
 
-Reviewers can submit their reviews for the papers they have been assigned to.
-This submission is similar to the paper's submission as it is uploaded to the
-file system and then it is assigned to the corresponding paper. Each review
+Reviewers can submit one reviews for each paper they have been assigned to. This
+process is similar to the paper's submission as it is uploaded to the file
+system and then it is assigned to the corresponding paper. Each review
 submission has a time limit established by each journal. This time limit is
 notified to the reviewers before the accept the review task. In the event of a
 reviewer sending a review when the time has expired, a penalty is applied to the
@@ -98,21 +97,22 @@ section~\ref{soa:aps}).
 As a novelty in Decentralized Science, there is the possibility to rate the
 reviews of a paper. This rating can only be done by the authors, the reviewers
 or the editors of the journal the paper have been submitted to. Each rating
-consists in an numeric value (1 or 0) representing if the rated is thinks the
+consists in an numeric value (1 or 0) representing if the rater is thinks the
 review is good or not.
 
 When deciding whether a review is good or not there are several points of
-view~\cite{daniel1993guardians,cole1979fair} and not everyone agrees. For
-this purpose, a community guideline is provided to explain what is a good
+view~\cite{daniel1993guardians,cole1979fair} and not everyone agrees. For this
+purpose, a community guideline is provided to explain what is considered a good
 review. This guidelines are created within the scientific community through
 academic papers and other sources, and they are always subject to change if the
 community requests it. In this way, this could be a solution to make all the
 votes in the system as fair as possible.
 
-Subsequently, the ``score'' of a rating affects directly to the reviewer's reputation in
-Decentralized Science. For this reason, reputation inside the system is a value
-between 1 and 0, meaning that reviewers with reputation closer to 1 are
-considered better by the community than the ones with reputation closer to 0.
+Subsequently, the ``score'' of a rating affects directly to the reviewer's
+reputation in Decentralized Science. For this reason, reputation inside the
+system is a value between 1 and 0, meaning that reviewers with reputation closer
+to 1 are considered better by the community than the ones with reputation closer
+to 0.
 
 
 \section{Platform's features}
@@ -120,15 +120,18 @@ considered better by the community than the ones with reputation closer to 0.
 Decentralized Science consists of three main components that decentralize and
 try to improve three different aspects related to scientific publication:
 \begin{enumerate}
+
+  
+\item Scientific papers are traditionally obtained or bought from a centralized
+  publisher. We propose a decentralized network to distribute academic works and
+  promote free access to science.
+
+  
 \item Peer reviewer quality and reliability information is difficult to
   predict~\cite{callaham_relationship_2007}, and it is usually hold private by
   publishers and journals. The system proposes to open this information through
   a decentralized reputation network of peer reviewers over a blockchain.
 
-
-\item Scientific papers are traditionally obtained or bought from a centralized
-  publisher. We propose a decentralized network to distribute academic works and
-  promote free access to science.
 
 \item Peer review governance communication is traditionally centralized and
   controlled by editors and publishers. Our proposal opens and decentralizes
@@ -240,11 +243,7 @@ penalized~\cite{ReinventingRigor,garfield2007evolution}. However, within a more
 transparent system, the first may be penalized as well.
 
 This transparency, combined with a distributed infrastructure for peer review,
-facilitates the exploration of new workflows~\cite{ReinventingSocioTech}. The
-following subsection explores one of these possibilities.
-
-
-
+facilitates the exploration of new workflows~\cite{ReinventingSocioTech}.
 
 
 %%%

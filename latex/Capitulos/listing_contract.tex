@@ -13,12 +13,13 @@
         owner = msg.sender;
     }
     
-    function doSomethingPublilc() public{
+    function doSomethingPublic() public{
       // This function can be called
       // once the contract is deployed
     }
     
-    function doSomethingRestricted() {ag.sender != owner){
+    function doSomethingRestricted() {
+       if ( msg.sender != owner ){
             // If the address that calls this function is not
             // the owner the transaction is cancelled
             revert();
@@ -27,7 +28,6 @@
             // This function can be called only by the owner
         }
     }
-    
 }
   
   \end{lstlisting}
