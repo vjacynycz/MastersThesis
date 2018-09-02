@@ -33,28 +33,28 @@ paper. Below we proceed to describe these interactions and the basic ideas to
 implement them.
 
 
-\sst{Decentralized Journal}
+\sst{Distributed Journal}
 \label{cha:platform-description-6}
 
 The platform is designed to fit current publication systems, offering journals
-to create a \ii{Decentralized Journal}, a smart contract (see
+to create a \ii{Distributed Journal}, a smart contract (see
 section~\ref{tb:cryptos:sm}) used to record all interaction users make with the
 platform.
 
-\emph{Decentralized Journals} have a title, a description, a list of fields of
+\emph{Distributed Journals} have a title, a description, a list of fields of
 interest and an image. This information is shown in the front page of each
-journal and it is stored within the file system. Each \ii{decentralized journal}
+journal and it is stored within the file system. Each \ii{distributed journal}
 has an owner capable of editing the journal information, giving account
 privileges, assigning reviewers and changing the journal's owner.
 
 \sst{Account privileges}
 \label{cha:platform-description-5}
 
-This platform allows journals give ``editor'' privileges to desired users. These
-are able to assign reviewers for each paper submitted to the journal. In order
-to do so, editors have access to the ``journal management page'' in which they
-can view: papers pending of reviewers assignment, papers pending of review,
-papers published and papers rejected.
+This platform allows journals to give ``editor'' privileges to desired users.
+These editors are able to assign reviewers for each paper submitted to the
+journal. In order to do so, editors have access to the ``journal management
+page'' in which they can view: papers pending of reviewers assignment, papers
+pending of review, papers published and papers rejected.
 
 \sst{Submit paper}
 \label{cha:platform-description-4}
@@ -63,7 +63,7 @@ Users may submit a paper to a journal inside Decentralized Science. First, the
 platform asks for the submission information such as the authors, an abstract
 and the file containing the paper. Next, this information is uploaded to the
 file system and assigned to the journal. Once the submission is complete, the
-paper remains pending until an editor assigns the reviewers. In this point, the
+paper remains pending until an editor assigns the reviewers. At this point, the
 paper acts as a preprint (see section~\ref{soa:aps}), remaining visible for all
 users until it is reviewed, modifying the paper's state from pending to
 published or rejected.
@@ -72,15 +72,15 @@ published or rejected.
 \label{cha:platform-description-3}
 
 Once a reviewer is proposed for a pending paper, she has the possibility to
-accept or reject the review task. This acceptance has an time limit in which she
+accept or reject the review task. This acceptance has a time limit in which she
 can communicate her decision. If the task is accepted, the reviewer has a
-deadline to submit the review. In the other hand, if the task is rejected, the
+deadline to submit the review. On the other hand, if the task is rejected, the
 editor can assign another reviewer.
 
 \sst{Submit review}
 \label{cha:platform-description-2}
 
-Reviewers can submit one reviews for each paper they have been assigned to. This
+Reviewers can submit one review for each paper they have been assigned to. This
 process is similar to the paper's submission as it is uploaded to the file
 system and then it is assigned to the corresponding paper. Each review
 submission has a time limit established by each journal. This time limit is
@@ -98,7 +98,10 @@ As a novelty in Decentralized Science, there is the possibility to rate the
 reviews of a paper. This rating can only be done by the authors, the reviewers
 or the editors of the journal the paper have been submitted to. Each rating
 consists in an numeric value (1 or 0) representing if the rater is thinks the
-review is good or not.
+review is good or not. This is the first approach to the rating for the
+reputation system, designed to simplify the process of voting if the review is
+good. In the future, more complex rating systems could be explored and
+implemented in the platform.
 
 When deciding whether a review is good or not there are several points of
 view~\cite{daniel1993guardians,cole1979fair} and not everyone agrees. For this
@@ -141,7 +144,7 @@ try to improve three different aspects related to scientific publication:
 
 These ideas are further discussed in the following sections.
 
-\subsection{Open Access By-Design}
+\subsection{Distributed and Open Access By-Design}
 \label{sec:open-access-design}
 
 Open Access focuses on the free access to scientific knowledge. While publishers
@@ -177,20 +180,20 @@ reviewers~\cite{resnick2000reputation}. Reviewers get rewarded for worthy, fair,
 and timely reviews, or penalized otherwise.
     
 This open reputation network of reviewers could increase the visibility and
-recognition of the reviewing work~\cite{rajpert-de_meyts_rewarding_2016}, as
-proposed at~\cite{peere2018}.
-
-In fact, such incentives could even be monetary, using
-crypto-currencies~\cite{Jan:2018:SDC:3184558.3191556}.
+recognition of the reviewing
+work~\cite{rajpert-de_meyts_rewarding_2016,peere2018} as nowadays most of
+reviewers remain anonymous after the peer review process.
 
 In addition, creating a public reputation network for reviewers reduces, or at
 least exposes, unfair and biased
-reviews~\cite{wenneras2001nepotism,ReinventingSocioTech}.
+reviews~\cite{wenneras2001nepotism,ReinventingSocioTech} (see section
+\ref{scb}).
 
 As seen in the previous section, in this approach the only ones allowed to send
 a rating are the authors of the paper, the editors who have assigned the
 reviewers, and the other reviewers of the article. Nevertheless, in future
-implementations, rating a review could be public.
+implementations, rating a review could be public, carefully considering the
+implications of such a decision.
 
 There are two main implications among others:
 
@@ -207,11 +210,11 @@ There are two main implications among others:
   economic benefit for carrying out the revision of a paper. By implementing a
   reputation system, payed reviews dynamics could be formed, in which the most
   reputable reviewers are paid for performing reviews at the request of the
-  journal or the authors. This is an incentive for all reviewers of the system
-  to make good reviews and gain reputation. In addition, since all interactions
-  are in Ethereum, payments and deliveries confirmations can be made through
-  personalized smart contracts, eliminating intermediaries, and making the
-  process transparent and honest.
+  journal or the authors~\cite{Jan:2018:SDC:3184558.3191556}. This is an
+  incentive for all reviewers of the system to make good reviews and gain
+  reputation. In addition, since all interactions are in Ethereum, payments and
+  deliveries confirmations can be made through personalized smart contracts,
+  eliminating intermediaries, and making the process transparent and honest.
  
 \end{itemize}
 

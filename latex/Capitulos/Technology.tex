@@ -41,28 +41,28 @@ Decentralized Science's project timeline has three different parts:
   Consequently, and as my Master's Thesis, I started the project's
   implementation and software design from October 2017 until February 2018. To
   achieve this, I used agile methodologies such as scrum and extreme programming
-  to be able to develop incremental prototypes as first approach to the
+  to be able to develop incremental prototypes as a first approach to the
   platform. During this period I have developed two functional prototypes using
   different blockchain architectures. Afterwards, I have tested them to compare
   the two implementations in terms of performance, execution cost and
   compatibility with other possible platforms. These prototypes are developed
   under an \bb{open source license} and the last version is available in
-  Github\footnote{see https://decentralized.science}. During these period I had
-  monthly reunions with my directors to update the status of the project.
+  Github\footnote{see https://decentralized.science}. During this period I had
+  reunions twice a month with my directors to update the status of the project.
   Finally, since January of 2018 I have started this manuscript as the master's
   thesis memory.
 
   \itbf{Post-project:} From March 2018 the team decided to continue working in
   the project's idea, trying to find supporters and funding to develop a final
-  platform. Decentralized Science has been in three European conferences on
-  blockchain in which several projects were discovered in the same field:
-  ETHCC2018 (Paris), SPOBC2018 (Vienna) and PEERE2018 (Rome). In addition,
-  Decentralized Science has formed a group with other similar projects called
-  Open Science Ecosystem with more than 30 projects in open science around the
-  world. Currently the team are sending scientific papers to different
-  conferences to validate the ideas of this platform with the scientific
-  community. One article has been published in a small conference and another
-  has been accepted with changes in a CORE-A conference so far (see
+  platform. Decentralized Science has been presented in three European
+  conferences on blockchain in which several projects were discovered in the
+  same field: ETHCC2018 (Paris), SPOBC2018 (Vienna) and PEERE2018 (Rome). In
+  addition, Decentralized Science has formed a group with other similar projects
+  called Open Science Ecosystem with more than 30 projects regarding open
+  science around the world. Currently the team are sending scientific papers to
+  different conferences to validate the ideas of this platform with the
+  scientific community. One paper has been published in the PEERE2018 conference and
+  another has been accepted in a CORE-A conference so far (see
   section~\ref{sec:conferences-papers}). This papers and the feedback received
   by the community allowed me to improve the platform source code and complete
   this manuscript.
@@ -78,14 +78,14 @@ ideas and give all the ideas that come to mind, no matter if they are possible
 or not~\cite{osborn1953applied}.
 
 This method is used nowadays in companies and work groups as part of the process
-of the creatfile uploadsion of a product, although there are some critics about
+of the creative process of a product, although there are some critics about
 brainstorming and in some cases instead of encouragind creativity, inhibits
 it~\cite{sutton1996brainstorming,mullen1991productivity}
 
 As part of the \bb{pre-project}(see section~\ref{methodology:timeline}) the team
 decided to use this methodology and do a brainstorming session to define what
 kind of problem should be solved with blockchain. Many ideas emerged and were
-capture into a white board without discrimination, no matter how hard or easy to
+captured into a white board without discrimination, no matter how hard or easy to
 implement they were.
 
 After saying enough ideas to fill the board we filtered the ones that were
@@ -121,7 +121,7 @@ The process is divided in two parts, customer profile and value map, each of
 these divided in other three parts:~\cite{osterwalder2014value}:
 
 \begin{itemize}
-\item \textbf{Customer profile:} This step is to identify the profile of the
+\item \textbf{Customer profile:} The goal of this step is to identify the profile of the
   final user of the platform. This section is divided in three parts: 1)
   \emph{Customer jobs:} things the customer are trying to get done, 2)
   \emph{Customer pains:} undesired costs and situations, 3) \emph{Customer
@@ -129,9 +129,9 @@ these divided in other three parts:~\cite{osterwalder2014value}:
 \item \textbf{Value Map:} This section is about what the final product has to
   have and what does not, and its also divided in: 1) \emph{Product and
     services:} which products and services are offered that help the customer
-  get a job done, 2) \emph{Pain relievers:} how the customer pains are going to
+ to get a job done, 2) \emph{Pain relievers:} how the customer pains are going to
   be alleviated, 3) \emph{Gain creators:} how the products and services create
-  customer gains
+  customer gains.
 \end{itemize}
 
 We decided to use this methodology in the \bb{pre-project}(see
@@ -165,8 +165,8 @@ Proposition Canvas:
 \subsection{Agile methodologies}
 \label{sec:agile-methodologies}
 
-Traditional software development methodologies are being eclipsed by new light
-or agile methodologies. These methodologies are characterized by continuous
+Traditional software development methodologies are being replaced by the
+so-called agile methodologies. These methodologies are characterized by continuous
 integration, iterative development and the ability to assume changes in business
 requirements~\cite{boehm2005management,livermore2008factors}.
 
@@ -178,9 +178,9 @@ responsibility of the code of all the members of the group, short and quick
 meetings, refactoring and continuous integration~\cite{theunissen2005search}.
 
 Another well-known method within agile methodologies is
-\bb{SCRUM}~\cite{rising2000scrum}, which uses two-week frameworks to perform
-development sprints and planning meetings. The use of these methodologies allows
-developers to create better quality software in shorter periods of time and are
+\bb{SCRUM}~\cite{rising2000scrum}, which uses two-week windows to perform
+development sprints and planning meetings. The use of these methodologies allow
+developers to create better quality software in shorter periods of time. They are
 designed for small teams from three to nine developers.
 
 These two methodologies were used to achieve the \bb{project implementation}
@@ -192,7 +192,7 @@ two weeks I started a development cycle consisting on programming the next
 prototype in the first week and running tests in the second week.
 
 During the whole \bb{project implementation} phase, meetings were held with the
-thesis directors at least twice a month to discuss the progress made and set
+thesis directors twice a month to discuss the progress made and set
 short-term objectives.
 
 As a complement to the previous methodologies, \bb{Kanban} was used to manage
@@ -231,9 +231,9 @@ exchange files~\cite{benet2014ipfs}.
 
 IPFS provides a robust, distributed and secure way to store files in a
 decentralized network. These files are identified by a string of characters and
-each identifier is unique. In order to achieve this IPFS forms the hash of the
-data inside the file (a cheap computational operation) and outputs its
-identifier. This hash behaves like a link within the IPFS network that allows
+each identifier is unique. In order to achieve this, IPFS computes the hash of the
+data inside the file (a cheap computational operation) and uses this hash as its
+identifier. It behaves like a link within the IPFS network that allows
 users to identify and recover the file.
 
 This feature implies that two identical data files have the same hash, so they
@@ -254,9 +254,9 @@ called \emph{hash}. The hash acts as a pointer that directs to the table's
 information, allowing users to find it in a large database without performing an
 exhaustive search~\cite{kaluszka2010distributed}.
 
-In distributed hash tables, hash strings are keys that identifies a value in one
+In distributed hash tables, hash strings are keys that identify a value in one
 or more nodes. Any node can use a key to retrieve data. This system includes a
-data structure called ``keyspace'' that is a set of all possible keys, which is
+data structure called ``keyspace'' that is the set of all possible keys, which is
 broadcasted across the nodes in the system. The mapping of the keys is made by a
 function that calculates the \ii{keyspace} of each node and shares it with its
 neighbors. These nodes also have and identifier and a set of identifiers
@@ -276,7 +276,7 @@ create its distributed file system.
 \subsubsection*{BitTorrent - File sharing}
 \label{tech:sec:ipfs:bt}
 BitTorrent~\cite{cohen2003incentives} is a P2P file sharing system used
-worldwide. In this system, files are divides into very small chucks of data, and
+worldwide. In this system, files are divided into very small chucks of data, and
 are shared in a peer-to-peer network. Each peer aims to maximize its download
 rate by connecting to the best peers, meaning that peers with faster network
 speed will be better than ones with slow connectivity. In BitTorrent's network,
@@ -331,7 +331,7 @@ Git are~\cite{benet2014ipfs}:
 \subsubsection*{Self-Certifying File Systems}
 \label{tech:sec:ipfs:scfs}
 
-\todo{explain more} A self-certifying file system (\emph{SCFS}) is a secure and
+A self-certifying file system (\emph{SCFS}) is a secure and
 decentralized file system that uses public keys to map file names, separating
 key management from file system security. Servers have a public key and clients
 use the server public key to authenticate the server and establish a secure
@@ -352,21 +352,21 @@ thousands of nodes.
 \label{tech:sec:ethereum}
 
 As seen in the section~\ref{tb:eth}, Ethereum is a technology that allows its
-users create fully decentralized and autonomous applications. These applications
+users to create fully decentralized and autonomous applications. These applications
 (called DApps) are smart contracts that are uploaded to the Ethereum blockchain,
 so it is not necessary to have a server to run or communicate with these
 contracts.
 
 Ethereum is used as \ii{backend} in Decentralized Science. All the internal
-operation of the platform is programmed in a smart contract and is executed from
-blockchain. This implies several important things:
+operation of the platform is programmed in a smart contract and is executed from the
+blockchain. This implies several important features:
 
 \begin{itemize}
   \itbf{Open source:} All the source code uploaded to Ethereum is free, public
   and anyone can fork it in other projects.
 
-  \ifbf{Auditable interactions:} All calls and interactions to the platform are
-  registered in blockchain, making the entire process of scientific publication
+  \itbf{Auditable interactions:} All calls and interactions to the platform are
+  registered in the blockchain, making the entire process of scientific publication
   auditable.
 
   \itbf{Distributed platform:} All the source code is executed in the Ethereum's
@@ -398,14 +398,14 @@ through a virtual machine that simulates the blockchain's behavior called EVM
 (\emph{Ethereum Virtual Machine})~\cite{hildenbrandt2017kevm}. When deploying a
 contract with this platform, a series of HTML elements are generated, simulating
 a real deployment and allowing developers to interact with the contract, without
-the need of developing a frontend to try the contract behavior.
+the need of developing a front-end to test the contract behavior.
 
 Remix also has a series of interesting features: a debugger to follow the
 execution process of a transaction, a gas calculator that estimates the gas cost
 of each transaction, a code analizer to detect possible vulnerabilities and an
 ABI export system (see section \ref{jsmm}).
 
-This tool facilitate the process of smart contracts developments, since the web
+This tool facilitate the process of developing smart contracts, since the web
 service allows to try different implementations of the same contract doing only
 small changes, without the need of installing any software (see figure
 ~\ref{tech:sec:remix:sc}).
@@ -418,7 +418,7 @@ small changes, without the need of installing any software (see figure
 
 Testrpc is a Node.js based Ethereum client for testing a development. It
 simulates an Ethereum client behavior using the ethereum.js library. Once
-installed throug \code{npm}, it can lauched through the linux terminal with the
+installed through \code{npm}, it can be lauched through the linux terminal with the
 command \code{testrpc} and offers the developers a series of interesting
 features:
 
@@ -431,7 +431,7 @@ features:
   \code{testrpc -a 1000}
 
   \itbf{View transactions:} Once testrpc is lauched, developers can see through
-  the console all the transactions made with the blockchain in a user-frendly
+  the console all the transactions made with the blockchain in a user-friendly
   way. It also has a gas\footnote{Amount of money needed to execute a
     transaction (see section~\ref{ts:at})} estimator, a tool that calculate the
   price of each transaction (see figure \ref{testrpc:sc}).
@@ -455,7 +455,7 @@ to communicate with it. There are two different ways to achieve this. The first
 one is to install an specialized web browser like
 AlethZero\footnote{https://github.com/ethereum/alethzero},
 Mist\footnote{https://github.com/ethereum/mist} or
-Brave\footnote{https://brave.com/} that provide the libraries needed to interact
+Brave\footnote{https://brave.com/} that provides the libraries needed to interact
 with smart contracts and connects to the blockchain automatically. The second
 one is installing an extension like Metamask\footnote{https://metamask.io/} as
 an extension of the web browser.
@@ -463,7 +463,7 @@ an extension of the web browser.
 
 Metamask is a web browser extension (available for Chrome, Firefox, and Opera)
 that allows its users to connect both to the Ethereum network or a custom test
-net. It contains the mechanism needed to make transactions and communicate with
+net. It contains the mechanisms needed to make transactions and communicate with
 smart contracts in the blockchain. To use it, users only need to install the
 extension from the Metamask homepage and configure it with an Ethereum account.
 Metamask also allows the creation of new accounts, but in order to make
@@ -471,7 +471,9 @@ transactions with the main Ethereum blockchain, these accounts must have enough
 funds.
 
 Thus, Metamask not only acts as a bridge between a web browser and the Ethereum
-network, it also works as a wallet and supports Ethereum's official tokens.
+network, it also works as a wallet and supports Ethereum's official tokens. In
+order to make transactions with Metamask through a web page, this web page
+should use JavaScript. 
 
 JavaScript is used to connect to a smart contract address and be able to call to
 specific functions of it. To do so, the JavaScript code must have two important
@@ -483,7 +485,7 @@ data:
   stored, because all the interactions with the platform are made through
   transactions to this address.
 \item \textbf{Contract's ABI:} An ABI (Application Binary Interface) is a data
-  structure in which JavaScript can find all the methods a contract has. Each
+  structure in which JavaScript can find all the methods a contract provides. Each
   method defines its inputs, outputs, type, if its payable and a state.
   JavaScript uses this information to build the transactions to call these
   methods (see listing \ref{abi}).

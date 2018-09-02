@@ -4,6 +4,10 @@
 \figura{privacyReview.jpg}{width=0.7\linewidth}{PrivacyReviewRating}{Review
   privacy models}
 
+All interactions with the platform are registered in a chain of blocks, which
+means they are public. This could be a major problem when it comes to anonymity
+in the peer review process.
+
 Anonymity of reviewers and authors in peer reviews is traditionally used to
 improve the fairness of the process. Thanks to single blind reviews, anonymous
 reviewers can honestly criticize a paper without fearing the reactions of the
@@ -19,9 +23,9 @@ to the lack of consequences.
 
 As mentioned in previous sections, all the information is stored in either IPFS
 (files) or Ethereum (interactions). All this information is public for everyone,
-which can be privacy problem for the reviewers if they do not want to reveal
-their identity. Exploring different possible configurations for each model of
-peer review may solve this problem.
+which can be an important privacy problem for the reviewers if they do not want
+to reveal their identity. Exploring different possible configurations for each
+model of peer review may solve this problem.
 
 Each of the anonymity options of the system requires different solutions, which
 are discussed bellow. The question of whether we can keep the benefits of blind
@@ -388,10 +392,11 @@ Next, the previously mentioned technologies are explained.
   betting smart contract will first ask all participants to pay their bets and
   afterwards distribute the prices. This paper calls this technique "collateral
   pattern", and proposes its use to provide accountability (Challenge
-  \ref{ch:accountability}) to the reviewers of the reputation system (Section
-  \ref{sec:reputation}). For each rating a reviewer may obtain, the reviewer
-  must spend as much reputation as she may lose. This encourages the claiming of
-  bad ratings, since not claiming them may result in a bigger loss.
+  \ref{ch:accountability}) to the reviewers of the reputation system (see
+  section~\ref{sec:distr-revi-reput}). For each rating a reviewer may obtain,
+  the reviewer must spend as much reputation as she may lose. This encourages
+  the claiming of bad ratings, since not claiming them may result in a bigger
+  loss.
   % \comse{No queda claro como se podría participar en el sistema por primera
   % vez, sin reputación que poner en collateral. No tenemos solución, lo
   % enumeraría como problema a solucionar.}\comat{Es cierto, aunque no se si

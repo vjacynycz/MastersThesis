@@ -12,7 +12,7 @@
   \end{Fuente}
 \end{FraseCelebre}
 
-The platform's architecture consists in two main parts as explained in section
+The platform architecture consists of two main parts as explained in section
 \ref{tech}, a decentralized file system in which users can upload all the files
 using IPFS (see section \ref{tech:sec:ipfs}), and a smart contact to register
 all interactions of the users with the platform (see
@@ -37,11 +37,11 @@ The first prototype of Decentralized Science was based on ``Structs'' to store
 the information inside the blockchain. Structs in Ethereum are similar to
 structs in other programming languages such as Java or C , a composite data type
 consisting in a group of variables placed in a block of memory. Structs in
-Ethereum allows users to ``pack'' information in the contract in a solid and
-clear way, facilitating the code clarity and comprehensibility. In addition,
-storing information with this data type can suppose an improvement in the
-execution costs, making interactions\footnote{Each interaction with the platform
-  has a small cost (see section~\ref{ts:at})} with the platform cheaper.
+Ethereum allow users to ``pack'' information in the contract in a solid and
+clear way, facilitating the code comprehensibility. In addition, storing
+information with this data type can suppose an improvement in the execution
+costs, making interactions\footnote{Each interaction with the platform has a
+  small cost (see section~\ref{ts:at})} with the platform cheaper.
 
 The information of this implementation is stored through an array of structs. In
 order to access a particular data (e.g. a paper within the platform), users only
@@ -62,7 +62,7 @@ As explained in the section~\ref{sec:agile-methodologies}, one of the most
 important challenges in designing a contract is to reduce the cost of
 transactions, since the cost of these can be very high if the contract design is
 inefficient~\cite{croman2016scaling}. Developing different implementations of
-the same interaction in a small prototype allows developers to test each
+the same interaction in a small prototype allow developers to test each
 transaction in several different ways. Furthermore, inserting data in the
 blockchain is very expensive, so it is advisable to use the data structures that
 Ethereum offers to reduce the transaction cost. Section~\ref{arch:trans}
@@ -73,15 +73,14 @@ reduce these costs and what solutions have been implemented.
   diagram of the contracts structure}
 
 The design of this first approach has been fragmented into 4 smart contracts
-that allow to both reduce the cost of transactions, and fragment the information
+that allow both to reduce the cost of transactions, and fragment the information
 of the platform, as seen in figure \ref{contracts:uml}. This fragmentation
 allows other smart contracts interact with the information stored in
 Decentralized Science, without having to rely on a single contract that
-centralizes all the transactions, possibly causing a significant number of
-transactions to the same address.
-
-\subsection*{Structs description}
-\label{sec:structs-impl-contr}
+centralizes all the transactions. This fragmentation lets other users to
+``fork'' part of the platform and design different implementations without
+altering all the system (e.g. The reputation system can be replaced without
+changing the rest of the platform).
 
 This implementation uses five different structs to store the information inside
 the blockchain:
@@ -101,8 +100,10 @@ the blockchain:
   \itbf{Review:} This struct is used inside the Paper struct to save its
   reviews. In order to do so, it contains a Multihash as a reference to the
   review file inside IPFS, the Ethereum's address of the reviewer and an integer
-  number between 1 and 4 showing the level of acceptance/rejection of the
-  review.
+  number between 1 and 7 showing the level of acceptance/rejection of the review
+  meaning: strong accept (7), accept (6), weak accept (5), borderline (4), weak
+  reject (3), reject (2), strong reject (1). As explained before, this system is
+  part of the first approach and can be changed in the future.
 
   \itbf{Rating:} As part of the reputation system mentioned in
   chapter~\ref{cha:platform-description} each review can be rated to give or
@@ -144,7 +145,7 @@ This smart contract stores the IPFS addresses of the papers and the reviews and
 controls if the papers are published.
 
 To store this data, this contract saves a reference to the IPFS addresses. This
-reference is the result of the data transformation is explained in the
+reference is the result of the data transformation that is explained in the
 section~\ref{arch:trans}, and it is used to identify a paper within
 Decentralized Science's platform.
 
@@ -159,7 +160,7 @@ This smart contract stores all the transactions about the ratings of the reviews
 made by the reviewers, and it is the one capable to give reputation to each one
 of them.
 
-Each ratring is represented by a struct that has: a hash that univocally
+Each rating is represented by a struct that has: a hash that univocally
 identifies the review of a paper made by a reviewer, the address of the person
 making the rating and a score that represents the reputation that is given to
 the reviewer.
@@ -176,24 +177,20 @@ editors who want to find new reviewers to carry out the peer review process.
 \subsection*{First prototype problems}
 \label{sec:first-prot-probl}
 
-The most important problem that the first prototype had was that the papers were
-centralized in the same contract. This centralization involved having to send
-many requests to the same Ethereum address, which could mean an increase in
-transaction costs.
+Using arrays and data structs implied that the data were stored in a linear way,
+something that is inadvisable in terms of scalability. This design could lead to
+a loss of performance on the platform when a critical number of papers is
+reached. This loss implies an increase over the transaction costs and,
+therefore, using the platform would be more expensive. The second prototype uses
+hash maps instead of arrays to store the information, a more efficient and
+cheaper way to store data in blockchain.
 
 Another disadvantage of this implementation is that each of the papers was
 identified by the index within the library's contract array. Identifying a paper
 with just one number within the system did not have any advantage over the
-identifiers for today's digital content. The second prototype tries to alleviate
-this problem using Ethereum addresses as a paper unique identifier.
-
-Finally, using arrays and data strucs implied that the data were stored in a
-linear way, something that is inadvisable in terms of scalability. This design
-could mean a loss of performance of the platform when a critical number of
-papers was reached. The second prototype uses hash maps instead of arrays to
-store the information, a more efficient and cheaper way to store data in
-blockchain.
-
+identifiers for today's digital content. The second prototype tries improve this
+disadvantage using Ethereum smart contract and addresses. Creating a paper smart
+contract in Ethereum offers several advantages: explained in the next section.
 
 \section{Second prototype}
 \label{sec:second-prototype}
@@ -210,7 +207,7 @@ not been published.
   prototype's diagram of the contracts structure}
 
 As shown in the figure~\ref{contracts:uml2}, the contract structure has been
-modified to eliminate the use of strucs except the one used to store the IPFS
+modified to eliminate the use of structs except the one used to store the IPFS
 addresses.
 
 In addition, the arrays have been replaced by ``mappings'', a type of data in
@@ -226,8 +223,8 @@ the publication process. It has an owner who controls the journal and a series
 of editors who are responsible for assigning the reviewers of the articles.
 
 The main difference with the previous version is that every time someone sends a
-paper to the journal, it creates a paper smart contract the submission
-information.
+paper to the journal, it creates a paper smart contract containing the
+submission information.
 
 Journal's owners can set time limits for the confirmation time (explained in
 chapter \ref{cha:platform-description}) and for the review time. This
@@ -259,6 +256,16 @@ Besides, each time a review is received, the paper contract allows a rating to
 be submitted. In this way, it is the paper itself that controls who can perform
 the rating and who has done it already.
 
+The paper contract also offers the possibility to receive money transactions, as
+a smart contact can transfer and store Ether\footnote{Ether is Ethereum's
+  currency (see section~\ref{tb:eth}})}. This feature could open new dynamics of
+research funding, where researchers receive money for their projects through
+academic papers within the platform.
+
+Finally, the papers contract addresses can suppose a new citation system for the
+academic process, in which the papers have links to the paper addresses they
+cite.
+
 \sst{RepHub contract}
 
 This contract is the reputation system, responsible for storing the reputation
@@ -271,6 +278,10 @@ between the reputation system and the paper to indicate that the person has made
 a rating. Once this is done, this contract calculates the reviewer's reputation
 and stores it within the system.
 
+The platform uses these contracts to perform all design interactions.
+Section~\ref{sec:funct-requ-activ} explores more in depth each of these with
+activity diagrams.
+
 \section{Ethereum addresses in Decentralized Science}
 \label{sec:ether-addr-decentr}
 
@@ -278,7 +289,7 @@ and stores it within the system.
   of Ethereum's addresses in Decentralized Science}
 
 Ethereum addresses (see section~\ref{ts:at}) are strings of characters that
-identify an individual or a contract in the blockchain. These addresses are
+identify an individual or a contracts in the blockchain. These addresses are
 unique, meaning that two people or contract cannot have the same address. As
 mentioned in this chapter, inside Decentralized Science users are authors,
 reviewers, editors or some of these roles simultaneously. This implies that an
@@ -341,7 +352,7 @@ presented in this work is a proof of concept that will evolve as new systems are
 designed to appease the problems that have arisen.
 
 
-\section{Functional requirements and activity diagrams}
+\section{Platform interactions and activity diagrams}
 \label{sec:funct-requ-activ}
 
 In the following section we will discuss the functional requirements and the
@@ -350,20 +361,20 @@ platform.
 
 Each of these interactions must be done through an Ethereum personal address, as
 it works as an identifier of the user performing it. For this reason, all of the
-following activity diagrams asks the user for an Ethereum address. In case a new
+following activity diagrams ask the user for an Ethereum address. In case a new
 user uses the platform does not have a personal address, the platform has the
-possibility to create one for that user through Metamask\footnote{Used to
+possibility to create one for that user through the Metamask\footnote{Used to
   connect a web browser to Ethereum (see section~\ref{jsmm})} extension.
-Furthermore, in order to complete each transaction, an essential requirement it
+Furthermore, in order to complete each transaction, an essential requirement is
 that the user must have an Ethereum account and Metamask installed.
 
 \subsection*{Send paper}
 
-Once an user has an Ethereum account users may send papers. The platform asks
-for the authors and for the file through a web form. Javascript collects this
+Once an user has an Ethereum account she may send papers. The platform asks for
+the authors and for the file through a web form. Javascript collects this
 information and uploads it to the file system, generating an IPFS file address.
-Finally, the platform creates a transaction with this data and sends
-them to the platform.
+Finally, the platform creates a transaction with this data and sends it to the
+platform.
 
 \figuraAD{AD1}% 1. Table ID
 {Send Paper}% 2. Table title
@@ -382,10 +393,10 @@ them to the platform.
 
 After receiving a paper, an editor has the possibility to assign reviewers. To
 do so, there must be a journal in the platform and the user must have editor
-privileges. Next, the editor assigns the reviewers of the paper and the platform
-creates the review tasks for each reviewer. These tasks can be accepted or
-rejected by the reviewers and they can have a ``deadline'' to receive the
-acceptance.
+privileges. Next, the editor assigns the reviewers (with which she has
+previously contacted) of the paper and the platform creates the review tasks for
+each reviewer. These tasks can be accepted or rejected by the reviewers and they
+can have a ``deadline'' to receive the acceptance.
 
 \figuraAD{AD2}% 1. Table ID
 {Assign Reviewer}% 2. Table title
@@ -404,7 +415,7 @@ task. Before doing so the reviewer must have an Ethereum address. Then, when a
 task is received, the reviewer has a time limit to accept it. If it is not
 accepted, the editor can assign another reviewer. In the other hand, if it is
 accepted, a transaction is created and the reviewer is registered in the paper
-to be able to send his review.
+contract to be able to send his review.
 
 \figuraAD{AD3}% 1. Table ID
 {Accept Review task}% 2. Table title
@@ -423,9 +434,10 @@ to be able to send his review.
 Sending a review is similar to sending a paper. The main difference is that the
 reviewer, once she accepts the review task, has a deadline to submit a review.
 If the review is sent before the time limit, the file containing the review is
-uploaded to IPFS and the platform created an Ethereum transaction with this
-information. Otherwise, if the review is not sent, the reviewer loose reputation
-within the reputation system.
+uploaded to IPFS and the platform creates an Ethereum transaction with this
+information and the acceptance level (see section~\ref{archAndDes}). Otherwise,
+if the review is not sent, the reviewer looses reputation within the reputation
+system.
 
 % \begin{minipage}{\linewidth}
 \figuraAD{AD4}% 1. Table ID
@@ -450,7 +462,7 @@ section~\ref{rep:system}.
 \figuraAD{AD5}% 1. Table ID
 {Rate Review}% 2. Table title
 {The authorized address submits a rating about a review}% 3. Table description
-{An integer from 1 to 5}% 4. Inputs
+{An integer from 0 to 1}% 4. Inputs
 {_}% 5. Outputs
 {The journal's contract address exists}% 6. Requirements
 {The address can submit a review and has not done it yet}% 7. Preconditions
