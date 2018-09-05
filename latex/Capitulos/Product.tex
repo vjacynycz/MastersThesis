@@ -46,9 +46,6 @@ main sections:
   popularity. Showing the most popular journals first (i.e. journals with the
   most publications).
 
-  \itbf{A list of filters:} A list showing the most relevant topics containing a
-  link to the topic search page.
-
   \itbf{Register journal link:} A link to the journal registration page.
 
 \end{itemize}
@@ -85,10 +82,10 @@ The journal page contains all the information about the journal:
 \item Title of the journal.
 \item A short description about the journal.
 \item An image of the journals cover.
-\item Tags of the journal with links to a search of each one.
-\item Latest papers published and a link to a list to all the papers of the
-  journal.
-\item A link to the paper submission page.
+\item Latest papers published and submitted (preprints) with a corresponding
+  link to IPDF.
+ \item A list to all the papers of the  journal.
+\item A link to the paper submission page (see figure~\ref{poc:subm}).
 \item The average review time of the papers published in the journal.
 \end{itemize}
 
@@ -96,6 +93,8 @@ The journal page contains all the information about the journal:
 {width=0.9\linewidth}%
 {Journal page}%
 {poc:j}
+
+\figuraHere{submission.png} {width=0.9\linewidth}{Submission page}{poc:subm}
 
 The figure~\ref{poc:j} shows the journal's page with all the information
 mentioned above. The HTML connects to the journal's Ethereum address to get the
@@ -111,11 +110,11 @@ A paper page contains useful information about the paper:
 \item Title.
 \item Authors, with links to each author page.
 \item Abstact of the paper.
-\item Topics with it's corresponding links.
 \item A download link for the paper and links to download each draft, offering
   the possibillity to view the previous work of the researchers.
-\item The reviews from the reviewers showing the author, the text of the review
-  and the acceptance level. Each review is also a link to the reviewer's page.
+\item The reviews from the reviewers showing the author, the IPFS link with the text of the review
+  and the acceptance level. Each review can also be rated if the user's address
+  can send  the rating.
 \end{itemize}
 \figuraHere{paper.png}%
 {width=0.9\linewidth}%
@@ -175,7 +174,7 @@ review.
 
 \figuraHere{assign.png}%
 {width=0.97\linewidth}%
-{Assign modal from journal's management page}%
+{Assign modal window from journal's management page}%
 {poc:am}
 
 
