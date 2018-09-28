@@ -1,0 +1,131 @@
+\documentclass{beamer}
+
+\usetheme{Madrid} 
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{subsection in toc}{
+  \hspace{5mm}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection
+  \breakhere}
+\setbeamertemplate{subsubsection in toc}{}
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+
+
+\AtBeginSubsubsection[]{
+  \begin{frame}
+   \frametitle{Parte \insertsectionnumber: \insertsectionhead}
+    
+    \begin{center}
+      \huge{\insertsubsectionhead}
+    \end{center}
+    \vspace{5mm}
+    \begin{center}
+      \begin{beamercolorbox}[sep=8pt,center,shadow=true]{title}
+        \usebeamerfont{title}
+        \insertsubsubsectionhead\par%\\
+      \end{beamercolorbox}
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\ib}[1]{\item \textbf{#1} }
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{import}
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{media9}    
+\usepackage{etoolbox} 
+\usepackage{tikz}
+\usepackage{subcaption}
+
+\usepackage[sort&compress,sectionbib]{natbib}
+\bibliographystyle{IEEEtranN}
+
+\newcommand{\framei}[4]{
+  \begin{frame}{#1}
+    \begin{center}
+      \includegraphics[width=0.9\linewidth,height=0.7
+      \textheight,keepaspectratio]{img/#2}\\
+      #3~\cite{#4}.
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\framein}[3]{
+  \begin{frame}{#1}
+    \begin{center}
+      \includegraphics[width=0.9\linewidth,height=0.7
+      \textheight,keepaspectratio]{img/#2}\\
+      #3.
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\framet}[3]{
+  \begin{frame}{#1}
+    #2
+  \end{frame}
+}
+
+\setbeamercolor{titlelike}{parent=structure}
+
+\title[Decentralized Science]{\includegraphics[width=0.6\linewidth]{img/logo.jpg}}
+
+\author[V. Jacynycz]{Viktor Jacynycz Garc\'ia}
+
+\institute[UCM] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+  Grupo Grasia\\
+  Facultad de informática\\
+  Universidad Complutense de Madrid \\ % Your institution for the title page
+  \medskip
+  \textit{vsjg@ucm.es} % Your email address
+}
+\date{} % Date, can be changed to a custom date
+
+\setcitestyle{numbers,square}
+% ~\citestyle{nature}
+\bibliographystyle{unsrtnat}
+
+\begin{document}
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\framet{A distributed publication system}{
+Decentralized Science is a platform that tries to distribute the current publication system (from sending the first draft to the final publication) through IPFS and Ethereum.
+}
+
+\framet{Goals}{
+\begin{itemize}
+  \item \textbf{Develop} an open-source and decetralized platform.
+  \item Create a \textbf{reputation system} for reviewers.
+  \item \textbf{Reduce} time and monetary costs of publication.
+  \item Explore \textbf{alternative metrics} for journals, papers and researchers.
+  \item \textbf{Prevent} possible problems and unfairness in the peer review process.
+\end{itemize}
+}
+
+\framet{Strengths}{
+\begin{itemize}
+  \item Open access by design.
+  \item Reviewer's Reputation System.
+  \item Transparent Governance.
+\end{itemize}
+}
+
+\framet{Open Access by Design}{a}
+
+\framet{Reputation System}{a}
+
+\framet{Transparent Governance}{a}
+
+%\section{Referencias}
+%\begin{frame}[allowframebreaks]{Referencias}
+%  \bibliography{references}
+%
+%  \printbibliography
+%\end{frame}
+
+\end{document} 

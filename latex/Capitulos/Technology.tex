@@ -40,17 +40,17 @@ Decentralized Science's project timeline has three different parts:
   knowledge in blockchain, I decided to continue with the project on my own.
   Consequently, and as my Master's Thesis, I started the project's
   implementation and software design from October 2017 until February 2018. To
-  achieve this, I used agile methodologies such as scrum and extreme programming
-  to be able to develop incremental prototypes as a first approach to the
-  platform. During this period I have developed two functional prototypes using
-  different blockchain architectures. Afterwards, I have tested them to compare
-  the two implementations in terms of performance, execution cost and
-  compatibility with other possible platforms. These prototypes are developed
-  under an \bb{open source license} and the last version is available in
-  Github\footnote{see https://decentralized.science}. During this period I had
-  reunions twice a month with my directors to update the status of the project.
-  Finally, since January of 2018 I have started this manuscript as the master's
-  thesis memory.
+  achieve this, I used a development system based on agile methodologies such as
+  SCRUM and Extreme Programming to be able to develop incremental prototypes as
+  a first approach to the platform. During this period I have developed two
+  functional prototypes using different blockchain architectures. Afterwards, I
+  have tested them to compare the two implementations in terms of performance,
+  execution cost and compatibility with other possible platforms. These
+  prototypes are developed under an \bb{open source license} and the last
+  version is available in Github\footnote{see https://decentralized.science}.
+  During this period I had reunions twice a month with my directors to update
+  the status of the project. Finally, since January of 2018 I have started this
+  manuscript as the master's thesis memory.
 
   \itbf{Post-project:} From March 2018 the team decided to continue working in
   the project's idea, trying to find supporters and funding to develop a final
@@ -61,8 +61,8 @@ Decentralized Science's project timeline has three different parts:
   called Open Science Ecosystem with more than 30 projects regarding open
   science around the world. Currently the team are sending scientific papers to
   different conferences to validate the ideas of this platform with the
-  scientific community. One paper has been published in the PEERE2018 conference and
-  another has been accepted in a CORE-A conference so far (see
+  scientific community. One paper has been published in the PEERE2018 conference
+  and another has been accepted in a CORE-A conference so far (see
   section~\ref{sec:conferences-papers}). This papers and the feedback received
   by the community allowed me to improve the platform source code and complete
   this manuscript.
@@ -85,8 +85,8 @@ it~\cite{sutton1996brainstorming,mullen1991productivity}
 As part of the \bb{pre-project}(see section~\ref{methodology:timeline}) the team
 decided to use this methodology and do a brainstorming session to define what
 kind of problem should be solved with blockchain. Many ideas emerged and were
-captured into a white board without discrimination, no matter how hard or easy to
-implement they were.
+captured into a white board without discrimination, no matter how hard or easy
+to implement they were.
 
 After saying enough ideas to fill the board we filtered the ones that were
 impossible to achieve. Then, each one voted the best three, making a ranking of
@@ -121,24 +121,24 @@ The process is divided in two parts, customer profile and value map, each of
 these divided in other three parts:~\cite{osterwalder2014value}:
 
 \begin{itemize}
-\item \textbf{Customer profile:} The goal of this step is to identify the profile of the
-  final user of the platform. This section is divided in three parts: 1)
-  \emph{Customer jobs:} things the customer are trying to get done, 2)
+\item \textbf{Customer profile:} The goal of this step is to identify the
+  profile of the final user of the platform. This section is divided in three
+  parts: 1) \emph{Customer jobs:} things the customer are trying to get done, 2)
   \emph{Customer pains:} undesired costs and situations, 3) \emph{Customer
     gains:} benefits, social gains and cost savings expected.
 \item \textbf{Value Map:} This section is about what the final product has to
   have and what does not, and its also divided in: 1) \emph{Product and
-    services:} which products and services are offered that help the customer
- to get a job done, 2) \emph{Pain relievers:} how the customer pains are going to
+    services:} which products and services are offered that help the customer to
+  get a job done, 2) \emph{Pain relievers:} how the customer pains are going to
   be alleviated, 3) \emph{Gain creators:} how the products and services create
   customer gains.
 \end{itemize}
 
-We decided to use this methodology in the \bb{pre-project}(see
+We decided to use this methodology in the \bb{pre-project} (see
 section~\ref{methodology:timeline}) for the definition of the final platform,
 since it established the general development framework of the application. As a
 result, the following items were the most relevant of the project's Value
-Proposition Canvas:
+Proposition Canvas (see figure~\ref{vpcimage}):
 
 \begin{itemize}
   \itbf{Customer Jobs:} Get recognition as researcher, share a research work,
@@ -151,9 +151,9 @@ Proposition Canvas:
   \itbf{Customer Gains:} Get to know other researchers, get knowledge, love for
   a research field, impact in the world, recognition as researcher.
 
-  \itbf{Product and services:} Paper auto-formatter, facebook of researchers,
+  \itbf{Product and services:} Paper auto-formatter, Facebook of researchers,
   distributed journal, automated state of the art generator, universal
-  publishing platform, github for researchers.
+  publishing platform, Github for researchers.
 
   \itbf{Pain relievers:} Reviewer reputation, faster reviews, get donations for
   research, public and fair reviews, easier accreditation system.
@@ -166,9 +166,9 @@ Proposition Canvas:
 \label{sec:agile-methodologies}
 
 Traditional software development methodologies are being replaced by the
-so-called agile methodologies. These methodologies are characterized by continuous
-integration, iterative development and the ability to assume changes in business
-requirements~\cite{boehm2005management,livermore2008factors}.
+so-called agile methodologies. These methodologies are characterized by
+continuous integration, iterative development and the ability to assume changes
+in business requirements~\cite{boehm2005management,livermore2008factors}.
 
 One of the most popular is known as \bb{Extreme
   Programming}~\cite{lindstrom2004extreme} based on a series of basic concepts
@@ -178,22 +178,23 @@ responsibility of the code of all the members of the group, short and quick
 meetings, refactoring and continuous integration~\cite{theunissen2005search}.
 
 Another well-known method within agile methodologies is
-\bb{SCRUM}~\cite{rising2000scrum}, which uses two-week windows to perform
+\bb{SCRUM}~\cite{rising2000scrum}, which uses two week windows to perform
 development sprints and planning meetings. The use of these methodologies allow
-developers to create better quality software in shorter periods of time. They are
-designed for small teams from three to nine developers.
+developers to create better quality software in shorter periods of time. They
+are designed for small teams from three to nine developers.
 
-These two methodologies were used to achieve the \bb{project implementation}
-(see section~\ref{methodology:timeline}). Programming smart contracts in
-Ethereum is a difficult task because once the source code is deployed in the
-blockchain, there is no way to change it. For this reason, these methodologies
-allowed me to develop small prototypes and run several test for each one. Every
-two weeks I started a development cycle consisting on programming the next
-prototype in the first week and running tests in the second week.
+These two methodologies were a great influence to the methodology used to
+achieve the \bb{project implementation} (see
+section~\ref{methodology:timeline}). Programming smart contracts in Ethereum is
+a difficult task because once the source code is deployed in the blockchain,
+there is no way to change it. For this reason, the methodology used allowed me to
+develop small prototypes and run several test for each one. Every two weeks I
+started a development cycle consisting on programming the next prototype in the
+first week and running tests in the second week.
 
 During the whole \bb{project implementation} phase, meetings were held with the
-thesis directors twice a month to discuss the progress made and set
-short-term objectives.
+thesis directors twice a month to discuss the progress made and set short-term
+objectives.
 
 As a complement to the previous methodologies, \bb{Kanban} was used to manage
 the status of the project throughout the development process. Kanban was created
@@ -231,10 +232,10 @@ exchange files~\cite{benet2014ipfs}.
 
 IPFS provides a robust, distributed and secure way to store files in a
 decentralized network. These files are identified by a string of characters and
-each identifier is unique. In order to achieve this, IPFS computes the hash of the
-data inside the file (a cheap computational operation) and uses this hash as its
-identifier. It behaves like a link within the IPFS network that allows
-users to identify and recover the file.
+each identifier is unique. In order to achieve this, IPFS computes the hash of
+the data inside the file (a cheap computational operation) and uses this hash as
+its identifier. It behaves like a link within the IPFS network that allows users
+to identify and recover the file.
 
 This feature implies that two identical data files have the same hash, so they
 have the same IPFS address, eliminating duplicates in an easy, secure and fast
@@ -256,10 +257,10 @@ exhaustive search~\cite{kaluszka2010distributed}.
 
 In distributed hash tables, hash strings are keys that identify a value in one
 or more nodes. Any node can use a key to retrieve data. This system includes a
-data structure called ``keyspace'' that is the set of all possible keys, which is
-broadcasted across the nodes in the system. The mapping of the keys is made by a
-function that calculates the \ii{keyspace} of each node and shares it with its
-neighbors. These nodes also have and identifier and a set of identifiers
+data structure called ``keyspace'' that is the set of all possible keys, which
+is broadcasted across the nodes in the system. The mapping of the keys is made
+by a function that calculates the \ii{keyspace} of each node and shares it with
+its neighbors. These nodes also have and identifier and a set of identifiers
 pointing to all its neighbors nodes. If a node is removed from the network, only
 a small portion of the data must be recovered by other
 nodes\cite{kaluszka2010distributed}.
@@ -331,12 +332,12 @@ Git are~\cite{benet2014ipfs}:
 \subsubsection*{Self-Certifying File Systems}
 \label{tech:sec:ipfs:scfs}
 
-A self-certifying file system (\emph{SCFS}) is a secure and
-decentralized file system that uses public keys to map file names, separating
-key management from file system security. Servers have a public key and clients
-use the server public key to authenticate the server and establish a secure
-communication channel. Once the client has verified the server a secure channel
-is established and the actual file access takes place.~\cite{mazieres2000self}.
+A self-certifying file system (\emph{SCFS}) is a secure and decentralized file
+system that uses public keys to map file names, separating key management from
+file system security. Servers have a public key and clients use the server
+public key to authenticate the server and establish a secure communication
+channel. Once the client has verified the server a secure channel is established
+and the actual file access takes place~\cite{mazieres2000self}.
 
 IPFS tries to connect these ideas into a cohesive, trustful and decentralized
 file system. It is build on top of a peer-to-peer network, so no nodes are
@@ -352,22 +353,22 @@ thousands of nodes.
 \label{tech:sec:ethereum}
 
 As seen in the section~\ref{tb:eth}, Ethereum is a technology that allows its
-users to create fully decentralized and autonomous applications. These applications
-(called DApps) are smart contracts that are uploaded to the Ethereum blockchain,
-so it is not necessary to have a server to run or communicate with these
-contracts.
+users to create fully decentralized and autonomous applications. These
+applications (called DApps) are smart contracts that are uploaded to the
+Ethereum blockchain, so it is not necessary to have a server to run or
+communicate with these contracts.
 
 Ethereum is used as \ii{backend} in Decentralized Science. All the internal
-operation of the platform is programmed in a smart contract and is executed from the
-blockchain. This implies several important features:
+operation of the platform is programmed in a smart contract and is executed from
+the blockchain. This implies several important features:
 
 \begin{itemize}
   \itbf{Open source:} All the source code uploaded to Ethereum is free, public
   and anyone can fork it in other projects.
 
   \itbf{Auditable interactions:} All calls and interactions to the platform are
-  registered in the blockchain, making the entire process of scientific publication
-  auditable.
+  registered in the blockchain, making the entire process of scientific
+  publication auditable.
 
   \itbf{Distributed platform:} All the source code is executed in the Ethereum's
   distributed network, meaning that Decentralized Science does not need a
@@ -418,8 +419,8 @@ small changes, without the need of installing any software (see figure
 
 Testrpc is a Node.js based Ethereum client for testing a development. It
 simulates an Ethereum client behavior using the ethereum.js library. Once
-installed through \code{npm}, it can be lauched through the linux terminal with the
-command \code{testrpc} and offers the developers a series of interesting
+installed through \code{npm}, it can be lauched through the linux terminal with
+the command \code{testrpc} and offers the developers a series of interesting
 features:
 
 \begin{itemize}
@@ -455,10 +456,10 @@ to communicate with it. There are two different ways to achieve this. The first
 one is to install an specialized web browser like
 AlethZero\footnote{https://github.com/ethereum/alethzero},
 Mist\footnote{https://github.com/ethereum/mist} or
-Brave\footnote{https://brave.com/} that provides the libraries needed to interact
-with smart contracts and connects to the blockchain automatically. The second
-one is installing an extension like Metamask\footnote{https://metamask.io/} as
-an extension of the web browser.
+Brave\footnote{https://brave.com/} that provides the libraries needed to
+interact with smart contracts and connects to the blockchain automatically. The
+second one is installing an extension like
+Metamask\footnote{https://metamask.io/} as an extension of the web browser.
 
 
 Metamask is a web browser extension (available for Chrome, Firefox, and Opera)
@@ -473,7 +474,7 @@ funds.
 Thus, Metamask not only acts as a bridge between a web browser and the Ethereum
 network, it also works as a wallet and supports Ethereum's official tokens. In
 order to make transactions with Metamask through a web page, this web page
-should use JavaScript. 
+should use JavaScript.
 
 JavaScript is used to connect to a smart contract address and be able to call to
 specific functions of it. To do so, the JavaScript code must have two important
@@ -485,8 +486,8 @@ data:
   stored, because all the interactions with the platform are made through
   transactions to this address.
 \item \textbf{Contract's ABI:} An ABI (Application Binary Interface) is a data
-  structure in which JavaScript can find all the methods a contract provides. Each
-  method defines its inputs, outputs, type, if its payable and a state.
+  structure in which JavaScript can find all the methods a contract provides.
+  Each method defines its inputs, outputs, type, if its payable and a state.
   JavaScript uses this information to build the transactions to call these
   methods (see listing \ref{abi}).
 
@@ -502,7 +503,7 @@ using HTML and Testrpc to simulate a functional journal (see chapter~\ref{poc})
 \subsection{Github}
 \label{sec:github}
 
-Github\footnote{https://github,com} is a web hosting service for \ii{VCS} using
+Github\footnote{https://github.com} is a web hosting service for \ii{VCS} using
 Git (see section~\ref{tech:sec:ipfs:git}). If offers all Git features as well as
 its own features like bug tracking, issues and task management, kanban boards,
 wiki pages among others.

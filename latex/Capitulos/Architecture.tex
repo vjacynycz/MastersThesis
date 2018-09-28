@@ -198,13 +198,14 @@ contract in Ethereum offers several advantages: explained in the next section.
 The second and final prototype of the platform is based on the use of smart
 contracts as papers, meaning that papers submitted to the platform have an
 associated Ethereum address. This implies that one of these addresses can
+
 uniquely identify a paper inside and outside Decentralized Science. Furthermore,
 since all interactions with the platform are timestamped, an Ethereum address
 could be used to demonstrate the authorship of a scientific paper even if it has
 not been published.
 
-\figura{UML_class_2.png}{width=0.8\linewidth}{contracts:uml2}{Second
-  prototype's diagram of the contracts structure}
+\figura{UML_class_2.png}{width=0.8\linewidth}{contracts:uml2}{Second prototype's
+  diagram of the contracts structure}
 
 As shown in the figure~\ref{contracts:uml2}, the contract structure has been
 modified to eliminate the use of structs except the one used to store the IPFS
@@ -258,7 +259,7 @@ the rating and who has done it already.
 
 The paper contract also offers the possibility to receive money transactions, as
 a smart contact can transfer and store Ether\footnote{Ether is Ethereum's
-  currency (see section~\ref{tb:eth}})}. This feature could open new dynamics of
+  currency (see section~\ref{tb:eth})}}. This feature could open new dynamics of
 research funding, where researchers receive money for their projects through
 academic papers within the platform.
 
@@ -355,9 +356,8 @@ designed to appease the problems that have arisen.
 \section{Platform interactions and activity diagrams}
 \label{sec:funct-requ-activ}
 
-In the following section we will discuss the
-activity diagrams for each transaction users can make to interact with the
-platform.
+In the following section we will discuss the activity diagrams for each
+transaction users can make to interact with the platform.
 
 Each of these interactions must be done through an Ethereum personal address, as
 it works as an identifier of the user performing it. For this reason, all of the
@@ -374,7 +374,7 @@ Once an user has an Ethereum account she may send papers. The platform asks for
 the authors and for the file through a web form. Javascript collects this
 information and uploads it to the file system, generating an IPFS file address.
 Finally, the platform creates a transaction with this data and sends it to the
-platform.
+platform. See Table \ref{fr:AD1} and Figure \ref{ad:AD1}.
 
 \figuraAD{AD1}% 1. Table ID
 {Send Paper}% 2. Table title
@@ -396,7 +396,7 @@ do so, there must be a journal in the platform and the user must have editor
 privileges. Next, the editor assigns the reviewers (with which she has
 previously contacted) of the paper and the platform creates the review tasks for
 each reviewer. These tasks can be accepted or rejected by the reviewers and they
-can have a ``deadline'' to receive the acceptance.
+can have a ``deadline'' to receive the acceptance. See Table \ref{fr:AD2} and Figure \ref{ad:AD2}.
 
 \figuraAD{AD2}% 1. Table ID
 {Assign Reviewer}% 2. Table title
@@ -415,7 +415,8 @@ task. Before doing so the reviewer must have an Ethereum address. Then, when a
 task is received, the reviewer has a time limit to accept it. If it is not
 accepted, the editor can assign another reviewer. In the other hand, if it is
 accepted, a transaction is created and the reviewer is registered in the paper
-contract to be able to send his review.
+contract to be able to send his
+review. See Table \ref{fr:AD3} and Figure \ref{ad:AD3}.
 
 \figuraAD{AD3}% 1. Table ID
 {Accept Review task}% 2. Table title
@@ -436,8 +437,9 @@ reviewer, once she accepts the review task, has a deadline to submit a review.
 If the review is sent before the time limit, the file containing the review is
 uploaded to IPFS and the platform creates an Ethereum transaction with this
 information and the acceptance level (see section~\ref{archAndDes}). Otherwise,
-if the review is not sent, the reviewer looses reputation within the reputation
-system.
+if the review is not sent, the
+reviewer looses one point of reputation within the reputation
+system. See Table \ref{fr:AD4} and Figure \ref{ad:AD4}.
 
 % \begin{minipage}{\linewidth}
 \figuraAD{AD4}% 1. Table ID
@@ -457,7 +459,7 @@ system.
 As part of the reputation system, all reviews can be rated by the authors and by
 other reviewers. When a review is sent to the platform, it generates an
 identifier which can be rated with 1 or 0 as explained in
-section~\ref{rep:system}.
+section~\ref{rep:system}. See Table \ref{fr:AD5} and Figure \ref{ad:AD5}.
 
 \figuraAD{AD5}% 1. Table ID
 {Rate Review}% 2. Table title
@@ -486,36 +488,36 @@ following transactions (all the costs are estimated\footnote{Check
 
   This transaction creates all the contracts required by the platform and
   outputs the Ethereum's address of the platform. The gas amount required to
-  this transaction is 1696291, approximately from 2 to 4 euros.
+  this transaction is 1.696.291, approximately from 2 to 4 euros.
 
   \itbf{Send Paper:} To send a paper the user have to send a transaction
   containing the Ethereum addresses of the authors and a file containing the
   paper. This file will be uploaded to IPFS through a node and then the
   resulting address will be inserted in the transaction. The gas amount required
-  to do this transaction is 114812, around 0.30 euros.
+  to do this transaction is 114.812, around 0,30 euros.
 
   \itbf{Assign reviewers:} Assigning the reviewers is normally very cheap
   because an address authorized as ``editor'' must create a simple transaction
   with the paper identifier and the addresses of the reviewers. The gas amount
-  required to do this transaction is 58707, around 0.10 euros.
+  required to do this transaction is 58.707, around 0,10 euros.
 
   \itbf{Accept review:} This is the cheapest interaction with the platform, a
   reviewer must accept the task of reviewing a paper through a transaction. With
   this system, the reviewer cryptographically signs the contract and compromises
-  to review the paper. The gas amount required to do this transaction is 23971,
-  around 0.04 euros.
+  to review the paper. The gas amount required to do this transaction is 23.971,
+  around 0,04 euros.
 
   \itbf{Send Review:} Sending a review is also expensive, because the review is
   also a file and must be uploaded to IPFS. The transaction also contains a
   reference to the paper, and an integer representing the acceptance level of
-  the review. The gas amount required to do this transaction is 149760, around
-  0.35 euros.
+  the review. The gas amount required to do this transaction is 149.760, around
+  0,35 euros.
 
   \itbf{Send Rating:} This transaction contains a reference to the review of a
   paper, and an integer from 1 to 5 representing the rating of a review. This
   transaction initially can only be made by the other reviewers, the authors and
   the editors of the journal. The gas amount required to do this transaction is
-  94122, around 0.04 euros.
+  94.122, around 0,04 euros.
 
 \end{itemize}
 
@@ -545,7 +547,7 @@ following actions have been taken to reduce these costs:
   used. But to avoid using this type, first the \ii{Base58} is decoded into the
   three parts mentioned above. Finally instead of creating a transaction with a
   string representing the IPFS address, the transaction contains the hash ID
-  (using an \emph{uint8} data tyoe), the size (using an \emph{uint8} data type)
+  (using an \emph{uint8} data type), the size (using an \emph{uint8} data type)
   and the hashed data (using \emph{bytes32} data type). This allows the platform
   to reduce the transactions involving a file upload around $40\%$.
 \end{itemize}

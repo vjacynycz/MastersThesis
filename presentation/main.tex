@@ -9,23 +9,38 @@
 \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 
 
-\AtBeginSubsubsection[]{
+\AtBeginSubsection[]{
   \begin{frame}
-   \frametitle{Parte \insertsectionnumber: \insertsectionhead}
+   %\frametitle{\insertsectionhead}
     
     \begin{center}
-      \huge{\insertsubsectionhead}
+      \huge{\insertsectionhead}
     \end{center}
     \vspace{5mm}
     \begin{center}
       \begin{beamercolorbox}[sep=8pt,center,shadow=true]{title}
         \usebeamerfont{title}
-        \insertsubsubsectionhead\par%\\
+        \insertsubsectionhead\par%\\
       \end{beamercolorbox}
     \end{center}
   \end{frame}
 }
-
+\defbeamertemplate*{footline}{Dan P theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\expandafter~~(\insertshortinstitute)
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+\insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
 \newcommand{\ib}[1]{\item \textbf{#1} }
 
 \usepackage{graphicx} % Allows including images
@@ -33,16 +48,16 @@
 \usepackage{import}
 \usepackage{eurosym}
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
+\usepackage[spanish]{babel}
 \usepackage{media9}    
 \usepackage{etoolbox} 
 \usepackage{tikz}
 \usepackage{subcaption}
-
+\usepackage{listings}
 \usepackage[sort&compress,sectionbib]{natbib}
 \bibliographystyle{IEEEtranN}
 
-\newcommand{\framei}[4]{
+\newcommand{\frameitc}[4]{
   \begin{frame}{#1}
     \begin{center}
       \includegraphics[width=0.9\linewidth,height=0.7
@@ -52,7 +67,17 @@
   \end{frame}
 }
 
-\newcommand{\framein}[3]{
+\newcommand{\frameitcp}[5]{
+  \begin{frame}{#1}
+    \begin{center}
+      \includegraphics[width=#5\linewidth,height=0.7
+      \textheight,keepaspectratio]{img/#2}\\
+      #3~\cite{#4}.
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\frameit}[3]{
   \begin{frame}{#1}
     \begin{center}
       \includegraphics[width=0.9\linewidth,height=0.7
@@ -62,21 +87,29 @@
   \end{frame}
 }
 
-\newcommand{\framet}[3]{
+\newcommand{\framei}[2]{
+  \begin{frame}{#1}
+    \begin{center}
+      \includegraphics[width=0.9\linewidth,height=0.7
+      \textheight,keepaspectratio]{img/#2}
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\framet}[2]{
   \begin{frame}{#1}
     #2
   \end{frame}
 }
 
-\setbeamercolor{titlelike}{parent=structure}
+\title[Towards a Decentralized Publication System]{\large{Towards a Decentralized Publication System: A Proposal Using Blockchain and P2P Technologies}}
 
-\title[Decentralized Science]{\includegraphics[width=0.6\linewidth]{img/logo.jpg}}
-
-\author[V. Jacynycz]{Viktor Jacynycz Garc\'ia}
+\author[V. Jacynycz]{Viktor Jacynycz García}
 
 \institute[UCM] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
-  Grupo Grasia\\
+  Máster en ingeniería informática \\
+  Master’s degree in Computer Science Engineering \\
   Facultad de informática\\
   Universidad Complutense de Madrid \\ % Your institution for the title page
   \medskip
@@ -93,39 +126,222 @@
 \titlepage % Print the title page as the first slide
 \end{frame}
 
-\framet{A distributed publication system}{
-Decentralized Science is a platform that tries to distribute the current publication system (from sending the first draft to the final publication) through IPFS and Ethereum.
+\begin{frame}
+\frametitle{Index}
+%\tableofcontents
+    \begin{minipage}{0.7\textwidth}
+       \linespread{1.1}
+       \tableofcontents[hideallsubsections] 
+       \vspace{10mm}
+    \end{minipage}
+\end{frame}
+
+\section{Introduction}
+\framei{Introduction}{Research_Journals.jpg}
+\framei{Introduction}{publishers_logos.png}
+\framei{Introduction}{ScientificReview.jpg}
+\framei{Introduction}{decsci.jpg}
+
+\framet{Objectives}{
+This work proposes three main objectives:
+\vspace{5mm}
+\begin{enumerate}
+    \item Create a decentralized platform for science publishing.
+    \vspace{5mm}
+    \item Create a reputation system for reviewers.
+    \vspace{5mm}
+    \item Analyze the platform and compare it with the current sytems.
+\end{enumerate}
 }
 
-\framet{Goals}{
+
+\section{Background}
+\subsection{Socio-cultural Background}
+\subsubsection{Publication systems}
+\frameitc{Publication systems}{Philosophical_Transactions_Volume_1_frontispiece.jpg}{The first \emph{journals} began to emerge in 1665}{kronick1976history}
+\framei{Publication systems}{publishers.PNG}
+
+\frameitc{Publication methods}{publishing.png}{Formerly, journal issues were printed by publishers}{spier2002history}
+
+\frameitc{Peer review process (\emph{1972})}{peerreview.png}{The peer review process determines if a paper is published in a \emph{journal}}{spier2002history}
+
+\frameitc{Publishers nowadays}{publishers2.png}{In the internet era, were creating a copy of a document has not cost, the role of traditional publishers could be questioned}{lariviere2015oligopoly}
+
+\framet{Alternative publication systems}{
+  \begin{itemize}
+    \ib{Preprints:} Papers published before the peer-review process~\cite{shuai2012scientific}.
+    \ib{Mega-journals:} A combination of varioues \emph{journals} to encourage open access publishing~\cite{binfield2013open}
+    \ib{Countinuous publication:} A methodology followed by some online \emph{journals} that consists in publishing papers inmediatly after they pass the peer-review process~\cite{anderton2013continuous}.
+  \end{itemize}
+}
+
+\frameitc{Reputation systems}{reputation.png}{Reputation systems offers the possibility to trust unknown individuals}{resnick2000reputation}
+
+\frameit{Sistemas de reputación}{reputation2.png}{Many of the services we use today have a reputation system}
+
+\frameit{Sistema de rating}{amazon.jpg}{Amazon, Google and many other companies have a 5-star scoring system}
+  
+\frameit{Sistema de votación}{se.png}{Stack exchange simplifies the voting with only two possibilities, like or dislike}
+  
+\frameitc{Peer review and publishing software}{ems.png}{Some of the state-of-the-art software for today's scientific publication process}{azar2006academic,paulo2011aems,Lev2016,rajpert2016rewarding,willinsky2005open}
+
+\subsection{Technical Background}
+\subsubsection{Distributed Networks}
+\frameitc{Network architectures}{architectures.png}{Different configurations of network architectures}{baran1964distributed}
+
+\frameitcp{Bitcoin}{btci.png}{Bitcoin is the first distributed cryptocurrency}{nakamoto2008bitcoin}{0.7}
+
+\frameitc{Transation based system}{transaction.png}{Bitcoin stores all the transaction between users}{antonopoulos2014mastering}
+
+\frameit{Bitcoin Addresses}{btcaddress.png}{Bitcoin users are identified inside the network using a randomly generated string called ``address''}
+
+\frameitc{Blockchain}{blockchain.png}{Blockchain's state is saved in an encrypted database called the blockchain}{nakamoto2008bitcoin}
+
+\frameitc{Ethereum}{EthereumLogo1200.jpg}{Ethereum uses the blockchain technology to deploy and execute small distributed programs}{nakamoto2008bitcoin}
+
+\frameitc{Smart contracts}{sc.png}{Los contratos inteligentes son
+  pequeños fragmentos de código que cambian el estado de la cadena de bloques}{buterin2014ethereum}
+  
+ \framet{Ethereum addresses}{
+  Ethereum addresses behave similar to Bitcoin's.
+\begin{block}{Example Ethereum user address}
+0XBB49CD914B515B2050080440B9B7EE86DBFD22CC
+\end{block}
+These addresses can identify:
 \begin{itemize}
-  \item \textbf{Develop} an open-source and decetralized platform.
-  \item Create a \textbf{reputation system} for reviewers.
-  \item \textbf{Reduce} time and monetary costs of publication.
-  \item Explore \textbf{alternative metrics} for journals, papers and researchers.
-  \item \textbf{Prevent} possible problems and unfairness in the peer review process.
+    \item A user.
+    \item A deployed smart contract.
 \end{itemize}
 }
 
-\framet{Strengths}{
+\frameitcp{IPFS}{IPFS.png}{IPFS is a distributed file system that works over a P2P network}{benet2014ipfs}{0.7}
+
+ \framet{IPFS addresses}{
+  IPFS creates an address to access the file through its data hash:
+\begin{block}{Example IPFS file address}
+/ipfs/\textbf{QmS4ustL54uo8FzR9455qaxZwuMiUhyvMcX9Ba8nUH4uVv}
+\end{block}
+These addresses identify uniquely each file in the system.
+}
+
+\section{Plataform description}
+
+\subsection{Distributed design}
+
+\frameit{Distributed design}{eipfs.png}{The platform uses \textbf{IPFS} as file system and \textbf{Ethereum} as management system to controll the publication process}
+
+\framet{Distributed design}{The platform is able to control the publication process through the following interactions:
 \begin{itemize}
-  \item Open access by design.
-  \item Reviewer's Reputation System.
-  \item Transparent Governance.
+    \item Paper submission.
+    \item Reviewer proposal.
+    \item Review task acceptance.
+    \item Review submission.
+    \item Review rating.
+\end{itemize}}
+
+\subsection{Main features}
+\framei{Open Access By design}{eipfs.png}
+
+\framet{Reviewer reputation system}{The reputation system for reviewers allow the following interactions:
+\begin{itemize}
+    \item All reviews are public and accessible.
+    \item Each review can be rated by the authors, the editors of the journal and the other reviewers.
+    \item Reviewers get rewarded for doing a \emph{good job} and get penalized otherwise.
+    \item Reviews can have a delivery time.
 \end{itemize}
 }
 
-\framet{Open Access by Design}{a}
+\framet{Transparent governance}{The proposed system aims to improve the peer review process transparency, speed,
+and fairness.
+\vspace{10mm} \\
+With the interactions being time-stamped and
+tamper-proof thanks to the blockchain technology, they can be monitored,
+audited, and held accountable.
+\vspace{10mm} \\
+This transparency, combined with a distributed infrastructure for peer review,
+facilitates the exploration of new workflows.
+}
 
-\framet{Reputation System}{a}
+\section{Architecture}
+\subsection{Platform design}
+\framei{Platform architecture}{architecture.png}
+\subsection{First Prototype}
+\framei{First Prototype}{UML_class_1.png}
+\subsection{Second Prototype}
+\framei{Second Prototype}{UML_class_2.png}
 
-\framet{Transparent Governance}{a}
+\section{Proof of concept}
+\subsection{Platform font-end}
+\framei{Proof of concept}{mockup.png}
+\framei{Proof of concept}{homepage.png}
+\framei{Proof of concept}{journal.PNG}
+\framei{Proof of concept}{paper.PNG}
+\framei{Proof of concept}{rating.png}
 
-%\section{Referencias}
-%\begin{frame}[allowframebreaks]{Referencias}
-%  \bibliography{references}
-%
-%  \printbibliography
-%\end{frame}
+\section{Discussion}
+\subsection{Issues and possible solutions}
+\framei{Issues and possible solutions}{privacyReviewRating.jpg}
+
+\subsection{Implications}
+\framet{Main implications}{
+\textbf{Creating} a distributed publication system for open science could impy:
+\begin{itemize}
+  \item A \textbf{reduction} of costs in money and time of the whole process both for authors and readers.
+  \item The exploration of \textbf{altenative models} for science publishing, impact factors and citation standards.
+  \item \textbf{Prevention} of possible discrimination problems due to gender or rivalry research causes.
+\end{itemize}
+}
+
+\section{Conclusion}
+\subsection{Concluding remarks and Future work}
+\framet{Concluding remarks}{
+\begin{itemize}
+  \item This work proposes the design and development of a decentralized platform for open science.
+  \item Besides the fact that this platform is only a prototype, it has a lot of potential and opens new lines of reseach.
+  \item The proposed system's infrastructure relies on new technologies with their own challenges and problems.
+  \item Other open issues that require further research and may be explored in future work.
+\end{itemize}
+}
+\framet{Future work}{
+\begin{itemize}
+  \item Solve privacy problems with the system proposed in the discussion chapter.
+  \item Test the prototype with real users.
+  \item Improve the platform publication process to automate steps like reviewer proposal.
+  \item Create a larger project to make a future PhD.
+\end{itemize}
+}
+
+\framet{Conferences}{
+\begin{itemize}
+\item \textbf{EthCC2018} - Ethereum community conference. \emph{Paris, France} (March
+  2018). \url{https://ethcc.io/}
+
+\item \textbf{PEERE2018} - International Conference on Peer Review. \emph{Rome, Italy}
+  (March 2018). \url{http://www.peere.org/conference/}
+
+\item \textbf{SPONBC2018} - Scientific Publishing on the Blockchain. \emph{Vienna,
+    Austria} (May 2018).
+  \url{https://blockchainforscience.com/2018/02/09/sponbc2018/}
+\end{itemize}
+
+}
+
+\framet{Papers published}{
+Tenorio-Fornés, A., Jacynycz, V., Llop, D., Sánchez-Ruiz, A.A., Hassan, S.
+\textbf{``A Decentralized Publication System for Open Science using Blockchain
+  and IPFS''}. \emph{PEERE International Conference on Peer Review Proceedings.}
+Rome (2018). Status: Published.
+\vspace{10mm} \\
+Tenorio-Fornés, A., Jacynycz, V., Llop, D., Sánchez-Ruiz, A.A., Hassan, S.
+\textbf{``Towards a Decentralized Process for Scientific Publication and Peer
+  Review using Blockchain and IPFS''}. \emph{HICSS Hawaii International Conference
+  on System Sciences (CORE-A)}. Hawaii (2019). Status: Accepted.
+  }
+
+\section{References}
+\begin{frame}[allowframebreaks]{References}
+\bibliography{references}
+\printbibliography
+\end{frame}
 
 \end{document} 

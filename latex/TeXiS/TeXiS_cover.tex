@@ -1,4 +1,5 @@
 
+
 \def\tituloPortadaVal{\titulo}
 \newcommand{\tituloPortada}[1]{%
 \def\tituloPortadaVal{#1}
@@ -34,14 +35,17 @@
 \def\textoPrimerSubtituloPortadaVal{%
   \textit{Memoria que presenta para optar al master en ingeniería informática}
   \leavevmode \\[0.3em]%
-  \textbf{\autorPortadaVal}%
+  \textbf{\autorPortadaVal}\\[1.2em]
+   %Calificación: \bb{Matrícula de Honor}
 } \newcommand{\textoPrimerSubtituloPortada}[1]{%
   \def\textoPrimerSubtituloPortadaVal{#1} }
 
 % Segundo subt_tulo de la segunda portada
 \def\textoSegundoSubtituloPortadaVal{%
   \textit{Directed by} \leavevmode \\[0.3em]
-  \textbf{\directorPortadaVal} } \newcommand{\textoSegundoSubtituloPortada}[1]{%
+  \textbf{\directorPortadaVal} \\[0.5em]
+   Calificación: 10 - \bb{Matrícula de Honor}
+} \newcommand{\textoSegundoSubtituloPortada}[1]{%
   \def\textoSegundoSubtituloPortadaVal{#1} }
 
 % ISBN
@@ -307,12 +311,45 @@
 \thispagestyle{empty} \mbox{ }
 
 % Informacion del ISBN y copyright
-\vskip 15cm
+\vskip 6cm
 \begin{center}
+\textbf{Attribution-NonCommercial-ShareAlike 4.0 International}
+
+  \emph{CC BY-NC-SA 4.0}
+\end{center}
+\vskip 5mm
+You are free to:
+\begin{itemize}
+
+
+\itbf{Share} — copy and redistribute the material in any medium or
+format \itbf{Adapt} — remix, transform, and build upon the material
+\end{itemize}
+
+The licensor
+  cannot revoke these freedoms as long as you follow
+  the following terms:
+
+  \begin{itemize}
+    \itbf{Attribution} — You must give appropriate credit, provide a
+  link to the license, and indicate if changes were made. You may do so in any
+  reasonable manner, but not in any way that suggests the licensor endorses you
+  or your use.
+
+  \itbf{NonCommercial} — You may not use the material for commercial purposes.
+
+  \itbf{ShareAlike} — If you remix, transform, or build upon the material, you must
+  distribute your contributions under the same license as the original.
+
+  \itbf{No additional restrictions} — You may not apply legal terms or technological
+  measures that legally restrict others from doing anything the license permits.
+  \end{itemize}
+\begin{center}
+
   \includegraphics{TeXiS/by-nc-sa.png}\\%
   https://creativecommons.org/licenses/by-nc-sa/4.0/\\%
   Viktor Jacynycz García
- \end{center}
+\end{center}
 \newpage
 \thispagestyle{empty} \mbox{ } \vskip 5cm El abajo firmante, matriculado en el
 Máster en Ingeniería Informática de la Facultad de Informática, autoriza a la
@@ -327,7 +364,7 @@ preservación y acceso a largo plazo.
 
 \mbox{ } \vskip 5cm
 \begin{center}
-Fdo. Viktor Jacynycz García
+  Fdo. Viktor Jacynycz García
 \end{center}
 }% \newcommand{\makeCover}
 

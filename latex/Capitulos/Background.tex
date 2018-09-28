@@ -135,13 +135,13 @@ researchers or universities the possibility to publish in these journals.
 combine multiple journals into a single journal, allowing the publication of
 open-access papers, which have gone through a peer review process. The first
 journal to adopt this idea was the \emph{PLOS ONE}
-Journal\footnote{http://journals.plos.org/plosone/} as of the project
-\emph{Public Library of Science}. This project aims to create a library of
-scientific journals under the values of open access and creative commons
-licenses. As a result of the success of the \emph{PLOS ONE} journal, other
-publishers have started their own mega-journals. Featuring alternative impact
-metrics, reusability of figures and data, post-publication discussions and
-portable reviews from other journals~\cite{bjork2015have}.
+Journal\footnote{http://journals.plos.org/plosone/} of the project \emph{Public
+  Library of Science}. This project aims to create a library of scientific
+journals under the values of open access and creative commons licenses. As a
+result of the success of the \emph{PLOS ONE} journal, other publishers have
+started their own mega-journals. Featuring alternative impact metrics,
+reusability of figures and data, post-publication discussions and portable
+reviews from other journals~\cite{bjork2015have}.
 
 The \bb{continuous publication} model is based on publishing individual papers
 once they are reviewed and accepted, migrating from the previous issue-based
@@ -314,7 +314,7 @@ clear examples of the use of this architecture is that of cryptocurrencies.
 \subsection{Digital Currencies and Cryptocurrencies}
 \label{tb:cryptos}
 
-In the 80s and 90s, with the expansion of the world wide web, several services
+In the 80s and 90s, with the expansion of the World Wide Web, several services
 began to be online (stores, newspapers, etc). Some of these services required
 monetary transactions through the internet to be used so, at this time, the
 concepts of electronic money or digital currencies began to emerge. One of the
@@ -349,8 +349,6 @@ with the arrival of the most widely used cryptocurrency today: \bb{Bitcoin}.
 \subsection{Bitcoin}
 \label{tb:bc}
 
-\figura{transaction.png}{width=0.9\linewidth}{tb:bc:transaction}{The change of
-  state of Bitcoin accounts done by transactions}
 
 In 2009, the idea of a \bb{fully decentralized currency} first emerged, when
 Satoshi Nakamoto, a fictional identity, published the first version of
@@ -370,17 +368,21 @@ generated with no cost and users can have multiple addresses. These addresses
 act as an identifier inside the Bitcoin's database and are used to transfer
 money.
 
+\figura{transaction.png}{width=0.9\linewidth}{tb:bc:transaction}{The change of
+  state of Bitcoin accounts done by transactions}
+
 Money transfers between two \ii{addresses} are called \bb{transactions}. Each
 transaction is a small data fragment containing the source address, the
-destination address and the amount of money transferred.
+destination address and the amount of money transferred (see
+figure~\ref{tb:bc:transaction}).
 
 Bitcoin's users can observe all \ii{transactions} between all \ii{addresses}. In
 order to do so, this technology stores a certain number of transactions into a
 data fragment, called block. Next, this block is linked cryptographically to the
 previous one containing all the foregoing transactions, forming a chain of
-interlinked data called \ii{blockchain} (see figure~\ref{tb:bc:transaction}). To
-sum up, Bitcoin's blockchain is a large chain of data blocks containing all the
-transactions between all accounts since the beginning of this technology.
+interlinked data called \ii{blockchain}. To sum up, Bitcoin's blockchain is a
+large chain of data blocks containing all the transactions between all accounts
+since the beginning of this technology.
 
 Bitcoin's transactions must be verified by all peers, meaning that there has to
 be a consensus among all the nodes for a transaction to be completed. This
@@ -445,8 +447,7 @@ a small amount of \ii{Ether}.
 \subsubsection*{Smart Contracts}
 \label{tb:cryptos:sm}
 \figura{cryptomap.png}{width=0.7\linewidth}{criptomap}{Existing cryptocurrencies
-  represented by purchase-sale
-  volume~\footnote{https://cryptocoincharts.info/coins/graphicalComparison}.}
+  represented by purchase-sale volume.}
 
 Smart contracts are written in a programming language called
 Solidity\footnote{http://solidity.readthedocs.io/en/develop/} provided by the
@@ -461,7 +462,9 @@ gambling games~\cite{piasecki2016gaming}, voting
 systems~\cite{mccorry2017smart}, crowdfunding~\cite{jacynycz2016betfunding},
 prediction markets~\cite{peterson2015augur}, transparency
 systems~\cite{bonneau2016ethiks} and so on. Today it is the most exchanged
-currency within cryptocurrencies (see figure~\ref{criptomap}).
+currency within
+cryptocurrencies~\footnote{https://cryptocoincharts.info/coins/graphicalComparison}
+(see figure~\ref{criptomap}).
 
 Smart contracts offer us a framework to design distributed platforms like the
 one proposed in this work, in which all transactions that interact with the
@@ -501,17 +504,18 @@ It should be noted that these address restrictions can also be applied to
 contract addresses, and may limit the execution of a certain fragment to an
 address associated with another contract.
 
-\input{Capitulos/listing_contract.tex}
-
 Smart contracts behavior is transaction-based~\cite{wood2014ethereum}. Once a
 contract is deployed in the blockchain, users (or other contracts) may send
-transactions to run specific functions in its code. Each transaction has a
-payload, containing the data required to execute the desired function. This
-execution has a fee called \bb{gas} that users have to pay to the network based
-on how complex is the code they want to run. The \bb{gas} amount required to
-execute a function inside a smart contract directly determines the code quality,
-as expensive transactions to smart contracts with high \bb{gas} costs are
-undesirable.
+transactions to run specific functions in its code.
+
+\input{Capitulos/listing_contract.tex}
+
+Each transaction has a payload, containing the data required to execute the
+desired function. This execution has a fee called \bb{gas} that users have to
+pay to the network based on how complex is the code they want to run. The
+\bb{gas} amount required to execute a function inside a smart contract directly
+determines the code quality, as expensive transactions to smart contracts with
+high \bb{gas} costs are undesirable.
 
 Ethereum's transaction-based smart contracts have changed the paradigm of modern
 software development, since the priority when developing a smart contract is to
